@@ -12,6 +12,14 @@
 <meta name="DC.Title" content="Installing the DITA Toolkit" />
 <meta name="abstract" content="This topic explains how to install the DITA Toolkit processing environment." />
 <meta name="description" content="This topic explains how to install the DITA Toolkit processing environment." />
+<meta scheme="URI" name="DC.Relation" content="DITA-readme.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-changes.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-futures.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-ant.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-tested.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-tweaks.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-XS-readme.html" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="installing" name="DC.Identifier" />
 <link href="commonltr.css" type="text/css" rel="stylesheet" />
@@ -62,9 +70,9 @@
         <span>Use an unzip tool to extract the package into a location of your choice. </span>
       </li>
 
-      <li class="stepexpand">
-        <span>Set up your environment variable JAVA_HOME to your installation directory for JDK or JRE.</span>
-      </li>
+      <li class="stepexpand"><span>Set up your environment variable JAVA_HOME to your installation directory for JDK or JRE. If you're using Windows, you can use <span class="q">"set"</span> command under command line to set up environment variable or directly add or modify the environment variable in System Property. If you're using bash shell under linux, you can use <span class="q">"export"</span> command to set up environment variable.</span>  For example, we can set up JAVA_HOME like this in Windows command line.<pre>c:\pkg\DITA-OT1.0&gt;set JAVA_HOME=C:\ibm\Java142</pre>
+In linux bash shell, we can set up JAVA_HOME like this.<pre>[dita@localhost dita]$export JAVA_HOME=/usr/local/IBM/Java142</pre>
+</li>
 
       <li class="stepexpand">
         <span>Set up your XSLT processor and include the jar files needed into the CLASSPATH. For example, if you are using saxon, include saxon.jar into the CLASSPATH. If you are using xalan, include xalan.jar and xercesImpl.jar into the CLASSPATH.</span>
@@ -130,6 +138,21 @@
 
   </div>
 
-
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">The DITA Open Toolkit</a></div>
+</div>
+<div class="relconcepts"><strong>Related concepts</strong><br />
+<div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
+<div><a href="DITA-ant.html" title="You can use the Ant build tool to automate builds that use the DITA processes including output for the sample documents provided with DITA.">Building DITA output with Ant</a></div>
+</div>
+<div class="relinfo"><strong>Related information</strong><br />
+<div><a href="DITA-changes.html" title="This document lists major changes and new features by release. Latest release news is added at the top of this document.">DITA release history</a></div>
+<div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
+<div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
+<div><a href="DITA-tweaks.html" title="No one transform is ever able to meet your requirements off the shelf. DITA transforms support a number of ways to customize or enhance the output without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
+<div><a href="DITA-XS-readme.html" title="This document describes the release notes and usage of the experimental DITA XML Schema on developerWorks.">DITA XML Schema Readme</a></div>
+</div>
+</div>
 </body>
 </html>
