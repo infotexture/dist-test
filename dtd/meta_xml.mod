@@ -87,7 +87,7 @@
                           expiry   %date-format; #IMPLIED
                           %select-atts;
 >
-<!ELEMENT permissions    EMPTY>
+<!ELEMENT permissions    EMPTY>
 
 <!ATTLIST permissions     view (internal|classified|all|entitled) #REQUIRED
 >

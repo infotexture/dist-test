@@ -14,71 +14,79 @@
 <meta name="description" content="This document lists major changes and new features by release. Latest release news is added at the top of this document." />
 <meta scheme="URI" name="DC.Relation" content="DITA-readme.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-futures.html" />
-<meta scheme="URI" name="DC.Relation" content="DITA-installing.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-installation.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-ant.html" />
-<meta scheme="URI" name="DC.Relation" content="DITA-tested.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-tweaks.html" />
-<meta scheme="URI" name="DC.Relation" content="DITA-XS-readme.html" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="ditareleasehistory" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
 <link href="commonltr.css" type="text/css" rel="stylesheet" />
 <title>DITA release history</title>
 </head>
 <body id="ditareleasehistory"><a name="ditareleasehistory"><!-- --></a>
 
 
-  <h1 class="topictitle1">DITA release history</h1>
+<h1 class="topictitle1">DITA release history</h1>
 
-  
-  <div><p>This document lists major changes and new features by release. Latest release news is added at the top of this document.</p>
 
-    <div class="section"><h4 class="sectiontitle">DITA Open Source Toolkit 1.0</h4>
-      
-      <div class="p">The initial release of the Open Sourced DITA Toolkit introduces major architectural changes from the previous, developerWorks version of the Toolkit. New features in this release are:<ol>
-          <li>A new, Java-based processing architecture that supports single-threaded execution throughout.</li>
+<div><p>This document lists major changes and new features by release.
+Latest release news is added at the top of this document.</p>
 
-          <li>Ant-based orchestration of the processing environment, from preprocessing to transformation to any required post-processing.</li>
+<div class="section"><h4 class="sectiontitle">DITA Open Source Toolkit 1.0</h4>              <div class="p">The initial
+release of the Open Sourced DITA Toolkit introduces major architectural changes
+from the previous, developerWorks version of the Toolkit. New features in
+this release are:<ol>
+<li>A new, Java-based processing architecture that supports single-threaded
+execution throughout.</li>
 
-          <li>A pre-processor core that supports conditional processing and conref resolution.</li>
+<li>Ant-based orchestration of the processing environment, from preprocessing
+to transformation to any required post-processing.</li>
 
-          <li>Map-driven processing that generates links for transformed topics.</li>
+<li>A pre-processor core that supports conditional processing and conref resolution.</li>
 
-          <li>A new DITA to HTML transform that replaces the previous topic2html_Impl.xsl core transform. This new core is based on requirements for high-volume usage within IBM for the past several years.</li>
+<li>Map-driven processing that generates links for transformed topics.</li>
 
-        </ol>
+<li>A new DITA to HTML transform that replaces the previous topic2html_Impl.xsl
+core transform. This new core is based on requirements for high-volume usage
+within IBM for the past several years.</li>
+
+</ol>
 </div>
+       <p>Ant-driven processing means that you can integrate the
+DITA processing tools into a seamless pipeline within supportive environments
+such as Eclipse.</p>
+       <p>The DTDs and Schemas in this version are based
+on those in the previous dita132 package with bug fixes. The DITA OS Toolkit
+will later support the OASIS 1.0 specification in its public review form.</p>
+ 
+   </div>
 
-      <p>Ant-driven processing means that you can integrate the DITA processing tools into a seamless pipeline within supportive environments such as Eclipse.</p>
+<div class="section"><h4 class="sectiontitle">DITA history on developerWorks (pre-Open Source)</h4>        
+     <p>Versions of the toolkit prior to Open Source are in the developerWorks
+XML Zone at this address: <a href="http://www-106.ibm.com/developerworks/xml/library/x-dita6/x-dita_downloads.html">DITA
+Downloads</a> Change logs for those versions are within the Readme files
+in each distribution.</p>
+     </div>
 
-      <p>The DTDs and Schemas in this version are based on those in the previous dita132 package with bug fixes. The DITA OS Toolkit will later support the OASIS 1.0 specification in its public review form.</p>
-
-    </div>
-
-    <div class="section"><h4 class="sectiontitle">DITA history on developerWorks (pre-Open Source)</h4>
-      
-      <p>Versions of the toolkit prior to Open Source are in the developerWorks XML Zone at this address: <a href="http://www-106.ibm.com/developerworks/xml/library/x-dita6/x-dita_downloads.html">DITA Downloads</a> Change logs for those versions are within the Readme files in each distribution.</p>
-
-    </div>
-
-  </div>
+</div>
 
 <div>
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">The DITA Open Toolkit</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit</a></div>
 </div>
 <div class="relconcepts"><strong>Related concepts</strong><br />
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
-<div><a href="DITA-ant.html" title="You can use the Ant build tool to automate builds that use the DITA processes including output for the sample documents provided with DITA.">Building DITA output with Ant</a></div>
+<div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
 </div>
 <div class="reltasks"><strong>Related tasks</strong><br />
-<div><a href="DITA-installing.html" title="This topic explains how to install the DITA Toolkit processing environment.">Installing the DITA Toolkit</a></div>
+<div><a href="DITA-installation.html" title="This topic explains how to install the DITA Toolkit processing environment.">Installing the DITA Toolkit</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br />
+<div><a href="DITA-tweaks.html" title="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
 </div>
 <div class="relinfo"><strong>Related information</strong><br />
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
-<div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
-<div><a href="DITA-tweaks.html" title="No one transform is ever able to meet your requirements off the shelf. DITA transforms support a number of ways to customize or enhance the output without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
-<div><a href="DITA-XS-readme.html" title="This document describes the release notes and usage of the experimental DITA XML Schema on developerWorks.">DITA XML Schema Readme</a></div>
 </div>
 </div>
 </body>
