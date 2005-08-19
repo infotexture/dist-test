@@ -13,11 +13,14 @@
 <meta name="abstract" content="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly." />
 <meta name="description" content="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly." />
 <meta scheme="URI" name="DC.Relation" content="DITA-readme.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-relnotes.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-changes.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-futures.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-installation.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-tested.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-ant.html" />
+<meta scheme="URI" name="DC.Relation" content="DITA-javacmd.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-variables.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-parameters.html" />
 <meta scheme="URI" name="DC.Relation" content="DITA-stubs.html" />
@@ -37,35 +40,40 @@
 DITA Toolkit supports other ways to customize or enhance the transforms without
 having to modify core transforms directly.</p>
 
-<div class="section"><p>The <em>dita2htmlImpl.xsl</em> file is the main XHTML processor
-to produce the output. You can work with the following variables and parameters
-to change the way of processing.</p>
-<p>If you need to make code changes to <em>dita2htmlImpl.xsl</em> to
-change a variable value, the preferred mechanism is to create an override
-transform and place your changed code in the new transform. </p>
-<div class="p">Here is
-an example of an override transform: <ol>
-<li>In the <tt>/xsl/</tt> directory, make a copy of the <em>dita2xhtml.xsl</em> file
-and change the filename of the copy.</li>
+  <div class="section">
+    <p>The <em>dita2htmlImpl.xsl</em> file is the main XHTML processor to produce 
+      the output. You can work with the following variables and parameters to 
+      change the way of processing.</p>
 
-<li>Add your XSLT changes within the new file.</li>
+    <p>If you need to make code changes to <em>dita2htmlImpl.xsl</em> to change a 
+      variable value, the preferred mechanism is to create an override 
+      transform and place your changed code in the new transform. </p>
 
-</ol>
+    <div class="p">Here is an example of an override transform: <ol> <li>In the 
+      <tt>/xsl/</tt> directory, make a copy of the <em>dita2xhtml.xsl</em> file 
+      and change the filename of the copy.</li>
+ <li>Add your XSLT changes 
+      within the new file.</li>
+ </ol>
  </div>
-<div class="note"><span class="notetitle">Note: </span><ul>
-<li>Making editing changes to XSLT transforms is not included in this document;
-refer to another XSLT reference for guidance.</li>
 
-<li>It is not recommended to edit any of the DITA distribution files, because
-your modification might be erased by package updates.</li>
+    <div class="note"><span class="notetitle">Note: </span>
+      <ul>
+        <li>Making editing changes to XSLT transforms is not included in this 
+          document; refer to another XSLT reference for guidance.</li>
 
-<li>You are responsible for any change you make to DITA transforms. If you
-need help, the <a href="news://news.software.ibm.com/ibm.software.developerworks.xml.xml">DITA
-forum on developerWorks</a> may be a useful resource.</li>
+        <li>It is not recommended to edit any of the DITA distribution files, 
+          because your modification might be erased by package updates.</li>
 
-</ul>
-</div>
-</div>
+        <li>You are responsible for any change you make to DITA transforms. If 
+          you need help, the <a href="news://news.software.ibm.com/ibm.software.developerworks.xml.xml">DITA 
+          forum on developerWorks</a> may be a useful resource.</li>
+
+      </ul>
+
+    </div>
+
+  </div>
 
 </div>
 
@@ -85,12 +93,17 @@ The dita2htmlImpl.xsl stylesheet provides code stubs that extend the appearance 
 <div class="relconcepts"><strong>Related concepts</strong><br />
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
+<div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
 </div>
 <div class="reltasks"><strong>Related tasks</strong><br />
 <div><a href="DITA-installation.html" title="This topic explains how to install the DITA Toolkit processing environment.">Installing the DITA Toolkit</a></div>
 </div>
+<div class="relref"><strong>Related reference</strong><br />
+<div><a href="DITA-relnotes.html" title="">DITA release notes</a></div>
+</div>
 <div class="relinfo"><strong>Related information</strong><br />
-<div><a href="DITA-changes.html" title="This document lists major changes and new features by release. Latest release news is added at the top of this document.">DITA release history</a></div>
+<div><a href="DITA-changes.html" title="This document lists major changes and new features by release.">DITA release history</a></div>
+<div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
 </div>
 </div>

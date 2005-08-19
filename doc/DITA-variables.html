@@ -22,46 +22,50 @@
 <body id="variables"><a name="variables"><!-- --></a>
 
 
-<h1 class="topictitle1">Global variable declarations</h1>
+  <h1 class="topictitle1">Global variable declarations</h1>
 
+  
+  <div><p>If you want to change the values of the following global variable 
+    declarations to meet your output requirements, copy the appropriate XSL 
+    directive into an override stylesheet that imports the<em> dita2htmlImpl.xsl 
+    </em> file and make your editing changes in the stylesheet.</p>
 
-<div><p>If you want to change the values of the following global variable
-declarations to meet your output requirements, copy the appropriate XSL directive
-into an override stylesheet that imports the<em> dita2htmlImpl.xsl </em> file
-and make your editing changes in the stylesheet.</p>
+    <div class="section">
+      <table summary="" cellspacing="0" cellpadding="4" border="1" class="simpletableborder">
+        <tr>
+          <th valign="bottom" align="left" id="N10034" width="20%">Variable name</th>
 
-<div class="section"><table summary="" cellspacing="0" cellpadding="4" border="1" class="simpletableborder">
-<tr>
-<th valign="bottom" align="left" id="N10035" width="20%">Variable name</th>
+          <th valign="bottom" align="left" id="N1003A" width="50%">Explanation</th>
 
-<th valign="bottom" align="left" id="N1003B" width="50%">Explanation</th>
+          <th valign="bottom" align="left" id="N10040" width="30%">Default Value</th>
 
-<th valign="bottom" align="left" id="N10041" width="30%">Default Value</th>
+        </tr>
 
-</tr>
+        <tr>
+          <td valign="top" headers="N10034">afill</td>
 
-<tr>
-<td valign="top" headers="N10035">afill</td>
+          <td valign="top" headers="N1003A">Filler for A-name anchors (link-to points that have no data 
+            content in and of themselves; some browsers fail to link if a named 
+            anchor has no text)</td>
 
-<td valign="top" headers="N1003B">Filler for A-name anchors (link-to points that have no data content
-in and of themselves; some browsers fail to link if a named anchor has no
-text)</td>
+          <td valign="top" headers="N10040">null string (could be a space character, &amp;nbsp;, 
+            &amp;#160;, etc.)</td>
 
-<td valign="top" headers="N10041">null string (could be a space character, &amp;nbsp;, &amp;#160;,
-etc.)</td>
+        </tr>
 
-</tr>
+      </table>
 
-</table>
-<p>For example, copy the <strong>afill</strong> variable declaration into
-your override stylesheet and change the content to represent the actual copyright
-owner of your content (this string will be copied into the result HTML document
-as a comment ):</p>
-<pre>&lt;xsl:variable name="afill"&gt;&amp;nbsp;&lt;/xsl:variable&gt;
-</pre>
-</div>
+      <p>For example, copy the <strong>afill</strong> variable declaration into your 
+        override stylesheet and change the content to represent the actual 
+        copyright owner of your content (this string will be copied into the 
+        result HTML document as a comment ):</p>
 
-</div>
+      <pre>&lt;xsl:variable 
+        name="afill"&gt;&amp;nbsp;&lt;/xsl:variable&gt; </pre>
+
+    </div>
+
+  </div>
 
 <div>
 <div class="familylinks">

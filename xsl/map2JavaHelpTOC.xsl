@@ -7,6 +7,9 @@
 <!-- stylesheet imports -->
 <xsl:import href="xslhtml/map2TOC.xsl"/>
 
+<!-- default "output extension" processing parameter ('.html')-->
+<xsl:param name="OUTEXT" select="'.html'"/><!-- "htm" and "html" are valid values -->
+
 <xsl:output
     method="xml"
     omit-xml-declaration="no"
