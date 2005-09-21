@@ -16,7 +16,7 @@
 <meta content="XHTML" name="DC.Format" />
 <meta content="antscript" name="DC.Identifier" />
 <meta content="en-us" name="DC.Language" />
-<link href="commonltr.css" type="text/css" rel="stylesheet" />
+<link href="E:\eclipse\workspace\DITA-OT\out\doc\commonltr.css" type="text/css" rel="stylesheet" />
 <title>Ant tasks and script</title>
 </head>
 <body id="antscript"><a name="antscript"><!-- --></a>
@@ -210,6 +210,19 @@
 
                   </tr>
 
+                  <tr>
+                    <td valign="top" width="16.666666666666664%" headers="N1009B ">clean.temp</td>
+
+                    <td valign="top" width="66.66666666666666%" headers="N100A1 ">
+                      <span id="antscript__cleantemp"><a name="antscript__cleantemp"><!-- --></a>The parameter to specify whether to clean 
+                        the temp directory before each build. Only "no" and "yes" 
+                        are valid values. The default is yes.</span>
+                    </td>
+
+                    <td valign="top" width="16.666666666666664%" headers="N100A7 ">No</td>
+
+                  </tr>
+
                 </tbody>
 
               </table>
@@ -226,11 +239,11 @@
                 
                 <thead align="left">
                   <tr>
-                    <th valign="top" width="16.666666666666664%" id="N1029D">Parameter </th>
+                    <th valign="top" width="16.666666666666664%" id="N102BC">Parameter </th>
 
-                    <th valign="top" width="66.66666666666666%" id="N102A3">Description</th>
+                    <th valign="top" width="66.66666666666666%" id="N102C2">Description</th>
 
-                    <th valign="top" width="16.666666666666664%" id="N102A9">Required</th>
+                    <th valign="top" width="16.666666666666664%" id="N102C8">Required</th>
 
                   </tr>
 
@@ -238,36 +251,43 @@
 
                 <tbody>
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.indexshow</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.indexshow</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
                       <span id="antscript__indexshow"><a name="antscript__indexshow"><!-- --></a>The parameter to specify whether each 
                         index entry should display within the body of the text 
                         itself. Only "no" and "yes" are valid values.</span>
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.copycss</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.copycss</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
-                      <span id="antscript__copycss"><a name="antscript__copycss"><!-- --></a>The parameter to specify whether all the 
-                        user-specified css files are to be copied to the 
-                        directory specified in the csspath option. Only "no" 
-                        and "yes" are valid values.</span>
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
+                      <span id="antscript__copycss"><a name="antscript__copycss"><!-- --></a>The parameter to specify whether copy css files 
+                        to the directory specified by <tt>args.csspath</tt>. Only "no" and "yes" 
+                        are valid values.</span>
+                      <div class="note" id="antscript__copycss-note"><a name="antscript__copycss-note"><!-- --></a><span class="notetitle">Note: </span>
+                        If <tt>args.copycss</tt> equals "yes", <tt>args.csspath</tt> must be an valid 
+                        local directory, URL are invalid. 
+                        If <tt>args.copycss</tt> equals "no", since no css files copied to 
+                        <tt>args.csspath</tt>, if <tt>args.csspath</tt> is a local path, the 
+                        css reference will be invalid.
+                      </div>
+
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.outext</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.outext</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
                       <span id="antscript__outext"><a name="antscript__outext"><!-- --></a>The output file extension name for 
                         generated xhtml files. Typically, '.html' or '.htm' can 
                         be used as the extension name for the generated xhtml 
@@ -275,67 +295,74 @@
                         default is '.html'.</span>
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.css</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.css</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
-                      <span id="antscript__argscss"><a name="antscript__argscss"><!-- --></a>User specified css file. This stylesheet can use 
-                        the css cascade effect to modify existing properties or 
-                        it can override or define new properties.</span>
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
+                      <span id="antscript__argscss"><a name="antscript__argscss"><!-- --></a>User specified css file, it can be a local file or remote
+                        file in the web.</span>
+                      <div class="note" id="antscript__argscss-note"><a name="antscript__argscss-note"><!-- --></a><span class="notetitle">Note: </span>It must be a filepath relative to URL or local root dir base on 
+                        the type of <tt>args.csspath</tt>.</div>
+
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.csspath</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.csspath</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
-                      <span id="antscript__csspath"><a name="antscript__csspath"><!-- --></a>The output path of css files.</span>
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
+                      <span id="antscript__csspath"><a name="antscript__csspath"><!-- --></a>The path for css reference, it can be a URL start 
+                        with 'http:\\' or 'https:\\', it also can be a local absolute directory.
+                        Default will be output directory.</span>
+                      <div class="note" id="antscript__csspath-note"><a name="antscript__csspath-note"><!-- --></a><span class="notetitle">Note: </span><tt>args.csspath</tt> should end with '\' if it is a URL,
+                        or file separator for local path.</div>
+
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.hdf</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.hdf</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
                       <span id="antscript__argshdf"><a name="antscript__argshdf"><!-- --></a>The name of the file containing XHTML to 
                         be placed in the HEAD area.</span>
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.hdr</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.hdr</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
                       <span id="antscript__argshdr"><a name="antscript__argshdr"><!-- --></a>The name of the file containing XHTML to 
                         be placed in the BODY running-heading area.</span>
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
                   <tr>
-                    <td valign="top" width="16.666666666666664%" headers="N1029D ">args.ftr</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102BC ">args.ftr</td>
 
-                    <td valign="top" width="66.66666666666666%" headers="N102A3 ">
+                    <td valign="top" width="66.66666666666666%" headers="N102C2 ">
                       <span id="antscript__argsftr"><a name="antscript__argsftr"><!-- --></a>The name of the file containing XHTML to 
                         be placed in the BODY running-footing area.</span>
                     </td>
 
-                    <td valign="top" width="16.666666666666664%" headers="N102A9 ">No</td>
+                    <td valign="top" width="16.666666666666664%" headers="N102C8 ">No</td>
 
                   </tr>
 
@@ -369,18 +396,18 @@
                   based on xhtml. 
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" width="90%" frame="border" border="1" rules="all"><caption>Table 3. Parameter 
                   Table of dita2eclipsehelp</caption> <thead align="left"> <tr> 
-                  <th valign="top" width="16.666666666666664%" id="N1042B">Parameter </th>
- <th valign="top" width="66.66666666666666%" id="N10431">Description</th>
+                  <th valign="top" width="16.666666666666664%" id="N1048E">Parameter </th>
+ <th valign="top" width="66.66666666666666%" id="N10494">Description</th>
  
-                  <th valign="top" width="16.666666666666664%" id="N10437">Required</th>
+                  <th valign="top" width="16.666666666666664%" id="N1049A">Required</th>
  </tr>
  </thead>
  <tbody> <tr> 
-                  <td valign="top" width="16.666666666666664%" headers="N1042B ">args.eclipse.toc</td>
- <td align="left" valign="top" width="66.66666666666666%" headers="N10431 ">The root 
+                  <td valign="top" width="16.666666666666664%" headers="N1048E ">args.eclipse.toc</td>
+ <td align="left" valign="top" width="66.66666666666666%" headers="N10494 ">The root 
                   file name of the output toc file. The default is the name of 
                   input ditamap file.</td>
- <td valign="top" width="16.666666666666664%" headers="N10437 ">No</td>
+ <td valign="top" width="16.666666666666664%" headers="N1049A ">No</td>
  </tr>
 </tbody>
  
@@ -403,25 +430,25 @@
                   based on html. 
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" width="90%" frame="border" border="1" rules="all"><caption>Table 3. Parameter Table 
                   of dita2javahelp</caption> <thead align="left"> <tr> 
-                  <th valign="top" width="16.666666666666664%" id="N104B2">Parameter </th>
- <th valign="top" width="66.66666666666666%" id="N104B8">Description</th>
+                  <th valign="top" width="16.666666666666664%" id="N10515">Parameter </th>
+ <th valign="top" width="66.66666666666666%" id="N1051B">Description</th>
  
-                  <th valign="top" width="16.666666666666664%" id="N104BE">Required</th>
+                  <th valign="top" width="16.666666666666664%" id="N10521">Required</th>
  </tr>
  </thead>
  <tbody> <tr> 
-                  <td valign="top" width="16.666666666666664%" headers="N104B2 ">args.javahelp.toc</td>
- <td align="left" valign="top" width="66.66666666666666%" headers="N104B8 ">The root 
+                  <td valign="top" width="16.666666666666664%" headers="N10515 ">args.javahelp.toc</td>
+ <td align="left" valign="top" width="66.66666666666666%" headers="N1051B ">The root 
                   file name of the output toc file. The default is the root 
                   file name of the input toc file.</td>
- <td valign="top" width="16.666666666666664%" headers="N104BE ">No</td>
+ <td valign="top" width="16.666666666666664%" headers="N10521 ">No</td>
  
                   </tr>
- <tr> <td valign="top" width="16.666666666666664%" headers="N104B2 ">args.javahelp.map</td>
- <td align="left" valign="top" width="66.66666666666666%" headers="N104B8 ">The root file name of the output javahelp map 
+ <tr> <td valign="top" width="16.666666666666664%" headers="N10515 ">args.javahelp.map</td>
+ <td align="left" valign="top" width="66.66666666666666%" headers="N1051B ">The root file name of the output javahelp map 
                   file. The default is the root file name of the map 
                   file.</td>
- <td valign="top" width="16.666666666666664%" headers="N104BE ">No</td>
+ <td valign="top" width="16.666666666666664%" headers="N10521 ">No</td>
  </tr>
  </tbody>
  </table>
@@ -435,18 +462,18 @@
                 <dd>Transform DITA topic or DITA map into xhtml web 
                   output.
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" width="90%" frame="border" border="1" rules="all"><caption>Table 3. Parameter Table of 
-                  dita2xhtml</caption> <thead align="left"> <tr> <th valign="top" width="16.666666666666664%" id="N10541">Parameter 
+                  dita2xhtml</caption> <thead align="left"> <tr> <th valign="top" width="16.666666666666664%" id="N105A4">Parameter 
                   </th>
- <th valign="top" width="66.66666666666666%" id="N10547">Description</th>
- <th valign="top" width="16.666666666666664%" id="N1054D">Required</th>
+ <th valign="top" width="66.66666666666666%" id="N105AA">Description</th>
+ <th valign="top" width="16.666666666666664%" id="N105B0">Required</th>
  
                   </tr>
  </thead>
- <tbody> <tr> <td valign="top" width="16.666666666666664%" headers="N10541 ">args.xhtml.toc</td>
+ <tbody> <tr> <td valign="top" width="16.666666666666664%" headers="N105A4 ">args.xhtml.toc</td>
  
-                  <td align="left" valign="top" width="66.66666666666666%" headers="N10547 ">The root file name of the output toc 
-                  file. The default is 'index'.)</td>
- <td valign="top" width="16.666666666666664%" headers="N1054D ">No</td>
+                  <td align="left" valign="top" width="66.66666666666666%" headers="N105AA ">The root file name of the output toc 
+                  file. The default is 'index'.</td>
+ <td valign="top" width="16.666666666666664%" headers="N105B0 ">No</td>
  
                   </tr>
 </tbody>
@@ -458,7 +485,32 @@
               
                 <dt class="dlterm">dita2pdf</dt>
 
-                <dd>Transform DITA topic or DITA map into pdf. </dd>
+                <dd>Transform DITA topic or DITA map into pdf. 
+                  
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" width="90%" frame="border" border="1" rules="all"><caption>Table 3. Parameter Table of 
+                  dita2pdf</caption> <thead align="left"> <tr> <th valign="top" width="16.666666666666664%" id="N10619">Parameter 
+                  </th>
+ <th valign="top" width="66.66666666666666%" id="N1061F">Description</th>
+ <th valign="top" width="16.666666666666664%" id="N10625">Required</th>
+ 
+                  </tr>
+ </thead>
+ <tbody> <tr> <td valign="top" width="16.666666666666664%" headers="N10619 ">args.fo.img.ext</td>
+ 
+                  <td align="left" valign="top" width="66.66666666666666%" headers="N1061F "><span id="antscript__foimgext"><a name="antscript__foimgext"><!-- --></a>The extension name of image file in pdf transformation. 
+                    Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
+                    <div class="note" id="antscript__foimgextnote"><a name="antscript__foimgextnote"><!-- --></a><span class="notetitle">Note: </span>Only one extension supported in the same 
+                      transformation, image files with other extensions will be renamed 
+                      to the specified extension.</div>
+</td>
+ 
+                  <td valign="top" width="16.666666666666664%" headers="N10625 ">No</td>
+ 
+                  </tr>
+</tbody>
+ </table>
+</div>
+</dd>
 
               
               

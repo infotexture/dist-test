@@ -137,18 +137,21 @@
               <entry colname="col1"><i>/csspath</i>:{args.csspath}</entry>
               <entry colname="col2">
                 <ph conref="DITA-antscript.xml#antscript/csspath"></ph>
+                <note conref="DITA-antscript.xml#antscript/csspath-note"/>
               </entry>
             </row>
             <row>
               <entry colname="col1"><i>/css</i>:{args.css}</entry>
               <entry colname="col2">
-                <ph conref="DITA-antscript.xml#antscript/argscss"></ph>
+                <ph conref="DITA-antscript.xml#antscript/argscss"/>
+                <note conref="DITA-antscript.xml#antscript/argscss-note"/>
               </entry>
             </row>
             <row>
               <entry colname="col1"><i>/copycss</i>:{args.copycss}</entry>
               <entry colname="col2">
                 <ph conref="DITA-antscript.xml#antscript/copycss"></ph>
+                <note conref="DITA-antscript.xml#antscript/copycss-note"/>
               </entry>
             </row>
             <row>
@@ -167,6 +170,19 @@
               <entry colname="col1"><i>/xsl</i>:{args.xsl}</entry>
               <entry colname="col2">
                 <ph conref="DITA-antscript.xml#antscript/argsxsl"></ph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1"><i>/cleantemp</i>:{clean.temp}</entry>
+              <entry colname="col2">
+                <ph conref="DITA-antscript.xml#antscript/cleantemp"></ph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1"><i>/foimgext</i>:{args.fo.img.ext}</entry>
+              <entry colname="col2">
+                <ph conref="DITA-antscript.xml#antscript/foimgext"/>
+                <note conref="DITA-antscript.xml#antscript/foimgextnote"/>
               </entry>
             </row>
           </tbody>

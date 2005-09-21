@@ -24,7 +24,7 @@
 <meta content="XHTML" name="DC.Format" />
 <meta content="installation" name="DC.Identifier" />
 <meta content="en-us" name="DC.Language" />
-<link href="commonltr.css" type="text/css" rel="stylesheet" />
+<link href="E:\eclipse\workspace\DITA-OT\out\doc\commonltr.css" type="text/css" rel="stylesheet" />
 <title>Installing the DITA Toolkit</title>
 </head>
 <body id="installation"><a name="installation"><!-- --></a>
@@ -145,8 +145,7 @@
                   &lt;saxon_dir&gt;\saxon.jar</samp></p>
 </li>
 
-                <li>Set up ANT_OPTS.<p><samp class="codeph">set ANT_OPTS=%ANT_OPTS% - 
-                  Djavax.xml.transform.TransformerFactory=com.icl.saxon.TransformerFactoryImpl</samp></p>
+                <li>Set up ANT_OPTS.<p><samp class="codeph">set ANT_OPTS=%ANT_OPTS% -Djavax.xml.transform.TransformerFactory=com.icl.saxon.TransformerFactoryImpl</samp></p>
 <div class="attention"><span class="attentiontitle">Attention: </span>if you do not use Saxon, please remove the 
                   <em>saxon.jar</em> file and ANT_OPTS from the environment 
                   variable.</div>
@@ -165,8 +164,7 @@
             <td valign="top" headers="N10176-desc N101D0">
               <ul>
                 <li>Set up CLASSPATH to include the <em>xalan.jar</em> file and 
-                  the <em> xercesImpl.jar</em> file. <pre>set 
-                  CLASSPATH=%CLASSPATH%;&lt;xalan_dir&gt;\bin</pre>
+                  the <em> xercesImpl.jar</em> file. <pre>set CLASSPATH=%CLASSPATH%;&lt;xalan_dir&gt;\bin</pre>
 <div class="attention"><span class="attentiontitle">Attention: </span>if you don't use the Xalan, please remove<em> 
                   jar</em> files related to the Xalan from the environment 
                   variable CLASSPATH.</div>

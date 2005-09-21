@@ -24,7 +24,7 @@
 <meta content="XHTML" name="DC.Format" />
 <meta content="usingparameterbuildingtool" name="DC.Identifier" />
 <meta content="en-us" name="DC.Language" />
-<link href="commonltr.css" type="text/css" rel="stylesheet" />
+<link href="E:\eclipse\workspace\DITA-OT\out\doc\commonltr.css" type="text/css" rel="stylesheet" />
 <title>Building DITA output with Java command line</title>
 </head>
 <body id="usingparameterbuildingtool"><a name="usingparameterbuildingtool"><!-- --></a>
@@ -250,7 +250,12 @@
               <td valign="top" headers="N100E6 "><em>/csspath</em>:{args.csspath}</td>
 
               <td valign="top" headers="N100EF ">
-                <span>The output path of css files.</span>
+                <span>The path for css reference, it can be a URL start 
+                        with 'http:\\' or 'https:\\', it also can be a local absolute directory.
+                        Default will be output directory.</span>
+                <div class="note"><span class="notetitle">Note: </span><tt>args.csspath</tt> should end with '\' if it is a URL,
+                        or file separator for local path.</div>
+
               </td>
 
             </tr>
@@ -259,9 +264,11 @@
               <td valign="top" headers="N100E6 "><em>/css</em>:{args.css}</td>
 
               <td valign="top" headers="N100EF ">
-                <span>User specified css file. This stylesheet can use 
-                        the css cascade effect to modify existing properties or 
-                        it can override or define new properties.</span>
+                <span>User specified css file, it can be a local file or remote
+                        file in the web.</span>
+                <div class="note"><span class="notetitle">Note: </span>It must be a filepath relative to URL or local root dir base on 
+                        the type of <tt>args.csspath</tt>.</div>
+
               </td>
 
             </tr>
@@ -270,10 +277,17 @@
               <td valign="top" headers="N100E6 "><em>/copycss</em>:{args.copycss}</td>
 
               <td valign="top" headers="N100EF ">
-                <span>The parameter to specify whether all the 
-                        user-specified css files are to be copied to the 
-                        directory specified in the csspath option. Only "no" 
-                        and "yes" are valid values.</span>
+                <span>The parameter to specify whether copy css files 
+                        to the directory specified by <tt>args.csspath</tt>. Only "no" and "yes" 
+                        are valid values.</span>
+                <div class="note"><span class="notetitle">Note: </span>
+                        If <tt>args.copycss</tt> equals "yes", <tt>args.csspath</tt> must be an valid 
+                        local directory, URL are invalid. 
+                        If <tt>args.copycss</tt> equals "no", since no css files copied to 
+                        <tt>args.csspath</tt>, if <tt>args.csspath</tt> is a local path, the 
+                        css reference will be invalid.
+                      </div>
+
               </td>
 
             </tr>
@@ -312,6 +326,31 @@
                         transformation, dita2xhtml.xsl in xhtml/eclipsehelp 
                         transformation, and dita2html.xsl in javahelp/htmlhelp 
                         transformation.</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100E6 "><em>/cleantemp</em>:{clean.temp}</td>
+
+              <td valign="top" headers="N100EF ">
+                <span>The parameter to specify whether to clean 
+                        the temp directory before each build. Only "no" and "yes" 
+                        are valid values. The default is yes.</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100E6 "><em>/foimgext</em>:{args.fo.img.ext}</td>
+
+              <td valign="top" headers="N100EF ">
+                <span>The extension name of image file in pdf transformation. 
+                    Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
+                <div class="note"><span class="notetitle">Note: </span>Only one extension supported in the same 
+                      transformation, image files with other extensions will be renamed 
+                      to the specified extension.</div>
+
               </td>
 
             </tr>
