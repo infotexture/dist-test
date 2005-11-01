@@ -1,25 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="copyright" content="(C) Copyright 2005" />
-<meta name="DC.rights.owner" content="(C) Copyright 2005" />
-<meta content="public" name="security" />
-<meta content="index,follow" name="Robots" />
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="copyright" content="(C) Copyright 2005">
+<meta name="DC.rights.owner" content="(C) Copyright 2005">
+<meta content="public" name="security">
+<meta content="index,follow" name="Robots">
 <meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
-<meta content="topic" name="DC.Type" />
-<meta name="DC.Title" content="Specializing domains in DITA" />
-<meta name="abstract" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains." />
-<meta name="description" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains." />
-<meta scheme="URI" name="DC.Relation" content="DITA-rm.html" />
-<meta scheme="URI" name="DC.Relation" content="DITA-dsf.html" />
-<meta scheme="URI" name="DC.Relation" content="DITA-mapdomains.html" />
-<meta content="Erik Hennum; IBM Corporation; ehennum@us.ibm.com. Erik Hennum works on the design and implementation of User Assistance for the IBM Storage Systems Group." name="DC.Creator" />
-<meta content="XHTML" name="DC.Format" />
-<meta content="domains" name="DC.Identifier" />
-<meta content="en-us" name="DC.Language" />
-<link href="E:\eclipse\workspace\DITA-OT\out\doc\articles\commonltr.css" type="text/css" rel="stylesheet" />
+<meta content="topic" name="DC.Type">
+<meta name="DC.Title" content="Specializing domains in DITA">
+<meta name="abstract" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
+<meta name="description" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
+<meta content="Erik Hennum; IBM Corporation; ehennum@us.ibm.com. Erik Hennum works on the design and implementation of User Assistance for the IBM Storage Systems Group." name="DC.Creator">
+<meta content="XHTML" name="DC.Format">
+<meta content="domains" name="DC.Identifier">
+<meta content="en-us" name="DC.Language">
+<link href="D:\eclipse\workspace\DITA-OT1.1.2\out\doc\articles\commonltr.css" type="text/css" rel="stylesheet">
 <title>Specializing domains in DITA</title>
 </head>
 <body id="domains"><a name="domains"><!-- --></a>
@@ -34,13 +30,7 @@
     <p>The Darwin Information Typing Architecture (DITA) is an XML architecture for extensible technical information. A domain extends DITA with a set of elements whose names and content models are unique to an organization or field of knowledge. Architects and authors can combine elements from any number of domains, leading to great flexibility and precision in capturing the semantics and structure of their information. In this overview, you learn how to define your own domains.</p>
 
   </div>
-  <div>
-<div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-rm.html" title="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">Introduction to the Darwin Information Typing Architecture</a></div>
-<div class="previouslink"><strong>Previous topic:</strong> <a href="DITA-dsf.html" title="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">Specializing topic types in DITA</a></div>
-<div class="nextlink"><strong>Next topic:</strong> <a href="DITA-mapdomains.html" title="The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.">How to define a formal information architecture with DITA map domains</a></div>
-</div>
-</div><div class="nested1" id="intro"><a name="intro"><!-- --></a>
+  <div class="nested1" id="intro"><a name="intro"><!-- --></a>
     <h2 class="topictitle2">Introducing domain specialization</h2>
 
     <div>
@@ -51,8 +41,8 @@
       <p><dfn class="term">Domain specialization</dfn> lets you define new types of content elements independently of topic type. That is, you can derive new phrase or block elements from the existing phrase and block elements. You can use a specialized content element within any topic structure where its base element is allowed. For instance, because a <span class="apiname">p</span> paragraph can appear within a concept body or task prerequisite, a specialized paragraph could appear there, too.</p>
 
       <div class="fignone">
-        <img src="image/content_special.gif" height="125" width="406" alt="specialized content can be inserted in topic bodies" />
-        <p>Here's an analogy from the kitchen. You might think of topics as types of containers for preparing food in different ways, such as a basic frying pan, blender, and baking dish. The content elements are like the ingredients that go into these containers, such as spices, flour, and eggs. The domain resembles a specialty grocer who provides ingredients for a particular cuisine. Your pot might contain chorizo from the carnicería when you're cooking TexMex or risotto when you're cooking Italian. Similarly, your topics can contain elements from the programming domain when you're writing about a programming language or elements from the UI domain when you're writing about a GUI application.</p>
+        <img src="image/content_special.gif" height="125" width="406" alt="specialized content can be inserted in topic bodies">
+        <p>Here's an analogy from the kitchen. You might think of topics as types of containers for preparing food in different ways, such as a basic frying pan, blender, and baking dish. The content elements are like the ingredients that go into these containers, such as spices, flour, and eggs. The domain resembles a specialty grocer who provides ingredients for a particular cuisine. Your pot might contain chorizo from the carnicer&iacute;a when you're cooking TexMex or risotto when you're cooking Italian. Similarly, your topics can contain elements from the programming domain when you're writing about a programming language or elements from the UI domain when you're writing about a GUI application.</p>
 
         <p>DITA has broad tastes, so you can mix domains as needed. If you're describing how to program GUI applications, your topics can draw on elements from both the programming and UI domains. You can also create new domains for <em>your</em> content. For instance, a new domain could provide elements for describing hardware devices. You can also reuse new domains created by others, expanding the variety of what you can cook up.</p>
 
@@ -62,7 +52,14 @@
 
     </div>
 
-  </div>
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-rm.html" title="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">Introduction to the Darwin Information Typing Architecture</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="DITA-dsf.html" title="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">Specializing topic types in DITA</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="DITA-mapdomains.html" title="The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.">How to define a formal information architecture with DITA map domains</a></div>
+</div>
+</div>
+</div>
 
   <div class="nested1" id="base"><a name="base"><!-- --></a>
     <h2 class="topictitle2">Understanding the base domains</h2>
@@ -74,9 +71,9 @@
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all">
           <thead align="left">
             <tr>
-              <th valign="top" id="N10103">Domain</th>
+              <th valign="top" id="N10104">Domain</th>
 
-              <th valign="top" id="N10109">Purpose</th>
+              <th valign="top" id="N1010A">Purpose</th>
 
             </tr>
 
@@ -84,30 +81,30 @@
 
           <tbody>
             <tr>
-              <td valign="top" headers="N10103 ">highlight</td>
+              <td valign="top" headers="N10104 ">highlight</td>
 
-              <td valign="top" headers="N10109 ">To highlight text with styles such as bold, italic, and monospace</td>
-
-            </tr>
-
-            <tr>
-              <td valign="top" headers="N10103 ">programming</td>
-
-              <td valign="top" headers="N10109 ">To define the syntax and give examples of programming languages</td>
+              <td valign="top" headers="N1010A ">To highlight text with styles such as bold, italic, and monospace</td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N10103 ">software</td>
+              <td valign="top" headers="N10104 ">programming</td>
 
-              <td valign="top" headers="N10109 ">To describe the operation of a software program</td>
+              <td valign="top" headers="N1010A ">To define the syntax and give examples of programming languages</td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N10103 ">UI</td>
+              <td valign="top" headers="N10104 ">software</td>
 
-              <td valign="top" headers="N10109 ">To describe the user interface of a software program</td>
+              <td valign="top" headers="N1010A ">To describe the operation of a software program</td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N10104 ">UI</td>
+
+              <td valign="top" headers="N1010A ">To describe the user interface of a software program</td>
 
             </tr>
 
@@ -567,7 +564,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
       <div class="section"><h4 class="sectiontitle">Notices</h4>
         
         <blockquote>
-          <p>© Copyright International Business Machines Corp., 2002, 2003. All rights reserved.</p>
+          <p>&copy; Copyright International Business Machines Corp., 2002, 2003. All rights reserved.</p>
 
           <p>The information provided in this document has not been submitted to any formal IBM test and is distributed "AS IS," without warranty of any kind, either express or implied. The use of this information or the implementation of any of these techniques described in this document is the reader's responsibility and depends on the reader's ability to evaluate and integrate them into their operating environment. Readers attempting to adapt these techniques to their own environments do so at their own risk. </p>
 

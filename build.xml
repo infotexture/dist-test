@@ -344,7 +344,7 @@
 
 		<target name="doc"
 			description="build the documentation"
-			depends="init, doc.langref.web, doc.articles.web, doc.readme.web">      
+			depends="init, doc.langref.web, doc.articles.web, doc.readme.web, doc.installguide.chm">      
 		</target>
 	
 		<target name="init.doc.langref" depends="init">
@@ -359,12 +359,26 @@
 				<param name="output.dir"     value="${dita.output.doc.langref.dir}"/>
 		        <param name="args.xhtml.toc" value="toc"/>
 			</antcall>
-			<copy
-				file="${dita.doc.langref.dir}${file.separator}index.html"
-				todir="${dita.output.doc.langref.dir}"/>
-		    <antcall target="dita.common.css">
-		        <param name="outputDir" value="${dita.output.doc.langref.dir}"/>
-		    </antcall>
+			<copy todir="${dita.output.doc.langref.dir}"
+            file="${dita.doc.langref.dir}${file.separator}index.html"/>		    
+		</target>
+    
+    <target name="doc.langref.chm" depends="init.doc.langref"
+			description="Build the langref document.">
+			<antcall target="dita2htmlhelp">
+				<param name="args.input"
+					     value="${dita.doc.langref.dir}${file.separator}ditaref-alpha.ditamap"/>
+				<param name="output.dir" value="${dita.output.doc.langref.dir}"/>
+			</antcall>    
+		</target>
+    
+    <target name="doc.langref.pdf" depends="init.doc.langref"
+			description="Build the langref document.">
+			<antcall target="dita2pdf">
+				<param name="args.input"
+					value="${dita.doc.langref.dir}${file.separator}ditaref-alpha.ditamap"/>
+				<param name="output.dir" value="${dita.output.doc.langref.dir}"/>		    
+			</antcall>
 		</target>
 	
 		<target name="clean.doc.langref"
@@ -383,8 +397,23 @@
 					value="${dita.doc.articles.dir}${file.separator}DITA-articles.ditamap"/>
 				<param name="output.dir"     value="${dita.output.doc.articles.dir}"/>
 			</antcall>
-			<antcall target="dita.common.css">
-		        <param name="outputDir" value="${dita.output.doc.articles.dir}"/>
+		</target>
+    
+    <target name="doc.articles.chm" depends="init.doc.articles"
+			description="Build the articles of dita as document.">
+			<antcall target="dita2htmlhelp">
+				<param name="args.input"
+					value="${dita.doc.articles.dir}${file.separator}DITA-articles.ditamap"/>
+				<param name="output.dir"     value="${dita.output.doc.articles.dir}"/>
+			</antcall>
+		</target>
+    
+    <target name="doc.articles.pdf" depends="init.doc.articles"
+			description="Build the articles of dita as document.">
+			<antcall target="dita2pdf">
+				<param name="args.input"
+					value="${dita.doc.articles.dir}${file.separator}DITA-articles.ditamap"/>
+				<param name="output.dir"     value="${dita.output.doc.articles.dir}"/>
 			</antcall>
 		</target>
 	
@@ -399,10 +428,47 @@
 					value="${dita.doc.dir}${file.separator}DITA-readme.ditamap"/>
 				<param name="output.dir"     value="${dita.output.doc.dir}"/>
 			</antcall>
-			<antcall target="dita.common.css">
-			    <param name="outputDir" value="${dita.output.doc.dir}"/>
+		</target>
+    
+    <target name="doc.readme.chm" depends="init">
+			<antcall target="dita2htmlhelp">
+				<param name="args.input"
+					value="${dita.doc.dir}${file.separator}DITA-readme.ditamap"/>
+				<param name="output.dir"     value="${dita.output.doc.dir}"/>
 			</antcall>
 		</target>
+    
+    <target name="doc.readme.pdf" depends="init">
+			<antcall target="dita2pdf">
+				<param name="args.input"
+					value="${dita.doc.dir}${file.separator}DITA-readme.ditamap"/>
+				<param name="output.dir"     value="${dita.output.doc.dir}"/>
+			</antcall>
+		</target>
+		
+    <target name="doc.installguide.web" depends="init">
+      <antcall target="dita2xhtml">
+        <param name="args.input"
+          value="${dita.doc.dir}${file.separator}installguide${file.separator}installing-ditaot.ditamap"/>
+        <param name="output.dir" value="${dita.output.doc.dir}${file.separator}installguide"/>
+      </antcall>
+    </target>
+    
+    <target name="doc.installguide.chm" depends="init">
+      <antcall target="dita2htmlhelp">
+        <param name="args.input"
+          value="${dita.doc.dir}${file.separator}installguide${file.separator}installing-ditaot.ditamap"/>
+        <param name="output.dir" value="${dita.output.doc.dir}${file.separator}installguide"/>
+      </antcall>
+    </target>
+  
+    <target name="doc.installguide.pdf" depends="init">
+      <antcall target="dita2pdf">
+        <param name="args.input"
+          value="${dita.doc.dir}${file.separator}installguide${file.separator}installing-ditaot.ditamap"/>
+        <param name="output.dir" value="${dita.output.doc.dir}${file.separator}installguide"/>
+      </antcall>
+    </target>
 
 		<target name="clean.doc"
 			description="remove the documentation output">
