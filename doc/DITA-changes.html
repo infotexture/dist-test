@@ -22,7 +22,7 @@
 <meta content="XHTML" name="DC.Format">
 <meta content="ditareleasehistory" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="D:\eclipse\workspace\DITA-OT1.1.2\out\doc\commonltr.css" type="text/css" rel="stylesheet">
+<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\commonltr.css" type="text/css" rel="stylesheet">
 <title>DITA release history</title>
 </head>
 <body id="ditareleasehistory"><a name="ditareleasehistory"><!-- --></a>
@@ -34,6 +34,31 @@
   <div><p>This document lists major changes and new features by 
     release.</p>
 
+    <div class="section"><h4 class="sectiontitle">DITA OT release 1.1.2.1</h4>
+      
+      <p>Release 1.1.2.1 is a full build to provide an urgent fix to fix the following critical problem which users found in release 1.1.2.</p>
+
+      <div class="p">
+        <ul>
+          <li>SF Bug 1345600  The build process failed when run "Ant all" in release 1.1.2</li>
+
+        </ul>
+             
+      </div>
+
+      <p>For this fix, we have restored all the source DITA files in 'doc' and directories in the binary packages.</p>
+
+      <p>Note that the original parameter "args.eclipse.toc" in "Ant tasks and script" was separated to "args.eclipsehelp.toc" for DITA-to-Eclipse help transformation, and "args.eclipsecontent.toc" for DITA-to-dynamic Eclipse content transformation.</p>
+
+      <div class="p">Another issue is that we found there is a mismatch in the document and the toolkit behavior when you are trying to use the following command
+      <pre>ant -f conductor.xml -propertyfile ${dita.temp.dir}/property.temp.</pre>
+
+      Now we have updated the documentation. Please refer to the topic 'Building DITA output with Java command line' on our website for more details.</div>
+
+      <p>These updates do not affect standard operation of the toolkit. The main goal of this minor release to enable new users of the toolkit to run the installation verification tests without failure.</p>
+
+    </div>
+ 
     <div class="section"><h4 class="sectiontitle">DITA OT release 1.1.2</h4>
       
       <p>Release 1.1.2 is a maintenance release to fix defects and make patches based on release 1.1.1. </p>
@@ -82,6 +107,31 @@
 
         </ol>
 
+      </div>
+
+      <strong>Parameter Changes</strong>
+      <div class="p">        
+        <ol>
+          <li>The original parameter "args.eclipse.toc" in "Ant tasks and script" was separated to "args.eclipsehelp.toc" for dita2eclipsehelp transformation, and "args.eclipsecontent.toc" for dita2eclipsecontent transformation.</li>
+
+          <li>Several parameters were added to the java command line interface, including "/javahelptoc","/javahelpmap","/eclipsehelptoc","/eclipsecontenttoc","/xhtmltoc".</li>
+
+        </ol>
+
+      </div>
+
+      <strong>Other Changes</strong>
+      <div class="p">        
+        Change to the "doc" directory, except "doc\langref" directory:
+        <ol>
+          <li>The source dita files and the generated HTML, CHM, and PDF files were separated into separate downloads.</li>
+
+          <li>The source package contains the source dita files.</li>
+
+          <li>The binary package contains the generated HTML, CHM, and PDF files.</li>
+
+        </ol>
+      
       </div>
 
     </div>

@@ -14,7 +14,7 @@
 <meta content="XHTML" name="DC.Format">
 <meta content="mapref" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="D:\eclipse\workspace\DITA-OT1.1.2\out\doc\commonltr.css" type="text/css" rel="stylesheet">
+<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\commonltr.css" type="text/css" rel="stylesheet">
 <title>Mapref</title>
 </head>
 <body id="mapref"><a name="mapref"><!-- --></a>
@@ -64,33 +64,37 @@
         <em>readme.ditamap</em> file.</p>
 
       <div class="p">
-        <pre>&lt;topicref format="ditamap" href="sample\mysample.ditamap" 
-          navtitle="sample ditamap"&gt; </pre>
+        <pre>&lt;topicref format="ditamap" href="sample\mysample.ditamap" navtitle="sample ditamap"&gt; </pre>
 
       </div>
 
       <div class="p">Now the complete content of the <em>readme.ditamap</em> file is shown as 
-        follows.<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt; 
-        &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" 
-        "../dtd/map.dtd"&gt; &lt;map id="mainDITAreadme" title="DITA Readme 
-        map"&gt; &lt;topicref collection-type="family" href="DITA-readme.xml" 
-        id="DITA-doc" locktitle="yes" navtitle="DITA-OT Introduction"&gt; 
-        &lt;topicref href="DITA-changes.xml" navtitle="DITA release 
-        history"&gt;&lt;/topicref&gt; &lt;topicref format="ditamap" 
-        href="sample\mysample.ditamap" navtitle="sample ditamap"&gt; 
-        &lt;/topicref&gt; &lt;/topicref&gt; &lt;/map&gt; </pre>
-</div>
+        follows.
+        <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;           
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
+&lt;map id="mainDITAreadme" title="DITA Readme map"&gt;
+  &lt;topicref collection-type="family" href="DITA-readme.xml" id="DITA-doc" 
+           locktitle="yes" navtitle="DITA-OT Introduction"&gt; 
+    &lt;topicref href="DITA-changes.xml" navtitle="DITA release history"/&gt;
+    &lt;topicref format="ditamap" href="sample\mysample.ditamap" navtitle="sample ditamap"/&gt;
+  &lt;/topicref&gt;
+&lt;/map&gt; 
+        </pre>
+
+      </div>
 
       <p>If, for example, the content of the <em>mysample.ditamap</em> is shown as follows,</p>
 
       <div class="p">
-        <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;!DOCTYPE 
-          map PUBLIC "-//OASIS//DTD DITA Map//EN" "../dtd/map.dtd"&gt; &lt;map 
-          id="samplemap" title="Sample Ditamap"&gt; &lt;topicref 
-          href="..\DITA-futures.xml" navtitle="DITA 
-          futures"&gt;&lt;/topicref&gt; &lt;topicref 
-          href="..\DITA-installation.xml" 
-          navtitle="Installation"&gt;&lt;/topicref&gt; &lt;/map&gt; </pre>
+        <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt; 
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt; 
+&lt;map id="samplemap" title="Sample Ditamap"&gt; 
+  &lt;topicref href="..\DITA-futures.xml" navtitle="DITA futures"/&gt;
+  &lt;topicref href="..\DITA-installation.xml" navtitle="Installation"/&gt;
+&lt;/map&gt; 
+        </pre>
 
       </div>
 
@@ -98,17 +102,18 @@
         the following codes:</p>
 
       <div class="p">
-        <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;!DOCTYPE 
-          map PUBLIC "-//OASIS//DTD DITA Map//EN" "../dtd/map.dtd"&gt; &lt;map 
-          id="mainDITAreadme" title="DITA Readme map"&gt; &lt;topicref 
-          collection-type="family" href="DITA-readme.xml" id="DITA-doc" 
-          locktitle="yes" navtitle="DITA-OT Introduction"&gt; &lt;topicref 
-          href="DITA-changes.xml" navtitle="DITA release 
-          history"&gt;&lt;/topicref&gt; &lt;topicref href="DITA-futures.xml" 
-          navtitle="DITA futures"&gt;&lt;/topicref&gt; &lt;topicref 
-          href="DITA-installation.xml" 
-          navtitle="Installation"&gt;&lt;/topicref&gt; &lt;/topicref&gt; 
-          &lt;/map&gt; </pre>
+        <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt; 
+&lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt; 
+&lt;map id="mainDITAreadme" title="DITA Readme map"&gt; 
+  &lt;topicref collection-type="family" href="DITA-readme.xml" 
+           id="DITA-doc" locktitle="yes" navtitle="DITA-OT Introduction"&gt;
+    &lt;topicref href="DITA-changes.xml" navtitle="DITA release history"/&gt; 
+    &lt;topicref href="DITA-futures.xml" navtitle="DITA futures"/&gt; 
+    &lt;topicref href="DITA-installation.xml" navtitle="Installation"/&gt;
+  &lt;/topicref&gt; 
+&lt;/map&gt; 
+        </pre>
 
       </div>
 

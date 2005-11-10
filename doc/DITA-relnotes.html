@@ -20,7 +20,7 @@
 <meta content="XHTML" name="DC.Format">
 <meta content="relnote" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="D:\eclipse\workspace\DITA-OT1.1.2\out\doc\commonltr.css" type="text/css" rel="stylesheet">
+<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\commonltr.css" type="text/css" rel="stylesheet">
 <title>DITA release notes</title>
 </head>
 <body id="relnote"><a name="relnote"><!-- --></a>
@@ -31,77 +31,29 @@
   <div>
     <div class="section"><h4 class="sectiontitle">Introduction</h4>
       
-      <p>Release 1.1.2 is a maintenance release to fix defects and make patches based on release 1.1.1. </p>
+      <p>Release 1.1.2.1 is a full build to provide an urgent fix to fix the following critical problem which users found in release 1.1.2.</p>
 
-      <div class="p">But there are certain limitations and unfixed bugs in this release, such as,
+      <div class="p">
         <ul>
-          <li>Bug 1343963 Blank index.html generated for ditamap contains only reltabe</li>
-
-          <li>Bug 1344486 java.io.EOFException thrown out when reading ditaval file</li>
+          <li>SF Bug 1345600  The build process failed when run "Ant all" in release 1.1.2</li>
 
         </ul>
-       
-        Please check the current 'open' bugs on the SourceForge bugs tracker.        
+             
       </div>
 
-    </div>
+      <p>For this fix, we have restored all the source DITA files in 'doc' and directories in the binary packages.</p>
 
-    <div class="section"><h4 class="sectiontitle">Changes</h4>
-      
-      <div class="p">
-        <ol>
-          <li>SF Bug   1297355: Multilevel HTML Help popup shows filenames</li>
+      <p>Note that the original parameter "args.eclipse.toc" in "Ant tasks and script" was separated to "args.eclipsehelp.toc" for DITA-to-Eclipse help transformation, and "args.eclipsecontent.toc" for DITA-to-dynamic Eclipse content transformation.</p>
 
-          <li>SF Bug   1297657: Update for Supported Parameters page</li>
+      <div class="p">Another issue is that we found there is a mismatch in the document and the toolkit behavior when you are trying to use the following command
+      <pre>ant -f conductor.xml -propertyfile ${dita.temp.dir}/property.temp.</pre>
 
-          <li>SF Bug   1304859: Toolkit disallows repetition of topic ID within map</li>
+      Now we have updated the documentation. Please refer to the topic 'Building DITA output with Java command line' on our website for more details.</div>
 
-          <li>SF Bug   1306361: Fatal error in published ditamap example</li>
-
-          <li>SF Bug   1306363: common.css not compiled with htmlhelp</li>
-
-          <li>SF Bug   1311788: DTD references not resolved</li>
-
-          <li>SF Bug   1314081: Fix catalog entries in catalag-ant.xml for OASIS DTDs</li>
-
-          <li>SF Bug   1323435: wrong system id for html output used in validation</li>
-
-          <li>SF Bug   1323486: HTML Help subterm indexes not sorted</li>
-
-          <li>SF Bug   1325290: JavaHelp output does not work for Russian</li>
-
-          <li>SF Bug   1325277: File missing from the map causes abend</li>
-
-          <li>SF Patch 1253783: dita2fo-links relative hrefs</li>
-
-          <li>SF Patch 1324387: In xslfo, groupchoice var prints extra | delimiter</li>
-
-          <li>SF RFE   1324990: Installation Guide</li>
-
-        </ol>
- 
-      </div>
+      <p>These updates do not affect standard operation of the toolkit. The main goal of this minor release to enable new users of the toolkit to run the installation verification tests without failure.</p>
 
     </div>
     
-    <div class="section">
-      <strong>Note</strong>
-      <p>SourceForge bugs, patches, and RFEs can be found in SourceForge bugs, patches, and RFE tracker.</p>
-
-      <div class="p">
-        <ul>
-          <li>Bugs tracker: http://sourceforge.net/tracker/?group_id=132728&amp;atid=725074</li>
-
-          <li>Patches tracker: http://sourceforge.net/tracker/?group_id=132728&amp;atid=725076</li>
-
-          <li>RFE tracker: http://sourceforge.net/tracker/?group_id=132728&amp;atid=725077</li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
   </div>
 
 <div>

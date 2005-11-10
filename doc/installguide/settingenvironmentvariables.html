@@ -13,12 +13,12 @@
 <meta name="description" content="Use this information to find and set your environment variables. Set your system environment variables after all DITA Open Toolkit items are installed. The environment variables must be set for each item installed in this guide.">
 <meta scheme="URI" name="DC.Relation" content="ditaot.html">
 <meta content="XHTML" name="DC.Format">
-<meta content="environmentvariables" name="DC.Identifier">
+<meta content="set_env" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="D:\eclipse\workspace\DITA-OT1.1.2\out\doc\installguide\commonltr.css" type="text/css" rel="stylesheet">
+<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\installguide\commonltr.css" type="text/css" rel="stylesheet">
 <title>Setting Environment Variables (Windows)</title>
 </head>
-<body id="environmentvariables"><a name="environmentvariables"><!-- --></a>
+<body id="set_env"><a name="set_env"><!-- --></a>
 
 
   <h1 class="topictitle1">Setting Environment Variables</h1>
@@ -55,18 +55,18 @@
 <th valign="bottom" id="N10074-desc" align="left">Description</th></tr></thead>
 <tbody>
           <tr>
-            <td valign="top" headers="N10074-option" id="N10080"><strong>Set the <var class="varname">Path</var> environment variable to 
+            <td valign="top" headers="N10074-option" id="N10080"><strong>Set the <var class="varname">PATH</var> environment variable to 
               include the directory where you installed the Ant bin 
               directory.</strong></td>
 
             <td valign="top" headers="N10074-desc N10080">
               <ol type="a">
-                <li>Find the <var class="varname">Path</var> environment variable in 
-                  the list. If <var class="varname">Path</var> is not listed, click on 
+                <li>Find the <var class="varname">PATH</var> environment variable in 
+                  the list. If <var class="varname">PATH</var> is not listed, click on 
                   <span class="uicontrol">New</span> under the System variables 
                   section.</li>
 
-                <li>Type <samp class="codeph">%ANT_HOME%\bin</samp><div class="important"><span class="importanttitle">Important: </span>If there are other variables listed, create 
+                <li>Type <samp class="codeph">%ANT_HOME%\bin;%JAVA_HOME%\bin;</samp><div class="important"><span class="importanttitle">Important: </span>If there are other variables listed, create 
                   a new variable separated by a semicolon. Ensure there are no 
                   spaces before or after the semicolon.</div>
 </li>
@@ -155,7 +155,7 @@
                   variables section.</li>
 
                 <li>Type 
-                  <samp class="codeph">C:\fop-0.20.5\build\fop.jar;C:\fop-0.20.5\lib\batik.jar;C:\fop-0.20.5\lib\avalon-framework-cvs-20020806.jar</samp><div class="important"><span class="importanttitle">Important: </span>If there are other variables listed, create 
+                  <samp class="codeph">C:\fop-0.20.5\build;C:\fop-0.20.5\lib</samp><div class="important"><span class="importanttitle">Important: </span>If there are other variables listed, create 
                   new variable separated by a semicolon. Ensure there are no 
                   spaces before or after the semicolon.</div>
 </li>
@@ -179,16 +179,20 @@
               new variable separated by a semicolon. Ensure there are no spaces 
               before or after the semicolon.</div>
 </li>
- </ol>
+ 
+              <li>Set up ANT_OPTS. For example: <pre>set ANT_OPTS=%ANT_OPTS% -Djavax.xml.transform.TransformerFactory=com.icl.saxon.TransformerFactoryImpl</pre>
+</li>
+ 
+              </ol>
 </td>
 
           </tr>
 
           <tr>
-            <td valign="top" headers="N10074-option" id="N1021A"><strong>Set the <var class="varname">CLASSPATH</var> environment variable 
+            <td valign="top" headers="N10074-option" id="N10226"><strong>Set the <var class="varname">CLASSPATH</var> environment variable 
               to include the directory where you installed Xalan.</strong></td>
 
-            <td valign="top" headers="N10074-desc N1021A">If you use the Xalan,<ol type="a"> <li>Find the 
+            <td valign="top" headers="N10074-desc N10226">If you use the Xalan,<ol type="a"> <li>Find the 
               <var class="varname">CLASSPATH</var> environment variable in the list. If 
               <var class="varname">CLASSPATH </var> is not listed, click on 
               <span class="uicontrol">New</span> under the System variables 
