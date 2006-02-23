@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -18,14 +18,19 @@
 <meta scheme="URI" name="DC.Relation" content="DITA-tested.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-javacmd.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-log.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-h2d.html">
+<meta scheme="URI" name="DC.Relation" content="dita2word.html#dita2word/limitation">
 <meta scheme="URI" name="DC.Relation" content="DITA-tweaks.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-limitations.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-troubleshooting.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-setupant.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-antuse.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-antscript.html">
 <meta content="XHTML" name="DC.Format">
 <meta content="DITA-ant" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\commonltr.css" type="text/css" rel="stylesheet">
+<link href="commonltr.css" type="text/css" rel="stylesheet">
 <title>Building DITA output with Ant</title>
 </head>
 <body id="DITA-ant"><a name="DITA-ant"><!-- --></a>
@@ -54,11 +59,11 @@
       development builds as well as document builds. </p>
 
     <p>It is unnecessary for Ant to set up a build environment to run the DITA 
-      XSLT scripts. To run the DITA scripts directly, see the <a href="DITA-readme.html#DITA-readme">DITA Readme</a> 
+      XSLT scripts. To run the DITA scripts directly, see the <a href="DITA-readme.html">DITA Readme</a> 
       document.</p>
 
     <div class="note"><span class="notetitle">Note: </span>The following instructions and the associated <em>build.xml</em> and 
-      <em>ditatargets.xml </em> files are for the Java 1.4.2, Ant 1.6.2, FOP 
+      <em>ditatargets.xml </em> files are for the Java 1.4.2, Ant 1.6.5, FOP 
       0.20.5, and Saxon 6.5.3 releases. These instructions are likely to need 
       some adjustment for other versions of these components and for specific 
       environments.</div>
@@ -81,15 +86,20 @@ This topic lists detailed Ant tasks and script.</li>
 <div class="relconcepts"><strong>Related concepts</strong><br>
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
+<div><a href="DITA-h2d.html" title="">Migrating HTML to DITA</a></div>
 </div>
 <div class="relref"><strong>Related reference</strong><br>
 <div><a href="DITA-relnotes.html" title="">DITA release notes</a></div>
+<div><a href="DITA-log.html" title="">Problem determination and log analysis</a></div>
 <div><a href="DITA-tweaks.html" title="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
+<div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
+<div><a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing and executing the DITA Open Toolkit.">Troubleshooting</a></div>
 </div>
 <div class="relinfo"><strong>Related information</strong><br>
 <div><a href="DITA-changes.html" title="This document lists major changes and new features by release.">DITA release history</a></div>
 <div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
+<div><a href="dita2word.html#dita2word__limitation" title="">Transfomring DITA to Word RTF</a></div>
 </div>
 </div>
 

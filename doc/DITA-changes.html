@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -18,11 +18,16 @@
 <meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-ant.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-javacmd.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-log.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-h2d.html">
+<meta scheme="URI" name="DC.Relation" content="dita2word.html#dita2word/limitation">
 <meta scheme="URI" name="DC.Relation" content="DITA-tweaks.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-limitations.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-troubleshooting.html">
 <meta content="XHTML" name="DC.Format">
 <meta content="ditareleasehistory" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
-<link href="E:\eclipse\workspace\DITA-OT-HEAD\out\doc\commonltr.css" type="text/css" rel="stylesheet">
+<link href="commonltr.css" type="text/css" rel="stylesheet">
 <title>DITA release history</title>
 </head>
 <body id="ditareleasehistory"><a name="ditareleasehistory"><!-- --></a>
@@ -33,6 +38,121 @@
   
   <div><p>This document lists major changes and new features by 
     release.</p>
+
+    <div class="section"><h4 class="sectiontitle">DITA OT release 1.2</h4>
+      
+      <p>DITA open toolkit Release 1.2 is a major release to add new functions, fulfill new requirements, make some function enhancements and fix bugs over release 1.1.2.1.</p>
+
+      <p>
+        <strong>Important Change</strong> DITA-OT 1.2 offers new error handling and logging system. If you invoke your transformation by using java command line where new error handling and logging system is mandatory, you need to set the <var class="varname">CLASSPATH</var> <a href="installguide/settingenvironmentvariables.html">Environment Variable</a> for <samp class="codeph">dost.jar</samp>. If you invoke your transformation by using an ant script, you need to do one more step after the setting above. That is adding a parameter in your command to invoke an ant script. For example, use <kbd class="userinput">ant -f ant\sample_xhtml.xml -logger org.dita.dost.log.DITAOTBuildLogger</kbd> instead of <kbd class="userinput">ant -f ant\sample_xhtml.xml</kbd> to start a transformation defined in ant script file ant\sample_xhtml.xml.
+      </p>
+
+      <div class="p">
+        <strong>New Functions</strong>
+        <ol>
+          <li>
+            <strong>New plugin archiecture</strong>
+            <p>DITA Open Toolkit 1.2 provides a new function to help users to download, install and use plug-ins and help developers
+create new plug-ins for DITA Open Toolkit.</p>
+
+          </li>
+
+          <li>
+            <strong>Transformation to wordrtf</strong>
+            <p>DITA Open Toolkit 1.2 provides DITA to Word transforming
+function to transform DITA source files to output in Microsoft<sup>&reg;</sup> Word
+RTF file.</p>
+
+          </li>
+
+          <li>
+            <strong>HTML to DITA migration tool</strong>
+            <p>DITA Open Toolkit 1.2 provides a HTML to DITA 
+            migration tool, which migrates HTML files to DITA files. This 
+            migration tool originally comes from the developerWorks publication 
+            of Robert D. Anderson's how-to articles with the original h2d code.</p>
+
+          </li>
+
+          <li>
+            <strong>Problem determination and log analysis</strong>
+            <p>In DITA Open Toolkit 1.2, a new logging method is supported 
+    to log messages both on the screen and into the log file. The messages on 
+    the screen present user with the status information, warning, error, and 
+    fatal error messages. The messages in the log file present user with more 
+    detailed information about the transformation process. By analyzing these 
+    messages, user can know what cause the problem and how to solve it.</p>
+
+          </li>
+
+          <li>
+            <strong>Open DITA User Guide for conditional processing</strong>
+            <p>In DITA Open Toolkit 1.2, a new user guide which can help users to use conditional processing is added to toolkit document.</p>
+
+          </li>
+
+          <li>
+            <strong>Include the OASIS version langref</strong>
+            <p>In DITA Open Toolkit 1.2, a new OASIS version of language reference for DITA standard is added to toolkit document.</p>
+
+          </li>
+
+          <li>
+            <strong>Document adapt to OASIS DITA 1.0.1 DTDs</strong>
+            <p>DITA DTD files are updated to 1.0.1 version in DITA Open Toolkit 1.2.</p>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+      <div class="p">
+        <strong>Other Changes</strong>
+        <ol>
+          <li>SF Bug 1304545 Some folders were copied to DITA-OT's root directory</li>
+
+          <li>SF Bug 1328689 Stylesheet links in HTML emitted with local filesystem paths</li>
+
+          <li>SF Bug 1333481 Mapref function does not work for maps in another directory</li>
+
+          <li>SF Bug 1343963 Blank index.html generated for ditamap contains only reltabe</li>
+
+          <li>SF Bug 1344486 java.io.EOFException thrown out when reading ditaval file</li>
+
+          <li>SF Bug 1347669 Path Spec. in nested DITA maps</li>
+
+          <li>SF Bug 1357139 filtering behavior doesn't conform to spec</li>
+
+          <li>SF Bug 1358619 The property.temp file gets cleaned out by default</li>
+
+          <li>SF Bug 1366843 XRefs do not generate proper links in FO/PDF</li>
+
+          <li>SF Bug 1367636 dita2fo-elems.xsl has strange line breaks</li>
+
+          <li>SF RFE 1296133 Enable related-links in PDF output</li>
+
+          <li>SF RFE 1326377 Add a /dbg or /debug flag for diagnostic info</li>
+
+          <li>SF RFE 1331727 Toolkit need to run on JDK 1.5.x(only support to run under Sun JDK 1.5 with saxon in normal case)</li>
+
+          <li>SF RFE 1357054 Be more friendly towards relative directories</li>
+
+          <li>SF RFE 1357906 Provide a default output directory</li>
+
+          <li>SF RFE 1368073 Enable plugins for DITA open toolkit</li>
+
+          <li>SF RFE 1379518 Clearer error messages and improved exception handling</li>
+
+          <li>SF RFE 1379523 DITA to Rich Text Format (.rtf) file</li>
+
+          <li>SF RFE 1382482 plugin architecture of DITA-OT</li>
+
+        </ol>
+
+      </div>
+
+    </div>
 
     <div class="section"><h4 class="sectiontitle">DITA OT release 1.1.2.1</h4>
       
@@ -418,14 +538,19 @@
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
 <div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
+<div><a href="DITA-h2d.html" title="">Migrating HTML to DITA</a></div>
 </div>
 <div class="relref"><strong>Related reference</strong><br>
 <div><a href="DITA-relnotes.html" title="">DITA release notes</a></div>
+<div><a href="DITA-log.html" title="">Problem determination and log analysis</a></div>
 <div><a href="DITA-tweaks.html" title="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
+<div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
+<div><a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing and executing the DITA Open Toolkit.">Troubleshooting</a></div>
 </div>
 <div class="relinfo"><strong>Related information</strong><br>
 <div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
+<div><a href="dita2word.html#dita2word__limitation" title="">Transfomring DITA to Word RTF</a></div>
 </div>
 </div>
 
