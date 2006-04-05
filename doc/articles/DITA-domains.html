@@ -119,7 +119,7 @@
 
       <p>Providing such highlight styles through a domain resolves a long-standing dispute for publication DTDs. Purists can omit the highlight domain to enforce documents that should be strictly semantic. Pragmatists can include the highlight domain to provide expressive flexibility for real-world authoring. A semipragmatist could even include the highlight domain in conceptual documents to support expressive authoring but omit the highlight domain from reference documents to enforce strict semantic tagging. </p>
 
-      <p>More generally, you can define documents with any combination of domains and topics. As we'll see in <a href="#generalize">Generalizing a domain</a>, the resulting documents can still be exchanged.</p>
+      <p>More generally, you can define documents with any combination of domains and topics. As we'll see in <a href="#generalize" title="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">Generalizing a domain</a>, the resulting documents can still be exchanged.</p>
 
     </div>
 
@@ -297,7 +297,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
 
       <p>The design pattern for a domain requires an abbreviation to represent the domain. A sensible abbreviation for the class library domain might be <samp class="codeph">cl</samp>. The identifier for a domain consists of the abbreviation followed by <samp class="codeph">-d</samp> (for domain).</p>
 
-      <p>As noted in <a href="#combine">Combining an existing topic and domain</a>, the domain requires an entity declaration file and an element definition file.</p>
+      <p>As noted in <a href="#combine" title="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">Combining an existing topic and domain</a>, the domain requires an entity declaration file and an element definition file.</p>
 
       <div class="section"><h4 class="sectiontitle">Writing the entity declaration file</h4>
         
@@ -495,7 +495,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
     <div>
       <p>As with topics, a specialized content element can be generalized to one of its ancestor elements. In the previous scenario, a <span class="apiname">classname</span> can generalize to <span class="apiname">apiname</span> or even <span class="apiname">keyword</span>. As a result, documents using different domains but the same topics can be exchanged or merged without having to generalize the topics.</p>
 
-      <p>To return to the highlight style controversy mentioned in <a href="#base">Understanding the base domains</a>, a pragmatic document authored with highlight domain will contain phrases like the following:</p>
+      <p>To return to the highlight style controversy mentioned in <a href="#base" title="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">Understanding the base domains</a>, a pragmatic document authored with highlight domain will contain phrases like the following:</p>
 
       <pre>... the &lt;b&gt;important&lt;/b&gt; point is ...</pre>
 

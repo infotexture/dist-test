@@ -33,70 +33,48 @@
 <body id="limitations"><a name="limitations"><!-- --></a>
 
 
-    <h1 class="topictitle1">Known Limitations</h1>
+  <h1 class="topictitle1">Known Limitations</h1>
 
-    
-    <div><p>Below are some known limitations categoried by module within 
-        the current release of the DITA Open Toolkit.</p>
+  
+  <div><p>Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.</p>
 
-        <div class="section"><h4 class="sectiontitle">Transformation to PDF and Word RTF</h4>
-            
-            <ol>
-                <li>The transforming tool will copy the images from DITA source files to the
-output directory during the process. In the output file, links to the images
-in local directory are provided instead. </li>
+    <div class="section"><h4 class="sectiontitle">Transformation to PDF and Word RTF</h4>
+      
+      <ol>
+        <li>You can change the styles of the output file by using tools in Microsoft<sup>&reg;</sup> Word rather than specifying the styles before transforming.</li>
 
-                <li>You can change the styles of the output file by using tools in Microsoft<sup>&reg;</sup> Word
-rather than specifying the styles before transforming.</li>
+        <li>If there is a cross reference referring to an URL in the DITA source file, the link should be completed defined with the proper internet protocol. For example, specify <kbd class="userinput">http://www.ibm.com</kbd> instead of <kbd class="userinput">www.ibm.com</kbd>.</li>
 
-                <li>If there is a cross reference referring to an URL in the DITA source file,
-the link should be completed defined with the proper internet protocol. For
-example, specify <kbd class="userinput">http://www.ibm.com</kbd> instead
-of <kbd class="userinput">www.ibm.com</kbd>.</li>
+        <li>Flagging, revision bar and filtering are not supported in PDF and Word RTF output.</li>
 
-                <li>Flagging, revision bar and filtering are not supported in PDF and Word RTF output.</li>
+        <li>Morerows attribute of the table element used to generating vertically merged cell is not supported in PDF output.</li>
 
-                <li>Morerows attribute of the table element used to generating vertically merged cell is not supported in PDF output.</li>
+        <li>Style attributes for table are not supported in Word RTF output.</li>
 
-                <li>Style attributes for table are not supported in Word RTF output.</li>
+        <li>Complex cases dealing with table in list are not supported in Word RTF.</li>
 
-                <li>Complex cases dealing with lists, such as list in table, table in list and nested list, are not supported in Word RTF and might corrupt the output document.</li>
+        <li>There might be no output style applied on contents of some tags in Word RTF output compared with other output.</li>
 
-                <li>Cell missing in table might corrupt table in Word RTF output.</li>
-
-                <li>There might be no output style applied on contents of some tags in Word RTF output compared with other output.</li>
-
-            </ol>
-
-        </div>
-     
-        <div class="section"><h4 class="sectiontitle">HTML to DITA migration</h4>
-            
-            <ol>
-                <li>Since Xalan doesn't allow to set the public and system IDs 
-                    dynamically using a variable, when Xalan is used as the 
-                    default XSLT processor, the output will contain:
-                    <pre>&lt;!DOCTYPE topic PUBLIC "{$publicid}" "{$systemid}"&gt;</pre>
-
-                    <p>Suggest to use Saxon as the processor to fix this 
-                        problem. For other information on this problem, see 
-                        the section "Other general migration notes" in the 
-                        first developerWorks article.</p>
-</li>
-
-                <li>Currently, the stylesheet can't handle HTML files within 
-                    namespace like below:
-                    <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
-
-                    <p>You need to remove the <samp class="codeph">xmlns</samp> attribute 
-                        before the migration.</p>
-</li>
-
-            </ol>
-
-        </div>
+      </ol>
 
     </div>
+
+    <div class="section"><h4 class="sectiontitle">HTML to DITA migration</h4>
+      
+      <ol>
+        <li>Since Xalan doesn't allow to set the public and system IDs dynamically using a variable, when Xalan is used as the default XSLT processor, the output will contain: <pre>&lt;!DOCTYPE topic PUBLIC "{$publicid}" "{$systemid}"&gt;</pre>
+<p>Suggest to use Saxon as the processor to fix this problem. For other information on this problem, see the section "Other general migration notes" in the first developerWorks article.</p>
+</li>
+
+        <li>Currently, the stylesheet can't handle HTML files within namespace like below: <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
+<div class="note"><span class="notetitle">Note: </span>This limitation has been fixed in release 1.2.1, please refer to the <a href="DITA-h2d.html" title="">Migrating HTML to DITA</a> for detail information.</div>
+</li>
+
+      </ol>
+
+    </div>
+
+  </div>
 
 <div>
 <div class="familylinks">

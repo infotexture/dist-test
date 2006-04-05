@@ -137,6 +137,29 @@
 
 </div>
 
+<div class="section"><h4 class="sectiontitle">About message file</h4>
+    
+    <p>The message file is used to store the detailed log messages, these 
+      messages are read dynamically from this file. To ensure those messages 
+      can be read correctly during the transform process, the message file 
+      should be located properly. In some situations, the toolkit may fails 
+      to load the message file due to some exceptions thrown. Please refer to 
+      <a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing 
+    and executing the DITA Open Toolkit.">Troubleshooting</a> for detailed information.</p>
+
+    <p>For high level users and developers, there is a propery 
+      <samp class="codeph">args.message.file</samp> in the toolkit's ant script, it is 
+      used to config the message file, you can overide it in your ant script.</p>
+
+    <div class="note"><span class="notetitle">Note: </span>Due to the difference of underly implemetation between Java, And, 
+      and XSL, the property <samp class="codeph">args.message.file</samp> is only useful 
+      for Java and Ant; To keep the normal function of log handling, you still 
+      need to ensure there are files 'resource/messages.xml' and 'resource/messages.dtd' 
+      both in the toolkit's root directory and in the directory that you run the 
+      toolkit.</div>
+
+</div>
+
 </div>
 
 <div>

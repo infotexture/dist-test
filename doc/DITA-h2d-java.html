@@ -28,13 +28,27 @@
 
                 <li>Navigate to the directory of the migration tool.</li>
 
+                <li>(Optional) If the input HTML file contains namespace, 
+                  you can remove it by hand, or running the command below:
+                  <div class="p">enter the following command when using Saxon: 
+                    <pre>java com.icl.saxon.StyleSheet mytask.htm preprocess.xsl &gt; mytask.htm</pre>
+
+                  </div>
+
+                  <div class="p">enter the following command when using Xalan: 
+                    <pre>java org.apache.xalan.xslt.Process -in mytask.htm -xsl preprocess.xsl -out mytask.htm</pre>
+
+                  </div>
+
+                </li>
+
                 <li>Use Saxon or Xalan directory to run the migration, on the command line, 
-                    <div class="p">enter the following command when using Saxon directory: 
+                    <div class="p">enter the following command when using Saxon: 
                         <pre>java com.icl.saxon.StyleSheet mytask.htm h2d.xsl infotype=task &gt; mytask.dita</pre>
 
                     </div>
 
-                    <div class="p">enter the following command when using Xalan directory: 
+                    <div class="p">enter the following command when using Xalan: 
                         <pre>java org.apache.xalan.xslt.Process -in mytask.htm -xsl h2d.xsl -out mytask.dita -param infortype task</pre>
 
                     </div>
@@ -63,11 +77,11 @@
                     
                     <thead align="left">
                         <tr valign="bottom">
-                            <th valign="bottom" id="N100A6">Parameter</th>
+                            <th valign="bottom" id="N100C6">Parameter</th>
 
-                            <th valign="bottom" id="N100AD">Description</th>
+                            <th valign="bottom" id="N100CD">Description</th>
 
-                            <th valign="bottom" id="N100B4">Required</th>
+                            <th valign="bottom" id="N100D4">Required</th>
 
                         </tr>
 
@@ -75,20 +89,20 @@
 
                     <tbody>
                         <tr>
-                            <td valign="top" headers="N100A6 ">infotype</td>
+                            <td valign="top" headers="N100C6 ">infotype</td>
 
-                            <td valign="top" headers="N100AD ">The infotype of generated 
+                            <td valign="top" headers="N100CD ">The infotype of generated 
                                 DITA files. Topic, concept, task, and reference 
                                 are valid values. Default is topic.</td>
 
-                            <td valign="top" headers="N100B4 ">No.</td>
+                            <td valign="top" headers="N100D4 ">No.</td>
 
                         </tr>
 
                         <tr>
-                            <td valign="top" headers="N100A6 ">dita-extension</td>
+                            <td valign="top" headers="N100C6 ">dita-extension</td>
 
-                            <td valign="top" headers="N100AD ">The extension for links that 
+                            <td valign="top" headers="N100CD ">The extension for links that 
                                 go to other DITA topics. ".dita" and ".xml" are 
                                 valid values. Default is ".dita".
                                 <div class="note"><span class="notetitle">Note: </span>The extension of the generated DITA file 
@@ -98,28 +112,28 @@
 
                             </td>
 
-                            <td valign="top" headers="N100B4 ">No.</td>
+                            <td valign="top" headers="N100D4 ">No.</td>
 
                         </tr>
 
                         <tr>
-                            <td valign="top" headers="N100A6 ">FILENAME</td>
+                            <td valign="top" headers="N100C6 ">FILENAME</td>
 
-                            <td valign="top" headers="N100AD ">It is used to determine 
+                            <td valign="top" headers="N100CD ">It is used to determine 
                                 the main topic's ID. <div class="note"><span class="notetitle">Note: </span>The FILENAME should 
                                 ends with '.htm' or '.html'. Invalid ID 
                                 characters, including all numbers, will be 
                                 replaced with letters.</div>
 </td>
 
-                            <td valign="top" headers="N100B4 ">No.</td>
+                            <td valign="top" headers="N100D4 ">No.</td>
 
                         </tr>
 
                         <tr>
-                            <td valign="top" headers="N100A6 ">default-lang</td>
+                            <td valign="top" headers="N100C6 ">default-lang</td>
 
-                            <td valign="top" headers="N100AD ">The default language of 
+                            <td valign="top" headers="N100CD ">The default language of 
                                 output DITA files. Default is "en-us".
                                 <div class="note"><span class="notetitle">Note: </span>For supported language, please refer to 
                                     <samp class="codeph">strings.xml</samp> under the 
@@ -129,7 +143,7 @@
 
                             </td>
 
-                            <td valign="top" headers="N100B4 ">No.</td>
+                            <td valign="top" headers="N100D4 ">No.</td>
 
                         </tr>
 

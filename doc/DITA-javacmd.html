@@ -54,7 +54,9 @@
       <p>This particular example creates a properties file, and then calls Ant 
         using this properties to build the sample <samp class="codeph">sequence.ditamap</samp> file 
         and outputs the xhtml results to the out directory. You can add other 
-        parameters to this properties file. See the following <em><a href="#usingparameterbuildingtool__javacmdinterface">Table of supported parameters</a></em> for 
+        parameters to this properties file. See the following <em><a href="#usingparameterbuildingtool__javacmdinterface" title="The DITA Open Toolkit release 1.0.2 or above provides a command 
+    line interface as an alternative for users with little knowledge of Ant to 
+    use the toolkit easily.">Table of supported parameters</a></em> for 
         details.</p>
 
       <div class="p">Note:
@@ -77,7 +79,9 @@
 
     <div class="section"><h4 class="sectiontitle">Supported parameters</h4>
       
-      <p><em><a href="#usingparameterbuildingtool__javacmdinterface">Table of supported parameters</a></em> lists 
+      <p><em><a href="#usingparameterbuildingtool__javacmdinterface" title="The DITA Open Toolkit release 1.0.2 or above provides a command 
+    line interface as an alternative for users with little knowledge of Ant to 
+    use the toolkit easily.">Table of supported parameters</a></em> lists 
         the supported parameters (their Ant names are within the braces) that 
         you can set with this tool.</p>
 
@@ -87,9 +91,9 @@
           
           <thead align="left">
             <tr valign="bottom">
-              <th valign="bottom" id="N100E2">Parameter</th>
+              <th valign="bottom" id="N100EC">Parameter</th>
 
-              <th valign="bottom" id="N100EB">Description</th>
+              <th valign="bottom" id="N100F5">Description</th>
 
             </tr>
 
@@ -97,10 +101,10 @@
 
           <tbody>
             <tr>
-              <td valign="top" headers="N100E2 "> 
+              <td valign="top" headers="N100EC "> 
                 <em>/i</em>:{args.input}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The path and name of the input file. 
                         This argument should be in the same upper or lower case 
                         with the filename on file system.</span>
@@ -113,9 +117,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/if</em>:{dita.input}</td>
+              <td valign="top" headers="N100EC "><em>/if</em>:{dita.input}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The name of the input file .</span>
                 <div class="note"><span class="notetitle">Note: </span>This parameter must be provided 
                         if <tt>args.input</tt> not be provided. And this 
@@ -132,9 +136,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/id</em>:{dita.input.dirname}</td>
+              <td valign="top" headers="N100EC "><em>/id</em>:{dita.input.dirname}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The input directory which 
                         contains the input file.</span>
                 <div class="note"><span class="notetitle">Note: </span>This parameter must be 
@@ -152,18 +156,18 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/outdir</em>:{output.dir}</td>
+              <td valign="top" headers="N100EC "><em>/outdir</em>:{output.dir}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The path of the output directory.</span>
               </td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/tempdir</em>:{dita.temp.dir}</td>
+              <td valign="top" headers="N100EC "><em>/tempdir</em>:{dita.temp.dir}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The directory of the temporary files. 
                         The default is 'temp'.</span>
               </td>
@@ -171,9 +175,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/ditaext</em>:{dita.extname}</td>
+              <td valign="top" headers="N100EC "><em>/ditaext</em>:{dita.extname}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The file extension name of the input 
                         topic files, for example, '.xml' or '.dita'. The 
                         default is '.xml'.</span>
@@ -182,18 +186,18 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/transtype</em>:{transtype}</td>
+              <td valign="top" headers="N100EC "><em>/transtype</em>:{transtype}</td>
 
-              <td valign="top" headers="N100EB ">The transformation type. Currently, the 
+              <td valign="top" headers="N100F5 ">The transformation type. Currently, the 
                 supported values include xhtml, pdf, javahelp, eclipsehelp, 
                 htmlhelp, eclipsecontent, troff, wordrtf and docbook.</td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/filter</em>:{dita.input.valfile}</td>
+              <td valign="top" headers="N100EC "><em>/filter</em>:{dita.input.valfile}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The name of the file containing 
                         <em>filter/flagging/revision </em>information.</span>
               </td>
@@ -201,9 +205,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/draft</em>:{args.draft}</td>
+              <td valign="top" headers="N100EC "><em>/draft</em>:{args.draft}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>Default "hide draft &amp; required-cleanup 
                         content" processing parameter (<span class="q">"no"</span>= hide 
                         them); <span class="q">"no"</span> and <span class="q">"yes"</span> are valid values; 
@@ -213,9 +217,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/artlbl</em>:{args.artlbl}</td>
+              <td valign="top" headers="N100EC "><em>/artlbl</em>:{args.artlbl}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>Default "output artwork 
                         filenames" processing parameter; <span class="q">"no"</span>and 
                         <span class="q">"yes"</span>are valid values; non-<span class="q">"yes"</span> is 
@@ -225,9 +229,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/ftr</em>:{args.ftr}</td>
+              <td valign="top" headers="N100EC "><em>/ftr</em>:{args.ftr}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the BODY running-footing area.</span>
               </td>
@@ -235,9 +239,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/hdr</em>:{args.hdr}</td>
+              <td valign="top" headers="N100EC "><em>/hdr</em>:{args.hdr}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the BODY running-heading area.</span>
               </td>
@@ -245,9 +249,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/hdf</em>:{args.hdf}</td>
+              <td valign="top" headers="N100EC "><em>/hdf</em>:{args.hdf}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the HEAD area.</span>
               </td>
@@ -255,9 +259,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/csspath</em>:{args.csspath}</td>
+              <td valign="top" headers="N100EC "><em>/csspath</em>:{args.csspath}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The path for css reference. Default is no path.</span>
                 <div class="note"><span class="notetitle">Note: </span>
                         <ul>
@@ -282,9 +286,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/css</em>:{args.css}</td>
+              <td valign="top" headers="N100EC "><em>/css</em>:{args.css}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>User specified css file, it can be a 
                         local file or remote file from website.</span>
                 <div class="note"><span class="notetitle">Note: </span>If <samp class="codeph">${args.csspath}</samp> 
@@ -296,9 +300,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/copycss</em>:{args.copycss}</td>
+              <td valign="top" headers="N100EC "><em>/copycss</em>:{args.copycss}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The parameter to specify whether copy user 
                         specified css files to the directory specified by 
                         <samp class="codeph">{args.outdir}${args.csspath}</samp>. 
@@ -308,9 +312,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/indexshow</em>:{args.indexshow}</td>
+              <td valign="top" headers="N100EC "><em>/indexshow</em>:{args.indexshow}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The parameter to specify whether each 
                         index entry should display within the body of the text 
                         itself. Only "no" and "yes" are valid values.</span>
@@ -319,9 +323,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/outext</em>:{args.outext}</td>
+              <td valign="top" headers="N100EC "><em>/outext</em>:{args.outext}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The output file extension name for 
                         generated xhtml files. Typically, '.html' or '.htm' can 
                         be used as the extension name for the generated xhtml 
@@ -332,9 +336,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/xsl</em>:{args.xsl}</td>
+              <td valign="top" headers="N100EC "><em>/xsl</em>:{args.xsl}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The xsl file to replace the default xsl 
                         file. It will replace dita2docbook.xsl in docbook 
                         transformation, dita2fo-shell.xsl in pdf 
@@ -347,9 +351,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/cleantemp</em>:{clean.temp}</td>
+              <td valign="top" headers="N100EC "><em>/cleantemp</em>:{clean.temp}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The parameter to specify whether to clean 
                         the temp directory before each build. Only "no" and "yes" 
                         are valid values. The default is yes.</span>
@@ -358,9 +362,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/foimgext</em>:{args.fo.img.ext}</td>
+              <td valign="top" headers="N100EC "><em>/foimgext</em>:{args.fo.img.ext}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The extension name of image file in pdf transformation. 
                     Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
                 <div class="note"><span class="notetitle">Note: </span>Only one extension supported in the same 
@@ -372,9 +376,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/javahelptoc</em>:{args.javahelp.toc}</td>
+              <td valign="top" headers="N100EC "><em>/javahelptoc</em>:{args.javahelp.toc}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The root file name of the output 
                         javahelp toc file in javahelp transformation. 
                         The default is the name of input ditamap file.</span>
@@ -383,9 +387,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/javahelpmap</em>:{args.javahelp.map}</td>
+              <td valign="top" headers="N100EC "><em>/javahelpmap</em>:{args.javahelp.map}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The root file name of the output 
                         javahelp map file in javahelp transformation. 
                         The default is the name of input ditamap file.</span>
@@ -394,9 +398,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/eclipsehelptoc</em>:{args.eclipsehelp.toc}</td>
+              <td valign="top" headers="N100EC "><em>/eclipsehelptoc</em>:{args.eclipsehelp.toc}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The root file name of the output 
                       eclipsehelp toc file in eclipsehelp transformation. 
                       The default is the name of input ditamap file.</span>
@@ -405,9 +409,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/eclipsecontenttoc</em>:{args.eclipsecontent.toc}</td>
+              <td valign="top" headers="N100EC "><em>/eclipsecontenttoc</em>:{args.eclipsecontent.toc}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The root file name of the output 
                       Eclipse content provider toc file in eclipsecontent transformation. 
                       The default is the name of input ditamap file.</span>
@@ -416,9 +420,27 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/xhtmltoc</em>:{args.xhtml.toc}</td>
+              <td valign="top" headers="N100EC "><em>/provider</em>:{args.eclipse.provider}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
+                <span>The provider name of the eclipse help output. The default value is DITA.</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "><em>/version</em>:{args.eclipse.version}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>The version number of the eclipse help output. The default value is 1.0</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "><em>/xhtmltoc</em>:{args.xhtml.toc}</td>
+
+              <td valign="top" headers="N100F5 ">
                 <span>The root file name of the output xhtml toc 
                     file in xhtml transformation. The default is 'index'.</span>
               </td>
@@ -426,9 +448,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/logdir</em>:{args.logdir}</td>
+              <td valign="top" headers="N100EC "><em>/logdir</em>:{args.logdir}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The directory used to keep generated 
                         log files. Default will be output directory.</span>
                 <div class="note"><span class="notetitle">Note: </span>If several transforms running 
@@ -460,9 +482,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/ditalocale</em>:{args.dita.locale}</td>
+              <td valign="top" headers="N100EC "><em>/ditalocale</em>:{args.dita.locale}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The locale used for  
                         sorting indexterms. If no locale specified, 
                         the first occurrence of "xml-lang" will be used as 
@@ -473,9 +495,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N100E2 "><em>/fooutputrellinks</em>:{args.fo.output.rel.links}</td>
+              <td valign="top" headers="N100EC "><em>/fooutputrellinks</em>:{args.fo.output.rel.links}</td>
 
-              <td valign="top" headers="N100EB ">
+              <td valign="top" headers="N100F5 ">
                 <span>The parameter to specify 
                       whether output related links in pdf transformation. 
                       "yes" and "no" are valid values. Default is "no".</span>
