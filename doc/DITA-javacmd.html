@@ -102,13 +102,44 @@
           <tbody>
             <tr>
               <td valign="top" headers="N100EC "> 
+                <em>/basedir</em>:{basedir}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>The path of the working directory for transformations, 
+                        it will be the base of relative paths specified by other parameters.</span>
+                <div class="note"><span class="notetitle">Note:</span> <ul>
+                        <li>If input is relative, it will be set relative to the current directory.</li>
+
+                        <li>In Ant scripts, the default is that specified in the Ant buildfile.</li>
+
+                        <li>In Java command line, the default is current directory.</li>
+</ul>
+
+                      </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "> 
+                <em>/ditadir</em>:{dita.dir}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>The absolute path of the toolkit's home directory.</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "> 
                 <em>/i</em>:{args.input}</td>
 
               <td valign="top" headers="N100F5 ">
                 <span>The path and name of the input file. 
                         This argument should be in the same upper or lower case 
                         with the filename on file system.</span>
-                <div class="note"><span class="notetitle">Note: </span>This parameter must be provided 
+                <div class="note"><span class="notetitle">Note:</span> This parameter must be provided 
                         if <tt>dita.input</tt> and <tt>dita.input.dirname</tt> 
                         not be provided.</div>
 
@@ -121,7 +152,7 @@
 
               <td valign="top" headers="N100F5 ">
                 <span>The name of the input file .</span>
-                <div class="note"><span class="notetitle">Note: </span>This parameter must be provided 
+                <div class="note"><span class="notetitle">Note:</span> This parameter must be provided 
                         if <tt>args.input</tt> not be provided. And this 
                         parameter must be used together with the 
                         <tt>dita.input.dirname</tt> parameter. The result of 
@@ -141,7 +172,7 @@
               <td valign="top" headers="N100F5 ">
                 <span>The input directory which 
                         contains the input file.</span>
-                <div class="note"><span class="notetitle">Note: </span>This parameter must be 
+                <div class="note"><span class="notetitle">Note:</span> This parameter must be 
                         provided if <tt>args.input</tt> not be provided. And 
                         this parameter must be used together with the 
                         <tt>dita.input</tt> parameter. The result of this 
@@ -263,7 +294,7 @@
 
               <td valign="top" headers="N100F5 ">
                 <span>The path for css reference. Default is no path.</span>
-                <div class="note"><span class="notetitle">Note: </span>
+                <div class="note"><span class="notetitle">Note:</span> 
                         <ul>
                           <li>If <samp class="codeph">${args.csspath}</samp> is an URL like path, 
                             it should starts with <samp class="codeph">http://</samp> or 
@@ -291,9 +322,22 @@
               <td valign="top" headers="N100F5 ">
                 <span>User specified css file, it can be a 
                         local file or remote file from website.</span>
-                <div class="note"><span class="notetitle">Note: </span>If <samp class="codeph">${args.csspath}</samp> 
+                <div class="note"><span class="notetitle">Note:</span> If <samp class="codeph">${args.csspath}</samp> 
                         is an URL, the <samp class="codeph">${args.css}</samp> should be a 
                         filepath relative to the URL.</div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "><em>/cssroot</em>:{args.cssroot}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>The root directory of user specified css file.</span>
+                <div class="note"><span class="notetitle">Note:</span> If this parameter is set, 
+                        the <samp class="codeph">${args.css}</samp> should be a 
+                        filepath relative to <samp class="codeph">args.cssroot</samp>.</div>
 
               </td>
 
@@ -367,7 +411,7 @@
               <td valign="top" headers="N100F5 ">
                 <span>The extension name of image file in pdf transformation. 
                     Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
-                <div class="note"><span class="notetitle">Note: </span>Only one extension supported in the same 
+                <div class="note"><span class="notetitle">Note:</span> Only one extension supported in the same 
                       transformation, image files with other extensions will be renamed 
                       to the specified extension.</div>
 
@@ -453,7 +497,7 @@
               <td valign="top" headers="N100F5 ">
                 <span>The directory used to keep generated 
                         log files. Default will be output directory.</span>
-                <div class="note"><span class="notetitle">Note: </span>If several transforms running 
+                <div class="note"><span class="notetitle">Note:</span> If several transforms running 
                         batchly, e.g., ant all:
                         <ul>
                           <li>If the user has specified a common logdir for all 
@@ -501,9 +545,30 @@
                 <span>The parameter to specify 
                       whether output related links in pdf transformation. 
                       "yes" and "no" are valid values. Default is "no".</span>
-                <div class="note"><span class="notetitle">Note: </span>Any value that is not 
+                <div class="note"><span class="notetitle">Note:</span> Any value that is not 
                         "yes" is regarded as "no".</div>
 
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "><em>/fouserconfig</em>:{args.fo.userconfig}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>The parameter to specify 
+                      the user configuration file for FOP.</span>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td valign="top" headers="N100EC "><em>/htmlhelpincludefile</em>:{args.htmlhelp.includefile}</td>
+
+              <td valign="top" headers="N100F5 ">
+                <span>
+                      The parameter to specify the file that need to be included
+                      by the HTMLHelp output.</span>
               </td>
 
             </tr>
