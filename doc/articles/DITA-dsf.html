@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -14,6 +14,9 @@
 <meta content="General" name="DC.Coverage">
 <meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="DC.subject">
 <meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="keywords">
+<meta content="general" name="DC.Audience.Experiencelevel">
+<meta content="" name="DC.Audience.Job">
+<meta content="user" name="DC.Audience.Type">
 <meta content="Michael Priestley; IBM Corporation; Toronto, Canada; mpriestl@ca.ibm.com; Michael Priestley is an information developer for the IBM Toronto Software Development Laboratory. He has written numerous papers on subjects such as hypertext navigation, singlesourcing, and interfaces to dynamic documents. He is currently working on XML and XSL for help and documentation management." name="DC.Creator">
 <meta content="23 February 2001" name="DC.Date.Created">
 <meta content="XHTML" name="DC.Format">
@@ -206,7 +209,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">The reference type module</h4>
+      <div class="section"><h3 class="sectiontitle">The reference type module</h3>
         
         <p>Listing 1 illustrates not the actual <kbd class="userinput">reference.mod</kbd> content, but a simplified version based on Table 1. The use of entities in the content models support domain specialization, as described in the domain specialization article.</p>
 
@@ -219,7 +222,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Adding specialization attributes</h4>
+      <div class="section"><h3 class="sectiontitle">Adding specialization attributes</h3>
         
         <p>To expose the element mappings, we add an attribute to each element that shows its mappings to more general types.</p>
 
@@ -232,7 +235,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Creating an authoring DTD</h4>
+      <div class="section"><h3 class="sectiontitle">Creating an authoring DTD</h3>
         
         <p>Now that we've defined the type module (which declares the newly typed elements and their attributes) and added specialization attributes (which map the new type to its ancestors), we can assemble an authoring DTD.</p>
 
@@ -376,7 +379,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">The APIdesc module</h4>
+      <div class="section"><h3 class="sectiontitle">The APIdesc module</h3>
         
         <p>Here you can see that the content for an API description is actually much more restricted than the content of a general reference topic. The sequence of <span class="filepath">syntax</span>, then <span class="filepath">usage</span>, then <span class="filepath">parameters</span> is now imposed, followed by optional additional sections. This sequence is a subset of the allowable structures in a reference topic, which allows any sequence of syntax, properties, and sections. In addition, the label for the <span class="filepath">usage</span> section is now fixed as <span class="filepath">Usage</span>, taking advantage of the spectitle attribute of section (which is there for exactly this kind of usage): with the spectitle attribute providing the section title, we can also get rid of the title element in usage's content model, making use of the predefined section.notitle.cnt entity.</p>
 
@@ -390,7 +393,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Adding specialization attributes</h4>
+      <div class="section"><h3 class="sectiontitle">Adding specialization attributes</h3>
         
         <p>Every new element now has a mapping to all its ancestor elements. </p>
 
@@ -406,7 +409,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Authoring DTDs</h4>
+      <div class="section"><h3 class="sectiontitle">Authoring DTDs</h3>
         
         <p>Now that we've defined the type module (which declares the newly typed elements and their attributes) and added specialization attributes (which map the new type to its ancestors), we can assemble an authoring DTD.</p>
 
@@ -465,13 +468,13 @@
         <div>
           <p>This process works only if the general transforms have been enabled to handle specialized elements, and if the specialized elements include enough information for the general transform to handle them.</p>
 
-          <div class="section"><h4 class="sectiontitle">Requirement 1: mapping attributes</h4>
+          <div class="section"><h5 class="sectiontitle">Requirement 1: mapping attributes</h5>
             
             <p>To provide the specialization information, you need to add specialization attributes, as outlined previously. After you include the attributes in your documents, they are ready to be processed by specialization-aware transforms.</p>
 
           </div>
 
-          <div class="section"><h4 class="sectiontitle">Requirement 2: specialization-aware transforms</h4>
+          <div class="section"><h5 class="sectiontitle">Requirement 2: specialization-aware transforms</h5>
             
             <p>For the transform, you need template rules that check for a match against both the element name and the attribute value. </p>
 
@@ -803,7 +806,7 @@
         </table>
 </div>
 
-      <div class="section"><h4 class="sectiontitle">Extended example</h4>
+      <div class="section"><h3 class="sectiontitle">Extended example</h3>
         
         <p>You have a general element <span class="filepath">General</span>, with the content model <span class="filepath">(a,b?,(c|d+))</span>. This definition means that a <span class="filepath">General</span> always contains element <span class="filepath"> a</span>, optionally followed by element <span class="filepath">b</span>, and always ends with either <span class="filepath">c</span> or one or more <span class="filepath">d</span>'s.</p>
 
@@ -827,7 +830,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Details of the class attribute</h4>
+      <div class="section"><h3 class="sectiontitle">Details of the class attribute</h3>
         
         <p>Every element must have a class attribute. The class attribute starts and ends with white space, and contains a list of blank-delimited values. Each value has two parts: the first part identifies a topic type, and the second part (after a /) identifies an element type. The class attribute value should be declared as a default attribute value in the DTD. Generally, it should not be modified by the author. </p>
 
@@ -849,7 +852,7 @@
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Using the class attribute</h4>
+      <div class="section"><h3 class="sectiontitle">Using the class attribute</h3>
         
         <p>Applying an XSLT template based on class attribute values allows a transform to be applied to whole branches of element types, instead of just a single element type.</p>
 
@@ -869,7 +872,7 @@ This match statement will work on any li element it encounters. It will also wor
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">The class attribute in domains specialization</h4>
+      <div class="section"><h3 class="sectiontitle">The class attribute in domains specialization</h3>
         
         <p>When you create a domains specialization, the new elements still need a class attribute, but should start with a "+" instead of a "-". This signals any generalization transforms to treat the element differently: a domains-aware generalization transform may have different logic for handling domains than for handling topic specializations. </p>
 
@@ -877,7 +880,7 @@ This match statement will work on any li element it encounters. It will also wor
 
       </div>
 
-      <div class="section"><h4 class="sectiontitle">Notices</h4>
+      <div class="section"><h3 class="sectiontitle">Notices</h3>
         
         <blockquote>
           <p>&copy; Copyright International Business Machines Corp., 2002, 2003. All rights reserved.</p>

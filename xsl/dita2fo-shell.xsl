@@ -135,9 +135,14 @@
             <xsl:text>[vertical list of authors]</xsl:text>
           </fo:block>
           <xsl:for-each select="//author">
-            <fo:block font-size="11pt" font-weight="bold" line-height="1.5">
-                [<xsl:value-of select="."></xsl:value-of>] </fo:block>
-          </xsl:for-each>
+            <xsl:variable name="authorid1" select="generate-id(.)"></xsl:variable>   
+			<xsl:variable name="authorid2" select="generate-id(//author[.=current()])"></xsl:variable>
+			<xsl:if test="$authorid1=$authorid2">
+			  <fo:block font-size="11pt" font-weight="bold" line-height="1.5">
+				[<xsl:value-of select="."></xsl:value-of>]
+			  </fo:block>
+			</xsl:if>            
+		  </xsl:for-each>
           
           <fo:block margin-top="3pc" font-size="11pt" font-weight="bold" line-height="normal"> ©    Copyright
                 <xsl:value-of select="//*[contains(@class,' bkinfo/orgname ')]"></xsl:value-of>

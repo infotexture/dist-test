@@ -4,7 +4,7 @@
 
 
 
-<group xml:base="dtd">
+<group xml:base="dtd/">
 
   <public publicId="-//IBM//DTD DITA Concept//EN" uri="dita132/concept.dtd"></public>
   <public publicId="-//IBM//ELEMENTS DITA Concept//EN" uri="dita132/concept.mod"></public>
@@ -60,6 +60,9 @@
 
   <public publicId="-//OASIS//DTD DITA Composite//EN" uri="ditabase.dtd"></public>
 
+  <public publicId="-//OASIS//DTD DITA Glossary//EN" uri="glossary.dtd"></public>
+  <public publicId="-//OASIS//ELEMENTS DITA Glossary//EN" uri="glossary.mod"></public>
+
   <public publicId="-//OASIS//DTD DITA Reference//EN" uri="reference.dtd"></public>
   <public publicId="-//OASIS//ELEMENTS DITA Reference//EN" uri="reference.mod"></public>
 
@@ -77,11 +80,17 @@
   <public publicId="-//OASIS//ELEMENTS DITA Map//EN" uri="map.mod"></public>
   <public publicId="-//OASIS//ENTITIES DITA Map Group Domain//EN" uri="mapGroup.ent"></public>
   <public publicId="-//OASIS//ELEMENTS DITA Map Group Domain//EN" uri="mapGroup.mod"></public>
+          
+  <public publicId="-//OASIS//DTD DITA BookMap//EN" uri="bookmap.dtd"></public>
+  <public publicId="-//OASIS//ELEMENTS DITA BookMap//EN" uri="bookmap.mod"></public>
 
 
 
   <public publicId="-//OASIS//ELEMENTS DITA Highlight Domain//EN" uri="highlightDomain.mod"></public>
   <public publicId="-//OASIS//ENTITIES DITA Highlight Domain//EN" uri="highlightDomain.ent"></public>
+          
+  <public publicId="-//OASIS//ELEMENTS DITA Indexing Domain//EN" uri="indexingDomain.mod"></public>
+  <public publicId="-//OASIS//ENTITIES DITA Indexing Domain//EN" uri="indexingDomain.ent"></public>
 
   <public publicId="-//OASIS//ELEMENTS DITA Programming Domain//EN" uri="programmingDomain.mod"></public>
   <public publicId="-//OASIS//ENTITIES DITA Programming Domain//EN" uri="programmingDomain.ent"></public>
@@ -94,9 +103,13 @@
 
   <public publicId="-//OASIS//ELEMENTS DITA Utilities Domain//EN" uri="utilitiesDomain.mod"></public>
   <public publicId="-//OASIS//ENTITIES DITA Utilities Domain//EN" uri="utilitiesDomain.ent"></public>
+          
+  <public publicId="-//OASIS//ELEMENTS DITA XNAL Domain//EN" uri="xnalDomain.mod"></public>
+  <public publicId="-//OASIS//ENTITIES DITA XNAL Domain//EN" uri="xnalDomain.ent"></public>
+  
 
-
-
+  <public publicId="-//OASIS//ELEMENTS DITA Common Elements//EN" uri="commonElements.mod"></public>
+  <public publicId="-//OASIS//ENTITIES DITA Common Elements//EN" uri="commonElements.ent"></public>
   <public publicId="-//OASIS//ELEMENTS DITA Metadata//EN" uri="metaDecl.mod"></public>
   <public publicId="-//OASIS//ELEMENTS DITA CALS Tables//EN" uri="tblDecl.mod"></public>
   <public publicId="-//OASIS//ELEMENTS DITA Exchange Table Model//EN" uri="tblDecl.mod"></public>
