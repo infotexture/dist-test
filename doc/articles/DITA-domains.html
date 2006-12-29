@@ -4,13 +4,13 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="public" name="security">
-<meta content="index,follow" name="Robots">
-<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
 <meta content="topic" name="DC.Type">
 <meta name="DC.Title" content="Specializing domains in DITA">
 <meta name="abstract" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
 <meta name="description" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
+<meta scheme="URI" name="DC.Relation" content="DITA-rm.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-dsf.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-mapdomains.html">
 <meta content="Erik Hennum; IBM Corporation; ehennum@us.ibm.com. Erik Hennum works on the design and implementation of User Assistance for the IBM Storage Systems Group." name="DC.Creator">
 <meta content="XHTML" name="DC.Format">
 <meta content="domains" name="DC.Identifier">
@@ -30,7 +30,14 @@
     <p>The Darwin Information Typing Architecture (DITA) is an XML architecture for extensible technical information. A domain extends DITA with a set of elements whose names and content models are unique to an organization or field of knowledge. Architects and authors can combine elements from any number of domains, leading to great flexibility and precision in capturing the semantics and structure of their information. In this overview, you learn how to define your own domains.</p>
 
   </div>
-  <div class="nested1" id="intro"><a name="intro"><!-- --></a>
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-rm.html" title="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">Introduction to the Darwin Information Typing Architecture</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="DITA-dsf.html" title="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">Specializing topic types in DITA</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="DITA-mapdomains.html" title="The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.">How to define a formal information architecture with DITA map domains</a></div>
+</div>
+</div>
+<div class="nested1" id="intro"><a name="intro"><!-- --></a>
     <h2 class="topictitle2">Introducing domain specialization</h2>
 
     <div>
@@ -71,9 +78,9 @@
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all">
           <thead align="left">
             <tr>
-              <th valign="top" id="N10109">Domain</th>
+              <th class="cellrowborder" valign="top" id="N1013A">Domain</th>
 
-              <th valign="top" id="N10110">Purpose</th>
+              <th class="cellrowborder" valign="top" id="N10141">Purpose</th>
 
             </tr>
 
@@ -81,30 +88,30 @@
 
           <tbody>
             <tr>
-              <td valign="top" headers="N10109 N10110 ">highlight</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">highlight</td>
 
-              <td valign="top" headers="N10109 N10110 ">To highlight text with styles such as bold, italic, and monospace</td>
-
-            </tr>
-
-            <tr>
-              <td valign="top" headers="N10109 N10110 ">programming</td>
-
-              <td valign="top" headers="N10109 N10110 ">To define the syntax and give examples of programming languages</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">To highlight text with styles such as bold, italic, and monospace</td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N10109 N10110 ">software</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">programming</td>
 
-              <td valign="top" headers="N10109 N10110 ">To describe the operation of a software program</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">To define the syntax and give examples of programming languages</td>
 
             </tr>
 
             <tr>
-              <td valign="top" headers="N10109 N10110 ">UI</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">software</td>
 
-              <td valign="top" headers="N10109 N10110 ">To describe the user interface of a software program</td>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">To describe the operation of a software program</td>
+
+            </tr>
+
+            <tr>
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">UI</td>
+
+              <td class="cellrowborder" valign="top" headers="N1013A N10141 ">To describe the user interface of a software program</td>
 
             </tr>
 
@@ -137,7 +144,7 @@
 
       <p>In particular, each domain is implemented with two files:</p>
 
-      <ul>
+      <br><ul>
         <li>
           <p>A file that declares the entities for the domain. This file has the <span class="filepath">.ent</span> extension.</p>
 
@@ -154,7 +161,7 @@
 
       <p>A shell DTD has a consistent design pattern with a few well-defined sections. The instructions in these sections perform the following actions:</p>
 
-      <ol>
+      <br><ol>
         <li>
           <p>Declare the entities for the domains.</p>
 
@@ -303,7 +310,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
         
         <p>The entity declaration file has sections that perform the following actions:</p>
 
-        <ol>
+        <br><ol>
           <li>
             <p>Define the domain specialization entities.</p>
 
@@ -344,7 +351,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
         
         <p>The element definition file has sections that perform the following actions:</p>
 
-        <ol>
+        <br><ol>
           <li>
             <p>Define the content element entities for the elements introduced by the domain.</p>
 
@@ -521,7 +528,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
     <div>
       <p>Through topic specialization and domains, DITA provides the following benefits:</p>
 
-      <ul>
+      <br><ul>
         <li>
           <p>Simpler topic design.</p>
 

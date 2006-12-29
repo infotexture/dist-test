@@ -4,13 +4,12 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="public" name="security">
-<meta content="index,follow" name="Robots">
-<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
 <meta content="topic" name="DC.Type">
 <meta name="DC.Title" content="How to define a formal information architecture with DITA map domains">
 <meta name="abstract" content="The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.">
 <meta name="description" content="The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.">
+<meta scheme="URI" name="DC.Relation" content="DITA-rm.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-domains.html">
 <meta content="XHTML" name="DC.Format">
 <meta content="dita-mapdomains" name="DC.Identifier">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
@@ -29,7 +28,13 @@
 
     </div>
 
-    <div class="nested1" id="informationArchitecture"><a name="informationArchitecture"><!-- --></a>
+    <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-rm.html" title="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">Introduction to the Darwin Information Typing Architecture</a></div>
+<div class="previouslink"><strong>Previous topic:</strong> <a href="DITA-domains.html" title="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">Specializing domains in DITA</a></div>
+</div>
+</div>
+<div class="nested1" id="informationArchitecture"><a name="informationArchitecture"><!-- --></a>
       <h2 class="topictitle2">Formal information architecture</h2>
 
       <div>
@@ -39,7 +44,7 @@
 
         <p>Currently, information architects work by defining the architecture through guidelines and instructions to the writer. A better approach is to formalize the architecture through an XML design that is validated by the XML editor or parser. This formal approach has the following benefits:</p>
 
-        <ul>
+        <br><ul>
           <li>Authors receive guidance from the markup while working.</li>
 
           <li>Information with the same purpose is consistent across deliverables.</li>
@@ -56,11 +61,11 @@
 <div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="void" border="1" rules="all">
             <thead align="left">
               <tr>
-                <th valign="top" id="N10088">Casual architecture</th>
+                <th class="cellrowborder" valign="top" id="N100AB">Casual architecture</th>
 
-                <th valign="top" id="N1008F">Applied design</th>
+                <th class="cellrowborder" valign="top" id="N100B2">Applied design</th>
 
-                <th valign="top" id="N10096">Formal architecture</th>
+                <th class="cellrowborder" valign="top" id="N100B9">Formal architecture</th>
 
               </tr>
 
@@ -68,15 +73,15 @@
 
             <tbody>
               <tr>
-                <td valign="top" headers="N10088 N1008F N10096 ">
+                <td class="cellrowborder" valign="top" headers="N100AB N100B2 N100B9 ">
                   <img src="image/infoarch1.gif" height="185" width="180" alt="Topics in any arrangement">
                 </td>
 
-                <td valign="top" headers="N10088 N1008F N10096 ">
+                <td class="cellrowborder" valign="top" headers="N100AB N100B2 N100B9 ">
                   <img src="image/infoarch2.gif" height="65" width="124" alt="Topic collection type">
                 </td>
 
-                <td valign="top" headers="N10088 N1008F N10096 ">
+                <td class="cellrowborder" valign="top" headers="N100AB N100B2 N100B9 ">
                   <img src="image/infoarch3.gif" height="162" width="156" alt="Topics in formal arrangement">
                 </td>
 
@@ -150,7 +155,7 @@
 
         <p>A specialized <samp class="codeph">topicref</samp>can be used for the following purposes:</p>
 
-        <ul>
+        <br><ul>
           <li>To restrict the references to topics of a specialized type. For instance, a <samp class="codeph">conceptref</samp> refers only to concept topics (including specialized concepts).</li>
 
           <li>To assign a topic a topic to a role within a collection. For instance, the topic identified by a <samp class="codeph">summaryref</samp> could provide the concluding explanation for a collection.</li>
@@ -333,8 +338,8 @@
 
         <p>In fact, this example is the map for the article that you're reading right now. That is, as you may well have noticed, this article conforms to the formal pattern for a how-to collection. Here's the list of topics in this how-to article but with the addition of the topic type or role and title:</p>
 
-        <ul>
-          <li>howto: How to define a formal information architecture with DITA map domains<ul>
+        <br><ul>
+          <li>howto: How to define a formal information architecture with DITA map domains<br><ul>
               <li>concept: Formal information architecture</li>
 
               <li>concept: Specializing topics and maps</li>

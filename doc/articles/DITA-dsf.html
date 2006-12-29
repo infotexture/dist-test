@@ -4,9 +4,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="public" name="security">
-<meta content="index,follow" name="Robots">
-<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
 <meta content="topic" name="DC.Type">
 <meta name="DC.Title" content="Specializing topic types in DITA">
 <meta name="abstract" content="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">
@@ -14,6 +11,8 @@
 <meta content="General" name="DC.Coverage">
 <meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="DC.subject">
 <meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="keywords">
+<meta scheme="URI" name="DC.Relation" content="DITA-rm.html">
+<meta scheme="URI" name="DC.Relation" content="DITA-domains.html">
 <meta content="general" name="DC.Audience.Experiencelevel">
 <meta content="" name="DC.Audience.Job">
 <meta content="user" name="DC.Audience.Type">
@@ -42,7 +41,13 @@
 
   </div>
 
-  <div class="nested1" id="archcontext"><a name="archcontext"><!-- --></a>
+  <div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-rm.html" title="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">Introduction to the Darwin Information Typing Architecture</a></div>
+<div class="nextlink"><strong>Next topic:</strong> <a href="DITA-domains.html" title="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">Specializing domains in DITA</a></div>
+</div>
+</div>
+<div class="nested1" id="archcontext"><a name="archcontext"><!-- --></a>
     <h2 class="topictitle2">Architectural context </h2>
 
     <div>
@@ -76,7 +81,7 @@
       <img src="image/manydiag.gif" height="253" width="494" alt="Specialized information types">
       <p>Each new information type is defined as an extension of an existing information type: the specializing type inherits, without duplication, any common structures; and the specializing type provides a mapping between its new elements and the general type's existing elements. Each information type is defined in its own DTD module, which defines only the new elements for that type. A document that consists of exactly one information type (for example, a task document in a help web) has a document type defined by all the modules in the information type's specialization hierarchy (for example, task.mod and topic.mod). A document type with multiple information types (for example, a book consisting of concepts, tasks, and reference topics) includes the modules for each of the information types used, as well as the modules for their ancestors (concept.mod, task.mod, reference.mod, plus their ancestor topic.mod). </p>
 
-      <div class="p">Because of the separation of information types into modules, you can define new information types without affecting ancestor types. This separation gives you the following benefits: <ul>
+      <div class="p">Because of the separation of information types into modules, you can define new information types without affecting ancestor types. This separation gives you the following benefits: <br><ul>
           <li>Reduces maintenance costs: each authoring group maintains only the elements that it uniquely requires</li>
 
           <li>Increases compatibility: the core information types can be centrally maintained, and changes to the core types are reflected in all specializing types</li>
@@ -106,9 +111,9 @@
             
             <thead align="left">
               <tr>
-                <th valign="top" width="NaN%" id="N101BB"> Topic </th>
+                <th class="cellrowborder" valign="top" width="NaN%" id="N101DE"> Topic </th>
 
-                <th valign="top" width="NaN%" id="N101C2"> Reference</th>
+                <th class="cellrowborder" valign="top" width="NaN%" id="N101E5"> Reference</th>
 
               </tr>
 
@@ -116,54 +121,54 @@
 
             <tbody>
               <tr>
-                <td valign="top" width="NaN%" headers="N101BB ">(topic.mod) </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101DE ">(topic.mod) </td>
 
-                <td valign="top" width="NaN%" headers="N101C2 "> (reference.mod)</td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N101BB "> topic </td>
-
-                <td valign="top" width="NaN%" headers="N101C2 "> reference </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 "> (reference.mod)</td>
 
               </tr>
 
               <tr>
-                <td valign="top" width="NaN%" headers="N101BB "> title </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101DE "> topic </td>
 
-                <td valign="top" width="NaN%" headers="N101C2 ">&nbsp;</td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N101BB "> body </td>
-
-                <td valign="top" width="NaN%" headers="N101C2 "> refbody </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 "> reference </td>
 
               </tr>
 
               <tr>
-                <td rowspan="2" valign="top" width="NaN%" headers="N101BB ">simpletable</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101DE "> title </td>
 
-                <td valign="top" width="NaN%" headers="N101C2 ">properties</td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N101C2 ">&nbsp;</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 ">&nbsp;</td>
 
               </tr>
 
               <tr>
-                <td rowspan="2" valign="top" width="NaN%" headers="N101BB "> section </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101DE "> body </td>
 
-                <td valign="top" width="NaN%" headers="N101C2 "> refsyn</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 "> refbody </td>
 
               </tr>
 
               <tr>
-                <td valign="top" width="NaN%" headers="N101C2 ">&nbsp;</td>
+                <td class="cellrowborder" rowspan="2" valign="top" width="NaN%" headers="N101DE ">simpletable</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 ">properties</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 ">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" rowspan="2" valign="top" width="NaN%" headers="N101DE "> section </td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 "> refsyn</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N101E5 ">&nbsp;</td>
 
               </tr>
 
@@ -194,7 +199,7 @@
           
             <dt class="dlterm">Cells</dt>
 
-            <dd>Each cell in a column represents the following possibilities in relation to the cell to its left: <ul>
+            <dd>Each cell in a column represents the following possibilities in relation to the cell to its left: <br><ul>
                 <li>A blank cell: The element in the cell to the left is reused as-is. For example, a <span class="filepath">reference</span><span class="filepath">title</span> is the same as a <span class="filepath">topic</span><span class="filepath">title</span>, and <span class="filepath">topic</span>'s declaration of the <span class="filepath">title</span> element can be used by <span class="filepath">reference</span>.</li>
 
                 <li>A full cell: An element that is specific to the current type replaces the more general element to the left. For example, in <span class="filepath">reference</span> , <span class="filepath">refbody</span> replaces the more general <span class="filepath">body</span>.</li>
@@ -272,7 +277,7 @@
       <div class="section">
         <p>As before, each cell specializes the contents of the cell to its left:</p>
 
-        <ul>
+        <br><ul>
           <li>A blank cell: The element to the left is picked up by the new type unchanged. For example, <span class="filepath">simpletable</span> and <span class="filepath">refsyn</span> are available in an API description.</li>
 
           <li>A full cell: The element to the left is replaced by a more specific one. For example, <span class="filepath">APIname</span> replaces <span class="filepath">title</span>.</li>
@@ -288,11 +293,11 @@
             
             <thead align="left">
               <tr>
-                <th valign="top" width="NaN%" id="N104B9"> Topic</th>
+                <th class="cellrowborder" valign="top" width="NaN%" id="N104DC"> Topic</th>
 
-                <th valign="top" width="NaN%" id="N104C0"> Reference</th>
+                <th class="cellrowborder" valign="top" width="NaN%" id="N104E3"> Reference</th>
 
-                <th valign="top" width="NaN%" id="N104C7"> APIdesc</th>
+                <th class="cellrowborder" valign="top" width="NaN%" id="N104EA"> APIdesc</th>
 
               </tr>
 
@@ -300,75 +305,75 @@
 
             <tbody>
               <tr>
-                <td valign="top" width="NaN%" headers="N104B9 "> (topic.mod) </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104DC "> (topic.mod) </td>
 
-                <td valign="top" width="NaN%" headers="N104C0 "> (reference.mod)</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 "> (reference.mod)</td>
 
-                <td valign="top" width="NaN%" headers="N104C7 "> (APIdesc.mod)</td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N104B9 "> topic </td>
-
-                <td valign="top" width="NaN%" headers="N104C0 "> reference </td>
-
-                <td valign="top" width="NaN%" headers="N104C7 "> APIdesc </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA "> (APIdesc.mod)</td>
 
               </tr>
 
               <tr>
-                <td valign="top" width="NaN%" headers="N104B9 "> title </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104DC "> topic </td>
 
-                <td valign="top" width="NaN%" headers="N104C0 ">&nbsp;</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 "> reference </td>
 
-                <td valign="top" width="NaN%" headers="N104C7 "> APIname </td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N104B9 "> body </td>
-
-                <td valign="top" width="NaN%" headers="N104C0 "> refbody </td>
-
-                <td valign="top" width="NaN%" headers="N104C7 "> APIbody </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA "> APIdesc </td>
 
               </tr>
 
               <tr>
-                <td rowspan="2" valign="top" width="NaN%" headers="N104B9 ">simpletable</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104DC "> title </td>
 
-                <td valign="top" width="NaN%" headers="N104C0 ">properties</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 ">&nbsp;</td>
 
-                <td valign="top" width="NaN%" headers="N104C7 ">parameters</td>
-
-              </tr>
-
-              <tr>
-                <td valign="top" width="NaN%" headers="N104C0 ">&nbsp;</td>
-
-                <td valign="top" width="NaN%" headers="N104C7 ">&nbsp;</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA "> APIname </td>
 
               </tr>
 
               <tr>
-                <td rowspan="3" valign="top" width="NaN%" headers="N104B9 "> section </td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104DC "> body </td>
 
-                <td valign="top" width="NaN%" headers="N104C0 "> refsyn</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 "> refbody </td>
 
-                <td valign="top" width="NaN%" headers="N104C7 ">&nbsp;</td>
-
-              </tr>
-
-              <tr>
-                <td rowspan="2" valign="top" width="NaN%" headers="N104C0 ">&nbsp;</td>
-
-                <td valign="top" width="NaN%" headers="N104C7 ">&nbsp;</td>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA "> APIbody </td>
 
               </tr>
 
               <tr>
-                <td valign="top" width="NaN%" headers="N104C7 ">usage</td>
+                <td class="cellrowborder" rowspan="2" valign="top" width="NaN%" headers="N104DC ">simpletable</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 ">properties</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA ">parameters</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 ">&nbsp;</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA ">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" rowspan="3" valign="top" width="NaN%" headers="N104DC "> section </td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104E3 "> refsyn</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA ">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" rowspan="2" valign="top" width="NaN%" headers="N104E3 ">&nbsp;</td>
+
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA ">&nbsp;</td>
+
+              </tr>
+
+              <tr>
+                <td class="cellrowborder" valign="top" width="NaN%" headers="N104EA ">usage</td>
 
               </tr>
 
@@ -439,7 +444,7 @@
     <div>
       <p>After a specialized type has been defined the necessary attributes have been declared, they can provide the basis for the following operations:</p>
 
-      <ul>
+      <br><ul>
         <li>Applying a general style sheet or transform to a specialized topic type</li>
 
         <li>Generalizing a topic of a specialized type (transforming it into a more generic topic type)</li>
@@ -526,7 +531,7 @@
 
         <p>The <span class="filepath">class</span> attribute that was introduced previously serves two purposes. It provices:</p>
 
-        <ul>
+        <br><ul>
           <li>The information needed to map.</li>
 
           <li>A way to preserve the information to allow round-tripping. </li>
@@ -612,7 +617,7 @@
 
         <p>You can put the specializing information in either of two places:</p>
 
-        <ul>
+        <br><ul>
           <li>Add it to the <span class="filepath">class</span> attribute. You need to be careful to get the order correct, and include all ancestor type values.</li>
 
           <li>Or give the name of the target element in an <span class="filepath">outputclass</span> attribute, migrate based on that value, and add the <span class="filepath">class</span> attribute values afterward.</li>
@@ -633,7 +638,7 @@
     <div>
       <p>Like the XML DTD syntax, the XML Schema language is a way of defining a vocabulary (elements and attributes) and a set of constraints on that vocabulary (such as content models, or fixed vs. implied attributes). It has a built-in specialization mechanism, which includes the capability to restrict allowable specializations. Using the XML Schema language instead of DTDs would make it much easier to validate that specialized information types represent valid subsets of generic types, which ensures smooth processing by generic translation and publishing transforms. </p>
 
-      <div class="p">Unlike DTDs, XML schemas are expressed as XML documents. As a result, they can be processed in ways that DTDs cannot. For example, we can maintain a single XML schema and then use XSL to generate two versions: <ul>
+      <div class="p">Unlike DTDs, XML schemas are expressed as XML documents. As a result, they can be processed in ways that DTDs cannot. For example, we can maintain a single XML schema and then use XSL to generate two versions: <br><ul>
           <li>An authoring version of it that eliminates any fixed attributes and any overridden elements</li>
 
           <li>A processor-ready version of it that includes the class attributes that drive the translation and publishing transforms</li>
@@ -653,7 +658,7 @@
     <div>
       <p>You can create a specialized information type by using this general procedure:</p>
 
-      <ol>
+      <br><ol>
         <li>Identify the elements that you need.</li>
 
         <li>Identify the mapping to elements of a more general type.</li>
@@ -668,7 +673,7 @@
 
       <p>You can create specialized XSL transforms by using this general procedure:</p>
 
-      <ol>
+      <br><ol>
         <li>Create a new transform for your information type.</li>
 
         <li>Import the existing transform that you want to extend.</li>
@@ -689,7 +694,7 @@
     <div>
       <p>Although you could create a new element equivalent for any tag in a general DTD, this work is useless to you as an author unless the content models that would include the tag are also specialized. In the <span class="filepath">APIdesc</span> example, the <span class="filepath">parameters</span> element is not valid content anywhere in <span class="filepath">topic</span> or <span class="filepath">reference</span>. For it to be used, you need to create valid contexts for parameters, all the way up to the topic-level container. To expose the <span class="filepath">parameters</span> element to your authors, you need to specialize the following parts:</p>
 
-      <ul>
+      <br><ul>
         <li>A <span class="filepath">body</span> element, to allow parameters as valid content (giving us <span class="filepath">APIbody</span>)</li>
 
         <li>A <span class="filepath">topic</span> element, to allow the specialized body (giving us <span class="filepath">APIdesc</span>)</li>
@@ -707,11 +712,11 @@
           
           <thead align="left">
             <tr>
-              <th valign="top" width="16.051364365971107%" id="N109FA">Content type</th>
+              <th class="cellrowborder" valign="top" width="16.051364365971107%" id="N10A1D">Content type</th>
 
-              <th valign="top" width="24.398073836276083%" id="N10A01">Allowed specialization</th>
+              <th class="cellrowborder" valign="top" width="24.398073836276083%" id="N10A24">Allowed specialization</th>
 
-              <th valign="top" width="59.5505617977528%" id="N10A08">Example (Special specializing General)</th>
+              <th class="cellrowborder" valign="top" width="59.5505617977528%" id="N10A2B">Example (Special specializing General)</th>
 
             </tr>
 
@@ -719,11 +724,11 @@
 
           <tbody>
             <tr>
-              <td valign="top" width="16.051364365971107%" headers="N109FA ">Required</td>
+              <td class="cellrowborder" valign="top" width="16.051364365971107%" headers="N10A1D ">Required</td>
 
-              <td valign="top" width="24.398073836276083%" headers="N10A01 ">Rename only</td>
+              <td class="cellrowborder" valign="top" width="24.398073836276083%" headers="N10A24 ">Rename only</td>
 
-              <td valign="top" width="59.5505617977528%" headers="N10A08 ">
+              <td class="cellrowborder" valign="top" width="59.5505617977528%" headers="N10A2B ">
                 <pre>&lt;!ELEMENT General(a)&gt;</pre>
 
                 <pre>&lt;!ELEMENT Special(a.1)&gt;</pre>
@@ -733,11 +738,11 @@
             </tr>
 
             <tr>
-              <td valign="top" width="16.051364365971107%" headers="N109FA ">Optional (?)</td>
+              <td class="cellrowborder" valign="top" width="16.051364365971107%" headers="N10A1D ">Optional (?)</td>
 
-              <td valign="top" width="24.398073836276083%" headers="N10A01 ">Rename, make required, or delete</td>
+              <td class="cellrowborder" valign="top" width="24.398073836276083%" headers="N10A24 ">Rename, make required, or delete</td>
 
-              <td valign="top" width="59.5505617977528%" headers="N10A08 ">
+              <td class="cellrowborder" valign="top" width="59.5505617977528%" headers="N10A2B ">
                 <pre>&lt;!ELEMENT General(a?)&gt;</pre>
 
                 <pre>&lt;!ELEMENT Special(a.1?)&gt;
@@ -749,11 +754,11 @@
             </tr>
 
             <tr>
-              <td valign="top" width="16.051364365971107%" headers="N109FA ">One or more (+)</td>
+              <td class="cellrowborder" valign="top" width="16.051364365971107%" headers="N10A1D ">One or more (+)</td>
 
-              <td valign="top" width="24.398073836276083%" headers="N10A01 ">Rename, make required, split into a required element plus others, split into one or more elements plus others.</td>
+              <td class="cellrowborder" valign="top" width="24.398073836276083%" headers="N10A24 ">Rename, make required, split into a required element plus others, split into one or more elements plus others.</td>
 
-              <td valign="top" width="59.5505617977528%" headers="N10A08 ">
+              <td class="cellrowborder" valign="top" width="59.5505617977528%" headers="N10A2B ">
                 <pre>&lt;!ELEMENT General(a+)&gt;</pre>
 
                 <pre>&lt;!ELEMENT Special(a.1+)&gt;
@@ -766,11 +771,11 @@
             </tr>
 
             <tr>
-              <td valign="top" width="16.051364365971107%" headers="N109FA ">Zero or more (*)</td>
+              <td class="cellrowborder" valign="top" width="16.051364365971107%" headers="N10A1D ">Zero or more (*)</td>
 
-              <td valign="top" width="24.398073836276083%" headers="N10A01 ">Rename, make required, make optional, split into a required element plus others, split into an optional element plus others, split into one-or-more plus others, split into zero-or-more plus others, or delete</td>
+              <td class="cellrowborder" valign="top" width="24.398073836276083%" headers="N10A24 ">Rename, make required, make optional, split into a required element plus others, split into an optional element plus others, split into one-or-more plus others, split into zero-or-more plus others, or delete</td>
 
-              <td valign="top" width="59.5505617977528%" headers="N10A08 ">
+              <td class="cellrowborder" valign="top" width="59.5505617977528%" headers="N10A2B ">
                 <pre>&lt;!ELEMENT General(a*)&gt;</pre>
 
                 <pre>&lt;!ELEMENT Special(a.1*)&gt;
@@ -787,11 +792,11 @@
             </tr>
 
             <tr>
-              <td valign="top" width="16.051364365971107%" headers="N109FA ">Either-or</td>
+              <td class="cellrowborder" valign="top" width="16.051364365971107%" headers="N10A1D ">Either-or</td>
 
-              <td valign="top" width="24.398073836276083%" headers="N10A01 ">Rename, or choose one</td>
+              <td class="cellrowborder" valign="top" width="24.398073836276083%" headers="N10A24 ">Rename, or choose one</td>
 
-              <td valign="top" width="59.5505617977528%" headers="N10A08 ">
+              <td class="cellrowborder" valign="top" width="59.5505617977528%" headers="N10A2B ">
                 <pre>&lt;!ELEMENT General (a|b)&gt;</pre>
 
                 <pre>&lt;!ELEMENT Special (a.1|b.1)&gt;
