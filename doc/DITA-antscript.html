@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -13,185 +13,277 @@
 <meta content="antscript" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>Ant tasks and script</title>
+<title>
+Ant tasks and script</title>
 </head>
 <body id="antscript"><a name="antscript"><!-- --></a>
 
 
-  <h1 class="topictitle1">Ant tasks and script</h1>
+
+  <h1 class="topictitle1">
+Ant tasks and script</h1>
 
   
-  <div><p>This topic lists detailed Ant tasks and script.</p>
+  <div><p>
+This topic lists detailed Ant tasks and script.</p>
+
 
     <div class="section">
-      <p>The build process including pre-process can be called by using Ant 
+
+      <p>
+The build process including pre-process can be called by using Ant 
         script. There are four major Ant script files: </p>
 
-      <p><em>conductor.xml</em>, <em>pretargets.xml,</em> <em>ditatargets.xml</em> 
-        and <em>catalog-ant.xml</em>.</p>
+      <p>
+<em>
+conductor.xml</em>, <em>
+pretargets.xml,</em> <em>
+ditatargets.xml</em> 
+        and <em>
+catalog-ant.xml</em>.</p>
 
       <dl>
+
         
+
           <dt class="dlterm">
-            <em>conductor.xml</em>
+
+            <em>
+conductor.xml</em>
           </dt>
 
-          <dd>The main Ant script file includes the other three ant scripts and 
+          <dd>
+The main Ant script file includes the other three ant scripts and 
             provides main targets for every output style. </dd>
 
           <dd class="ddexpand">
+
             
-<div class="tablenoborder"><a name="antscript__dita.param.general"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="antscript__dita.param.general" frame="border" border="1" rules="all"><caption>Table 1. General Parameter Table</caption>
+<div class="tablenoborder"><a name="antscript__dita.param.general"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="antscript__dita.param.general" frame="border" border="1" rules="all"><caption>Table 1. 
+General Parameter Table</caption>
+
                 
                 
                 
                 <thead align="left">
+
                   <tr>
-                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N1009C">Parameter </th>
 
-                    <th class="cellrowborder" align="left" valign="top" width="66.66666666666666%" id="N100A3">Description</th>
+                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N100A0">
+Parameter </th>
 
-                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N100AA">Required</th>
+                    <th class="cellrowborder" align="left" valign="top" width="66.66666666666666%" id="N100A7">
+Description</th>
+
+                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N100AE">
+Required</th>
 
                   </tr>
 
                 </thead>
 
                 <tbody>
+
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">basedir</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__basedir"><a name="antscript__basedir"><!-- --></a>The path of the working directory for transformations, 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+basedir</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__basedir"><a name="antscript__basedir"><!-- --></a>
+The path of the working directory for transformations, 
                         it will be the base of relative paths specified by other parameters.</span> 
-                      <div class="note" id="antscript__basedir-note"><a name="antscript__basedir-note"><!-- --></a><span class="notetitle">Note:</span> <br><ul>
-                        <li>If input is relative, it will be set relative to the current directory.</li>
+                      <div class="note" id="antscript__basedir-note"><a name="antscript__basedir-note"><!-- --></a><span class="notetitle">Note:</span> 
+<br><ul>
 
-                        <li>In Ant scripts, the default is that specified in the Ant buildfile.</li>
+                        <li>
+If input is relative, it will be set relative to the current directory.</li>
 
-                        <li>In Java command line, the default is current directory.</li>
+                        <li>
+In Ant scripts, the default is that specified in the Ant buildfile.</li>
+
+                        <li>
+In Java command line, the default is current directory.</li>
 </ul>
 
                       </div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.dir</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__ditadir"><a name="antscript__ditadir"><!-- --></a>The absolute path of the toolkit's home directory.</span> 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.dir</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__ditadir"><a name="antscript__ditadir"><!-- --></a>
+The absolute path of the toolkit's home directory.</span> 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">args.input</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__argsinput"><a name="antscript__argsinput"><!-- --></a>The path and name of the input file. 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+args.input</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__argsinput"><a name="antscript__argsinput"><!-- --></a>
+The path and name of the input file. 
                         This argument should be in the same upper or lower case 
                         with the filename on file system.</span>
-                      <div class="note" id="antscript__argsinput-note"><a name="antscript__argsinput-note"><!-- --></a><span class="notetitle">Note:</span> This parameter must be provided 
-                        if <tt>dita.input</tt> and <tt>dita.input.dirname</tt> 
+                      <div class="note" id="antscript__argsinput-note"><a name="antscript__argsinput-note"><!-- --></a><span class="notetitle">Note:</span> 
+This parameter must be provided 
+                        if <tt>
+dita.input</tt> and <tt>
+dita.input.dirname</tt> 
                         not be provided.</div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.input</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__ditainput"><a name="antscript__ditainput"><!-- --></a>The name of the input file .</span>
-                      <div class="note" id="antscript__ditainput-note"><a name="antscript__ditainput-note"><!-- --></a><span class="notetitle">Note:</span> This parameter must be provided 
-                        if <tt>args.input</tt> not be provided. And this 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.input</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__ditainput"><a name="antscript__ditainput"><!-- --></a>
+The name of the input file .</span>
+                      <div class="note" id="antscript__ditainput-note"><a name="antscript__ditainput-note"><!-- --></a><span class="notetitle">Note:</span> 
+This parameter must be provided 
+                        if <tt>
+args.input</tt> not be provided. And this 
                         parameter must be used together with the 
-                        <tt>dita.input.dirname</tt> parameter. The result of 
+                        <tt>
+dita.input.dirname</tt> parameter. The result of 
                         this combination is equivalent to use only the 
-                        <tt>args.input</tt> parameter. It is an alternative way 
+                        <tt>
+args.input</tt> parameter. It is an alternative way 
                         to specify the path and name of the input file. 
-                        <em><strong>DEPRECATED</strong> - use <samp class="codeph">args.input</samp> 
+                        <em>
+<strong>
+DEPRECATED</strong> - use <samp class="codeph">
+args.input</samp> 
                           instead.</em></div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.input.dirname</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__ditainputdirname"><a name="antscript__ditainputdirname"><!-- --></a>The input directory which 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.input.dirname</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__ditainputdirname"><a name="antscript__ditainputdirname"><!-- --></a>
+The input directory which 
                         contains the input file.</span>
-                      <div class="note" id="antscript__ditainputdirname-note"><a name="antscript__ditainputdirname-note"><!-- --></a><span class="notetitle">Note:</span> This parameter must be 
-                        provided if <tt>args.input</tt> not be provided. And 
+                      <div class="note" id="antscript__ditainputdirname-note"><a name="antscript__ditainputdirname-note"><!-- --></a><span class="notetitle">Note:</span> 
+This parameter must be 
+                        provided if <tt>
+args.input</tt> not be provided. And 
                         this parameter must be used together with the 
-                        <tt>dita.input</tt> parameter. The result of this 
+                        <tt>
+dita.input</tt> parameter. The result of this 
                         combination is equivalent to use only the 
-                        <tt>args.input</tt> parameter. It is an alternative way 
+                        <tt>
+args.input</tt> parameter. It is an alternative way 
                         to specify the path and name of the input file.
-                        <em><strong>DEPRECATED</strong> - use <samp class="codeph">args.input</samp> 
+                        <em>
+<strong>
+DEPRECATED</strong> - use <samp class="codeph">
+args.input</samp> 
                           instead.</em></div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.temp.dir</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__tempdir"><a name="antscript__tempdir"><!-- --></a>The directory of the temporary files. 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.temp.dir</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__tempdir"><a name="antscript__tempdir"><!-- --></a>
+The directory of the temporary files. 
                         The default is 'temp'.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">output.dir</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__outputdir"><a name="antscript__outputdir"><!-- --></a>The path of the output directory.</span>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+output.dir</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__outputdir"><a name="antscript__outputdir"><!-- --></a>
+The path of the output directory.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">Yes</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+Yes</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.extname</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__ditaextname"><a name="antscript__ditaextname"><!-- --></a>The file extension name of the input 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.extname</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__ditaextname"><a name="antscript__ditaextname"><!-- --></a>
+The file extension name of the input 
                         topic files, for example, '.xml' or '.dita'. The 
                         default is '.xml'.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">args.xsl</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__argsxsl"><a name="antscript__argsxsl"><!-- --></a>The xsl file to replace the default xsl 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+args.xsl</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__argsxsl"><a name="antscript__argsxsl"><!-- --></a>
+The xsl file to replace the default xsl 
                         file. It will replace dita2docbook.xsl in docbook 
                         transformation, dita2fo-shell.xsl in pdf 
                         transformation, dita2xhtml.xsl in xhtml/eclipsehelp 
@@ -200,84 +292,125 @@
                         transformation.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">dita.input.valfile</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__inputvalfile"><a name="antscript__inputvalfile"><!-- --></a>The name of the file containing 
-                        <em>filter/flagging/revision </em>information.</span>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+dita.input.valfile</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__inputvalfile"><a name="antscript__inputvalfile"><!-- --></a>
+The name of the file containing 
+                        <em>
+filter/flagging/revision </em>information.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">args.draft</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__argsdraft"><a name="antscript__argsdraft"><!-- --></a>Default "hide draft &amp; required-cleanup 
-                        content" processing parameter (<span class="q">"no"</span>= hide 
-                        them); <span class="q">"no"</span> and <span class="q">"yes"</span> are valid values; 
-                        non-<span class="q">"yes"</span> is ignored.</span>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+args.draft</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__argsdraft"><a name="antscript__argsdraft"><!-- --></a>
+Default "hide draft &amp; required-cleanup 
+                        content" processing parameter (<span class="q">"
+no"</span>= hide 
+                        them); <span class="q">"
+no"</span> and <span class="q">"
+yes"</span> are valid values; 
+                        non-<span class="q">"
+yes"</span> is ignored.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">args.artlbl</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__argsartlbl"><a name="antscript__argsartlbl"><!-- --></a>Default "output artwork 
-                        filenames" processing parameter; <span class="q">"no"</span>and 
-                        <span class="q">"yes"</span>are valid values; non-<span class="q">"yes"</span> is 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+args.artlbl</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__argsartlbl"><a name="antscript__argsartlbl"><!-- --></a>
+Default "output artwork 
+                        filenames" processing parameter; <span class="q">"
+no"</span>and 
+                        <span class="q">"
+yes"</span>are valid values; non-<span class="q">"
+yes"</span> is 
                         ignored.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">clean.temp</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__cleantemp"><a name="antscript__cleantemp"><!-- --></a>The parameter to specify whether to clean 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+clean.temp</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__cleantemp"><a name="antscript__cleantemp"><!-- --></a>
+The parameter to specify whether to clean 
                         the temp directory before each build. Only "no" and "yes" 
                         are valid values. The default is yes.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N1009C ">args.logdir</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A3 ">
-                      <span id="antscript__argslogdir"><a name="antscript__argslogdir"><!-- --></a>The directory used to keep generated 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100A0 ">
+args.logdir</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N100A7 ">
+
+                      <span id="antscript__argslogdir"><a name="antscript__argslogdir"><!-- --></a>
+The directory used to keep generated 
                         log files. Default will be output directory.</span>
-                      <div class="note" id="antscript__argslogdir-note"><a name="antscript__argslogdir-note"><!-- --></a><span class="notetitle">Note:</span> If several transforms running 
+                      <div class="note" id="antscript__argslogdir-note"><a name="antscript__argslogdir-note"><!-- --></a><span class="notetitle">Note:</span> 
+If several transforms running 
                         batchly, e.g., ant all:
                         <br><ul>
-                          <li>If the user has specified a common logdir for all 
+
+                          <li>
+If the user has specified a common logdir for all 
                             transformations, it will be used as log directory.</li>
 
-                          <li>If the user hasn't specified a common dir for all 
+                          <li>
+If the user hasn't specified a common dir for all 
                             transformations:
                             <br><ul>
-                              <li>If all transformations have same output directory, 
+
+                              <li>
+If all transformations have same output directory, 
                                 the common output direcory will be used as log 
                                 directory.</li>
 
-                              <li>If there is no same output directory for all 
-                                transformations, the <samp class="codeph">basedir</samp> will be used as 
+                              <li>
+If there is no same output directory for all 
+                                transformations, the <samp class="codeph">
+basedir</samp> will be used as 
                                 default log directory.</li>
 
                             </ul>
@@ -289,7 +422,8 @@
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AA ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N100AE ">
+No</td>
 
                   </tr>
 
@@ -301,116 +435,173 @@
           </dd>
 
           <dd class="ddexpand">
+
             
-<div class="tablenoborder"><a name="antscript__dita.param.htmlgeneral"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="antscript__dita.param.htmlgeneral" frame="border" border="1" rules="all"><caption>Table 2. General Parameter Table for 
+<div class="tablenoborder"><a name="antscript__dita.param.htmlgeneral"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="antscript__dita.param.htmlgeneral" frame="border" border="1" rules="all"><caption>Table 2. 
+General Parameter Table for 
                 Tasks(dita2xhtml,dita2htmlhelp,dita2javahelp,dita2eclipsehelp)</caption>
+
                 
                 
                 
                 <thead align="left">
+
                   <tr>
-                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N103B3">Parameter </th>
 
-                    <th class="cellrowborder" align="left" valign="top" width="66.66666666666666%" id="N103BA">Description</th>
+                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N103BD">
+Parameter </th>
 
-                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N103C1">Required</th>
+                    <th class="cellrowborder" align="left" valign="top" width="66.66666666666666%" id="N103C4">
+Description</th>
+
+                    <th class="cellrowborder" align="left" valign="top" width="16.666666666666664%" id="N103CB">
+Required</th>
 
                   </tr>
 
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.indexshow</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__indexshow"><a name="antscript__indexshow"><!-- --></a>The parameter to specify whether each 
+                  <tr>
+
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.indexshow</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__indexshow"><a name="antscript__indexshow"><!-- --></a>
+The parameter to specify whether each 
                         index entry should display within the body of the text 
                         itself. Only "no" and "yes" are valid values.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.copycss</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__copycss"><a name="antscript__copycss"><!-- --></a>The parameter to specify whether copy user 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.copycss</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__copycss"><a name="antscript__copycss"><!-- --></a>
+The parameter to specify whether copy user 
                         specified css files to the directory specified by 
-                        <samp class="codeph">{args.outdir}${args.csspath}</samp>. 
+                        <samp class="codeph">
+{args.outdir}${args.csspath}</samp>. 
                         "no" and "yes" are valid values. Default is "no".</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.outext</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__outext"><a name="antscript__outext"><!-- --></a>The output file extension name for 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.outext</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__outext"><a name="antscript__outext"><!-- --></a>
+The output file extension name for 
                         generated xhtml files. Typically, '.html' or '.htm' can 
                         be used as the extension name for the generated xhtml 
                         files. You can also specify other extension name. The 
                         default is '.html'.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.css</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__argscss"><a name="antscript__argscss"><!-- --></a>User specified css file, it can be a 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.css</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__argscss"><a name="antscript__argscss"><!-- --></a>
+User specified css file, it can be a 
                         local file or remote file from website.</span>
-                      <div class="note" id="antscript__argscss-note"><a name="antscript__argscss-note"><!-- --></a><span class="notetitle">Note:</span> If <samp class="codeph">${args.csspath}</samp> 
-                        is an URL, the <samp class="codeph">${args.css}</samp> should be a 
+                      <div class="note" id="antscript__argscss-note"><a name="antscript__argscss-note"><!-- --></a><span class="notetitle">Note:</span> 
+If <samp class="codeph">
+${args.csspath}</samp> 
+                        is an URL, the <samp class="codeph">
+${args.css}</samp> should be a 
                         filepath relative to the URL.</div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.cssroot</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__argscssroot"><a name="antscript__argscssroot"><!-- --></a>The root directory of user specified css file.</span>
-                      <div class="note" id="antscript__argscssroot-note"><a name="antscript__argscssroot-note"><!-- --></a><span class="notetitle">Note:</span> If this parameter is set, 
-                        the <samp class="codeph">${args.css}</samp> should be a 
-                        filepath relative to <samp class="codeph">args.cssroot</samp>.</div>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.cssroot</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__argscssroot"><a name="antscript__argscssroot"><!-- --></a>
+The root directory of user specified css file.</span>
+                      <div class="note" id="antscript__argscssroot-note"><a name="antscript__argscssroot-note"><!-- --></a><span class="notetitle">Note:</span> 
+If this parameter is set, 
+                        the <samp class="codeph">
+${args.css}</samp> should be a 
+                        filepath relative to <samp class="codeph">
+args.cssroot</samp>.</div>
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.csspath</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__csspath"><a name="antscript__csspath"><!-- --></a>The path for css reference. Default is no path.</span>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.csspath</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__csspath"><a name="antscript__csspath"><!-- --></a>
+The path for css reference. Default is no path.</span>
                       <div class="note" id="antscript__csspath-note"><a name="antscript__csspath-note"><!-- --></a><span class="notetitle">Note:</span> 
-                        <br><ul>
-                          <li>If <samp class="codeph">${args.csspath}</samp> is an URL like path, 
-                            it should starts with <samp class="codeph">http://</samp> or 
-                            <samp class="codeph">https://</samp>. For example: 
-                            <samp class="codeph">http://www.ibm.com/css</samp>.</li>
 
-                          <li>Local absolute paths is not supported for 
-                            <samp class="codeph">${args.csspath}</samp>.</li>
+                        <br><ul>
+
+                          <li>
+If <samp class="codeph">
+${args.csspath}</samp> is an URL like path, 
+                            it should starts with <samp class="codeph">
+http://</samp> or 
+                            <samp class="codeph">
+https://</samp>. For example: 
+                            <samp class="codeph">
+http://www.ibm.com/css</samp>.</li>
+
+                          <li>
+Local absolute paths is not supported for 
+                            <samp class="codeph">
+${args.csspath}</samp>.</li>
                             
-                          <li>Use '<samp class="codeph">/</samp>' as the path separator 
+                          <li>
+Use '<samp class="codeph">
+/</samp>' as the path separator 
                             and don't append separator at last. 
-                            For example: <samp class="codeph">css/mycss</samp>.</li>
+                            For example: <samp class="codeph">
+css/mycss</samp>.</li>
                             
                         </ul>
 
@@ -418,43 +609,59 @@
 
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.hdf</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__argshdf"><a name="antscript__argshdf"><!-- --></a>The name of the file containing XHTML to 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.hdf</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__argshdf"><a name="antscript__argshdf"><!-- --></a>
+The name of the file containing XHTML to 
                         be placed in the HEAD area.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.hdr</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__argshdr"><a name="antscript__argshdr"><!-- --></a>The name of the file containing XHTML to 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.hdr</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__argshdr"><a name="antscript__argshdr"><!-- --></a>
+The name of the file containing XHTML to 
                         be placed in the BODY running-heading area.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103B3 ">args.ftr</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103BA ">
-                      <span id="antscript__argsftr"><a name="antscript__argsftr"><!-- --></a>The name of the file containing XHTML to 
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103BD ">
+args.ftr</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N103C4 ">
+
+                      <span id="antscript__argsftr"><a name="antscript__argsftr"><!-- --></a>
+The name of the file containing XHTML to 
                         be placed in the BODY running-footing area.</span>
                     </td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103C1 ">No</td>
+                    <td class="cellrowborder" align="left" valign="top" width="16.666666666666664%" headers="N103CB ">
+No</td>
 
                   </tr>
 
@@ -467,64 +674,100 @@
 
         
         
-          <dt class="dlterm">targets in <em>conductor.xml</em></dt>
+
+          <dt class="dlterm">
+targets in <em>
+conductor.xml</em></dt>
 
           <dd>
-            <p>The following targets in <em>conductor.xml</em> will call the 
+
+            <p>
+The following targets in <em>
+conductor.xml</em> will call the 
               complete processing of DITA files which can be loaded by 
               users.</p>
 
             <dl>
-              
-                <dt class="dlterm">dita2docbook</dt>
-
-                <dd>Transform DITA topic or DITA map into docbook output.</dd>
 
               
-              
-                <dt class="dlterm">dita2eclipsehelp</dt>
 
-                <dd>Transform DITA topic or DITA map into Eclipse help plugin 
+                <dt class="dlterm">
+dita2docbook</dt>
+
+                <dd>
+Transform DITA topic or DITA map into docbook output.</dd>
+
+              
+              
+
+                <dt class="dlterm">
+dita2eclipsehelp</dt>
+
+                <dd>
+Transform DITA topic or DITA map into Eclipse help plugin 
                   based on xhtml. 
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 3. Parameter 
-                  Table of dita2eclipsehelp</caption> <thead align="left"> <tr> 
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N105F2">Parameter </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N105F9">Description</th>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 3. 
+Parameter 
+                  Table of dita2eclipsehelp</caption>
+ <thead align="left">
+ <tr>
  
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10600">Required</th>
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10601">
+Parameter </th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10608">
+Description</th>
+ 
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N1060F">
+Required</th>
  </tr>
  </thead>
- <tbody> <tr> 
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N105F2 ">args.eclipsehelp.toc</td>
+ <tbody>
+ <tr>
  
-                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N105F9 ">
-                    <span id="antscript__eclipsehelptoc"><a name="antscript__eclipsehelptoc"><!-- --></a>The root file name of the output 
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10601 ">
+args.eclipsehelp.toc</td>
+ 
+                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10608 ">
+
+                    <span id="antscript__eclipsehelptoc"><a name="antscript__eclipsehelptoc"><!-- --></a>
+The root file name of the output 
                       eclipsehelp toc file in eclipsehelp transformation. 
                       The default is the name of input ditamap file.</span>
                   </td>
 
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10600 ">No</td>
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1060F ">
+No</td>
  </tr>
 
                   <tr id="antscript__argsprovider">
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N105F2 ">args.eclipse.provider</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N105F9 ">
-                      <span id="antscript__eclipseprovider"><a name="antscript__eclipseprovider"><!-- --></a>The provider name of the eclipse help output. The default value is DITA.</span>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10601 ">
+args.eclipse.provider</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10608 ">
+
+                      <span id="antscript__eclipseprovider"><a name="antscript__eclipseprovider"><!-- --></a>
+The provider name of the eclipse help output. The default value is DITA.</span>
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10600 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1060F ">
+No</td>
 
                   </tr>
 
                   <tr id="antscript__argsversion">
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N105F2 ">args.eclipse.version</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N105F9 ">
-                      <span id="antscript__eclipseversion"><a name="antscript__eclipseversion"><!-- --></a>The version number of the eclipse help output. The default value is 1.0</span>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10601 ">
+args.eclipse.version</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10608 ">
+
+                      <span id="antscript__eclipseversion"><a name="antscript__eclipseversion"><!-- --></a>
+The version number of the eclipse help output. The default value is 1.0</span>
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10600 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1060F ">
+No</td>
 
                   </tr>
 </tbody>
@@ -535,50 +778,76 @@
 
               
               
-                <dt class="dlterm">dita2eclipsecontent</dt>
 
-                <dd>Transform DITA topic or DITA map into Eclipse help plugin for 
+                <dt class="dlterm">
+dita2eclipsecontent</dt>
+
+                <dd>
+Transform DITA topic or DITA map into Eclipse help plugin for 
                   Eclipse dynamic content provider based on xhtml.
                   
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 4. Parameter 
-                  Table of dita2eclipsecontent</caption> <thead align="left"> <tr> 
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N106BB">Parameter </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N106C2">Description</th>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 4. 
+Parameter 
+                  Table of dita2eclipsecontent</caption>
+ <thead align="left">
+ <tr>
  
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N106C9">Required</th>
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N106CF">
+Parameter </th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N106D6">
+Description</th>
+ 
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N106DD">
+Required</th>
  </tr>
  </thead>
- <tbody> <tr> 
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106BB ">args.eclipsecontent.toc</td>
+ <tbody>
+ <tr>
  
-                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106C2 ">
-                    <span id="antscript__eclipsecontenttoc"><a name="antscript__eclipsecontenttoc"><!-- --></a>The root file name of the output 
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106CF ">
+args.eclipsecontent.toc</td>
+ 
+                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106D6 ">
+
+                    <span id="antscript__eclipsecontenttoc"><a name="antscript__eclipsecontenttoc"><!-- --></a>
+The root file name of the output 
                       Eclipse content provider toc file in eclipsecontent transformation. 
                       The default is the name of input ditamap file.</span>
                   </td>
 
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106C9 ">No</td>
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106DD ">
+No</td>
  </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106BB ">args.eclipse.provider</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106C2 ">
-                      <span id="antscript__eclipseprovider"><a name="antscript__eclipseprovider"><!-- --></a>The provider name of the eclipse help output. The default value is DITA.</span>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106CF ">
+args.eclipse.provider</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106D6 ">
+
+                      <span id="antscript__eclipseprovider"><a name="antscript__eclipseprovider"><!-- --></a>
+The provider name of the eclipse help output. The default value is DITA.</span>
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106C9 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106DD ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106BB ">args.eclipse.version</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106C2 ">
-                      <span id="antscript__eclipseversion"><a name="antscript__eclipseversion"><!-- --></a>The version number of the eclipse help output. The default value is 1.0</span>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106CF ">
+args.eclipse.version</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N106D6 ">
+
+                      <span id="antscript__eclipseversion"><a name="antscript__eclipseversion"><!-- --></a>
+The version number of the eclipse help output. The default value is 1.0</span>
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106C9 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N106DD ">
+No</td>
 
                   </tr>
 </tbody>
@@ -589,101 +858,62 @@
 
               
               
-                <dt class="dlterm">dita2htmlhelp</dt>
 
-                <dd>Transform DITA topic or DITA map into html help output 
+                <dt class="dlterm">
+dita2htmlhelp</dt>
+
+                <dd>
+Transform DITA topic or DITA map into html help output 
                   based on html.
                   
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 5. Parameter Table of dita2javahelp</caption> <thead align="left"> <tr> 
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10782">Parameter </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10789">Description</th>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 5. 
+Parameter Table of dita2javahelp</caption>
+ <thead align="left">
+ <tr>
  
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10790">Required</th>
- </tr>
- </thead>
-
-                  <tbody>                  
-                  <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10782 ">args.dita.locale</td>
-
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10789 "><span id="antscript__ditalocale"><a name="antscript__ditalocale"><!-- --></a>The locale used for  
-                        sorting indexterms. If no locale specified, 
-                        the first occurrence of "xml-lang" will be used as 
-                        default locale; If no "xml-lang" found, "en-us" will 
-                        be used by default.</span></td>
-                    
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10790 ">No</td>
-
-                  </tr>
-
-                  <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10782 ">args.htmlhelp.includefile</td>
-
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10789 "><span id="antscript__htmlhelpincludefile"><a name="antscript__htmlhelpincludefile"><!-- --></a>
-                      The parameter to specify the file that need to be included
-                      by the HTMLHelp output.</span></td>
-                    
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10790 ">No</td>
-
-                  </tr>
-
-                  </tbody>
-</table>
-</div>
-</dd>
-
-              
-              
-                <dt class="dlterm">dita2javahelp</dt>
-
-                <dd>Transform DITA topic or DITA map into java help output 
-                  based on html. 
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 6. Parameter Table 
-                  of dita2javahelp</caption> <thead align="left"> <tr> 
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10822">Parameter </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10829">Description</th>
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N1079B">
+Parameter </th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N107A2">
+Description</th>
  
-                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10830">Required</th>
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N107A9">
+Required</th>
  </tr>
  </thead>
 
                   <tbody>
-                  <tr> 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10822 ">args.javahelp.toc</td>
-
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10829 ">
-                      <span id="antscript__javahelptoc"><a name="antscript__javahelptoc"><!-- --></a>The root file name of the output 
-                        javahelp toc file in javahelp transformation. 
-                        The default is the name of input ditamap file.</span>
-                    </td>
-
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10830 ">No</td>
- 
-                  </tr>
-
-                  <tr> 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10822 ">args.javahelp.map</td>
-
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10829 ">
-                      <span id="antscript__javahelpmap"><a name="antscript__javahelpmap"><!-- --></a>The root file name of the output 
-                        javahelp map file in javahelp transformation. 
-                        The default is the name of input ditamap file.</span>
-                    </td>
-
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10830 ">No</td>
-
-                  </tr>
-
+                  
                   <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10822 ">args.dita.locale</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10829 "><span>The locale used for  
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1079B ">
+args.dita.locale</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N107A2 ">
+<span id="antscript__ditalocale"><a name="antscript__ditalocale"><!-- --></a>
+The locale used for  
                         sorting indexterms. If no locale specified, 
                         the first occurrence of "xml-lang" will be used as 
                         default locale; If no "xml-lang" found, "en-us" will 
                         be used by default.</span></td>
                     
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10830 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N107A9 ">
+No</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1079B ">
+args.htmlhelp.includefile</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N107A2 ">
+<span id="antscript__htmlhelpincludefile"><a name="antscript__htmlhelpincludefile"><!-- --></a>
+
+                      The parameter to specify the file that need to be included
+                      by the HTMLHelp output.</span></td>
+                    
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N107A9 ">
+No</td>
 
                   </tr>
 
@@ -694,26 +924,128 @@
 
               
               
-                <dt class="dlterm">dita2xhtml</dt>
 
-                <dd>Transform DITA topic or DITA map into xhtml web 
+                <dt class="dlterm">
+dita2javahelp</dt>
+
+                <dd>
+Transform DITA topic or DITA map into java help output 
+                  based on html. 
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 6. 
+Parameter Table 
+                  of dita2javahelp</caption>
+ <thead align="left">
+ <tr>
+ 
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10842">
+Parameter </th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10849">
+Description</th>
+ 
+                  <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10850">
+Required</th>
+ </tr>
+ </thead>
+
+                  <tbody>
+
+                  <tr>
+ 
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10842 ">
+args.javahelp.toc</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10849 ">
+
+                      <span id="antscript__javahelptoc"><a name="antscript__javahelptoc"><!-- --></a>
+The root file name of the output 
+                        javahelp toc file in javahelp transformation. 
+                        The default is the name of input ditamap file.</span>
+                    </td>
+
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10850 ">
+No</td>
+ 
+                  </tr>
+
+                  <tr>
+ 
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10842 ">
+args.javahelp.map</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10849 ">
+
+                      <span id="antscript__javahelpmap"><a name="antscript__javahelpmap"><!-- --></a>
+The root file name of the output 
+                        javahelp map file in javahelp transformation. 
+                        The default is the name of input ditamap file.</span>
+                    </td>
+
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10850 ">
+No</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10842 ">
+args.dita.locale</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10849 ">
+<span>
+The locale used for  
+                        sorting indexterms. If no locale specified, 
+                        the first occurrence of "xml-lang" will be used as 
+                        default locale; If no "xml-lang" found, "en-us" will 
+                        be used by default.</span></td>
+                    
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10850 ">
+No</td>
+
+                  </tr>
+
+                  </tbody>
+</table>
+</div>
+</dd>
+
+              
+              
+
+                <dt class="dlterm">
+dita2xhtml</dt>
+
+                <dd>
+Transform DITA topic or DITA map into xhtml web 
                   output.
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 7. Parameter Table of 
-                  dita2xhtml</caption> <thead align="left"> <tr> <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N108E6">Parameter 
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 7. 
+Parameter Table of 
+                  dita2xhtml</caption>
+ <thead align="left">
+ <tr>
+ <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N1090C">
+Parameter 
                   </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N108ED">Description</th>
- <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N108F4">Required</th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10913">
+Description</th>
+ <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N1091A">
+Required</th>
  
                   </tr>
  </thead>
- <tbody> <tr> 
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N108E6 ">args.xhtml.toc</td>
+ <tbody>
+ <tr>
  
-                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N108ED ">
-                    <span id="antscript__xhtmltoc"><a name="antscript__xhtmltoc"><!-- --></a>The root file name of the output xhtml toc 
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1090C ">
+args.xhtml.toc</td>
+ 
+                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10913 ">
+
+                    <span id="antscript__xhtmltoc"><a name="antscript__xhtmltoc"><!-- --></a>
+The root file name of the output xhtml toc 
                     file in xhtml transformation. The default is 'index'.</span>
                   </td>
- <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N108F4 ">No</td>
+ <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N1091A ">
+No</td>
  
                   </tr>
 </tbody>
@@ -723,55 +1055,83 @@
 
               
               
-                <dt class="dlterm">dita2pdf</dt>
 
-                <dd>Transform DITA topic or DITA map into pdf. 
+                <dt class="dlterm">
+dita2pdf</dt>
+
+                <dd>
+Transform DITA topic or DITA map into pdf. 
                   
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 8. Parameter Table of 
-                  dita2pdf</caption> <thead align="left"> <tr> <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10967">Parameter 
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all"><caption>Table 8. 
+Parameter Table of 
+                  dita2pdf</caption>
+ <thead align="left">
+ <tr>
+ <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10992">
+Parameter 
                   </th>
- <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N1096E">Description</th>
- <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N10975">Required</th>
+ <th class="cellrowborder" align="center" valign="top" width="66.66666666666666%" id="N10999">
+Description</th>
+ <th class="cellrowborder" align="center" valign="top" width="16.666666666666664%" id="N109A0">
+Required</th>
  
                   </tr>
  </thead>
- <tbody> <tr> <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10967 ">args.fo.img.ext</td>
+ <tbody>
+ <tr>
+ <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10992 ">
+args.fo.img.ext</td>
  
-                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N1096E ">
-                    <span id="antscript__foimgext"><a name="antscript__foimgext"><!-- --></a>The extension name of image file in pdf transformation. 
+                  <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10999 ">
+
+                    <span id="antscript__foimgext"><a name="antscript__foimgext"><!-- --></a>
+The extension name of image file in pdf transformation. 
                     Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
-                    <div class="note" id="antscript__foimgextnote"><a name="antscript__foimgextnote"><!-- --></a><span class="notetitle">Note:</span> Only one extension supported in the same 
+                    <div class="note" id="antscript__foimgextnote"><a name="antscript__foimgextnote"><!-- --></a><span class="notetitle">Note:</span> 
+Only one extension supported in the same 
                       transformation, image files with other extensions will be renamed 
                       to the specified extension.</div>
 </td>
  
-                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10975 ">No</td>
+                  <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N109A0 ">
+No</td>
  
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10967 ">args.fo.output.rel.links</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N1096E "><span id="antscript__fooutputrellinks"><a name="antscript__fooutputrellinks"><!-- --></a>The parameter to specify 
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10992 ">
+args.fo.output.rel.links</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10999 ">
+<span id="antscript__fooutputrellinks"><a name="antscript__fooutputrellinks"><!-- --></a>
+The parameter to specify 
                       whether output related links in pdf transformation. 
                       "yes" and "no" are valid values. Default is "no".</span>
-                      <div class="note" id="antscript__fooutputrellinks-note"><a name="antscript__fooutputrellinks-note"><!-- --></a><span class="notetitle">Note:</span> Any value that is not 
+                      <div class="note" id="antscript__fooutputrellinks-note"><a name="antscript__fooutputrellinks-note"><!-- --></a><span class="notetitle">Note:</span> 
+Any value that is not 
                         "yes" is regarded as "no".</div>
 
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10975 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N109A0 ">
+No</td>
 
                   </tr>
 
                   <tr>
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10967 ">args.fo.userconfig</td>
 
-                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N1096E "><span id="antscript__fouserconfig"><a name="antscript__fouserconfig"><!-- --></a>The parameter to specify 
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10992 ">
+args.fo.userconfig</td>
+
+                    <td class="cellrowborder" align="left" valign="top" width="66.66666666666666%" headers="N10999 ">
+<span id="antscript__fouserconfig"><a name="antscript__fouserconfig"><!-- --></a>
+The parameter to specify 
                       the user configuration file for FOP.</span>
                     </td>
 
-                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N10975 ">No</td>
+                    <td class="cellrowborder" align="center" valign="top" width="16.666666666666664%" headers="N109A0 ">
+No</td>
 
                   </tr>
 
@@ -782,16 +1142,23 @@
 
               
               
-                <dt class="dlterm">dita2troff</dt>
 
-                <dd>Transform DITA map into troff, which is the system menu 
+                <dt class="dlterm">
+dita2troff</dt>
+
+                <dd>
+Transform DITA map into troff, which is the system menu 
                   style in UNIX system.</dd>
 
               
               
-                <dt class="dlterm">dita2wordrtf</dt>
 
-                <dd>Transform DITA topic or DITA map into Word rtf. The <tt>args.artlbl</tt> parameter
+                <dt class="dlterm">
+dita2wordrtf</dt>
+
+                <dd>
+Transform DITA topic or DITA map into Word rtf. The <tt>
+args.artlbl</tt> parameter
 of the general parameters is not supported.</dd>
 
               
@@ -801,44 +1168,63 @@ of the general parameters is not supported.</dd>
 
         
         
+
           <dt class="dlterm">
-            <em>pretargets.xml</em>
+
+            <em>
+pretargets.xml</em>
           </dt>
 
-          <dd>The Ant script file which contains all targets for 
+          <dd>
+The Ant script file which contains all targets for 
             pre-process.</dd>
 
         
         
+
           <dt class="dlterm">
-            <em>ditatargets.xml</em>
+
+            <em>
+ditatargets.xml</em>
           </dt>
 
-          <dd>The Ant script file which contains all targets for main 
+          <dd>
+The Ant script file which contains all targets for main 
             transformation.</dd>
 
         
         
+
           <dt class="dlterm">
-            <em>catalog-ant.xml</em>
+
+            <em>
+catalog-ant.xml</em>
           </dt>
 
-          <dd>The xml catalog information which is used by Ant.</dd>
+          <dd>
+The xml catalog information which is used by Ant.</dd>
 
                 
       </dl>
 
     </div>
 
-    <div class="section"><h2 class="sectiontitle">Sample ant script</h2>
+    <div class="section"><h2 class="sectiontitle">
+Sample ant script</h2>
+
       
-      <p>These ant scripts are in <samp class="codeph">ant</samp> directory. 
+      <p>
+These ant scripts are in <samp class="codeph">
+ant</samp> directory. 
         They are simple and easy to learn. From these files, you can learn how 
         to write your own Ant script to build your own process.</p>
 
-      <div class="p">Here is a sample template for writing an Ant script that executes 
-        transformation to xhtml in <samp class="codeph">ant</samp> directory
-        <pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+      <div class="p">
+Here is a sample template for writing an Ant script that executes 
+        transformation to xhtml in <samp class="codeph">
+ant</samp> directory
+        <pre>
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 &lt;project name="sample_xhtml" default="all" basedir=".."&gt; 
   &lt;import file="${basedir}${file.separator}conductor.xml"/&gt; 
   &lt;property name="dita.extname" value=".xml"/&gt; 
@@ -854,15 +1240,22 @@ of the general parameters is not supported.</dd>
 
       </div>
 
-      <div class="p">After you write the input file and output directory to overwrite @DITA.INPUT@ 
+      <div class="p">
+After you write the input file and output directory to overwrite @DITA.INPUT@ 
         and @OUTPUT.DIR@, the script can execute the transformation from your 
         input to xhtml by this command. The property of dita.extname is a global 
         variable with which you can set the file extension name of the topic 
-        file. The default dita.extname is <span class="q">"<em>.xml</em>"</span>. You can also set it 
-        to <span class="q">"<em>.dita</em>"</span> according to OASIS DITA recommendation. 
-        <pre>ant -f ant/template_xhtml.xml</pre>
+        file. The default dita.extname is <span class="q">"
+<em>
+.xml</em>"</span>. You can also set it 
+        to <span class="q">"
+<em>
+.dita</em>"</span> according to OASIS DITA recommendation. 
+        <pre>
+ant -f ant/template_xhtml.xml</pre>
  All of 
-        targets we use here are defined in <em>conductor.xml</em>. Therefore, you 
+        targets we use here are defined in <em>
+conductor.xml</em>. Therefore, you 
         need to import that file before calling the target.
       </div>
 

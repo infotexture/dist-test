@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -13,65 +13,93 @@
 <meta content="parameters" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>Default values for externally modifiable parameters</title>
+<title>
+Default values for externally modifiable parameters</title>
 </head>
 <body id="parameters"><a name="parameters"><!-- --></a>
 
 
-  <h1 class="topictitle1">Default values for externally modifiable parameters</h1>
+
+  <h1 class="topictitle1">
+Default values for externally modifiable parameters</h1>
 
   
-  <div><p>This topic lists the default values for externally modifiable 
+  <div><p>
+This topic lists the default values for externally modifiable 
     parameters.</p>
 
+
     <div class="section">
-      <p>These default values can be changed at run time by using the 
+
+      <p>
+These default values can be changed at run time by using the 
         parameter-passing syntax of your XSLT processor (if it supports 
         command-line parameters). If your processor does not support 
         parameter-passing on the command line, copy the XSL directives you wish 
         to change into an override XSLT stylesheet, change the values as 
-        needed, and import <em>dita2htmlImpl.xsl</em> at the top of this new 
-        stylesheet. <em>dita2xhtml.xsl</em> is an example of an override 
+        needed, and import <em>
+dita2htmlImpl.xsl</em> at the top of this new 
+        stylesheet. <em>
+dita2xhtml.xsl</em> is an example of an override 
         stylesheet that you can copy and modify as needed.</p>
 
       <table summary="" cellspacing="0" cellpadding="4" border="1" class="simpletableborder">
+
         <tr>
-          <th valign="bottom" align="left" id="N10042" width="20%">Parameter name</th>
 
-          <th valign="bottom" align="left" id="N10048" width="60%">Explanation</th>
+          <th valign="bottom" align="left" id="N10042" width="20%">
+Parameter name</th>
 
-          <th valign="bottom" align="left" id="N1004E" width="20%">Default value</th>
+          <th valign="bottom" align="left" id="N10048" width="60%">
+Explanation</th>
+
+          <th valign="bottom" align="left" id="N1004E" width="20%">
+Default value</th>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">dita-css</td>
 
-          <td valign="top" headers="N10048">Default CSS filename parameter, usually the name of your 
+          <td valign="top" headers="N10042">
+dita-css</td>
+
+          <td valign="top" headers="N10048">
+Default CSS filename parameter, usually the name of your 
             site's overall stylesheet.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>commonltr.css</tt>
+
+            <tt>
+commonltr.css</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">bidi-dita-css</td>
 
-          <td valign="top" headers="N10048">Default CSS filename parameter for bi-direction language, 
+          <td valign="top" headers="N10042">
+bidi-dita-css</td>
+
+          <td valign="top" headers="N10048">
+Default CSS filename parameter for bi-direction language, 
             usually the name of your site's overall stylesheet.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>commonrtl.css</tt>
+
+            <tt>
+commonrtl.css</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">CSS</td>
 
-          <td valign="top" headers="N10048">User's CSS filename parameter. <p>This can be the name 
+          <td valign="top" headers="N10042">
+CSS</td>
+
+          <td valign="top" headers="N10048">
+User's CSS filename parameter. <p>
+This can be the name 
             of a stylesheet used by one or more topics within an overall group. 
             This stylesheet can use the CSS cascade effect to modify existing 
             properties or it can override or define new 
@@ -79,15 +107,21 @@
 </td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">CSSPATH</td>
 
-          <td valign="top" headers="N10048">Default CSS path parameter.<p>This specifies a path for the 
+          <td valign="top" headers="N10042">
+CSSPATH</td>
+
+          <td valign="top" headers="N10048">
+Default CSS path parameter.<p>
+This specifies a path for the 
             cascading style sheet (CSS). This allows you to place the CSS in 
             one place and have several different topics point to it. If no 
             CSSPATH is specified, the CSS is assumed to be in the same 
@@ -95,142 +129,215 @@
 </td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">HDF</td>
 
-          <td valign="top" headers="N10048">The name of the file which contains XHTML codes to be placed 
+          <td valign="top" headers="N10042">
+HDF</td>
+
+          <td valign="top" headers="N10048">
+The name of the file which contains XHTML codes to be placed 
             in the HEAD area.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">HDR</td>
 
-          <td valign="top" headers="N10048">The name of the file which contains XHTML codes to be placed 
+          <td valign="top" headers="N10042">
+HDR</td>
+
+          <td valign="top" headers="N10048">
+The name of the file which contains XHTML codes to be placed 
             in the BODY running-heading area.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">FTR</td>
 
-          <td valign="top" headers="N10048">The name of the file which contains XHTML codes to be placed 
+          <td valign="top" headers="N10042">
+FTR</td>
+
+          <td valign="top" headers="N10048">
+The name of the file which contains XHTML codes to be placed 
             in the BODY running-footing area.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">ARTLBL</td>
 
-          <td valign="top" headers="N10048">Default <strong>output artwork filenames</strong> processing 
-            parameter; <tt>no</tt> and <tt>yes</tt> are valid values; any other 
+          <td valign="top" headers="N10042">
+ARTLBL</td>
+
+          <td valign="top" headers="N10048">
+Default <strong>
+output artwork filenames</strong> processing 
+            parameter; <tt>
+no</tt> and <tt>
+yes</tt> are valid values; any other 
             value is ignored.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>no</tt>
+
+            <tt>
+no</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">DRAFT </td>
 
-          <td valign="top" headers="N10048">Default <strong>hide draft &amp; cleanup content</strong> processing 
-            parameter (<tt>no</tt>= hide them); <tt>no</tt> and <tt>yes</tt> 
+          <td valign="top" headers="N10042">
+DRAFT </td>
+
+          <td valign="top" headers="N10048">
+Default <strong>
+hide draft &amp; cleanup content</strong> processing 
+            parameter (<tt>
+no</tt>= hide them); <tt>
+no</tt> and <tt>
+yes</tt> 
             are valid values; any other value is ignored.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>no</tt>
+
+            <tt>
+no</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">INDEXSHOW</td>
 
-          <td valign="top" headers="N10048">Default <strong>hide index entries</strong> processing parameter 
-            (<tt>no</tt> = hide them); <tt>no</tt> and <tt>yes</tt> are valid 
+          <td valign="top" headers="N10042">
+INDEXSHOW</td>
+
+          <td valign="top" headers="N10048">
+Default <strong>
+hide index entries</strong> processing parameter 
+            (<tt>
+no</tt> = hide them); <tt>
+no</tt> and <tt>
+yes</tt> are valid 
             values; any other value is ignored.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>no</tt>
+
+            <tt>
+no</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">YEAR</td>
 
-          <td valign="top" headers="N10048">The year for the copyright.</td>
+          <td valign="top" headers="N10042">
+YEAR</td>
+
+          <td valign="top" headers="N10048">
+The year for the copyright.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>2005l</tt>
+
+            <tt>
+2005l</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">OUTEXT</td>
 
-          <td valign="top" headers="N10048">Default <strong>output extension</strong> processing parameter; 
-            <tt>htm</tt> and <tt>html</tt> are valid values.</td>
+          <td valign="top" headers="N10042">
+OUTEXT</td>
+
+          <td valign="top" headers="N10048">
+Default <strong>
+output extension</strong> processing parameter; 
+            <tt>
+htm</tt> and <tt>
+html</tt> are valid values.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>html</tt>
+
+            <tt>
+html</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">WORKDIR</td>
 
-          <td valign="top" headers="N10048">The working directory, relative to the stylesheet, that 
+          <td valign="top" headers="N10042">
+WORKDIR</td>
+
+          <td valign="top" headers="N10048">
+The working directory, relative to the stylesheet, that 
             contains the document being transformed. Needed as a directory 
             prefix for the @conref and @href document() function 
             calls.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>./</tt>
+
+            <tt>
+./</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">PATH2PROJ</td>
 
-          <td valign="top" headers="N10048">The path back to the project. Used for <em>c.gif</em>, 
-            <em>delta.gif</em>, and <em>.css</em> files to allow users to have 
+          <td valign="top" headers="N10042">
+PATH2PROJ</td>
+
+          <td valign="top" headers="N10048">
+The path back to the project. Used for <em>
+c.gif</em>, 
+            <em>
+delta.gif</em>, and <em>
+.css</em> files to allow users to have 
             these files in 1 location.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">FILENAME</td>
 
-          <td valign="top" headers="N10048">The file name (file name and extension only - no path) of 
+          <td valign="top" headers="N10042">
+FILENAME</td>
+
+          <td valign="top" headers="N10048">
+The file name (file name and extension only - no path) of 
             the document being transformed. Needed to help form debugging 
-            messages.<div class="note"><span class="notetitle">Note:</span> This value is not inherent to the XSLT 
+            messages.<div class="note"><span class="notetitle">Note:</span> 
+This value is not inherent to the XSLT 
             processor; typically, when the transform starts, the input filename 
             will be passed to the processor's command line as a parameter. 
             Any resulting debugging messages will echo the file 
@@ -238,73 +345,101 @@
 </td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">FILTERFILE</td>
 
-          <td valign="top" headers="N10048">The name of the file that contains filter/flagging/revision 
+          <td valign="top" headers="N10042">
+FILTERFILE</td>
+
+          <td valign="top" headers="N10048">
+The name of the file that contains filter/flagging/revision 
             information.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">DBG</td>
 
-          <td valign="top" headers="N10048">Debug mode which enables XSL debugging XSL messages. Needed 
-            to help form debugging messages. <tt>no</tt> and <tt>yes</tt> are 
+          <td valign="top" headers="N10042">
+DBG</td>
+
+          <td valign="top" headers="N10048">
+Debug mode which enables XSL debugging XSL messages. Needed 
+            to help form debugging messages. <tt>
+no</tt> and <tt>
+yes</tt> are 
             valid values; any other value is ignored.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>no</tt>
+
+            <tt>
+no</tt>
           </td>
 
         </tr>
 
         <tr>
-          <td valign="top" headers="N10042">DITAEXT</td>
 
-          <td valign="top" headers="N10048">DITAEXT file extension name of dita topic file.</td>
+          <td valign="top" headers="N10042">
+DITAEXT</td>
+
+          <td valign="top" headers="N10048">
+DITAEXT file extension name of dita topic file.</td>
 
           <td valign="top" headers="N1004E">
-            <tt>null</tt>
+
+            <tt>
+null</tt>
           </td>
 
         </tr>
 
       </table>
 
-      <p>For example, the following sample invocation shows how to turn on 
+      <p>
+For example, the following sample invocation shows how to turn on 
         draft mode using the Saxon XSLT processor:</p>
 
-      <pre>c:pkg\dita12\doc&gt;java -jar &lt;saxon_dir&gt;/saxon.jar abc.htm 
+      <pre>
+c:pkg\dita12\doc&gt;java -jar &lt;saxon_dir&gt;/saxon.jar abc.htm 
         dita-tweaks.xml ..\xsl\dita2htmlImpl.xsl DRAFT=yes</pre>
 
-      <p>The effect of this parameter will be to show the content of all 
-        <samp class="codeph">&lt;draft-comment&gt;</samp> and 
-        <samp class="codeph">&lt;required-cleanup&gt;</samp> elements with highly visible 
+      <p>
+The effect of this parameter will be to show the content of all 
+        <samp class="codeph">
+&lt;draft-comment&gt;</samp> and 
+        <samp class="codeph">
+&lt;required-cleanup&gt;</samp> elements with highly visible 
         styling for use by reviewers.</p>
 
-      <div class="note"><span class="notetitle">Note:</span> To invoke a process using parameters, please check the 
+      <div class="note"><span class="notetitle">Note:</span> 
+To invoke a process using parameters, please check the 
         documentation for your XSLT processor. Most current XSLT 1.0 processors 
         support a non-standard command line interface for parameters. </div>
 
-      <div class="note"><span class="notetitle">Note:</span> Parametric tweaks cannot be applied from internal 
-        stylesheet links (that is, the <samp class="codeph">&lt;?xml-stylesheet 
+      <div class="note"><span class="notetitle">Note:</span> 
+Parametric tweaks cannot be applied from internal 
+        stylesheet links (that is, the <samp class="codeph">
+&lt;?xml-stylesheet 
         ...?&gt;</samp> processing instruction) as such associations do not 
         provide a way to pass parameters, even if a browser-specific renderer 
         is capable of using such data. To cause a browser-based view to show 
         something ordinarily affected by a command-line parameter, such as the 
         DRAFT="yes" effect, embed the alternative value directly in 
         the override stylesheet that is named in the stylesheet processing 
-        instruction:<pre>&lt;xsl:param name="DRAFT" 
+        instruction:<pre>
+&lt;xsl:param name="DRAFT" 
         select="'yes'"/&gt;</pre>
 </div>
 

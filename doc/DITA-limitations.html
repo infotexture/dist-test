@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -25,46 +25,73 @@
 <meta content="limitations" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>Known Limitations</title>
+<title>
+Known Limitations</title>
 </head>
 <body id="limitations"><a name="limitations"><!-- --></a>
 
 
-  <h1 class="topictitle1">Known Limitations</h1>
+
+  <h1 class="topictitle1">
+Known Limitations</h1>
 
   
-  <div><p>Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.</p>
+  <div><p>
+Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.</p>
 
-    <div class="section"><h2 class="sectiontitle">Transformation to PDF and Word RTF</h2>
+
+    <div class="section"><h2 class="sectiontitle">
+Transformation to PDF and Word RTF</h2>
+
       
       <br><ol>
-        <li>You can change the styles of the output file by using tools in Microsoft<sup>&reg;</sup> Word rather than specifying the styles before transforming.</li>
 
-        <li>If there is a cross reference referring to an URL in the DITA source file, the link should be completed defined with the proper internet protocol. For example, specify <kbd class="userinput">http://www.ibm.com</kbd> instead of <kbd class="userinput">www.ibm.com</kbd>.</li>
+        <li>
+You can change the styles of the output file by using tools in 
+Microsoft<sup>&reg;</sup> Word rather than specifying the styles before transforming.</li>
 
-        <li>Flagging, revision bar and filtering are not supported in PDF and Word RTF output.</li>
+        <li>
+If there is a cross reference referring to an URL in the DITA source file, the link should be completed defined with the proper internet protocol. For example, specify <kbd class="userinput">
+http://www.ibm.com</kbd> instead of <kbd class="userinput">
+www.ibm.com</kbd>.</li>
 
-        <li>Morerows attribute of the table element used to generating vertically merged cell is not supported in PDF output.</li>
+        <li>
+Flagging, revision bar and filtering are not supported in PDF and Word RTF output.</li>
 
-        <li>Style attributes for table are not supported in Word RTF output.</li>
+        <li>
+Morerows attribute of the table element used to generating vertically merged cell is not supported in PDF output.</li>
 
-        <li>Complex cases dealing with table in list are not supported in Word RTF.</li>
+        <li>
+Style attributes for table are not supported in Word RTF output.</li>
 
-        <li>There might be no output style applied on contents of some tags in Word RTF output compared with other output.</li>
+        <li>
+Complex cases dealing with table in list are not supported in Word RTF.</li>
+
+        <li>
+There might be no output style applied on contents of some tags in Word RTF output compared with other output.</li>
 
       </ol>
 
     </div>
 
-    <div class="section"><h2 class="sectiontitle">HTML to DITA migration</h2>
+    <div class="section"><h2 class="sectiontitle">
+HTML to DITA migration</h2>
+
       
       <br><ol>
-        <li>Since Xalan doesn't allow to set the public and system IDs dynamically using a variable, when Xalan is used as the default XSLT processor, the output will contain: <pre>&lt;!DOCTYPE topic PUBLIC "{$publicid}" "{$systemid}"&gt;</pre>
-<p>Suggest to use Saxon as the processor to fix this problem. For other information on this problem, see the section "Other general migration notes" in the first developerWorks article.</p>
+
+        <li>
+Since Xalan doesn't allow to set the public and system IDs dynamically using a variable, when Xalan is used as the default XSLT processor, the output will contain: <pre>
+&lt;!DOCTYPE topic PUBLIC "{$publicid}" "{$systemid}"&gt;</pre>
+<p>
+Suggest to use Saxon as the processor to fix this problem. For other information on this problem, see the section "Other general migration notes" in the first developerWorks article.</p>
 </li>
 
-        <li>Currently, the stylesheet can't handle HTML files within namespace like below: <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
-<div class="note"><span class="notetitle">Note:</span> This limitation has been fixed in release 1.2.1, please refer to the <a href="DITA-h2d.html" title="">Migrating HTML to DITA</a> for detail information.</div>
+        <li>
+Currently, the stylesheet can't handle HTML files within namespace like below: <pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
+<div class="note"><span class="notetitle">Note:</span> 
+This limitation has been fixed in release 1.2.1, please refer to the <a href="DITA-h2d.html">Migrating HTML to DITA</a> for detail information.</div>
 </li>
 
       </ol>
@@ -81,11 +108,11 @@
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
 <div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
-<div><a href="DITA-h2d.html" title="">Migrating HTML to DITA</a></div>
+<div><a href="DITA-h2d.html">Migrating HTML to DITA</a></div>
 </div>
 <div class="relref"><strong>Related reference</strong><br>
-<div><a href="DITA-relnotes.html" title="">DITA release notes</a></div>
-<div><a href="DITA-log.html" title="">Problem determination and log analysis</a></div>
+<div><a href="DITA-relnotes.html">DITA release notes</a></div>
+<div><a href="DITA-log.html">Problem determination and log analysis</a></div>
 <div><a href="DITA-tweaks.html" title="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
 <div><a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing and executing the DITA Open Toolkit.">Troubleshooting</a></div>
 </div>
@@ -93,7 +120,7 @@
 <div><a href="DITA-changes.html" title="This document lists major changes and new features by release.">DITA release history</a></div>
 <div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
-<div><a href="dita2word.html#dita2word__limitation" title="">Transfomring DITA to Word RTF</a></div>
+<div><a href="dita2word.html#dita2word__limitation">Transfomring DITA to Word RTF</a></div>
 </div>
 </div>
 

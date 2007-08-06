@@ -77,7 +77,7 @@
             </xsl:otherwise>
           </xsl:choose>
         </fox:label>
-        <xsl:apply-templates mode="outline"></xsl:apply-templates>
+        <xsl:apply-templates select="child::*[contains(@class,' topic/topic ')]" mode="outline"></xsl:apply-templates>
       </fox:outline>
   </xsl:template>
   
