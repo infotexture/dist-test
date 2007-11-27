@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -28,54 +28,39 @@
 <meta content="DITA-ant" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>
-Building DITA output with Ant</title>
+<title>Building DITA output with Ant</title>
 </head>
 <body id="DITA-ant"><a name="DITA-ant"><!-- --></a>
 
 
-
-  <h1 class="topictitle1">
-Building DITA output with Ant</h1>
+  <h1 class="topictitle1">Building DITA output with Ant</h1>
 
   
-  <div><p>
-Ant is an open tool that uses the DITA processes to make producing 
+  <div><p>Ant is an open tool that uses the DITA processes to make producing 
     DITA output easier.</p>
 
-
     <p>
-
-      <strong>
-Introduction of Ant </strong>
+      <strong>Introduction of Ant </strong>
     </p>
 
-    <p>
-DITA provides a set of XSLT scripts for producing different types of 
+    <p>DITA provides a set of XSLT scripts for producing different types of 
       documentations such as: help output in Eclipse, Java Help and HTML Help, 
       web HTML pages and PDF file. </p>
 
-    <p>
-To make it easier to call these scripts, the DITA distribution now 
+    <p>To make it easier to call these scripts, the DITA distribution now 
       provides an experimental Ant tool to automatically build the DITA 
       documentations, demos, and samples. </p>
 
-    <p>
-Ant is a Java-based, open source tool provided by the Apache Foundation 
+    <p>Ant is a Java-based, open source tool provided by the Apache Foundation 
       to declare a sequence of build actions. Meanwhile, Ant is well suited for 
       development builds as well as document builds. </p>
 
-    <p>
-It is unnecessary for Ant to set up a build environment to run the DITA 
-      XSLT scripts. To run the DITA scripts directly, see the <a href="DITA-readme.html" title=" The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">
-DITA Readme</a> 
+    <p>It is unnecessary for Ant to set up a build environment to run the DITA 
+      XSLT scripts. To run the DITA scripts directly, see the <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">DITA Readme</a> 
       document.</p>
 
-    <div class="note"><span class="notetitle">Note:</span> 
-The following instructions and the associated <em>
-build.xml</em> and 
-      <em>
-ditatargets.xml </em> files are for the Java 1.4.2, Ant 1.6.5, FOP 
+    <div class="note"><span class="notetitle">Note:</span> The following instructions and the associated <em>build.xml</em> and 
+      <em>ditatargets.xml </em> files are for the Java 1.4.2, Ant 1.6.5, FOP 
       0.20.5, and Saxon 6.5.3 releases. These instructions are likely to need 
       some adjustment for other versions of these components and for specific 
       environments.</div>

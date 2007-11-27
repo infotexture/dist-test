@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -13,49 +13,35 @@
 <meta content="stubs" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>
-Stubs for user-provided override extensions</title>
+<title>Stubs for user-provided override extensions</title>
 </head>
 <body id="stubs"><a name="stubs"><!-- --></a>
 
 
-
-  <h1 class="topictitle1">
-Stubs for user-provided override extensions</h1>
+  <h1 class="topictitle1">Stubs for user-provided override extensions</h1>
 
   
-  <div><p>
-The <em>
-dita2htmlImpl.xsl</em> stylesheet provides code stubs that 
+  <div><p>The <em>dita2htmlImpl.xsl</em> stylesheet provides code stubs that 
     extend the appearance of your HTML result document. If you copy these stubs 
     into your override stylesheet and provide your own code within them, the 
     result content will be pasted into appropriate parts of the overall HTML 
     page.</p>
 
-
     <div class="section">
-
-      <p>
-Regions that can be modified by these stubs include header, footer, 
+      <p>Regions that can be modified by these stubs include header, footer, 
         topic-top blurbs (a common location for mini-contents boxes), 
         self-contained scripts (such as JavaScript used commonly for DHTML 
-        support), self-contained styles, <span>
-flagging based on property value 
+        support), self-contained styles, <span>flagging based on property value 
         matches, </span>panel titles and prefixes for panel titles (to 
         auto-generate explicit bookmarks for your users). See the section of 
-        <em>
-dita2htmlImpl.xsl</em> called <strong>
-start of override stubs</strong> for the 
+        <em>dita2htmlImpl.xsl</em> called <strong>start of override stubs</strong> for the 
         examples of mostly empty stubs that you can modify.</p>
 
-      <p>
-For example, copy the following template rule into an override file, 
-        such as a copy of <em>
-dita2xhtml.xsl</em>, to generate a mini table of 
+      <p>For example, copy the following template rule into an override file, 
+        such as a copy of <em>dita2xhtml.xsl</em>, to generate a mini table of 
         contents at the top of a topic that directly nests child topics:</p>
 
-      <pre>
- &lt;!-- override for main stub --&gt; &lt;xsl:template 
+      <pre class="pre"> &lt;!-- override for main stub --&gt; &lt;xsl:template 
         name="gen-user-sidetoc"&gt; &lt;!-- if there are nested 
         topics... --&gt; &lt;xsl:if 
         test="descendant::*[contains(@class,' topic/topic 
@@ -78,8 +64,7 @@ dita2xhtml.xsl</em>, to generate a mini table of
         &lt;/xsl:for-each&gt; &lt;/table&gt; &lt;/p&gt; &lt;/xsl:if&gt; 
         &lt;/xsl:template&gt; </pre>
 
-      <div class="remember"><span class="remembertitle">Remember:</span> 
- Do your modifications on the copies of stylesheets 
+      <div class="remember"><span class="remembertitle">Remember:</span>  Do your modifications on the copies of stylesheets 
         so that you can turn back on the original!</div>
 
     </div>

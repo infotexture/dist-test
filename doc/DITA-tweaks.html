@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -28,69 +28,45 @@
 <meta content="tweaks" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>
-Controls, parameters, tweaks, and gizmos for 
-dita2htmlImpl.xsl</title>
+<title>Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</title>
 </head>
 <body id="tweaks"><a name="tweaks"><!-- --></a>
 
 
-
-<h1 class="topictitle1">
-Controls, parameters, tweaks, and gizmos for <em>
-dita2htmlImpl.xsl</em></h1>
+<h1 class="topictitle1">Controls, parameters, tweaks, and gizmos for <em>dita2htmlImpl.xsl</em></h1>
 
 
-<div><p>
-If the available methods can not fully match your own output requirements,
+<div><p>If the available methods can not fully match your own output requirements,
 DITA Toolkit supports other ways to customize or enhance the transforms without
 having to modify core transforms directly.</p>
 
-
   <div class="section">
-
-    <p>
-The <em>
-dita2htmlImpl.xsl</em> file is the main XHTML processor to produce 
+    <p>The <em>dita2htmlImpl.xsl</em> file is the main XHTML processor to produce 
       the output. You can work with the following variables and parameters to 
       change the way of processing.</p>
 
-    <p>
-If you need to make code changes to <em>
-dita2htmlImpl.xsl</em> to change a 
+    <p>If you need to make code changes to <em>dita2htmlImpl.xsl</em> to change a 
       variable value, the preferred mechanism is to create an override 
       transform and place your changed code in the new transform. </p>
 
-    <div class="p">
-Here is an example of an override transform: <br><ol>
- <li>
-In the 
-      <tt>
-/xsl/</tt> directory, make a copy of the <em>
-dita2xhtml.xsl</em> file 
+    <div class="p">Here is an example of an override transform: <br><ol> <li>In the 
+      <tt>/xsl/</tt> directory, make a copy of the <em>dita2xhtml.xsl</em> file 
       and change the filename of the copy.</li>
- <li>
-Add your XSLT changes 
+ <li>Add your XSLT changes 
       within the new file.</li>
  </ol>
  </div>
 
     <div class="note"><span class="notetitle">Note:</span> 
-
       <br><ul>
-
-        <li>
-Making editing changes to XSLT transforms is not included in this 
+        <li>Making editing changes to XSLT transforms is not included in this 
           document; refer to another XSLT reference for guidance.</li>
 
-        <li>
-It is not recommended to edit any of the DITA distribution files, 
+        <li>It is not recommended to edit any of the DITA distribution files, 
           because your modification might be erased by package updates.</li>
 
-        <li>
-You are responsible for any change you make to DITA transforms. If 
-          you need help, the <a href="news://news.software.ibm.com/ibm.software.developerworks.xml.xml">
-DITA 
+        <li>You are responsible for any change you make to DITA transforms. If 
+          you need help, the <a href="news://news.software.ibm.com/ibm.software.developerworks.xml.xml">DITA 
           forum on developerWorks</a> may be a useful resource.</li>
 
       </ul>

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
 <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -12,92 +12,62 @@
 <meta content="mapref" name="DC.Identifier">
 <meta content="en-us" name="DC.Language">
 <link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>
-Mapref</title>
+<title>Mapref</title>
 </head>
 <body id="mapref"><a name="mapref"><!-- --></a>
 
 
-
-  <h1 class="topictitle1">
-Mapref</h1>
+  <h1 class="topictitle1">Mapref</h1>
 
   
-  <div><p>
-Mapref refers to a special usage of the <tt>
-&lt;topicref&gt;</tt> 
+  <div><p>Mapref refers to a special usage of the <tt>&lt;topicref&gt;</tt> 
     element as a reference to another ditamap file. This allows you to manage 
     the overall ditamap file more easily. A large ditamap file can thus be 
     broken down into several ditamap files, making it easier for the user to 
     manage the overall logical structure. On the other hand, this mechanism 
     also increases the reusability of those ditamap files.</p>
 
-
-    <div class="section">
-You can create references to another ditamap file by setting the 
-      format attribute as follows.<div class="note"><span class="notetitle">Note:</span> 
-This usage is so-called 
-      <tt>
-mapref</tt>. But in fact, there is no <tt>
-&lt;mapref&gt;</tt> element 
+    <div class="section">You can create references to another ditamap file by setting the 
+      format attribute as follows.<div class="note"><span class="notetitle">Note:</span> This usage is so-called 
+      <tt>mapref</tt>. But in fact, there is no <tt>&lt;mapref&gt;</tt> element 
       in use.</div>
 </div>
 
     <ol>
-
       <li>
-
-        <span>
-Add a <tt>
-&lt;topicref&gt;</tt> element to your map.</span>
+        <span>Add a <tt>&lt;topicref&gt;</tt> element to your map.</span>
       </li>
 
       <li>
-
-        <span>
-Define the location of the target ditamap file in the href 
+        <span>Define the location of the target ditamap file in the href 
           attribute. The href takes a standard URL format. Typically it is a 
           relative path to the file. </span>
       </li>
 
       <li>
-
-        <span>
-Set format="ditamap".</span>
+        <span>Set format="ditamap".</span>
       </li>
 
       <li>
-
-        <span>
-Add a navigation title in the navtitle attribute. </span>
+        <span>Add a navigation title in the navtitle attribute. </span>
       </li>
 
     </ol>
 
     <div class="example">
-
-      <p>
-For example, if you want to create a reference to the 
-        <em>
-samples/mysamp.ditamap</em> file using <tt>
-sample ditamap</tt> as the 
+      <p>For example, if you want to create a reference to the 
+        <em>samples/mysamp.ditamap</em> file using <tt>sample ditamap</tt> as the 
         navigation title, add the following codes into the 
-        <em>
-readme.ditamap</em> file.</p>
+        <em>readme.ditamap</em> file.</p>
 
       <div class="p">
-
-        <pre>
-&lt;topicref format="ditamap" href="sample\mysample.ditamap" navtitle="sample ditamap"&gt; </pre>
+        <pre class="codeblock">&lt;topicref format="ditamap" href="sample\mysample.ditamap" navtitle="sample ditamap"&gt; </pre>
 
       </div>
 
-      <div class="p">
-Now the complete content of the <em>
-readme.ditamap</em> file is shown as 
+      <div class="p">Now the complete content of the <em>readme.ditamap</em> file is shown as 
         follows.
-        <pre>
-
+        <pre class="codeblock">
 &lt;?xml version="1.0" encoding="utf-8"?&gt;           
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt;
 &lt;map id="mainDITAreadme" title="DITA Readme map"&gt;
@@ -111,14 +81,10 @@ readme.ditamap</em> file is shown as
 
       </div>
 
-      <p>
-If, for example, the content of the <em>
-mysample.ditamap</em> is shown as follows,</p>
+      <p>If, for example, the content of the <em>mysample.ditamap</em> is shown as follows,</p>
 
       <div class="p">
-
-        <pre>
-
+        <pre class="codeblock">
 &lt;?xml version="1.0" encoding="utf-8"?&gt; 
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt; 
 &lt;map id="samplemap" title="Sample Ditamap"&gt; 
@@ -129,15 +95,11 @@ mysample.ditamap</em> is shown as follows,</p>
 
       </div>
 
-      <p>
-then the <em>
-readme.ditamap</em> file can be equivalently expressed by 
+      <p>then the <em>readme.ditamap</em> file can be equivalently expressed by 
         the following codes:</p>
 
       <div class="p">
-
-        <pre>
-
+        <pre class="codeblock">
 &lt;?xml version="1.0" encoding="utf-8"?&gt; 
 &lt;!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd"&gt; 
 &lt;map id="mainDITAreadme" title="DITA Readme map"&gt; 
