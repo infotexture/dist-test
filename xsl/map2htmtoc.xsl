@@ -39,11 +39,19 @@
 <xsl:param name="CSS"/>
 <xsl:param name="CSSPATH"/>
 <xsl:param name="OUTPUTCLASS"/>   <!-- class to put on body element. -->
+<!-- the path back to the project. Used for c.gif, delta.gif, css to allow user's to have
+  these files in 1 location. -->
+<xsl:param name="PATH2PROJ">
+  <xsl:apply-templates select="/processing-instruction('path2project')" mode="get-path2project"/>
+</xsl:param>
 
 <!-- Define a newline character -->
 <xsl:variable name="newline"><xsl:text>
 </xsl:text></xsl:variable>
 
+<xsl:template match="processing-instruction('path2project')" mode="get-path2project">
+  <xsl:value-of select="."/>
+</xsl:template>
 
 <!-- *********************************************************************************
      Setup the HTML wrapper for the table of contents
@@ -111,48 +119,62 @@
      ********************************************************************************* -->
 <xsl:template match="*[contains(@class, ' map/topicref ')][not(@toc='no')]">
   <xsl:param name="pathFromMaplist"/>
-  <li>
-      <xsl:choose>
-        <!-- If there is a reference to a DITA or HTML file, and it is not external: -->
-        <xsl:when test="@href and not(@href='')">
-          <xsl:element name="a">
-            <xsl:attribute name="href">
-             <xsl:choose>        <!-- What if targeting a nested topic? Need to keep the ID? -->
-              <xsl:when test="contains(@copy-to, $DITAEXT)">
-                <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
-                <xsl:value-of select="substring-before(@copy-to,$DITAEXT)"/><xsl:value-of select="$OUTEXT"/>
-              </xsl:when>
-              <xsl:when test="contains(@href,$DITAEXT)">
-                <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
-                <xsl:value-of select="substring-before(@href,$DITAEXT)"/><xsl:value-of select="$OUTEXT"/>
-              </xsl:when>
-              <xsl:otherwise>  <!-- If non-DITA, keep the href as-is -->
-                <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
-                <xsl:value-of select="@href"/>
-              </xsl:otherwise>
-             </xsl:choose>
-            </xsl:attribute>
-            <xsl:if test="@scope='external' or @type='external' or ((@format='PDF' or @format='pdf') and not(@scope='local'))">
+  <xsl:variable name="title">
+    <xsl:call-template name="navtitle"/>
+  </xsl:variable>
+  <xsl:choose>
+    <xsl:when test="$title and $title!=''">
+      <li>
+        <xsl:choose>
+          <!-- If there is a reference to a DITA or HTML file, and it is not external: -->
+          <xsl:when test="@href and not(@href='')">
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:choose>        <!-- What if targeting a nested topic? Need to keep the ID? -->
+                  <xsl:when test="contains(@copy-to, $DITAEXT)">
+                    <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
+                    <xsl:value-of select="substring-before(@copy-to,$DITAEXT)"/><xsl:value-of select="$OUTEXT"/>
+                  </xsl:when>
+                  <xsl:when test="contains(@href,$DITAEXT)">
+                    <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
+                    <xsl:value-of select="substring-before(@href,$DITAEXT)"/><xsl:value-of select="$OUTEXT"/>
+                  </xsl:when>
+                  <xsl:otherwise>  <!-- If non-DITA, keep the href as-is -->
+                    <xsl:if test="not(@scope='external')"><xsl:value-of select="$pathFromMaplist"/></xsl:if>
+                    <xsl:value-of select="@href"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:attribute>
+              <xsl:if test="@scope='external' or @type='external' or ((@format='PDF' or @format='pdf') and not(@scope='local'))">
                 <xsl:attribute name="target">_blank</xsl:attribute>
-            </xsl:if>
-           <xsl:call-template name="navtitle"/>
-          </xsl:element>
-        </xsl:when>
-
-        <xsl:otherwise>
-         <xsl:call-template name="navtitle"/>
-        </xsl:otherwise>
-      </xsl:choose>
-
-       <!-- If there are any children that should be in the TOC, process them -->
-       <xsl:if test="descendant::*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))]">
-         <xsl:value-of select="$newline"/><ul><xsl:value-of select="$newline"/>
-           <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
-             <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
-           </xsl:apply-templates>
-         </ul><xsl:value-of select="$newline"/>
-       </xsl:if>
-  </li><xsl:value-of select="$newline"/>
+              </xsl:if>
+              <xsl:value-of select="$title"/>
+            </xsl:element>
+          </xsl:when>
+          
+          <xsl:otherwise>
+            <xsl:value-of select="$title"/>
+          </xsl:otherwise>
+        </xsl:choose>
+        
+        <!-- If there are any children that should be in the TOC, process them -->
+        <xsl:if test="descendant::*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))]">
+          <xsl:value-of select="$newline"/><ul><xsl:value-of select="$newline"/>
+            <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
+              <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
+            </xsl:apply-templates>
+          </ul><xsl:value-of select="$newline"/>
+        </xsl:if>
+      </li><xsl:value-of select="$newline"/>
+    </xsl:when>
+    <xsl:otherwise>
+      <!-- if it is an empty topicref -->
+      <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
+        <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
+      </xsl:apply-templates>
+    </xsl:otherwise>
+  </xsl:choose>
+  
 </xsl:template>
 
 <!-- If toc=no, but a child has toc=yes, that child should bubble up to the top -->
@@ -259,10 +281,35 @@
 </xsl:template>
 
 <!-- Link to user CSS. -->
+<!-- Test for URL: returns "url" when the content starts with a URL;
+  Otherwise, leave blank -->
+<xsl:template name="url-string">
+  <xsl:param name="urltext"/>
+  <xsl:choose>
+    <xsl:when test="contains($urltext,'http://')">url</xsl:when>
+    <xsl:when test="contains($urltext,'https://')">url</xsl:when>
+    <xsl:otherwise/>
+  </xsl:choose>
+</xsl:template>
+
 <!-- Can't link to commonltr.css or commonrtl.css because we don't know what language the map is in. -->
 <xsl:template name="generateCssLinks">
+  <xsl:variable name="urltest">
+    <xsl:call-template name="url-string">
+      <xsl:with-param name="urltext">
+        <xsl:value-of select="concat($CSSPATH,$CSS)"/>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:variable>
   <xsl:if test="string-length($CSS)>0">
-   <link rel="stylesheet" type="text/css" href="{$CSSPATH}{$CSS}" />
+  <xsl:choose>
+    <xsl:when test="$urltest='url'">
+      <link rel="stylesheet" type="text/css" href="{$CSSPATH}{$CSS}" />
+    </xsl:when>
+    <xsl:otherwise>
+      <link rel="stylesheet" type="text/css" href="{$PATH2PROJ}{$CSSPATH}{$CSS}" />
+    </xsl:otherwise>
+  </xsl:choose><xsl:value-of select="$newline"/>   
   </xsl:if>
 </xsl:template>
 

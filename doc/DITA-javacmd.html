@@ -18,7 +18,6 @@
 <meta scheme="URI" name="DC.Relation" content="DITA-log.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-h2d.html">
 <meta scheme="URI" name="DC.Relation" content="dita2word.html#dita2word/limitation">
-<meta scheme="URI" name="DC.Relation" content="DITA-tweaks.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-limitations.html">
 <meta scheme="URI" name="DC.Relation" content="DITA-troubleshooting.html">
 <meta content="XHTML" name="DC.Format">
@@ -79,7 +78,7 @@
         you can set with this tool.</p>
 
       
-<div class="tablenoborder"><a name="usingparameterbuildingtool__javacmdinterface"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="usingparameterbuildingtool__javacmdinterface" frame="border" border="1" rules="all"><caption>Table 1. Table of supported parameters</caption>
+<div class="tablenoborder"><a name="usingparameterbuildingtool__javacmdinterface"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="usingparameterbuildingtool__javacmdinterface" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Table of supported parameters</span></caption>
           
           
           <thead align="left">
@@ -602,7 +601,7 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/generatecopyouter</em>:{generate.copy.outer}</td>
+              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/generateouter</em>:{generate.copy.outer}</td>
 
               <td class="cellrowborder" valign="top" headers="N100EB ">
                 <span>The parameter to specify how to deal with the overflowing dita/topic files. Only "1", "2" and "3" are valid values. The default is 1. </span>
@@ -638,6 +637,28 @@
 
     </div>
 
+    <div class="section"><h2 class="sectiontitle">Enhanced command line help</h2>
+      
+      <div class="p">
+        <span>From DITA OT 1.3</span>, the command line help function is enhanced to improve
+        usability. You can know the version of toolkit and the usage of the command line from the
+        command line help by using the following commands: <p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<samp class="codeph">java -jar lib/dost.jar <strong>-version</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</samp><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<samp class="codeph">java -jar lib/dost.jar <strong>-h</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</samp><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+      </div>
+
+      <p>You can see the brief description of the supported parameters in the command line
+        window when you type a specific command. For example, <samp class="codeph">java -jar
+          lib/dost.jar <strong>-h</strong>
+        </samp>
+      </p>
+
+    </div>
+
   </div>
 
 <div>
@@ -652,7 +673,6 @@
 <div class="relref"><strong>Related reference</strong><br>
 <div><a href="DITA-relnotes.html">DITA release notes</a></div>
 <div><a href="DITA-log.html">Problem determination and log analysis</a></div>
-<div><a href="DITA-tweaks.html" title="If the available methods can not fully match your own output requirements, DITA Toolkit supports other ways to customize or enhance the transforms without having to modify core transforms directly.">Controls, parameters, tweaks, and gizmos for dita2htmlImpl.xsl</a></div>
 <div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
 <div><a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing and executing the DITA Open Toolkit.">Troubleshooting</a></div>
 </div>

@@ -87,6 +87,8 @@
               <li>It is recommended to download the latest version of the DITA 
                 Toolkit for stable usage.</li>
 
+              <li>If you use DITA Open Toolkit full distribution, click <a href="#Fullsetup" title="The software that DITA OT depend on are redistributed. The full distribution package of DITA OT after 1.3 includes the software, so the configuration process is streamlined.">here</a> to continue.</li>
+
               <li>If you use <strong>Linux</strong>, click <a href="#Linuxsetup" title="The following steps guide you to set up the DITA Toolkit processing environment in Linux.">here</a> to continue the setting up 
                 process. </li>
 
@@ -119,13 +121,13 @@
         <span>Set up the <strong>XSLT</strong> processor.</span>
         
 <table class="choicetableborder" summary="" cellspacing="0" cellpadding="4" rules="rows" frame="hsides" border="1">
-<thead><tr><th valign="bottom" id="N10187-option" align="left">Option</th>
-<th valign="bottom" id="N10187-desc" align="left">Description</th></tr></thead>
+<thead><tr><th valign="bottom" id="N10198-option" align="left">Option</th>
+<th valign="bottom" id="N10198-desc" align="left">Description</th></tr></thead>
 <tbody>
           <tr>
-            <td valign="top" headers="N10187-option" id="N10194"><strong>If you use the Saxon,</strong></td>
+            <td valign="top" headers="N10198-option" id="N101A5"><strong>If you use the Saxon,</strong></td>
 
-            <td valign="top" headers="N10187-desc N10194">
+            <td valign="top" headers="N10198-desc N101A5">
               <br><ul>
                 <li>Set up CLASSPATH to include the <em>saxon.jar</em> file. 
                   <p><samp class="codeph">set CLASSPATH=%CLASSPATH%; 
@@ -146,9 +148,9 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="N10187-option" id="N101E1"><strong>If you use the Xalan,</strong></td>
+            <td valign="top" headers="N10198-option" id="N101F2"><strong>If you use the Xalan,</strong></td>
 
-            <td valign="top" headers="N10187-desc N101E1">
+            <td valign="top" headers="N10198-desc N101F2">
               <br><ul>
                 <li>Set up CLASSPATH to include the <em>xalan.jar</em> file and 
                   the <em> xercesImpl.jar</em> file. <pre class="codeblock">set CLASSPATH=%CLASSPATH%;&lt;xalan_dir&gt;\bin</pre>
@@ -197,13 +199,13 @@
         
         
 <table class="choicetableborder" summary="" cellspacing="0" cellpadding="4" rules="rows" frame="hsides" border="1">
-<thead><tr><th valign="bottom" id="N1025D-option" align="left">Option</th>
-<th valign="bottom" id="N1025D-desc" align="left">Description</th></tr></thead>
+<thead><tr><th valign="bottom" id="N1026E-option" align="left">Option</th>
+<th valign="bottom" id="N1026E-desc" align="left">Description</th></tr></thead>
 <tbody>
           <tr>
-            <td valign="top" headers="N1025D-option" id="N1026A"><strong> If you have installed the JavaHelp,</strong></td>
+            <td valign="top" headers="N1026E-option" id="N1027B"><strong> If you have installed the JavaHelp,</strong></td>
 
-            <td valign="top" headers="N1025D-desc N1026A">set up the environment variable <samp class="codeph">JHHOME</samp> to 
+            <td valign="top" headers="N1026E-desc N1027B">set up the environment variable <samp class="codeph">JHHOME</samp> to 
               your installation directory for JavaHelp. For 
               example:<p><samp class="codeph">set 
               JHHOME=&lt;javahelp_dir&gt;</samp></p>
@@ -212,9 +214,9 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="N1025D-option" id="N1028B"><strong>If you have installed the FOP,</strong></td>
+            <td valign="top" headers="N1026E-option" id="N1029C"><strong>If you have installed the FOP,</strong></td>
 
-            <td valign="top" headers="N1025D-desc N1028B"> set up your environment variable CLASSPATH to include the 
+            <td valign="top" headers="N1026E-desc N1029C"> set up your environment variable CLASSPATH to include the 
               <em>fop.jar, batik.jar</em> and <em>avalon.jar</em> files in the FOP 
               directory. For example: <p><samp class="codeph">set 
               CLASSPATH=%CLASSPATH%;&lt;fop_dir&gt;\build;&lt;fop_dir&gt;\lib</samp></p>
@@ -223,9 +225,9 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="N1025D-option" id="N102B2"><strong>If you want to build HTML Help output,</strong></td>
+            <td valign="top" headers="N1026E-option" id="N102C3"><strong>If you want to build HTML Help output,</strong></td>
 
-            <td valign="top" headers="N1025D-desc N102B2">install Microsoft HTML Help Workshop to the default 
+            <td valign="top" headers="N1026E-desc N102C3">install Microsoft HTML Help Workshop to the default 
               directory.</td>
 
           </tr>
@@ -292,6 +294,57 @@
 
   </div>
 
+  <div class="nested1" xml:lang="en-us" id="Fullsetup"><a name="Fullsetup"><!-- --></a>
+    <h2 class="topictitle2">Installing DITA OT Full Distribution</h2>
+
+    
+    <div><p>The software that DITA OT depend on are
+      redistributed. The full distribution package of DITA OT after 1.3 includes the software,
+      so the configuration process is streamlined.</p>
+
+      <div class="p">Before installing DITA Open Toolkit full distribution, you need to complete the
+        following steps:<br><ul>
+          <li>Download and configure JDK properly.</li>
+
+          <li>(Optional) Download and configure HTMLHelp Compiler properly for HTMLHelp
+            transformation. </li>
+
+          <li>(Optional) Download and configure JavaHelp Compiler properly for JavaHelp
+            transformation.</li>
+
+        </ul>
+</div>
+
+      <div class="section">Then, you need to complete the following steps:</div>
+
+      <ol>
+        <li><span>Download the full DITA OT package. </span></li>
+
+        <li><span>Run the batch file "<samp class="codeph">startcmd.bat</samp>" for Windows
+          or "<samp class="codeph">startcmd.sh</samp>" for Linux to set up the necessary environment
+          variables.</span></li>
+
+        <li><span>Run the transformation in the command-line window by using
+          Java command line or ANT.</span>
+        </li>
+
+      </ol>
+
+      <div class="section">You can still use the standard package to install DITA OT:<br><ul>
+        <li>Download the standard package.</li>
+
+        <li>Configure the system environment of DITA OT, but add two more paths %DITA_HOME%\lib;%DITA_HOME%\lib\resolver.jar;
+          to the CLASSPATH parameter.</li>
+
+        <li> Run the package by using Java command line or Ant. </li>
+
+      </ul>
+</div>
+
+    </div>
+
+  </div>
+
   <div class="nested1" xml:lang="en-us" id="Linuxsetup"><a name="Linuxsetup"><!-- --></a>
     <h2 class="topictitle2">Set up DITA Toolkit in Linux</h2>
 
@@ -341,13 +394,13 @@
           <span>Set up the <strong>XSLT</strong> processor.</span>
           
 <table class="choicetableborder" summary="" cellspacing="0" cellpadding="4" rules="rows" frame="hsides" border="1">
-<thead><tr><th valign="bottom" id="N1041A-option" align="left">Option</th>
-<th valign="bottom" id="N1041A-desc" align="left">Description</th></tr></thead>
+<thead><tr><th valign="bottom" id="N104BB-option" align="left">Option</th>
+<th valign="bottom" id="N104BB-desc" align="left">Description</th></tr></thead>
 <tbody>
             <tr>
-              <td valign="top" headers="N1041A-option" id="N10427"><strong>If you use the Saxon,</strong></td>
+              <td valign="top" headers="N104BB-option" id="N104C8"><strong>If you use the Saxon,</strong></td>
 
-              <td valign="top" headers="N1041A-desc N10427">
+              <td valign="top" headers="N104BB-desc N104C8">
                 <br><ul>
                   <li>Set up CLASSPATH to include the <em>saxon.jar</em> file.<p><samp class="codeph">export 
                     CLASSPATH=$CLASSPATH:&lt;saxon_dir&gt;/saxon.jar</samp></p>
@@ -367,9 +420,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N1041A-option" id="N1046F"><strong>If you use the Xalan,</strong></td>
+              <td valign="top" headers="N104BB-option" id="N10510"><strong>If you use the Xalan,</strong></td>
 
-              <td valign="top" headers="N1041A-desc N1046F">
+              <td valign="top" headers="N104BB-desc N10510">
                 <br><ul>
                   <li>Set up CLASSPATH to include the <em>xalan.jar</em> file and 
                     the <em> xercesImpl.jar</em> file. <p><samp class="codeph">export 
@@ -395,13 +448,13 @@
             to set up.</span>
           
 <table class="choicetableborder" summary="" cellspacing="0" cellpadding="4" rules="rows" frame="hsides" border="1">
-<thead><tr><th valign="bottom" id="N104B6-option" align="left">Option</th>
-<th valign="bottom" id="N104B6-desc" align="left">Description</th></tr></thead>
+<thead><tr><th valign="bottom" id="N10557-option" align="left">Option</th>
+<th valign="bottom" id="N10557-desc" align="left">Description</th></tr></thead>
 <tbody>
             <tr>
-              <td valign="top" headers="N104B6-option" id="N104C3"><strong> If you have installed the JavaHelp,</strong></td>
+              <td valign="top" headers="N10557-option" id="N10564"><strong> If you have installed the JavaHelp,</strong></td>
 
-              <td valign="top" headers="N104B6-desc N104C3">set up the environment variable JHHOME to your 
+              <td valign="top" headers="N10557-desc N10564">set up the environment variable JHHOME to your 
                 installation directory for JavaHelp. For 
                 example:<p><samp class="codeph">export 
                 JHHOME=&lt;javahelp_dir&gt;</samp></p>
@@ -410,9 +463,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N104B6-option" id="N104DE"><strong>If you have installed the FOP,</strong></td>
+              <td valign="top" headers="N10557-option" id="N1057F"><strong>If you have installed the FOP,</strong></td>
 
-              <td valign="top" headers="N104B6-desc N104DE"> set up your environment variable CLASSPATH to include 
+              <td valign="top" headers="N10557-desc N1057F"> set up your environment variable CLASSPATH to include 
                 the <em>fop.jar, batik.jar</em> and <em>avalon.jar</em> files in 
                 the FOP directory. For example: <p><samp class="codeph">export 
                 CLASSPATH=$CLASSPATH:&lt;fop_dir&gt;/build:&lt;fop_dir&gt;/lib</samp></p>
@@ -421,9 +474,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="N104B6-option" id="N10505"><strong>If you want to build HTML Help output,</strong></td>
+              <td valign="top" headers="N10557-option" id="N105A6"><strong>If you want to build HTML Help output,</strong></td>
 
-              <td valign="top" headers="N104B6-desc N10505">install Microsoft HTML Help Workshop to the default 
+              <td valign="top" headers="N10557-desc N105A6">install Microsoft HTML Help Workshop to the default 
                 directory.</td>
 
             </tr>

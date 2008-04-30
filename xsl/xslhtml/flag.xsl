@@ -7,6 +7,49 @@
 
  <!-- ========== Flagging with flags & revisions ========== -->
  
+ <!-- Single template to set flag variables, generate props and revision flagging, and output
+  contents. Can be used by any element that does not use any markup between flags and contents. -->
+ <xsl:template match="*" mode="outputContentsWithFlags">
+  <xsl:variable name="flagrules">
+   <xsl:call-template name="getrules"/>
+  </xsl:variable>
+  <xsl:call-template name="start-flagit">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
+  </xsl:call-template>
+  <xsl:call-template name="revblock">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
+  </xsl:call-template>
+  <xsl:call-template name="end-flagit">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
+  </xsl:call-template>
+ </xsl:template>
+ 
+ <!-- Single template to set the background style, flag based on props and revisions, and output
+  contents. Can be used by any element that does not use any markup between flags and contents. -->
+ <xsl:template match="*" mode="outputContentsWithFlagsAndStyle">
+  <xsl:variable name="flagrules">
+   <xsl:call-template name="getrules"/>
+  </xsl:variable>
+  <xsl:variable name="conflictexist">
+   <xsl:call-template name="conflict-check">
+    <xsl:with-param name="flagrules" select="$flagrules"/>
+   </xsl:call-template>
+  </xsl:variable>
+  <xsl:call-template name="gen-style">
+   <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
+  </xsl:call-template>
+  <xsl:call-template name="start-flagit">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
+  </xsl:call-template>
+  <xsl:call-template name="revblock">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
+  </xsl:call-template>
+  <xsl:call-template name="end-flagit">
+   <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
+  </xsl:call-template>
+ </xsl:template>
+ 
  <!-- Flags - based on audience, product, platform, and otherprops in the source
   AND prop elements in the val file:
   Flag the text with the artwork from the val file & insert the ALT text from the val file.
@@ -783,9 +826,12 @@
     <img>
      <xsl:attribute name="src">
       <xsl:if test="string-length($PATH2PROJ) > 0"><xsl:value-of select="$PATH2PROJ"/></xsl:if>
+      <!--
       <xsl:call-template name="get-file-name">
        <xsl:with-param name="file-path" select="$imgsrc"/>
       </xsl:call-template>
+      -->
+      <xsl:value-of select="$imgsrc"/>
      </xsl:attribute>
      <xsl:if test="startflag/alt-text">
       <xsl:attribute name="alt">
@@ -809,9 +855,12 @@
     <img>
      <xsl:attribute name="src">
       <xsl:if test="string-length($PATH2PROJ) > 0"><xsl:value-of select="$PATH2PROJ"/></xsl:if>
+      <!--
       <xsl:call-template name="get-file-name">
        <xsl:with-param name="file-path" select="$imgsrc"/>
       </xsl:call-template>
+      -->
+      <xsl:value-of select="$imgsrc"/>
      </xsl:attribute>
      <xsl:if test="endflag/alt-text">
       <xsl:attribute name="alt">
@@ -1084,9 +1133,12 @@
     <img>
      <xsl:attribute name="src">
       <xsl:if test="string-length($PATH2PROJ) > 0"><xsl:value-of select="$PATH2PROJ"/></xsl:if>
+      <!-- 
       <xsl:call-template name="get-file-name">
        <xsl:with-param name="file-path" select="$imgsrc"/>
       </xsl:call-template>
+      -->
+      <xsl:value-of select="$imgsrc"/>
      </xsl:attribute>
      <xsl:if test="startflag/alt-text">
       <xsl:attribute name="alt">
@@ -1104,9 +1156,12 @@
     <img>
      <xsl:attribute name="src">
       <xsl:if test="string-length($PATH2PROJ) > 0"><xsl:value-of select="$PATH2PROJ"/></xsl:if>
+      <!--
       <xsl:call-template name="get-file-name">
        <xsl:with-param name="file-path" select="$imgsrc"/>
       </xsl:call-template>
+      -->
+      <xsl:value-of select="$imgsrc"/>
      </xsl:attribute>
      <xsl:attribute name="alt"> <!-- always insert an ALT - if it's blank, assume the user didn't want to fill it. -->
       <xsl:value-of select="@alt"/>
@@ -1130,9 +1185,11 @@
     <img>
      <xsl:attribute name="src">
       <xsl:if test="string-length($PATH2PROJ) > 0"><xsl:value-of select="$PATH2PROJ"/></xsl:if>
+      <!--
       <xsl:call-template name="get-file-name">
        <xsl:with-param name="file-path" select="$imgsrc"/>
       </xsl:call-template>
+      -->
      </xsl:attribute>
      <xsl:if test="endflag/alt-text">
       <xsl:attribute name="alt">
