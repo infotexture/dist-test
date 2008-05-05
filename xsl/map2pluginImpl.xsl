@@ -18,8 +18,8 @@
   <xsl:param name="plugin"/>
   
   <xsl:variable name="newline">
-    <xsl:text>
-    </xsl:text>
+<xsl:text>
+</xsl:text>
   </xsl:variable>
   
   <!-- Define the error message prefix identifier -->

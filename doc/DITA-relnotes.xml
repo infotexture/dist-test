@@ -8,6 +8,17 @@
   <title>DITA release notes</title>
   <refbody>
     <section>
+      <title>DITA OT release 1.4.2.1</title>
+      <p>Release 1.4.2.1 is a full build to provide an urgent fix to fix the 
+        following critical problem which users found in release 1.4.2.</p>
+      <ol>
+        <li>SF Bug 1956231 OSGI Manifest for eclipsehelp transtype contains spaces.</li>
+      </ol>
+      <p>For this fix, we have updated xsl/map2pluginImpl.xsl to prevent 
+        generating extra spaces at the head of every line in OSGI manifest 
+        file of eclipse help output.</p>
+    </section>
+    <section>
       <title>DITA OT release 1.4.2</title>
       <p>Release 1.4.2 is a maintenance release to fix defects and make patches 
         based on release 1.4.1</p>
