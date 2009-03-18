@@ -7,6 +7,12 @@
 <xsl:import href="xslhtml/dita2htmlImpl.xsl"></xsl:import>
 
 
+<xsl:import href="xslhtml/conceptdisplay.xsl"></xsl:import>
+
+
+<xsl:import href="xslhtml/glossdisplay.xsl"></xsl:import>
+
+
 <xsl:import href="xslhtml/taskdisplay.xsl"></xsl:import>
 
 
@@ -22,6 +28,8 @@
 <xsl:import href="xslhtml/ui-d.xsl"></xsl:import>
 
 <xsl:import href="xslhtml/hi-d.xsl"></xsl:import>
+
+<xsl:import href="xslhtml/abbrev-d.xsl"></xsl:import>
 
 
 

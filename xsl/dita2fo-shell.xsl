@@ -1,4 +1,4 @@
-<xsl:stylesheet version="1.0" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fox="http://xml.apache.org/fop/extensions">
+<xsl:stylesheet version="1.0" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:import href="xslfo/topic2foImpl.xsl"></xsl:import>
   <xsl:import href="xslfo/domains2fo.xsl"></xsl:import>
@@ -34,9 +34,11 @@
   <xsl:template name="dita-setup">
     <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
       
-      <xsl:apply-templates mode="outline"></xsl:apply-templates>
-      
       <xsl:call-template name="define-page-masters-dita"></xsl:call-template>
+      <fo:bookmark-tree>
+        
+	<xsl:apply-templates mode="outline"></xsl:apply-templates>
+      </fo:bookmark-tree>
       
       <xsl:call-template name="front-covers"></xsl:call-template>
       
@@ -61,12 +63,12 @@
         </xsl:choose>
       </xsl:variable>
       
-      <fox:outline>
+      <fo:bookmark>
         <xsl:attribute name="internal-destination">
           
           <xsl:value-of select="$id-value"></xsl:value-of>
         </xsl:attribute>
-        <fox:label>
+        <fo:bookmark-title>
           
           <xsl:choose>
             <xsl:when test="*[contains(@class,' topic/titlealts ')]/*[contains(@class, ' topic/navtitle ')]">
@@ -76,9 +78,9 @@
               <xsl:apply-templates select="title" mode="text-only"></xsl:apply-templates>
             </xsl:otherwise>
           </xsl:choose>
-        </fox:label>
+        </fo:bookmark-title>
         <xsl:apply-templates select="child::*[contains(@class,' topic/topic ')]" mode="outline"></xsl:apply-templates>
-      </fox:outline>
+      </fo:bookmark>
   </xsl:template>
   
   <xsl:template match="*" mode="text-only">

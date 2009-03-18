@@ -5,7 +5,9 @@
 <!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
 
 <xsl:stylesheet version="1.0"
-     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+     xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
+     exclude-result-prefixes="related-links">
 
 <!-- XHTML output with XML syntax -->
 <xsl:output method="xml"
@@ -264,15 +266,9 @@
         <xsl:value-of select="$widthpercent"/><xsl:text>%</xsl:text>
       </xsl:attribute>
     </xsl:if>
-    <xsl:call-template name="start-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag-parent">
+    <xsl:apply-templates select="." mode="start-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
+    </xsl:apply-templates>
     <xsl:variable name="revtest">
       <xsl:if test="@rev and not($FILTERFILE='') and ($DRAFT='yes')"> 
         <xsl:call-template name="find-active-rev-flag">               
@@ -317,15 +313,9 @@
 <xsl:call-template name="propentry-templates"/>
      </xsl:otherwise>
     </xsl:choose>
-    <xsl:call-template name="end-revflag">
+    <xsl:apply-templates select="." mode="end-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-revflag-parent">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
-    </xsl:call-template>
+    </xsl:apply-templates>
   </td><xsl:value-of select="$newline"/>
 </xsl:template>
 
@@ -343,4 +333,26 @@
  </xsl:choose>
 </xsl:template>
 
+  <!-- References have their own group. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='reference']" mode="related-links:get-group" name="related-links:group.reference">
+    <xsl:text>reference</xsl:text>
+  </xsl:template>
+  
+  <!-- Priority of reference group. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='reference']" mode="related-links:get-group-priority" name="related-links:group-priority.reference">
+    <xsl:value-of select="1"/>
+  </xsl:template>
+  
+  <!-- Reference wrapper for HTML: "Related reference" in <div>. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='reference']" mode="related-links:result-group" name="related-links:result.reference">
+    <xsl:param name="links"/>
+    <div class="relinfo">
+      <strong>
+        <xsl:call-template name="getString">
+          <xsl:with-param name="stringName" select="'Related reference'"/>
+        </xsl:call-template>
+      </strong><br/><xsl:value-of select="$newline"/>
+      <xsl:copy-of select="$links"/>
+    </div><xsl:value-of select="$newline"/>
+  </xsl:template>
 </xsl:stylesheet>

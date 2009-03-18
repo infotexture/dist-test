@@ -1,21 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="topic" name="DC.Type">
+<meta name="DC.Type" content="topic">
 <meta name="DC.Title" content="Specializing domains in DITA">
 <meta name="abstract" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
 <meta name="description" content="In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.">
-<meta scheme="URI" name="DC.Relation" content="DITA-rm.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-dsf.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-mapdomains.html">
-<meta content="Erik Hennum; IBM Corporation; ehennum@us.ibm.com. Erik Hennum works on the design and implementation of User Assistance for the IBM Storage Systems Group." name="DC.Creator">
-<meta content="XHTML" name="DC.Format">
-<meta content="domains" name="DC.Identifier">
-<meta content="en-us" name="DC.Language">
-<link href="commonltr.css" type="text/css" rel="stylesheet">
+<meta name="DC.Relation" scheme="URI" content="DITA-rm.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-dsf.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-mapdomains.html">
+<meta name="DC.Creator" content="Erik Hennum; IBM Corporation; ehennum@us.ibm.com. Erik Hennum works on the design and implementation of User Assistance for the IBM Storage Systems Group.">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="domains">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
 <title>Specializing domains in DITA</title>
 </head>
 <body id="domains"><a name="domains"><!-- --></a>
@@ -49,7 +50,7 @@
 
       <div class="fignone">
         <img src="image/content_special.gif" height="125" width="406" alt="specialized content can be inserted in topic bodies">
-        <p>Here's an analogy from the kitchen. You might think of topics as types of containers for preparing food in different ways, such as a basic frying pan, blender, and baking dish. The content elements are like the ingredients that go into these containers, such as spices, flour, and eggs. The domain resembles a specialty grocer who provides ingredients for a particular cuisine. Your pot might contain chorizo from the carnicer&iacute;a when you're cooking TexMex or risotto when you're cooking Italian. Similarly, your topics can contain elements from the programming domain when you're writing about a programming language or elements from the UI domain when you're writing about a GUI application.</p>
+        <p>Here's an analogy from the kitchen. You might think of topics as types of containers for preparing food in different ways, such as a basic frying pan, blender, and baking dish. The content elements are like the ingredients that go into these containers, such as spices, flour, and eggs. The domain resembles a specialty grocer who provides ingredients for a particular cuisine. Your pot might contain chorizo from the carnicería when you're cooking TexMex or risotto when you're cooking Italian. Similarly, your topics can contain elements from the programming domain when you're writing about a programming language or elements from the UI domain when you're writing about a GUI application.</p>
 
         <p>DITA has broad tastes, so you can mix domains as needed. If you're describing how to program GUI applications, your topics can draw on elements from both the programming and UI domains. You can also create new domains for <em>your</em> content. For instance, a new domain could provide elements for describing hardware devices. You can also reuse new domains created by others, expanding the variety of what you can cook up.</p>
 
@@ -68,12 +69,12 @@
       <p>A DITA <dfn class="term">domain</dfn> collects a set of specialized content elements for some purpose. In effect, a domain provides a specialized vocabulary. With the base DITA package, you receive the following domains:</p>
 
       
-<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" frame="border" border="1" rules="all">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all">
           <thead align="left">
             <tr>
-              <th class="cellrowborder" valign="top" id="N10109">Domain</th>
+              <th class="cellrowborder" valign="top" id="d21e115">Domain</th>
 
-              <th class="cellrowborder" valign="top" id="N10110">Purpose</th>
+              <th class="cellrowborder" valign="top" id="d21e118">Purpose</th>
 
             </tr>
 
@@ -81,30 +82,30 @@
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">highlight</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">highlight</td>
 
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">To highlight text with styles such as bold, italic, and monospace</td>
-
-            </tr>
-
-            <tr>
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">programming</td>
-
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">To define the syntax and give examples of programming languages</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">To highlight text with styles such as bold, italic, and monospace</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">software</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">programming</td>
 
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">To describe the operation of a software program</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">To define the syntax and give examples of programming languages</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">UI</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">software</td>
 
-              <td class="cellrowborder" valign="top" headers="N10109 N10110 ">To describe the user interface of a software program</td>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">To describe the operation of a software program</td>
+
+            </tr>
+
+            <tr>
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">UI</td>
+
+              <td class="cellrowborder" valign="top" headers="d21e115 d21e118 ">To describe the user interface of a software program</td>
 
             </tr>
 
@@ -564,7 +565,7 @@ the &lt;methodname&gt;concatenate()&lt;/methodname&gt; method.
       <div class="section"><h3 class="sectiontitle">Notices</h3>
         
         <blockquote>
-          <p>&copy; Copyright International Business Machines Corp., 2002, 2003. All rights reserved.</p>
+          <p>© Copyright International Business Machines Corp., 2002, 2003. All rights reserved.</p>
 
           <p>The information provided in this document has not been submitted to any formal IBM test and is distributed "AS IS," without warranty of any kind, either express or implied. The use of this information or the implementation of any of these techniques described in this document is the reader's responsibility and depends on the reader's ability to evaluate and integrate them into their operating environment. Readers attempting to adapt these techniques to their own environments do so at their own risk. </p>
 

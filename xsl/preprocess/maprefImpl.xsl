@@ -87,7 +87,7 @@
                 <!-- update mapref id path -->
                 <xsl:variable name="updated-id-path" select="concat($mapref-id-path,' ',generate-id(.),' ')"/> 
                 <!-- get the file handle by getting workdir and use document() to get the file -->
-                <xsl:variable name="fileurl">
+                <xsl:variable name="fileurl-origin">
                     <xsl:choose>
                         <xsl:when test="contains(@href,'://')">
                             <xsl:value-of select="@href"/>
@@ -97,6 +97,13 @@
                         </xsl:otherwise>
                     </xsl:choose>                    
                 </xsl:variable>
+              <xsl:variable name="fileurl">
+                <xsl:call-template name="replace-blank">
+                  <xsl:with-param name="file-origin">
+                    <xsl:value-of select="translate($fileurl-origin,'\','/')"/>
+                  </xsl:with-param>
+                </xsl:call-template>
+              </xsl:variable>
                 <xsl:variable name="file" select="document($fileurl,/)"/>
                 
                 <xsl:choose>
@@ -275,7 +282,7 @@
                     </xsl:choose>                    
                     <xsl:choose>
                         <!-- if the element is not at the top level of reference target, @class equals to $refclass -->
-                        <xsl:when test="not(contains(@class,$refclass))"> 
+                        <xsl:when test="not(contains(@class,substring($refclass, 3)))"> 
                             <xsl:attribute name="class"><xsl:value-of select="$refclass"/></xsl:attribute>
                         </xsl:when>
                         <xsl:otherwise>
@@ -396,7 +403,14 @@
                 </xsl:when>
                 <xsl:when test="not($linking='none') and @href and not(contains(@href,'#'))">
                     <xsl:variable name="update-id-path" select="concat($mapref-id-path,' ',generate-id(.),' ')"/>
-                    <xsl:apply-templates select="document(@href,/)/*[contains(@class,' map/map ')]" mode="mapref">
+                  <xsl:variable name="href">
+                      <xsl:call-template name="replace-blank">
+                        <xsl:with-param name="file-origin">
+                          <xsl:value-of select="translate(@href,'\','/')"/>
+                        </xsl:with-param>
+                      </xsl:call-template>
+                  </xsl:variable>
+                    <xsl:apply-templates select="document($href,/)/*[contains(@class,' map/map ')]" mode="mapref">
                         <xsl:with-param name="relative-path">
                             <xsl:choose>
                                 <xsl:when test="not($relative-path='#none#' or $relative-path='')">
@@ -603,4 +617,6 @@
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
+
+  
 </xsl:stylesheet>

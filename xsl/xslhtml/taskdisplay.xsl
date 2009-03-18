@@ -5,7 +5,9 @@
 <!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
 
 <xsl:stylesheet version="1.0"
-     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+     xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
+     exclude-result-prefixes="related-links">
 
 <!-- XHTML output with XML syntax -->
 <xsl:output method="xml"
@@ -62,6 +64,7 @@
 </div><xsl:value-of select="$newline"/>
 </xsl:template>
 
+<xsl:template match="*[contains(@class,' task/prereq ')]" mode="get-output-class">p</xsl:template>
 <xsl:template match="*[contains(@class,' task/prereq ')]" name="topic.task.prereq">
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
@@ -328,7 +331,9 @@
     </xsl:call-template>
   </xsl:variable>
 <div class="p">
-  <xsl:call-template name="commonattributes"/>
+  <xsl:call-template name="commonattributes">
+    <xsl:with-param name="default-output-class" select="'p'"/>
+  </xsl:call-template>
   <xsl:call-template name="gen-style">
     <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
@@ -688,6 +693,7 @@
    </xsl:otherwise>
  </xsl:choose>
 </xsl:template>
+<xsl:template match="*[contains(@class,' task/choicetable ')]" mode="get-output-class">choicetableborder</xsl:template>
 <xsl:template match="*[contains(@class,' task/choicetable ')]" mode="choicetable-fmt">
  <!-- Find the total number of relative units for the table. If @relcolwidth="1* 2* 2*",
       the variable is set to 5. -->
@@ -801,14 +807,39 @@
 
 <!-- Option & Description headers -->
 <xsl:template match="*[contains(@class,' task/chhead ')]/*[contains(@class,' task/choptionhd ')]" mode="chtabhdr">
- <xsl:apply-templates/>
+  <xsl:variable name="flagrules">
+    <xsl:call-template name="getrules"/>
+    <xsl:call-template name="getrules-parent"/>
+  </xsl:variable>
+  <xsl:apply-templates select="." mode="start-stentry-flagging">
+    <xsl:with-param name="flagrules" select="$flagrules"/>
+  </xsl:apply-templates>
+  <xsl:apply-templates/>
+  <xsl:apply-templates select="." mode="end-stentry-flagging">
+    <xsl:with-param name="flagrules" select="$flagrules"/>
+  </xsl:apply-templates>
 </xsl:template>
 <xsl:template match="*[contains(@class,' task/chhead ')]/*[contains(@class,' task/chdeschd ')]" mode="chtabhdr">
- <xsl:apply-templates/>
+  <xsl:variable name="flagrules">
+    <xsl:call-template name="getrules"/>
+    <xsl:call-template name="getrules-parent"/>
+  </xsl:variable>
+  <xsl:apply-templates select="." mode="start-stentry-flagging">
+    <xsl:with-param name="flagrules" select="$flagrules"/>
+  </xsl:apply-templates>
+  <xsl:apply-templates/>
+  <xsl:apply-templates select="." mode="end-stentry-flagging">
+    <xsl:with-param name="flagrules" select="$flagrules"/>
+  </xsl:apply-templates>
 </xsl:template>
 
 <xsl:template match="*[contains(@class,' task/chrow ')]" name="topic.task.chrow">
- <tr><xsl:call-template name="setid"/><xsl:call-template name="commonattributes"/><xsl:apply-templates/></tr>
+ <xsl:param name="width-multiplier">0</xsl:param>
+ <tr><xsl:call-template name="setid"/><xsl:call-template name="commonattributes"/>    
+    <xsl:apply-templates>     <!-- width-multiplier will be used in the first row to set widths. -->
+      <xsl:with-param name="width-multiplier"><xsl:value-of select="$width-multiplier"/></xsl:with-param>
+    </xsl:apply-templates>
+</tr>
  <xsl:value-of select="$newline"/>
 </xsl:template>
 
@@ -884,15 +915,9 @@
         <xsl:value-of select="$widthpercent"/><xsl:text>%</xsl:text>
       </xsl:attribute>
     </xsl:if>
-    <xsl:call-template name="start-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag-parent">
+    <xsl:apply-templates select="." mode="start-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
+    </xsl:apply-templates>
     <xsl:variable name="revtest">
       <xsl:if test="@rev and not($FILTERFILE='') and ($DRAFT='yes')"> <!-- revision? -->
         <xsl:call-template name="find-active-rev-flag">               <!-- active? (revtest will be 1 when active)-->
@@ -938,15 +963,9 @@
 <xsl:call-template name="stentry-templates"/>
      </xsl:otherwise>
     </xsl:choose>
-    <xsl:call-template name="end-revflag">
+    <xsl:apply-templates select="." mode="end-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-revflag-parent">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
-    </xsl:call-template>
+    </xsl:apply-templates>
   </td><xsl:value-of select="$newline"/>
 </xsl:template>
 
@@ -1035,15 +1054,9 @@
         <xsl:value-of select="$widthpercent"/><xsl:text>%</xsl:text>
       </xsl:attribute>
     </xsl:if>
-    <xsl:call-template name="start-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag-parent">
+    <xsl:apply-templates select="." mode="start-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="start-revflag">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
+    </xsl:apply-templates>
     <xsl:variable name="revtest">
       <xsl:if test="@rev and not($FILTERFILE='') and ($DRAFT='yes')"> <!-- revision? -->
         <xsl:call-template name="find-active-rev-flag">               <!-- active? (revtest will be 1 when active)-->
@@ -1089,15 +1102,9 @@
 <xsl:call-template name="stentry-templates"/>
      </xsl:otherwise>
     </xsl:choose>
-    <xsl:call-template name="end-revflag">
+    <xsl:apply-templates select="." mode="end-stentry-flagging">
       <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-revflag-parent">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-    <xsl:call-template name="end-flagit">
-      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
-    </xsl:call-template>
+    </xsl:apply-templates>
   </td><xsl:value-of select="$newline"/>
 </xsl:template>
 
@@ -1144,4 +1151,27 @@
   </xsl:call-template>
 </xsl:template>
 
+  <!-- Tasks have their own group. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='task']" mode="related-links:get-group" name="related-links:group.task">
+    <xsl:text>task</xsl:text>
+  </xsl:template>
+  
+  <!-- Priority of task group. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='task']" mode="related-links:get-group-priority" name="related-links:group-priority.task">
+    <xsl:value-of select="2"/>
+  </xsl:template>
+  
+  <!-- Task wrapper for HTML: "Related tasks" in <div>. -->
+  <xsl:template match="*[contains(@class, ' topic/link ')][@type='task']" mode="related-links:result-group" name="related-links:result.task">
+    <xsl:param name="links"/>
+    <div class="relinfo">
+      <strong>
+        <xsl:call-template name="getString">
+          <xsl:with-param name="stringName" select="'Related tasks'"/>
+        </xsl:call-template>
+      </strong><br/><xsl:value-of select="$newline"/>
+      <xsl:copy-of select="$links"/>
+    </div><xsl:value-of select="$newline"/>
+  </xsl:template>
+  
 </xsl:stylesheet>

@@ -1,29 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="topic" name="DC.Type">
+<meta name="DC.Type" content="topic">
 <meta name="DC.Title" content="DITA release history">
 <meta name="abstract" content="This document lists major changes and new features by release.">
 <meta name="description" content="This document lists major changes and new features by release.">
-<meta scheme="URI" name="DC.Relation" content="DITA-readme.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-relnotes.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-futures.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-tested.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-ant.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-javacmd.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-log.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-h2d.html">
-<meta scheme="URI" name="DC.Relation" content="dita2word.html#dita2word/limitation">
-<meta scheme="URI" name="DC.Relation" content="DITA-limitations.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-troubleshooting.html">
-<meta content="XHTML" name="DC.Format">
-<meta content="ditareleasehistory" name="DC.Identifier">
-<meta content="en-us" name="DC.Language">
-<link href="commonltr.css" type="text/css" rel="stylesheet">
+<meta name="DC.Relation" scheme="URI" content="DITA-readme.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-relnotes.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-futures.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-tested.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-usingtransforms.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-ant.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-javacmd.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-log.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-h2d.html">
+<meta name="DC.Relation" scheme="URI" content="dita2word.html#dita2word">
+<meta name="DC.Relation" scheme="URI" content="DITA-limitations.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-troubleshooting.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="ditareleasehistory">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
 <title>DITA release history</title>
 </head>
 <body id="ditareleasehistory"><a name="ditareleasehistory"><!-- --></a>
@@ -771,7 +772,7 @@
       
       <p>DITA open toolkit Release 1.2 is a major release to add new functions, fulfill new requirements, make some function enhancements and fix bugs over release 1.1.2.1.</p>
 
-      <p><strong>Important Change</strong> DITA-OT 1.2 offers new error handling and logging system. If you invoke your transformation by using java command line where new error handling and logging system is mandatory, you need to set the <var class="varname">CLASSPATH</var><a href="installguide/settingenvironmentvariables.html" title="This section helps you find and set the environment variables. Set your system environment variables after all DITA Open Toolkit items are installed. The environment variables must be set for each item installed in this guide.">Environment Variable</a> for <samp class="codeph">dost.jar</samp>. If you invoke your transformation by using an ant script, you need to do one more step after the setting above. That is adding a parameter in your command to invoke an ant script. For example, use <kbd class="userinput">ant -f ant\sample_xhtml.xml -logger org.dita.dost.log.DITAOTBuildLogger</kbd> instead of <kbd class="userinput">ant -f ant\sample_xhtml.xml</kbd> to start a transformation defined in ant script file ant\sample_xhtml.xml. </p>
+      <p><strong>Important Change</strong> DITA-OT 1.2 offers new error handling and logging system. If you invoke your transformation by using java command line where new error handling and logging system is mandatory, you need to set the <var class="varname">CLASSPATH</var> Environment Variable for <samp class="codeph">dost.jar</samp>. If you invoke your transformation by using an ant script, you need to do one more step after the setting above. That is adding a parameter in your command to invoke an ant script. For example, use <kbd class="userinput">ant -f ant\sample_xhtml.xml -logger org.dita.dost.log.DITAOTBuildLogger</kbd> instead of <kbd class="userinput">ant -f ant\sample_xhtml.xml</kbd> to start a transformation defined in ant script file ant\sample_xhtml.xml. </p>
 
       <div class="p">
         <strong>New Functions</strong>
@@ -784,7 +785,7 @@
 
           <li>
             <strong>Transformation to wordrtf</strong>
-            <p>DITA Open Toolkit 1.2 provides DITA to Word transforming function to transform DITA source files to output in Microsoft<sup>&reg;</sup> Word RTF file.</p>
+            <p>DITA Open Toolkit 1.2 provides DITA to Word transforming function to transform DITA source files to output in Microsoft<sup>®</sup> Word RTF file.</p>
 
           </li>
 
@@ -1062,7 +1063,7 @@
 
           <li>
             <strong>Mapref function</strong>
-            <p>Mapref refers to a special usage of the <tt>&lt;topicref&gt;</tt> element as a reference to another ditamap file. This allows you to manage the overall ditamap file more easily. A large ditamap file can thus be broken down into several ditamap files, making it easier for the user to manage the overall logical structure. On the other hand, this mechanism also increases the reusability of those ditamap files. If you want to know more about mapref, please refer <a href="mapref.html" title="Mapref refers to a special usage of the <topicref> element as a reference to another ditamap file. This allows you to manage the overall ditamap file more easily. A large ditamap file can thus be broken down into several ditamap files, making it easier for the user to manage the overall logical structure. On the other hand, this mechanism also increases the reusability of those ditamap files.">Mapref</a>.</p>
+            <p>Mapref refers to a special usage of the <tt>&lt;topicref&gt;</tt> element as a reference to another ditamap file. This allows you to manage the overall ditamap file more easily. A large ditamap file can thus be broken down into several ditamap files, making it easier for the user to manage the overall logical structure. On the other hand, this mechanism also increases the reusability of those ditamap files. If you want to know more about mapref, please refer <a href="mapref.html" title="Mapref refers to a special usage of the <topicref&gt; element as a reference to another ditamap file. This allows you to manage the overall ditamap file more easily. A large ditamap file can thus be broken down into several ditamap files, making it easier for the user to manage the overall logical structure. On the other hand, this mechanism also increases the reusability of those ditamap files.">Mapref</a>.</p>
 
           </li>
 
@@ -1218,13 +1219,14 @@
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit</a></div>
 </div>
-<div class="relconcepts"><strong>Related concepts</strong><br>
+<div class="relinfo"><strong>Related concepts</strong><br>
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
 <div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
 <div><a href="DITA-h2d.html">Migrating HTML to DITA</a></div>
+<div><a href="dita2word.html#dita2word">DITA to Word output transform</a></div>
 </div>
-<div class="relref"><strong>Related reference</strong><br>
+<div class="relinfo"><strong>Related reference</strong><br>
 <div><a href="DITA-relnotes.html">DITA release notes</a></div>
 <div><a href="DITA-log.html">Problem determination and log analysis</a></div>
 <div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
@@ -1233,7 +1235,6 @@
 <div class="relinfo"><strong>Related information</strong><br>
 <div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
-<div><a href="dita2word.html#dita2word__limitation">Transfomring DITA to Word RTF</a></div>
 </div>
 </div>
 

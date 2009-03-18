@@ -5,55 +5,8 @@
 
 
 <group xml:base="dtd/">
-
-  <public publicId="-//IBM//DTD DITA Concept//EN" uri="dita132/concept.dtd"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Concept//EN" uri="dita132/concept.mod"></public>
-
-  <public publicId="-//IBM//DTD DITA Composite//EN" uri="dita132/ditabase.dtd"></public>
-
-  <public publicId="-//IBM//DTD DITA Reference//EN" uri="dita132/reference.dtd"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Reference//EN" uri="dita132/reference.mod"></public>
-
-  <public publicId="-//IBM//DTD DITA Task//EN" uri="dita132/task.dtd"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Task//EN" uri="dita132/task.mod"></public>
-
-  <public publicId="-//IBM//DTD DITA Topic//EN" uri="dita132/topic.dtd"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Topic//EN" uri="dita132/topic.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Topic Class//EN" uri="dita132/topic_class.ent"></public>
-  <public publicId="-//IBM//ENTITIES DITA Topic Definitions//EN" uri="dita132/topic_defn.ent"></public>
-
-
-
-  <public publicId="-//IBM//DTD DITA Map//EN" uri="dita132/map.dtd"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Map//EN" uri="dita132/map.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Map Group Domain//EN" uri="dita132/mapgroup.ent"></public>
-  <public publicId="-//IBM//ELEMENTS DITA Map Group Domain//EN" uri="dita132/mapgroup.mod"></public>
-
-
-
-  <public publicId="-//IBM//ELEMENTS DITA Highlight Domain//EN" uri="dita132/highlight-domain.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Highlight Domain//EN" uri="dita132/highlight-domain.ent"></public>
-
-  <public publicId="-//IBM//ELEMENTS DITA Programming Domain//EN" uri="dita132/programming-domain.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Programming Domain//EN" uri="dita132/programming-domain.ent"></public>
-
-  <public publicId="-//IBM//ELEMENTS DITA Software Domain//EN" uri="dita132/software-domain.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Software Domain//EN" uri="dita132/software-domain.ent"></public>
-
-  <public publicId="-//IBM//ELEMENTS DITA User Interface Domain//EN" uri="dita132/ui-domain.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA User Interface Domain//EN" uri="dita132/ui-domain.ent"></public>
-
-  <public publicId="-//IBM//ELEMENTS DITA Utilities Domain//EN" uri="dita132/utilities-domain.mod"></public>
-  <public publicId="-//IBM//ENTITIES DITA Utilities Domain//EN" uri="dita132/utilities-domain.ent"></public>
-
-
-
-  <public publicId="-//IBM//ELEMENTS DITA Metadata//EN" uri="dita132/meta_xml.mod"></public>
-  <public publicId="-//IBM//ELEMENTS DITA CALS Tables//EN" uri="dita132/tbl_xml.mod"></public>
           
-          
-
-
+        
 
         <public publicId="-//OASIS//DTD DITA Concept//EN" uri="concept.dtd"></public>
         <public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="concept.dtd"></public>
@@ -197,4 +150,3021 @@
 
   
   
+    
+    
+    
+    
+<public publicId="-//IBM//DTD DITA Concept//EN" uri="demo/dita132/dtd/concept.dtd">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Concept//EN" uri="demo/dita132/dtd/concept.mod">
+</public>
+    
+    
+<public publicId="-//IBM//DTD DITA Composite//EN" uri="demo/dita132/dtd/ditabase.dtd">
+</public>
+    
+    
+<public publicId="-//IBM//DTD DITA Reference//EN" uri="demo/dita132/dtd/reference.dtd">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Reference//EN" uri="demo/dita132/dtd/reference.mod">
+</public>
+    
+    
+<public publicId="-//IBM//DTD DITA Task//EN" uri="demo/dita132/dtd/task.dtd">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Task//EN" uri="demo/dita132/dtd/task.mod">
+</public>
+    
+    
+<public publicId="-//IBM//DTD DITA Topic//EN" uri="demo/dita132/dtd/topic.dtd">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Topic//EN" uri="demo/dita132/dtd/topic.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Topic Class//EN" uri="demo/dita132/dtd/topic_class.ent">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Topic Definitions//EN" uri="demo/dita132/dtd/topic_defn.ent">
+</public>
+    
+    
+    
+    
+<public publicId="-//IBM//DTD DITA Map//EN" uri="demo/dita132/dtd/map.dtd">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Map//EN" uri="demo/dita132/dtd/map.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Map Group Domain//EN" uri="demo/dita132/dtd/mapgroup.ent">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA Map Group Domain//EN" uri="demo/dita132/dtd/mapgroup.mod">
+</public>
+    
+    
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Highlight Domain//EN" uri="demo/dita132/dtd/highlight-domain.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Highlight Domain//EN" uri="demo/dita132/dtd/highlight-domain.ent">
+</public>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Programming Domain//EN" uri="demo/dita132/dtd/programming-domain.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Programming Domain//EN" uri="demo/dita132/dtd/programming-domain.ent">
+</public>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Software Domain//EN" uri="demo/dita132/dtd/software-domain.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Software Domain//EN" uri="demo/dita132/dtd/software-domain.ent">
+</public>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA User Interface Domain//EN" uri="demo/dita132/dtd/ui-domain.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA User Interface Domain//EN" uri="demo/dita132/dtd/ui-domain.ent">
+</public>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Utilities Domain//EN" uri="demo/dita132/dtd/utilities-domain.mod">
+</public>
+    
+<public publicId="-//IBM//ENTITIES DITA Utilities Domain//EN" uri="demo/dita132/dtd/utilities-domain.ent">
+</public>
+    
+    
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Metadata//EN" uri="demo/dita132/dtd/meta_xml.mod">
+</public>
+    
+<public publicId="-//IBM//ELEMENTS DITA CALS Tables//EN" uri="demo/dita132/dtd/tbl_xml.mod">
+</public>
+
+
+
+
+
+    
+    
+<public publicId="-//OASIS//ELEMENTS DITA Topic//EN" uri="demo/dita12/dtd12/base/dtd/topic.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Topic//EN" uri="demo/dita12/dtd12/base/dtd/topic.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Topic//EN" uri="demo/dita12/dtd12/base/dtd/topic.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Topic Definitions//EN" uri="demo/dita12/dtd12/base/dtd/topicDefn.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Topic Definitions//EN" uri="demo/dita12/dtd12/base/dtd/topicDefn.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Topic Definitions//EN" uri="demo/dita12/dtd12/base/dtd/topicDefn.ent">
+</public>
+    
+    
+<public publicId="-//OASIS//ENTITIES DITA Topic Class//EN" uri="demo/dita12/dtd12/base/dtd/topicAttr.mod">
+</public>
+
+    
+    
+<public publicId="-//OASIS//ELEMENTS DITA Map//EN" uri="demo/dita12/dtd12/base/dtd/map.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Map//EN" uri="demo/dita12/dtd12/base/dtd/map.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Map//EN" uri="demo/dita12/dtd12/base/dtd/map.mod">
+</public>
+
+    
+    
+<public publicId="-//OASIS//ELEMENTS DITA Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Common Elements//EN" uri="demo/dita12/dtd12/base/dtd/commonElements.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Metadata//EN" uri="demo/dita12/dtd12/base/dtd/metaDecl.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Metadata//EN" uri="demo/dita12/dtd12/base/dtd/metaDecl.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Metadata//EN" uri="demo/dita12/dtd12/base/dtd/metaDecl.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Exchange Table Model//EN" uri="demo/dita12/dtd12/base/dtd/tblDecl.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Exchange Table Model//EN" uri="demo/dita12/dtd12/base/dtd/tblDecl.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Exchange Table Model//EN" uri="demo/dita12/dtd12/base/dtd/tblDecl.mod">
+</public>
+
+    
+    
+<public publicId="-//OASIS//ELEMENTS DITA Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Delayed Resolution Domain//EN" uri="demo/dita12/dtd12/base/dtd/delayResolutionDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Highlight Domain//EN" uri="demo/dita12/dtd12/base/dtd/highlightDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Indexing Domain//EN" uri="demo/dita12/dtd12/base/dtd/indexingDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Map Group Domain//EN" uri="demo/dita12/dtd12/base/dtd/mapGroup.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Utilities Domain//EN" uri="demo/dita12/dtd12/base/dtd/utilitiesDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Hazard Statement Domain//EN" uri="demo/dita12/dtd12/base/dtd/hazardstatementDomain.mod">
+</public>
+            
+    
+<public publicId="-//OASIS//DTD DITA DITAVAL//EN" uri="demo/dita12/dtd12/ditaval/dtd/ditaval.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x DITAVAL//EN" uri="demo/dita12/dtd12/ditaval/dtd/ditaval.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 DITAVAL//EN" uri="demo/dita12/dtd12/ditaval/dtd/ditaval.dtd">
+</public>
+
+    
+    
+<public publicId="-//OASIS//DTD DITA Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Concept//EN" uri="demo/dita12/dtd12/technicalContent/dtd/concept.ent">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Composite//EN" uri="demo/dita12/dtd12/technicalContent/dtd/ditabase.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Composite//EN" uri="demo/dita12/dtd12/technicalContent/dtd/ditabase.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Composite//EN" uri="demo/dita12/dtd12/technicalContent/dtd/ditabase.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Glossary//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossary.ent">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Glossary Group//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossgroup.ent">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Reference//EN" uri="demo/dita12/dtd12/technicalContent/dtd/reference.ent">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA General Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/generalTask.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x General Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/generalTask.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 General Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/generalTask.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Task//EN" uri="demo/dita12/dtd12/technicalContent/dtd/task.ent">
+</public>
+
+    
+    
+<public publicId="-//OASIS//DTD DITA Topic//EN" uri="demo/dita12/dtd12/technicalContent/dtd/topic.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Topic//EN" uri="demo/dita12/dtd12/technicalContent/dtd/topic.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="demo/dita12/dtd12/technicalContent/dtd/topic.dtd">
+</public>
+
+    
+    
+<public publicId="-//OASIS//DTD DITA Map//EN" uri="demo/dita12/dtd12/technicalContent/dtd/map.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Map//EN" uri="demo/dita12/dtd12/technicalContent/dtd/map.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Map//EN" uri="demo/dita12/dtd12/technicalContent/dtd/map.dtd">
+</public>
+
+    
+    
+<public publicId="-//OASIS//ENTITIES DITA Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Abbreviated Form Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/abbreviateDomain.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Programming Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/programmingDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Software Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/softwareDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Task Requirements Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/taskreqDomain.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 User Interface Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/uiDomain.ent">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Glossary Reference Domain//EN" uri="demo/dita12/dtd12/technicalContent/dtd/glossrefDomain.ent">
+</public>
+
+    
+    
+<public publicId="-//OASIS//ELEMENTS DITA Strict Taskbody Constraint//EN" uri="demo/dita12/dtd12/technicalContent/dtd/strictTaskbodyConstraint.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Strict Taskbody Constraint//EN" uri="demo/dita12/dtd12/technicalContent/dtd/strictTaskbodyConstraint.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Strict Taskbody Constraint//EN" uri="demo/dita12/dtd12/technicalContent/dtd/strictTaskbodyConstraint.mod">
+</public>
+
+  
+    
+<public publicId="-//OASIS//DTD DITA BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 BookMap//EN" uri="demo/dita12/dtd12/bookmap/dtd/bookmap.ent">
+</public>
+
+  
+    
+<public publicId="-//OASIS//DTD DITA Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.dtd">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.ent">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Subject Scheme Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/subjectScheme.ent">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA Classification Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyMap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Subject Classification Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyMap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Subject Classification Map//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyMap.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Map Subject Classification Domain//EN" uri="demo/dita12/dtd12/subjectScheme/dtd/classifyDomain.mod">
+</public>
+
+  
+    
+<public publicId="-//OASIS//ELEMENTS DITA XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 XNAL Domain//EN" uri="demo/dita12/dtd12/xnal/dtd/xnalDomain.ent">
+</public>
+
+  
+    
+<public publicId="-//OASIS//DTD DITA Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.dtd">
+</public> 
+    
+<public publicId="-//OASIS//DTD DITA Learning BookMap//EN" uri="demo/dita12/dtd12/learning/dtd/learningBookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA Learning Map//EN" uri="demo/dita12/dtd12/learning/dtd/learningMap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning BookMap//EN" uri="demo/dita12/dtd12/learning/dtd/learningBookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Map//EN" uri="demo/dita12/dtd12/learning/dtd/learningMap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning BookMap//EN" uri="demo/dita12/dtd12/learning/dtd/learningBookmap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Map//EN" uri="demo/dita12/dtd12/learning/dtd/learningMap.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Assessment//EN" uri="demo/dita12/dtd12/learning/dtd/learningAssessment.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Base//EN" uri="demo/dita12/dtd12/learning/dtd/learningBase.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Content//EN" uri="demo/dita12/dtd12/learning/dtd/learningContent.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Overview//EN" uri="demo/dita12/dtd12/learning/dtd/learningOverview.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Plan//EN" uri="demo/dita12/dtd12/learning/dtd/learningPlan.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Summary//EN" uri="demo/dita12/dtd12/learning/dtd/learningSummary.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.x Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.mod">
+</public>
+
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Metadata Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMetadataDomain.mod">
+</public>
+    
+<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.ent">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Map Domain//EN" uri="demo/dita12/dtd12/learning/dtd/learningMapDomain.mod">
+</public>
+
+  
+    
+<public publicId="-//OASIS//DTD DITA Machinery Task//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTask.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.x Machinery Task//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTask.dtd">
+</public>
+    
+<public publicId="-//OASIS//DTD DITA 1.2 Machinery Task//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTask.dtd">
+</public>
+
+    
+<public publicId="-//OASIS//ELEMENTS DITA Machinery Taskbody Constraint//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTaskbodyConstraint.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.x Machinery Taskbody Constraint//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTaskbodyConstraint.mod">
+</public>
+    
+<public publicId="-//OASIS//ELEMENTS DITA 1.2 Machinery Taskbody Constraint//EN" uri="demo/dita12/dtd12/machineIndustry/dtd/machineryTaskbodyConstraint.mod">
+</public>
+
+
+
+    
+<system systemId="topicMod.xsd" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicMod.xsd" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</system>
+    
+    
+<system systemId="topicGrp.xsd" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicGrp.xsd" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</system>
+    
+
+    
+<system systemId="tblDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</system>
+    
+    
+<system systemId="tblDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</system>
+    
+    
+    
+<system systemId="metaDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</system>
+    
+    
+<system systemId="metaDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</system>
+
+    
+<system systemId="mapMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</system>
+    
+    
+<system systemId="mapGrp.xsd" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGrp.xsd" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</system>
+    
+    
+<system systemId="mapGroupMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</system>
+    
+    
+<system systemId="highlightDomain.xsd" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</system>
+    
+    
+<system systemId="utilitiesDomain.xsd" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</system>
+    
+    
+<system systemId="indexingDomain.xsd" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</system>
+    
+    
+<system systemId="hazardstatementDomain.xsd" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</system>
+    
+    
+<system systemId="delayResolutionDomain.xsd" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</system>
+
+    
+<system systemId="ditaarch.xsd" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaarch.xsd" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</system>
+    
+    
+<system systemId="xml.xsd" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xml.xsd" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xml.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xml.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</system>
+
+    
+<system systemId="commonElementMod.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</system>
+    
+    
+<system systemId="commonElementGrp.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</system>
+    
+    
+    
+    
+<uri name="topicMod.xsd" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicMod.xsd" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/topicMod.xsd">
+</uri>
+    
+    
+<uri name="topicGrp.xsd" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicGrp.xsd" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/topicGrp.xsd">
+</uri>
+    
+
+    
+<uri name="tblDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/tblDeclMod.xsd">
+</uri>
+    
+    
+<uri name="tblDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/tblDeclGrp.xsd">
+</uri>
+    
+    
+    
+<uri name="metaDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/metaDeclMod.xsd">
+</uri>
+    
+    
+<uri name="metaDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/metaDeclGrp.xsd">
+</uri>
+
+    
+<uri name="mapMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapMod.xsd">
+</uri>
+    
+    
+<uri name="mapGrp.xsd" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGrp.xsd" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapGrp.xsd">
+</uri>
+    
+    
+<uri name="mapGroupMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/mapGroupMod.xsd">
+</uri>
+    
+    
+<uri name="highlightDomain.xsd" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/highlightDomain.xsd">
+</uri>
+    
+    
+<uri name="utilitiesDomain.xsd" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/utilitiesDomain.xsd">
+</uri>
+    
+    
+<uri name="indexingDomain.xsd" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/indexingDomain.xsd">
+</uri>
+    
+    
+<uri name="hazardstatementDomain.xsd" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:hazardstatementDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/hazardstatementDomain.xsd">
+</uri>
+    
+    
+<uri name="delayResolutionDomain.xsd" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:delayResolutionDomain.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/delayResolutionDomain.xsd">
+</uri>
+
+    
+<uri name="ditaarch.xsd" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaarch.xsd" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/ditaarch.xsd">
+</uri>
+    
+    
+<uri name="xml.xsd" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xml.xsd" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xml.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xml.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/xml.xsd">
+</uri>
+
+    
+<uri name="commonElementMod.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementMod.xsd">
+</uri>
+    
+    
+<uri name="commonElementGrp.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.x" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.2" uri="demo/dita12/xsd12/base/xsd/commonElementGrp.xsd">
+</uri>
+
+    
+<system systemId="topic.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</system>
+    
+    
+<system systemId="map.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:map.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:map.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:map.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</system>
+    
+    
+<system systemId="ditabase.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditabase.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</system>
+
+    
+<system systemId="concept.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:concept.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:concept.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:concept.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</system>
+    
+    
+<system systemId="conceptMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</system>
+    
+    
+<system systemId="conceptGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</system>
+
+    
+<system systemId="reference.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:reference.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:reference.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:reference.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</system>
+    
+    
+<system systemId="referenceMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</system>
+    
+    
+<system systemId="referenceGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</system>
+
+    
+<system systemId="task.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:task.xsd:" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:task.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:task.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</system>
+    
+    
+<system systemId="taskMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</system>
+    
+    
+<system systemId="strictTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</system>
+    
+    
+<system systemId="taskGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</system>
+
+    
+<system systemId="glossary.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossary.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</system>
+    
+    
+<system systemId="glossaryMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</system>
+    
+    
+<system systemId="glossaryGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</system>
+
+    
+<system systemId="glossarygroup.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</system>
+    
+    
+<system systemId="glossgroupMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</system>
+    
+    
+<system systemId="glossgroupGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</system>
+
+
+    
+<system systemId="softwareDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</system>
+    
+    
+<system systemId="programmingDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</system>
+    
+    
+<system systemId="uiDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:uiDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</system>
+    
+    
+<system systemId="glossrefDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</system>
+    
+    
+<system systemId="abbreviateDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</system>
+    
+    
+<system systemId="taskRequirementsDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</system>
+    
+    
+    
+<uri name="topic.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topic.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topic.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:topic.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/topic.xsd">
+</uri>
+    
+    
+<uri name="map.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:map.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:map.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:map.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/map.xsd">
+</uri>
+    
+    
+<uri name="ditabase.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditabase.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/ditabase.xsd">
+</uri>
+
+    
+<uri name="concept.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:concept.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:concept.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:concept.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/concept.xsd">
+</uri>
+    
+    
+<uri name="conceptMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/conceptMod.xsd">
+</uri>
+    
+    
+<uri name="conceptGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/conceptGrp.xsd">
+</uri>
+
+    
+<uri name="reference.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:reference.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:reference.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:reference.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/reference.xsd">
+</uri>
+    
+    
+<uri name="referenceMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/referenceMod.xsd">
+</uri>
+    
+    
+<uri name="referenceGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/referenceGrp.xsd">
+</uri>
+
+    
+<uri name="task.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:task.xsd:" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:task.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:task.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/task.xsd">
+</uri>
+    
+    
+<uri name="taskMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskMod.xsd">
+</uri>
+    
+    
+<uri name="strictTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/strictTaskbodyConstraintMod.xsd">
+</uri>
+    
+    
+<uri name="taskGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskGrp.xsd">
+</uri>
+
+    
+<uri name="glossary.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossary.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossary.xsd">
+</uri>
+    
+    
+<uri name="glossaryMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryMod.xsd">
+</uri>
+    
+    
+<uri name="glossaryGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossaryGrp.xsd">
+</uri>
+
+    
+<uri name="glossarygroup.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossarygroup.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroup.xsd">
+</uri>
+    
+    
+<uri name="glossgroupMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupMod.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupMod.xsd">
+</uri>
+    
+    
+<uri name="glossgroupGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossgroupGrp.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossgroupGrp.xsd">
+</uri>
+
+
+    
+<uri name="softwareDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/softwareDomain.xsd">
+</uri>
+    
+    
+<uri name="programmingDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/programmingDomain.xsd">
+</uri>
+    
+    
+<uri name="uiDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:uiDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/uiDomain.xsd">
+</uri>
+    
+    
+<uri name="glossrefDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:glossrefDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/glossrefDomain.xsd">
+</uri>
+    
+    
+<uri name="abbreviateDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/abbreviateDomain.xsd">
+</uri>
+    
+    
+<uri name="taskRequirementsDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd:1.x" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:taskRequirementsDomain.xsd:1.2" uri="demo/dita12/xsd12/technicalContent/xsd/taskRequirementsDomain.xsd">
+</uri>
+
+    
+<system systemId="bookmap.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmap.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</system>
+    
+    
+<system systemId="bookmapMod.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</system>
+    
+    
+<system systemId="bookmapGrp.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</system>
+
+    
+<uri name="bookmap.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmap.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmap.xsd">
+</uri>
+    
+    
+<uri name="bookmapMod.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmapMod.xsd">
+</uri>
+    
+    
+<uri name="bookmapGrp.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.x" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.2" uri="demo/dita12/xsd12/bookmap/xsd/bookmapGrp.xsd">
+</uri>
+
+    
+<system systemId="xnalDomain.xsd" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.x" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.2" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</system>
+
+    
+<uri name="xnalDomain.xsd" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.x" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.2" uri="demo/dita12/xsd12/xnal/xsd/xnalDomain.xsd">
+</uri>
+    
+    
+<system systemId="learningDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</system>
+    
+    
+<system systemId="learningMapDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</system>
+        
+    
+<system systemId="learningMetadataDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</system>
+    
+    
+<system systemId="learningAssessment.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</system>
+    
+    
+<system systemId="learningAssessmentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</system>
+    
+    
+<system systemId="learningAssessmentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</system>
+    
+    
+<system systemId="learningBaseGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</system>
+    
+    
+<system systemId="learningBaseMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</system>
+    
+    
+<system systemId="learningContent.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</system>
+    
+    
+<system systemId="learningContentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</system>
+    
+    
+<system systemId="learningContentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</system>
+    
+    
+<system systemId="learningBookmap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</system>
+    
+    
+<system systemId="learningMap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</system>
+    
+    
+<system systemId="learningMapGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</system>
+    
+    
+<system systemId="learningOverview.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</system>
+    
+    
+<system systemId="learningOverviewGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</system>
+    
+    
+<system systemId="learningOverviewMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</system>
+    
+    
+<system systemId="learningPlan.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</system>
+    
+    
+<system systemId="learningPlanMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</system>
+    
+    
+<system systemId="learningPlanGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</system>
+    
+    
+<system systemId="learningSummary.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</system>
+    
+    
+<system systemId="learningSummaryGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</system>
+    
+    
+<system systemId="learningSummaryMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</system>  
+    
+    
+    
+<uri name="learningDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningDomain.xsd">
+</uri>
+    
+    
+<uri name="learningMapDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMapDomain.xsd">
+</uri>
+        
+    
+<uri name="learningMetadataDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMetadataDomain.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMetadataDomain.xsd">
+</uri>
+    
+    
+<uri name="learningAssessment.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessment.xsd">
+</uri>
+    
+    
+<uri name="learningAssessmentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentGrp.xsd">
+</uri>
+    
+    
+<uri name="learningAssessmentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningAssessmentMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningAssessmentMod.xsd">
+</uri>
+    
+    
+<uri name="learningBaseGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBaseGrp.xsd">
+</uri>
+    
+    
+<uri name="learningBaseMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningBaseMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBaseMod.xsd">
+</uri>
+    
+    
+<uri name="learningContent.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContent.xsd">
+</uri>
+    
+    
+<uri name="learningContentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContentGrp.xsd">
+</uri>
+    
+    
+<uri name="learningContentMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningContentMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningContentMod.xsd">
+</uri>
+    
+    
+<uri name="learningDitabase.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDitabase.xsd" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDitabase.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningDitabase.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningBookmap.xsd">
+</uri>
+    
+    
+<uri name="learningMap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMap.xsd">
+</uri>
+    
+    
+<uri name="learningMapGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningMapGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningMapGrp.xsd">
+</uri>
+    
+    
+<uri name="learningOverview.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverview.xsd">
+</uri>
+    
+    
+<uri name="learningOverviewGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverviewGrp.xsd">
+</uri>
+    
+    
+<uri name="learningOverviewMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningOverviewMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningOverviewMod.xsd">
+</uri>
+    
+    
+<uri name="learningPlan.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlan.xsd">
+</uri>
+    
+    
+<uri name="learningPlanMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlanMod.xsd">
+</uri>
+    
+    
+<uri name="learningPlanGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningPlanGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningPlanGrp.xsd">
+</uri>
+    
+    
+<uri name="learningSummary.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummary.xsd">
+</uri>
+    
+    
+<uri name="learningSummaryGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryGrp.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummaryGrp.xsd">
+</uri>
+    
+    
+<uri name="learningSummaryMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.x" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.2" uri="demo/dita12/xsd12/learning/xsd/learningSummaryMod.xsd">
+</uri>   
+
+    
+<system systemId="subjectScheme.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</system>
+    
+    
+<system systemId="subjectSchemeMod.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</system>
+    
+    
+<system systemId="subjectSchemeGrp.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</system>
+    
+    
+<system systemId="classifyMap.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</system>
+    
+    
+<system systemId="classifyDomain.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</system>
+    
+
+     
+<uri name="subjectScheme.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectScheme.xsd">
+</uri>
+    
+     
+<uri name="subjectSchemeMod.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeMod.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeMod.xsd">
+</uri>
+    
+     
+<uri name="subjectSchemeGrp.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:subjectSchemeGrp.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/subjectSchemeGrp.xsd">
+</uri>
+    
+     
+<uri name="classifyMap.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyMap.xsd">
+</uri>
+    
+     
+<uri name="classifyDomain.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.x" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</uri>
+     
+<uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.2" uri="demo/dita12/xsd12/subjectScheme/xsd/classifyDomain.xsd">
+</uri>
+
+    
+<system systemId="machineryTask.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.x" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.2" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</system>
+    
+    
+<system systemId="mitaskTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd:1.x" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd:1.2" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</system>
+
+    
+<uri name="machineryTask.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.x" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd:1.2" uri="demo/dita12/xsd12/machineIndustry/xsd/machineryTask.xsd">
+</uri>
+    
+    
+<uri name="mitaskTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd:1.x" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:mitaskTaskbodyConstraintMod.xsd:1.2" uri="demo/dita12/xsd12/machineIndustry/xsd/mitaskTaskbodyConstraintMod.xsd">
+</uri>
+
+    
+<system systemId="ditaval.xsd" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaval.xsd" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.x" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</system>
+    
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.2" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</system>
+                
+    
+<uri name="ditaval.xsd" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.x" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</uri>
+    
+<uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.2" uri="demo/dita12/xsd12/ditaval/xsd/ditaval.xsd">
+</uri>
+        
+
 </catalog>

@@ -1,29 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="concept" name="DC.Type">
+<meta name="DC.Type" content="concept">
 <meta name="DC.Title" content="Building DITA output with Java command line">
 <meta name="abstract" content="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">
 <meta name="description" content="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">
-<meta scheme="URI" name="DC.Relation" content="DITA-readme.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-relnotes.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-changes.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-futures.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-tested.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-usingtransforms.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-ant.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-log.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-h2d.html">
-<meta scheme="URI" name="DC.Relation" content="dita2word.html#dita2word/limitation">
-<meta scheme="URI" name="DC.Relation" content="DITA-limitations.html">
-<meta scheme="URI" name="DC.Relation" content="DITA-troubleshooting.html">
-<meta content="XHTML" name="DC.Format">
-<meta content="usingparameterbuildingtool" name="DC.Identifier">
-<meta content="en-us" name="DC.Language">
-<link href="commonltr.css" type="text/css" rel="stylesheet">
+<meta name="DC.Relation" scheme="URI" content="DITA-readme.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-relnotes.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-changes.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-futures.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-tested.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-usingtransforms.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-ant.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-log.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-h2d.html">
+<meta name="DC.Relation" scheme="URI" content="dita2word.html#dita2word">
+<meta name="DC.Relation" scheme="URI" content="DITA-limitations.html">
+<meta name="DC.Relation" scheme="URI" content="DITA-troubleshooting.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="usingparameterbuildingtool">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
 <title>Building DITA output with Java command line</title>
 </head>
 <body id="usingparameterbuildingtool"><a name="usingparameterbuildingtool"><!-- --></a>
@@ -78,14 +79,14 @@
         you can set with this tool.</p>
 
       
-<div class="tablenoborder"><a name="usingparameterbuildingtool__javacmdinterface"><!-- --></a><table summary="" cellspacing="0" cellpadding="4" id="usingparameterbuildingtool__javacmdinterface" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Table of supported parameters</span></caption>
+<div class="tablenoborder"><a name="usingparameterbuildingtool__javacmdinterface"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="usingparameterbuildingtool__javacmdinterface" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Table of supported parameters</span></caption>
           
           
           <thead align="left">
             <tr valign="bottom">
-              <th class="cellrowborder" valign="bottom" id="N100E2">Parameter</th>
+              <th class="cellrowborder" valign="bottom" id="d11693e98">Parameter</th>
 
-              <th class="cellrowborder" valign="bottom" id="N100EB">Description</th>
+              <th class="cellrowborder" valign="bottom" id="d11693e101">Description</th>
 
             </tr>
 
@@ -93,10 +94,10 @@
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "> 
+              <td class="cellrowborder" valign="top" headers="d11693e98 "> 
                 <em>/basedir</em>:{basedir}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The path of the working directory for transformations, 
                         it will be the base of relative paths specified by other parameters.</span>
                 <div class="note"><span class="notetitle">Note:</span> <br><ul>
@@ -114,20 +115,20 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "> 
+              <td class="cellrowborder" valign="top" headers="d11693e98 "> 
                 <em>/ditadir</em>:{dita.dir}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The absolute path of the toolkit's home directory.</span>
               </td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "> 
+              <td class="cellrowborder" valign="top" headers="d11693e98 "> 
                 <em>/i</em>:{args.input}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The path and name of the input file. 
                         This argument should be in the same upper or lower case 
                         with the filename on file system.</span>
@@ -140,9 +141,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/if</em>:{dita.input}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/if</em>:{dita.input}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The name of the input file .</span>
                 <div class="note"><span class="notetitle">Note:</span> This parameter must be provided 
                         if <tt>args.input</tt> not be provided. And this 
@@ -159,9 +160,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/id</em>:{dita.input.dirname}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/id</em>:{dita.input.dirname}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The input directory which 
                         contains the input file.</span>
                 <div class="note"><span class="notetitle">Note:</span> This parameter must be 
@@ -179,18 +180,18 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/outdir</em>:{output.dir}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/outdir</em>:{output.dir}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The path of the output directory.</span>
               </td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/tempdir</em>:{dita.temp.dir}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/tempdir</em>:{dita.temp.dir}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The directory of the temporary files. 
                         The default is 'temp'.</span>
               </td>
@@ -198,9 +199,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/ditaext</em>:{dita.extname}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/ditaext</em>:{dita.extname}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The file extension name of the input 
                         topic files, for example, '.xml' or '.dita'. The 
                         default is '.xml'.</span>
@@ -209,18 +210,18 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/transtype</em>:{transtype}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/transtype</em>:{transtype}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">The transformation type. Currently, the 
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">The transformation type. Currently, the 
                 supported values include xhtml, pdf, javahelp, eclipsehelp, 
                 htmlhelp, eclipsecontent, troff, wordrtf and docbook.</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/filter</em>:{dita.input.valfile}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/filter</em>:{dita.input.valfile}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The name of the file containing 
                         <em>filter/flagging/revision </em>information.</span>
               </td>
@@ -228,9 +229,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/draft</em>:{args.draft}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/draft</em>:{args.draft}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>Default "hide draft &amp; required-cleanup 
                         content" processing parameter (<span class="q">"no"</span>= hide 
                         them); <span class="q">"no"</span> and <span class="q">"yes"</span> are valid values; 
@@ -240,9 +241,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/artlbl</em>:{args.artlbl}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/artlbl</em>:{args.artlbl}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>Default "output artwork 
                         filenames" processing parameter; <span class="q">"no"</span>and 
                         <span class="q">"yes"</span>are valid values; non-<span class="q">"yes"</span> is 
@@ -252,9 +253,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/ftr</em>:{args.ftr}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/ftr</em>:{args.ftr}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the BODY running-footing area.</span>
               </td>
@@ -262,9 +263,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/hdr</em>:{args.hdr}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/hdr</em>:{args.hdr}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the BODY running-heading area.</span>
               </td>
@@ -272,9 +273,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/hdf</em>:{args.hdf}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/hdf</em>:{args.hdf}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The name of the file containing XHTML to 
                         be placed in the HEAD area.</span>
               </td>
@@ -282,9 +283,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/csspath</em>:{args.csspath}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/csspath</em>:{args.csspath}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The path for css reference. Default is no path.</span>
                 <div class="note"><span class="notetitle">Note:</span> 
                         <br><ul>
@@ -309,9 +310,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/css</em>:{args.css}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/css</em>:{args.css}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>User specified css file, it can be a 
                         local file or remote file from website.</span>
                 <div class="note"><span class="notetitle">Note:</span> If <samp class="codeph">${args.csspath}</samp> 
@@ -323,9 +324,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/cssroot</em>:{args.cssroot}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/cssroot</em>:{args.cssroot}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root directory of user specified css file.</span>
                 <div class="note"><span class="notetitle">Note:</span> If this parameter is set, 
                         the <samp class="codeph">${args.css}</samp> should be a 
@@ -336,9 +337,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/copycss</em>:{args.copycss}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/copycss</em>:{args.copycss}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify whether copy user 
                         specified css files to the directory specified by 
                         <samp class="codeph">{args.outdir}${args.csspath}</samp>. 
@@ -348,9 +349,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/indexshow</em>:{args.indexshow}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/indexshow</em>:{args.indexshow}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify whether each 
                         index entry should display within the body of the text 
                         itself. Only "no" and "yes" are valid values.</span>
@@ -359,9 +360,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/outext</em>:{args.outext}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/outext</em>:{args.outext}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The output file extension name for 
                         generated xhtml files. Typically, '.html' or '.htm' can 
                         be used as the extension name for the generated xhtml 
@@ -372,9 +373,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/xsl</em>:{args.xsl}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/xsl</em>:{args.xsl}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The xsl file to replace the default xsl 
                         file. It will replace dita2docbook.xsl in docbook 
                         transformation, dita2fo-shell.xsl in pdf 
@@ -387,9 +388,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/cleantemp</em>:{clean.temp}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/cleantemp</em>:{clean.temp}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify whether to clean 
                         the temp directory before each build. Only "no" and "yes" 
                         are valid values. The default is yes.</span>
@@ -398,9 +399,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/foimgext</em>:{args.fo.img.ext}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/foimgext</em>:{args.fo.img.ext}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The extension name of image file in pdf transformation. 
                     Only '.jpg', '.gif' are valid value. The default is '.jpg'.</span>
                 <div class="note"><span class="notetitle">Note:</span> Only one extension supported in the same 
@@ -412,9 +413,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/javahelptoc</em>:{args.javahelp.toc}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/javahelptoc</em>:{args.javahelp.toc}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root file name of the output 
                         javahelp toc file in javahelp transformation. 
                         The default is the name of input ditamap file.</span>
@@ -423,9 +424,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/javahelpmap</em>:{args.javahelp.map}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/javahelpmap</em>:{args.javahelp.map}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root file name of the output 
                         javahelp map file in javahelp transformation. 
                         The default is the name of input ditamap file.</span>
@@ -434,9 +435,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/eclipsehelptoc</em>:{args.eclipsehelp.toc}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/eclipsehelptoc</em>:{args.eclipsehelp.toc}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root file name of the output 
                       eclipsehelp toc file in eclipsehelp transformation. 
                       The default is the name of input ditamap file.</span>
@@ -445,9 +446,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/eclipsecontenttoc</em>:{args.eclipsecontent.toc}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/eclipsecontenttoc</em>:{args.eclipsecontent.toc}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root file name of the output 
                       Eclipse content provider toc file in eclipsecontent transformation. 
                       The default is the name of input ditamap file.</span>
@@ -456,27 +457,27 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/provider</em>:{args.eclipse.provider}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/provider</em>:{args.eclipse.provider}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The provider name of the eclipse help output. The default value is DITA.</span>
               </td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/version</em>:{args.eclipse.version}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/version</em>:{args.eclipse.version}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The version number of the eclipse help output. The default value is 1.0</span>
               </td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/xhtmltoc</em>:{args.xhtml.toc}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/xhtmltoc</em>:{args.xhtml.toc}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The root file name of the output xhtml toc 
                     file in xhtml transformation. The default is 'index'.</span>
               </td>
@@ -484,9 +485,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/logdir</em>:{args.logdir}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/logdir</em>:{args.logdir}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The directory used to keep generated 
                         log files. Default will be output directory.</span>
                 <div class="note"><span class="notetitle">Note:</span> If several transforms running 
@@ -518,9 +519,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/ditalocale</em>:{args.dita.locale}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/ditalocale</em>:{args.dita.locale}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The locale used for  
                         sorting indexterms. If no locale specified, 
                         the first occurrence of "xml-lang" will be used as 
@@ -531,9 +532,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/fooutputrellinks</em>:{args.fo.output.rel.links}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/fooutputrellinks</em>:{args.fo.output.rel.links}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify 
                       whether output related links in pdf transformation. 
                       "yes" and "no" are valid values. Default is "no".</span>
@@ -545,9 +546,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/fouserconfig</em>:{args.fo.userconfig}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/fouserconfig</em>:{args.fo.userconfig}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify 
                       the user configuration file for FOP.</span>
               </td>
@@ -555,9 +556,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/htmlhelpincludefile</em>:{args.htmlhelp.includefile}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/htmlhelpincludefile</em>:{args.htmlhelp.includefile}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>
                       The parameter to specify the file that need to be included
                       by the HTMLHelp output.</span>
@@ -566,9 +567,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/validate</em>:{validate}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/validate</em>:{validate}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify whether the ditamap/dita/xml 
                       files to be validated. Only "true" and "false" are valid values. The default is true. </span>
                 <div class="note"><span class="notetitle">Note:</span> It is not recommended to turn off the validation function , 
@@ -580,9 +581,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/outercontrol</em>:{outer.control}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/outercontrol</em>:{outer.control}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify how to respond to the overflowing dita/topic files. Only "fail", "warn" and "quiet" are valid values. The default is warn. </span>
                 <div class="note"><span class="notetitle">Note:</span> The detailed introduction: 
                       	<br><ul>
@@ -601,9 +602,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/generateouter</em>:{generate.copy.outer}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/generateouter</em>:{generate.copy.outer}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify how to deal with the overflowing dita/topic files. Only "1", "2" and "3" are valid values. The default is 1. </span>
                 <div class="note"><span class="notetitle">Note:</span> The detailed introduction: 
                       	<br><ul>
@@ -622,9 +623,9 @@
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" headers="N100E2 "><em>/onlytopicinmap</em>:{onlytopic.in.map}</td>
+              <td class="cellrowborder" valign="top" headers="d11693e98 "><em>/onlytopicinmap</em>:{onlytopic.in.map}</td>
 
-              <td class="cellrowborder" valign="top" headers="N100EB ">
+              <td class="cellrowborder" valign="top" headers="d11693e101 ">
                 <span>The parameter to specify whether the referenced dita/topic files which are not referenced by ditamap files should be resolved. Only "true" and "false" are valid values. The default is false. </span>
               </td>
 
@@ -665,12 +666,13 @@
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit</a></div>
 </div>
-<div class="relconcepts"><strong>Related concepts</strong><br>
+<div class="relinfo"><strong>Related concepts</strong><br>
 <div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
 <div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
 <div><a href="DITA-h2d.html">Migrating HTML to DITA</a></div>
+<div><a href="dita2word.html#dita2word">DITA to Word output transform</a></div>
 </div>
-<div class="relref"><strong>Related reference</strong><br>
+<div class="relinfo"><strong>Related reference</strong><br>
 <div><a href="DITA-relnotes.html">DITA release notes</a></div>
 <div><a href="DITA-log.html">Problem determination and log analysis</a></div>
 <div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
@@ -680,7 +682,6 @@
 <div><a href="DITA-changes.html" title="This document lists major changes and new features by release.">DITA release history</a></div>
 <div><a href="DITA-tested.html" title="See which tools and platforms have been used in testing the DITA processing system.">Tested platforms and tools</a></div>
 <div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
-<div><a href="dita2word.html#dita2word__limitation">Transfomring DITA to Word RTF</a></div>
 </div>
 </div>
 

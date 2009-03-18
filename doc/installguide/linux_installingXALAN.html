@@ -1,61 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="copyright" content="(C) Copyright 2005">
-<meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta content="task" name="DC.Type">
-<meta name="DC.Title" content="Installing XALAN XSLT Processor">
-<meta name="abstract" content="You can alternatively use the XALAN SXLT Processor to import stylesheets and queries into an XML schema, validate XML data against a schema, and select the elements and attributes in your XML documents according to their schema-defined type.">
-<meta name="description" content="You can alternatively use the XALAN SXLT Processor to import stylesheets and queries into an XML schema, validate XML data against a schema, and select the elements and attributes in your XML documents according to their schema-defined type.">
-<meta scheme="URI" name="DC.Relation" content="linux_installotoverview.html">
-<meta content="XHTML" name="DC.Format">
-<meta content="linux_install_xalan" name="DC.Identifier">
-<meta content="en-us" name="DC.Language">
-<link href="commonltr.css" type="text/css" rel="stylesheet">
-<title>Installing XALAN XSLT Processor (Linux)</title>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="task">
+<meta name="DC.Title" content="Installing Xalan on Linux">
+<meta name="DC.subject" content="installing DITA Open Toolkit, Xalan XSLT processor, installing on Linux, CLASSPATH, CLASSPATH environment variable">
+<meta name="keywords" content="installing DITA Open Toolkit, Xalan XSLT processor, installing on Linux, CLASSPATH, CLASSPATH environment variable">
+<meta name="DC.Relation" scheme="URI" content="linux_installing.html">
+<meta name="prodname" content="DITA Open Toolkit">
+<meta name="version" content="1.4.1">
+<meta name="DC.Creator" content="Jen Linton">
+<meta name="DC.Creator" content="JoAnn Hackos">
+<meta name="DC.Creator" content="Kylene Bruski">
+<meta name="DC.Contributor" content="Anna van Raaphorst">
+<meta name="DC.Contributor" content="Richard Johnson">
+<meta name="DC.Publisher" content="OASIS (Organization for the Advancement of Structured Information Standards)">
+<meta name="copyright" content="Comtech Services, Inc. 2005" type="primary">
+<meta name="DC.Rights.Owner" content="Comtech Services, Inc. 2005" type="primary">
+<meta name="DC.Date.Created" content="2005-November-01">
+<meta name="DC.Date.Modified" content="2006-October-12">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="linux_installingxalan">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="commonltr.css">
+<title>Installing Xalan on Linux</title>
 </head>
-<body id="linux_install_xalan"><a name="linux_install_xalan"><!-- --></a>
+<body id="linux_installingxalan"><a name="linux_installingxalan"><!-- --></a>
 
 
-  <h1 class="topictitle1">Installing XALAN XSLT Processor</h1>
+	<h1 class="topictitle1">Installing Xalan on Linux</h1>
 
-  
-  
-  <div><p>You can alternatively use the XALAN SXLT Processor to import 
-    stylesheets and queries into an XML schema, validate XML data against a 
-    schema, and select the elements and attributes in your XML documents 
-    according to their schema-defined type.</p>
+	
+	
+	<div>
+		<ol>
+			<li>
+				<span>Enter the URL:<a href="http://archive.apache.org/dist/xml/xalan-j/" target="_blank">http://archive.apache.org/dist/xml/xalan-j/</a>
+				</span>
+			</li>
 
-    <ol>
-      <li>
-        <span>Enter the URL:<a href="http://archive.apache.org/dist/xml/xalan-j/" target="_blank">http://archive.apache.org/dist/xml/xalan-j/</a></span>
-      </li>
+			<li>
+				<span>From SAXON: The Xalan Processor page, scroll to find the heading 
+          <span class="uicontrol">xalan-j_2_7_0-bin.tar.gz</span>. Click to 
+          download.</span>
+			</li>
 
-      <li>
-        <span>From SAXON: The Xalan Processor page, scroll to find the heading 
-          <span class="uicontrol">xalan-j_2_6_0-bin.tar.gz</span>. Click to 
-          downlad.</span>
-      </li>
-
-      <li>
-        <span> Save and unzip the xalan-j_2_6_0-bin.tar.gz file to a linux home 
+			<li>
+				<span> Save and unzip the <span class="filepath">xalan-j_2_7_0-bin.tar.gz</span> file to a linux home 
           directory.</span>
-      </li>
+			</li>
 
-      <li>
-        <span>Set the <var class="varname">CLASSPATH</var> <a href="linux_settingenvironmentvariables.html" title="This section helps you find and set the environment variables. Set your system environment variables after all DITA Open Toolkit items are installed. The environment variables must be set for each item installed in this guide.">environment variable</a> for following .jar files: 
-          <span class="filepath">xalan.jar</span> file and the 
-          <span class="filepath">xercesImpl.jar</span> file</span>
-      </li>
+			<li>
+				<span>Add Xalan to the <var class="varname">CLASSPATH</var>
+					environment variable: <kbd class="userinput">export CLASSPATH=${CLASSPATH}:${xalan_dir}/bin </kbd>
+					</span>
+			</li>
 
-    </ol>
+		</ol>
 
-  </div>
+	</div>
 
 <div>
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="linux_installotoverview.html" title="This section contains the instructions for installing DITA Open Toolkit from the SourceForge Web site for Linux.">DITA Open Toolkit Installation</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a href="linux_installing.html">Installing the small package on Linux</a></div>
 </div>
 </div>
 

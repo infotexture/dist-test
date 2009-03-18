@@ -4,8 +4,8 @@
      applicable licenses.-->
 <!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. -->
 <project name="ditaot-init" basedir=".">
-  <import file="catalog-ant.xml"/>
-    
+  <!--<import file="catalog-ant.xml"/>-->
+
   <dirname property="ant.file.ditaot-init.dir" file="${ant.file.ditaot-init}" />
 
   <!-- First try to initialize ${dita.dir} using the special 
@@ -35,6 +35,12 @@
     classname="org.dita.dost.invoker.AntInvoker">
     <classpath refid="dost.jar.path" />
   </taskdef>
+
+  <taskdef name="ext-pipeline"
+    classname="org.dita.dost.invoker.ExtensibleAntInvoker">
+    <classpath refid="dost.jar.path" />
+  </taskdef>
+
   <taskdef name="config-logger"
     classname="org.dita.dost.log.LogConfigTask">
     <classpath refid="dost.jar.path" />
@@ -101,9 +107,13 @@
   </target>
   
   <target name="use-init" depends="use-init.envhhcdir,use-init.hhcdir">
-    <available classname="com.icl.saxon.StyleSheet" property="hasSaxon" />
-    <available classname="org.apache.fop.tools.anttasks.Fop"
-      property="hasFOP" />    
+    <available classname="net.sf.saxon.StyleSheet" property="hasSaxon" />
+    <available classname="net.sf.saxon.Transform" property="hasSaxon" />
+    <available classname="org.apache.fop.tools.anttasks.Fop" property="hasFOP">
+      <classpath>
+        <pathelement location="${dita.dir}/demo/legacypdf/lib/fop.jar"/>
+      </classpath>
+    </available>
   </target>
 
   <!-- property value validation begin -->
