@@ -7,7 +7,7 @@ REM Get the absolute path of DITAOT's home directory
 set DITA_DIR=%~dp0
 
 REM Set environment variables
-set ANT_OPTS=-Xmx800m %ANT_OPTS%
+set ANT_OPTS=-Xmx512m %ANT_OPTS%
 set ANT_OPTS=%ANT_OPTS% -Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl
 set ANT_HOME=%DITA_DIR%tools\ant
 set PATH=%DITA_DIR%tools\ant\bin;%PATH%

@@ -45,7 +45,7 @@
 
         <p>Currently, information architects work by defining the architecture through guidelines and instructions to the writer. A better approach is to formalize the architecture through an XML design that is validated by the XML editor or parser. This formal approach has the following benefits:</p>
 
-        <br><ul>
+        <ul>
           <li>Authors receive guidance from the markup while working.</li>
 
           <li>Information with the same purpose is consistent across deliverables.</li>
@@ -62,11 +62,11 @@
 <div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="void" border="1" rules="all">
             <thead align="left">
               <tr>
-                <th class="cell-norowborder" valign="top" id="d5253e75">Casual architecture</th>
+                <th class="cell-norowborder" valign="top" id="d5311e79">Casual architecture</th>
 
-                <th class="cell-norowborder" valign="top" id="d5253e78">Applied design</th>
+                <th class="cell-norowborder" valign="top" id="d5311e82">Applied design</th>
 
-                <th class="nocellnorowborder" valign="top" id="d5253e81">Formal architecture</th>
+                <th class="nocellnorowborder" valign="top" id="d5311e85">Formal architecture</th>
 
               </tr>
 
@@ -74,15 +74,15 @@
 
             <tbody>
               <tr>
-                <td class="cell-norowborder" valign="top" headers="d5253e75 d5253e78 d5253e81 ">
+                <td class="cell-norowborder" valign="top" headers="d5311e79 d5311e82 d5311e85 ">
                   <img src="image/infoarch1.gif" height="185" width="180" alt="Topics in any arrangement">
                 </td>
 
-                <td class="cell-norowborder" valign="top" headers="d5253e75 d5253e78 d5253e81 ">
+                <td class="cell-norowborder" valign="top" headers="d5311e79 d5311e82 d5311e85 ">
                   <img src="image/infoarch2.gif" height="65" width="124" alt="Topic collection type">
                 </td>
 
-                <td class="nocellnorowborder" valign="top" headers="d5253e75 d5253e78 d5253e81 ">
+                <td class="nocellnorowborder" valign="top" headers="d5311e79 d5311e82 d5311e85 ">
                   <img src="image/infoarch3.gif" height="162" width="156" alt="Topics in formal arrangement">
                 </td>
 
@@ -150,7 +150,7 @@
 
         <p>A specialized <samp class="codeph">topicref</samp>can be used for the following purposes:</p>
 
-        <br><ul>
+        <ul>
           <li>To restrict the references to topics of a specialized type. For instance, a <samp class="codeph">conceptref</samp> refers only to concept topics (including specialized concepts).</li>
 
           <li>To assign a topic a topic to a role within a collection. For instance, the topic identified by a <samp class="codeph">summaryref</samp> could provide the concluding explanation for a collection.</li>
@@ -174,24 +174,19 @@
 
         </div>
 
-        <ol>
-          <li>
+        <ol><li>
             <span>Create a domain entities file to declare the elements extending the <samp class="codeph">topicref</samp> element.</span>
           </li>
-
-          <li>
+<li>
             <span>Create a domain definition module to define the elements including their element entities, content and attribute definitions, and the architectural class attribute.</span>
           </li>
-
-          <li>
+<li>
             <span>Create a shell DTD that assembles the base map module and the domain entities file and definition module.</span>
           </li>
-
-          <li>
+<li>
             <span>Create map collections from the shell DTD. </span>
           </li>
-
-        </ol>
+</ol>
 
       </div>
 
@@ -333,8 +328,8 @@
 
         <p>In fact, this example is the map for the article that you're reading right now. That is, as you may well have noticed, this article conforms to the formal pattern for a how-to collection. Here's the list of topics in this how-to article but with the addition of the topic type or role and title:</p>
 
-        <br><ul>
-          <li>howto: How to define a formal information architecture with DITA map domains<br><ul>
+        <ul>
+          <li>howto: How to define a formal information architecture with DITA map domains<ul>
               <li>concept: Formal information architecture</li>
 
               <li>concept: Specializing topics and maps</li>

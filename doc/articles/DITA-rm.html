@@ -42,7 +42,7 @@ The Darwin Information Typing Architecture (DITA) provides a way for documentati
 <li class="olchildlink"><a href="DITA-domains.html">Specializing domains in DITA</a><br>
 In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.</li>
 <li class="olchildlink"><a href="DITA-mapdomains.html">How to define a formal information architecture with DITA map domains</a><br>
-The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables.</li>
+The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables. </li>
 </ol>
 </div>
 <div class="nested1" id="ditarmintro"><a name="ditarmintro"><!-- --></a>
@@ -89,10 +89,10 @@ The benefits of formal information typing are well known for the content of topi
         
         <p>As the "Architecture" part of DITA's name suggests, DITA has unifying features that serve to organize and integrate information:</p>
 
-        <br><ul>
+        <ul>
           <li><em>Topic orientation.</em> The highest standard structure in DITA is the topic. Any higher structure than a topic is usually part of the processing context for a topic, such as a print-organizing structure or the helpset-like navigation for a set of topics. Also, topics have no internal hierarchical nesting; for internal organization, they rely on sections that define or directly support the topic.</li>
 
-          <li><em>Reuse.</em> A principal goal for DITA has been to reduce the practice of copying content from one place to another as a way of reusing content. Reuse within DITA occurs on two levels:<br><ul>
+          <li><em>Reuse.</em> A principal goal for DITA has been to reduce the practice of copying content from one place to another as a way of reusing content. Reuse within DITA occurs on two levels:<ul>
               <li><em>Topic reuse.</em> Because of the non-nesting structure of topics, a topic can be reused in any topic-like context. Information designers know that when they reuse a topic in a new information model, the architecture will process it consistently in its new context.</li>
 
               <li><em>Content reuse.</em> The SGML method of declaring reusable external entities is available for XML users, but this has several practical limitations in XML. DITA instead leans toward a different SGML reuse technique and provides each element with a conref attribute that can point to any other equivalent element in the same or any other topic. This referencing mechanism starts with a base element, thus assuring that a fail-safe structure is always part of the calling topic (the topic that contains the element with the conref attribute). The new content is always functionally equivalent to the element that it replaces.</li>
@@ -100,7 +100,7 @@ The benefits of formal information typing are well known for the content of topi
             </ul>
 </li>
 
-          <li><em>Specialization.</em> The class mechanism in CSS indicates a common formatting semantic for any element that has a matching class value. In the same way, any DITA element can be extended into a new element whose identifier gets added to the class attribute through its DTD. Therefore, a new element is always associated to its base, or to any element in its specialization sequence.<br><ul>
+          <li><em>Specialization.</em> The class mechanism in CSS indicates a common formatting semantic for any element that has a matching class value. In the same way, any DITA element can be extended into a new element whose identifier gets added to the class attribute through its DTD. Therefore, a new element is always associated to its base, or to any element in its specialization sequence.<ul>
               <li><em>Topic specialization.</em> Applied to topic structures, specialization is a natural way to extend the generic topic into new information types (or infotypes), which in turn can be extended into more specific instantiations of information structures. For example, a recipe, a material safety data sheet, and an encyclopedia article are all potential derivations from a common reference topic.</li>
 
               <li><em>Domain specialization.</em> Using the same specialization principle, the element vocabulary within a generic topic (or set of infotyped topics) can be extended by introducing elements that reflect a particular information domain served by those topics. For example, a keyword can be extended as a unit of weight in a recipe, as a part name in a hardware reference or as a variable in a programming reference. A specialized domain, such as programming phrases, can be introduced by substitution anywhere that the root elements are allowed. This makes the entire vocabulary available throughout all the infotyped topics used within a discipline. Also, a domain can be replaced within existing infotyped topics, in effect hiding the jargon of one discipline from writers dealing with the content of another. Yet both sets of topics can be appropriate for the same user roles of performing tasks or getting reference information.</li>
@@ -108,7 +108,7 @@ The benefits of formal information typing are well known for the content of topi
             </ul>
 </li>
 
-          <li><em>Property-based processing.</em> The DITA model provides metadata and attributes that can be used to associate or filter the content of DITA topics with applications such as content management systems, search engines, processing filters, and so on.<br><ul>
+          <li><em>Property-based processing.</em> The DITA model provides metadata and attributes that can be used to associate or filter the content of DITA topics with applications such as content management systems, search engines, processing filters, and so on.<ul>
               <li><em>Extensive metadata to make topics easier to find.</em> The DITA model for metadata supports the standard categories for the Dublin Core Metadata Initiative. In addition, the DITA metadata enables many different content management approaches to be applied to its content.</li>
 
               <li><em>Universal properties.</em> Most elements in the topic DTD contain a set of universal attributes that enable the elements to be used as selectors, filters, content referencing infrastructure, and multi-language support. In addition, some elements, whose attributes can serve a range of specialized roles, have been analyzed to make sure that their enumerated values provide a rich basis for specialization (which usually constrains values and never adds to them).</li>
@@ -116,7 +116,7 @@ The benefits of formal information typing are well known for the content of topi
             </ul>
 </li>
 
-          <li><em>Taking advantage of existing tags and tools.</em> Rather than being a radical departure from the familiar, DITA builds on well-accepted sets of tags and can be used with standard XML tools.<br><ul>
+          <li><em>Taking advantage of existing tags and tools.</em> Rather than being a radical departure from the familiar, DITA builds on well-accepted sets of tags and can be used with standard XML tools.<ul>
               <li><em>Leveraging popular language subsets.</em> The core elements in DITA's topic DTD borrow from HTML and XHTML, using familiar element names like p, ol, ul, dl within an HTML-like topic structure. In fact, DITA topics can be written, like HTML, for rendering directly in a browser. In more ambitious designs, DITA topics can be written, like SGML, to be normalized through processing into a deliverable, say XHTML or a well-formed XML format targeted for a particular browser's ability to handle XML. Also, DITA makes use of the popular OASIS (formerly CALS) table model.</li>
 
               <li><em>Leveraging popular and well-supported tools.</em> The XML processing model is widely supported by a number of vendors. The class-based extension mechanism in DITA translates well to the design features of the XSLT and CSS stylesheet languages defined by the World Wide Web Consortium and supported in many transformation tools, editors and browsers. DITA topics can be processed by a spectrum of tools ranging from shareware to custom tailored products, on almost any operating platform.</li>
@@ -138,7 +138,7 @@ The benefits of formal information typing are well known for the content of topi
         
         <p>Through topic granularity and topic type specialization, DITA brings the following benefits of the object-oriented model to information sets: </p>
 
-        <br><ul>
+        <ul>
           <li><em>Encapsulation.</em> The designer of the topic type only needs to address a specific, manageable problem domain. The author only needs to learn the elements that are specific to the topic type. The implementer of the processing for the topic type only needs to process elements that are special.</li>
 
           <li><em>Polymorphism.</em> Special topic types can be treated as more generic topic types for common processing.</li>
@@ -149,7 +149,7 @@ The benefits of formal information typing are well known for the content of topi
 
         <p>DITA can be considered object-oriented in that:</p>
 
-        <br><ul>
+        <ul>
           <li>Data and processors are separated from their environment and can be chunked to provide behaviors similar to object-orientation (such as override transforms that modify or redefine earlier behaviors).</li>
 
           <li>Classification of elements through a sequence of derivations that are progressively more specific, possibly more constrained, and always rigidly tied to a consistent processing or rendering model.</li>
@@ -185,7 +185,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6218e377">Delivery contexts</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e383">Delivery contexts</th>
 
             </tr>
 
@@ -193,11 +193,11 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e377 ">helpset</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">helpset</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e377 ">aggregate printing</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">aggregate printing</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e377 ">Web site; information portal</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">Web site; information portal</td>
 
             </tr>
 
@@ -214,7 +214,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6218e415">Typed topic structures</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e421">Typed topic structures</th>
 
             </tr>
 
@@ -222,13 +222,13 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e415 ">topic</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">topic</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e415 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e415 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e415 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">reference</td>
 
             </tr>
 
@@ -245,7 +245,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6218e458">Specialized vocabularies (domains) across information types</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e464">Specialized vocabularies (domains) across information types</th>
 
             </tr>
 
@@ -253,20 +253,20 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6218e458 ">Typed topic:</td>
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e464 ">Typed topic:</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e458 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e458 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e458 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">reference</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6218e458 ">Included domains:</td>
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e464 ">Included domains:</td>
 
-              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6218e458 ">
+              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6308e464 ">
                 <p>highlighting<br>
 software<br>
 programming<br>
@@ -288,7 +288,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6218e510">Common structures</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e516">Common structures</th>
 
             </tr>
 
@@ -296,9 +296,9 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6218e510 ">metadata</td>
+              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6308e516 ">metadata</td>
 
-              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6218e510 ">OASIS (CALS) table</td>
+              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6308e516 ">OASIS (CALS) table</td>
 
             </tr>
 
@@ -326,7 +326,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6218e558">delivery contexts</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e564">delivery contexts</th>
 
             </tr>
 
@@ -334,11 +334,11 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e558 ">helpset</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">helpset</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e558 ">aggregate printing</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">aggregate printing</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e558 ">Web site; information portal</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">Web site; information portal</td>
 
             </tr>
 
@@ -365,7 +365,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6218e620">typed topic structures</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e626">typed topic structures</th>
 
             </tr>
 
@@ -373,13 +373,13 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e620 ">topic</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">topic</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e620 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e620 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e620 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">reference</td>
 
             </tr>
 
@@ -414,7 +414,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6218e696">specialized vocabularies (domains) across information types</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e702">specialized vocabularies (domains) across information types</th>
 
             </tr>
 
@@ -422,24 +422,24 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6218e696 ">
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e702 ">
                 <strong>Typed topic:</strong>
               </td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e696 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e696 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6218e696 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">reference</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6218e696 ">
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e702 ">
                 <strong>Included domains:</strong>
               </td>
 
-              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6218e696 ">
+              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6308e702 ">
                 <p>highlighting<br>
 software<br>
 programming<br>
@@ -456,43 +456,37 @@ user interface</p>
 
       <p>The basic domains defined as examples for DITA include:</p>
 
-      <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletableborder">
-        <tr>
-          <th valign="bottom" align="left" id="d6218e748">Domain</th>
+      <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletableborder"><tr>
+          <th valign="bottom" align="left" id="d6308e754">Domain</th>
 
-          <th valign="bottom" align="left" id="d6218e751">Elements</th>
-
-        </tr>
-
-        <tr>
-          <td valign="top" id="d6218e757" headers="d6218e748"><strong>highlighting</strong></td>
-
-          <td valign="top" headers="d6218e751 d6218e757">b, u, i, tt, sup, sub</td>
+          <th valign="bottom" align="left" id="d6308e757">Elements</th>
 
         </tr>
+<tr>
+          <td valign="top" id="d6308e763" headers="d6308e754"><strong>highlighting</strong></td>
 
-        <tr>
-          <td valign="top" id="d6218e766" headers="d6218e748"><strong>software</strong></td>
-
-          <td valign="top" headers="d6218e751 d6218e766">msgph, msgblock, msgnum, cmdname, varname, filepath, userinput, systemoutput </td>
-
-        </tr>
-
-        <tr>
-          <td valign="top" id="d6218e775" headers="d6218e748"><strong>programming</strong></td>
-
-          <td valign="top" headers="d6218e751 d6218e775">codeph, codeblock, option, var, parmname, synph, oper, delim, sep, apiname, parml, plentry, pt, pd, syntaxdiagram, synblk, groupseq, groupchoice, groupcomp, fragment, fragref, synnote, synnoteref, repsep, kwd </td>
+          <td valign="top" headers="d6308e757 d6308e763">b, u, i, tt, sup, sub</td>
 
         </tr>
+<tr>
+          <td valign="top" id="d6308e772" headers="d6308e754"><strong>software</strong></td>
 
-        <tr>
-          <td valign="top" id="d6218e784" headers="d6218e748"><strong>user interface</strong></td>
-
-          <td valign="top" headers="d6218e751 d6218e784">uicontrol, wintitle, menucascade, shortcut</td>
+          <td valign="top" headers="d6308e757 d6308e772">msgph, msgblock, msgnum, cmdname, varname, filepath, userinput, systemoutput </td>
 
         </tr>
+<tr>
+          <td valign="top" id="d6308e781" headers="d6308e754"><strong>programming</strong></td>
 
-      </table>
+          <td valign="top" headers="d6308e757 d6308e781">codeph, codeblock, option, var, parmname, synph, oper, delim, sep, apiname, parml, plentry, pt, pd, syntaxdiagram, synblk, groupseq, groupchoice, groupcomp, fragment, fragref, synnote, synnoteref, repsep, kwd </td>
+
+        </tr>
+<tr>
+          <td valign="top" id="d6308e790" headers="d6308e754"><strong>user interface</strong></td>
+
+          <td valign="top" headers="d6308e757 d6308e790">uicontrol, wintitle, menucascade, shortcut</td>
+
+        </tr>
+</table>
 
       <p>By following the rules for specializing a new domain of content, you can extend, replace, or remove these domains. Moreover, content specialization enables you to name and extend <em>any</em> content element in the scope of DITA infotyped topics for a more semantically significant role in a new domain.</p>
 
@@ -517,7 +511,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6218e830">common structures</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e836">common structures</th>
 
             </tr>
 
@@ -525,9 +519,9 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6218e830 ">metadata</td>
+              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6308e836 ">metadata</td>
 
-              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6218e830 ">OASIS (CALS) table</td>
+              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6308e836 ">OASIS (CALS) table</td>
 
             </tr>
 
@@ -604,7 +598,7 @@ user interface</p>
 
   </div>
 
-<div class="p"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  In the original design of DITA, all of the shared vocabulary had been made global to all information types by being defined in the topic DTD, which had two undesirable effects: <br><ul>
+<div class="p"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  In the original design of DITA, all of the shared vocabulary had been made global to all information types by being defined in the topic DTD, which had two undesirable effects: <ul>
             <li>new vocabulary could not be added without increasing the size of the core DTD</li>
 
             <li>certain domain-specific vocabulary could not be prohibited for DTDs specialized for a different domain.</li>

@@ -18,7 +18,7 @@
 
     
 
-  <target name="dita.map.eclipse" depends=" dita.map.eclipse.init, dita.map.eclipse.fragment.language.init, dita.map.eclipse.fragment.language.country.init, dita.map.eclipse.fragment.error">
+  <target name="dita.map.eclipse" depends=" dita.map.eclipse.init, copy-plugin-files, dita.map.eclipse.fragment.language.init, dita.map.eclipse.fragment.language.country.init, dita.map.eclipse.fragment.error">
     
   </target>
 	
@@ -80,6 +80,7 @@
 
     <target name="dita.map.eclipse.toc" unless="noMap" depends="dita.map.eclipse.plugin.init" if="old.transform" description="Build EclipseHelp TOC file">
         <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditamapfile}" extension=".xml" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2eclipse.xsl">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedditamapfile}" if="chunkedditamapfile"></includesfile>
             <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
             <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
@@ -89,6 +90,7 @@
     
     <target name="dita.out.map.eclipse.toc" unless="noMap" depends="dita.map.eclipse.plugin.init" if="inner.transform" description="Build EclipseHelp TOC file">
         <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditamapfile}" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2eclipse.xsl">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedditamapfile}" if="chunkedditamapfile"></includesfile>
             <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
             <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
@@ -97,11 +99,11 @@
         </xslt>
     </target>
     
-    <target name="dita.map.eclipse.index" unless="noMap" if="old.transform" depends="dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
+    <target name="dita.map.eclipse.index" unless="noMap" if="old.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
         <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}${user.input.file};targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};${index.ext.param.encoding}"></pipeline>
     </target>
     
-    <target name="dita.out.map.eclipse.index" unless="noMap" if="inner.transform" depends="dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
+    <target name="dita.out.map.eclipse.index" unless="noMap" if="inner.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
         <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}index.xml;targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};${index.ext.param.encoding}"></pipeline>
     </target>
 
@@ -130,7 +132,7 @@
   
   
   <target name="dita.map.eclipse.manifest.file" unless="noPlugin" depends="dita.map.eclipse.plugin.init" if="old.transform" description="Build Eclipsehelp manifest.mf file">
-    <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}meta-inf${file.separator}Manifest.mf" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
+    <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
       <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
       <param name="plugin" expression="${eclipse.plugin}"></param>
@@ -142,7 +144,7 @@
   </target>
   
   <target name="dita.out.map.eclipse.manifest.file" unless="noPlugin" depends="dita.map.eclipse.plugin.init" if="inner.transform" description="Build Eclipsehelp manifest.mf file">
-    <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}meta-inf${file.separator}Manifest.mf" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
+    <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
       <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
       <param name="plugin" expression="${eclipse.plugin}"></param>
@@ -191,27 +193,47 @@
 	</target>
   
   <target name="dita.map.eclipse.fragment.move.files" if="old.transform">
-    <defaultexcludes add="**/meta-inf/**"></defaultexcludes>
+    <defaultexcludes add="**/META-INF/**"></defaultexcludes>
     <defaultexcludes add="**/nl/**"></defaultexcludes>
+  	<delete file="${output.dir}${file.separator}plugin.xml"></delete>
+  	<delete file="${output.dir}${file.separator}plugincustomization.ini"></delete>
     <move todir="${dita.map.output.dir}${file.separator}${fragment.dirname}" includeemptydirs="yes">
       <fileset dir="${dita.map.output.dir}" defaultexcludes="yes">
-        <exclude name="*.xml"></exclude>
-        <exclude name="*.properties"></exclude>
+        <exclude name="helpData.xml"></exclude>
+      	<exclude name="plugin.properties"></exclude>
+      	<exclude name="plugin_${fragment.property.name}.properties"></exclude>
         <exclude name="*.list"></exclude>
+      	<exclude name="disabled_book.css"></exclude>
+      	<exclude name="narrow_book.css"></exclude>
+      	<exclude name="${os}_narrow_book.css"></exclude>
+      	<exclude name="book.css"></exclude>
+      	<exclude name="plugincustomization.ini"></exclude>
       </fileset>
-    </move>     
+    </move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"></move>
+
+  	
   </target>
   
   <target name="dita.out.map.eclipse.fragment.move.files" if="inner.transform">
-    <defaultexcludes add="**/meta-inf/**"></defaultexcludes>
+    <defaultexcludes add="**/META-INF/**"></defaultexcludes>
     <defaultexcludes add="**/nl/**"></defaultexcludes>
+  	<delete file="${output.dir}${file.separator}plugin.xml"></delete>
+  	<delete file="${output.dir}${file.separator}plugincustomization.ini"></delete>
     <move todir="${output.dir}${file.separator}${fragment.dirname}" includeemptydirs="yes">
       <fileset dir="${output.dir}" defaultexcludes="yes">
-        <exclude name="*.xml"></exclude>
-        <exclude name="*.properties"></exclude>
+        <exclude name="helpData.xml"></exclude>
+      	<exclude name="plugin.properties"></exclude>
+      	<exclude name="plugin_${fragment.property.name}.properties"></exclude>
         <exclude name="*.list"></exclude>
+      	<exclude name="disabled_book.css"></exclude>
+      	<exclude name="narrow_book.css"></exclude>
+      	<exclude name="${os}_narrow_book.css"></exclude>
+      	<exclude name="book.css"></exclude>
+      	<exclude name="plugincustomization.ini"></exclude>
       </fileset>
-    </move>     
+    </move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"></move>
   </target>
   
   
@@ -228,5 +250,21 @@
 
     
     <target name="dita.topics.eclipse" depends="dita.topics.xhtml"></target>
+	
+	<target name="copy-plugin-files">
+	  	
+	  	
+	  	<copy todir="${output.dir}">
+	  	      <fileset dir="${user.input.dir}">
+	  	      	<include name="disabled_book.css"></include>
+	  	        <include name="narrow_book.css"></include>
+	  	        <include name="${os}_narrow_book.css"></include>
+	  	        <include name="book.css"></include>
+	  	        <include name="plugincustomization.ini"></include>
+	  	        <include name="helpData.xml"></include>
+	  	      </fileset>
+	  		  
+	  	</copy>
+	</target>
 
 </project>

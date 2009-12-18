@@ -46,6 +46,15 @@
   </message>
   
   
+  <message id="DOTA010E" type="ERROR">
+    <reason>FOP Plugin cannot be found in its default place.</reason>
+    <response>Please install the required plugins into the dir demo/fo/fop or configure the build file by yourself.
+    </response>
+  </message>
+  
+  
+  
+  
   
   <message id="DOTJ001F" type="FATAL">
     <reason>Input argument error: no &apos;:&apos; found in the parameter &apos;%1&apos;.</reason>
@@ -268,7 +277,7 @@
   </message>
   
   <message id="DOTJ045W" type="WARN">
-    <reason>The key &quot;%1&quot; is defined more than once in the same map file. The reference href=&quot;%2&quot; is ingnored.</reason>
+    <reason>The key &quot;%1&quot; is defined more than once in the same map file. The reference href=&quot;%2&quot; is ignored.</reason>
     <response>Please make sure the key name is unique. </response>
   </message>
   
@@ -283,9 +292,15 @@
   </message>
   
   <message id="DOTJ048I" type="INFO">
-    <reason>key definition &quot;%1&quot;=&quot;%2&quot; in &quot;%3&quot; has been defined in another file, so it is ingnored.</reason>
+    <reason>key definition &quot;%1&quot;=&quot;%2&quot; in &quot;%3&quot; has been defined in another file, so it is ignored.</reason>
     <response>Please make sure the key name does not duplicate.</response>
   </message>
+  
+  <message id="DOTJ049W" type="WARN">
+  	<reason>Attribute &quot;%1&quot; in element &quot;%2&quot; has been assigned a value of &quot;%3&quot; which does not comply with its subject scheme.</reason>
+  	<response>The attribute value should be one of &quot;%4&quot; as defined in subject schema.</response>
+  </message>
+  
   
     
     
@@ -593,7 +608,33 @@
     <reason>ID &apos;%1&apos; was used in topicref tag but did not point to a topic element. HREF attribute in topicref tag should only point to topic level elements.</reason>
     <response>Correct the ID &apos;%1&apos; and make sure it point to a topic level element.</response>
   </message>
+  
+  
+  <message id="DOTX062I" type="INFO">
+    <reason>It appears that this document uses constraints, but the conref processor cannot validate that the target of a conref is valid.</reason>
+    <response>To enable constraint checking, please upgrade to an XSLT 2.0 processor.</response>
+  </message>
+  
+  
+  
+  <message id="DOTX063W" type="WARN">
+    <reason>It appears that dita file &apos;%1&apos; is not referred by topicref tag in the ditamap file.</reason>
+    <response>Please make sure that &apos;%1&apos; is referenced in the ditamap file.</response>
+  </message>
+  
    
+  
+  
+  <message id="DOTX064W" type="WARN">
+    <reason>The copy-to attribute [copy-to=&quot;%1&quot;] points to an existed file, so this attribute is ignored.</reason>
+    <response>Please make sure copy-to attribute points to a file name that does not exist in your project.</response>
+  </message>
+  
+  <message id="DOTX065W" type="WARN">
+    <reason>The copy-to attribute [href=&quot;%1&quot; copy-to=&quot;%2&quot;] points to another copy-to target, so this attribute is ignored.</reason>
+    <response>Please make sure that this attribute value is unique within your project.</response>
+  </message>
+  
   
   
   

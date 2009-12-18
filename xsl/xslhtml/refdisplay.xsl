@@ -224,11 +224,6 @@
     <xsl:call-template name="getrules"/>
     <xsl:call-template name="getrules-parent"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
   <td valign="top">
     <xsl:call-template name="output-stentry-id"/>
     <xsl:call-template name="addPropertiesHeadersAttribute">
@@ -237,7 +232,6 @@
     </xsl:call-template>
     <xsl:call-template name="commonattributes"/>
     <xsl:call-template name="gen-style">
-      <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
     </xsl:call-template>
     <xsl:variable name="localkeycol">
@@ -346,7 +340,7 @@
   <!-- Reference wrapper for HTML: "Related reference" in <div>. -->
   <xsl:template match="*[contains(@class, ' topic/link ')][@type='reference']" mode="related-links:result-group" name="related-links:result.reference">
     <xsl:param name="links"/>
-    <div class="relinfo">
+    <div class="relinfo relref">
       <strong>
         <xsl:call-template name="getString">
           <xsl:with-param name="stringName" select="'Related reference'"/>

@@ -7,15 +7,26 @@
         <isset property="out.ext"></isset>
       </not>
     </condition>
-    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml.xsl">
+  	
+  	
+    <condition property="transtype.ext" value="_eclipsehelp.xsl" else=".xsl">
+      <equals arg1="eclipsehelp" arg2="${transtype}" casesensitive="no"></equals>
+    </condition>
+  	
+  	
+    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml${transtype.ext}">
       <not>
         <isset property="args.xsl"></isset>
       </not>
     </condition>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
+  	<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -23,8 +34,18 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
       <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
       <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
+      
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
       
     </xslt>
   </target>
@@ -40,10 +61,14 @@
         <isset property="args.xsl"></isset>
       </not>
     </condition>
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -51,9 +76,19 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
+      <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
       <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
 	  
-      <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
+	  
     </xslt>
   </target>
   
@@ -65,15 +100,25 @@
         <isset property="out.ext"></isset>
       </not>
     </condition>
-    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml.xsl">
+    
+    <condition property="transtype.ext" value="_eclipsehelp.xsl" else=".xsl">
+      <equals arg1="eclipsehelp" arg2="${transtype}" casesensitive="no"></equals>
+    </condition>
+    
+    
+    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml${transtype.ext}">
       <not>
         <isset property="args.xsl"></isset>
       </not>
     </condition>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>    
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="filename" filedirparameter="filedir">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -81,8 +126,18 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
       <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
       <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
+      
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
       
       
       <mapper type="regexp" from="^(${tempdirToinputmapdir.relative.value})(.*?)(\.(xml|dita))$$" to="\2${out.ext}"></mapper>
@@ -100,10 +155,14 @@
         <isset property="args.xsl"></isset>
       </not>
     </condition>
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -111,9 +170,19 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
-      <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
-	  
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
       <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
+      <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
+      
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
+	  
       <mapper type="regexp" from="^(${tempdirToinputmapdir.relative.value})(.*?)(\.(xml|dita))$$" to="\2${out.ext}"></mapper>
     </xslt>
   </target>
@@ -140,14 +209,25 @@
         <isset property="out.ext"></isset>
       </not>
     </condition>
-    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml.xsl">
+  	
+  	
+    <condition property="transtype.ext" value="_eclipsehelp.xsl" else=".xsl">
+      <equals arg1="eclipsehelp" arg2="${transtype}" casesensitive="no"></equals>
+    </condition>
+  	
+  	
+    <condition property="args.xsl" value="${dita.script.dir}${file.separator}dita2xhtml${transtype.ext}">
       <not>
         <isset property="args.xsl"></isset>
       </not>
     </condition>
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -155,8 +235,18 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
       <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
       <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
+      
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
       
     </xslt>
   </target>
@@ -172,9 +262,13 @@
         <isset property="args.xsl"></isset>
       </not>
     </condition>
+  	
+  	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+      <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
-      <param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"></param>
+      <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"></param>
       <param name="CSS" expression="${args.css.file}" if="args.css.file"></param>
       <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"></param>
       <param name="HDF" expression="${args.hdf}" if="args.hdf"></param>
@@ -182,9 +276,19 @@
       <param name="FTR" expression="${args.ftr}" if="args.ftr"></param>
       <param name="DRAFT" expression="${args.draft}" if="args.draft"></param>
       <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl"></param>
-      <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
-	  
+      <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"></param>
+      <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"></param>
+      <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"></param>
+      <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"></param>
       <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow"></param>
+      <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"></param>
+      <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
+      
+      <param name="BASEDIR" expression="${basedir}"></param>
+      <param name="OUTPUTDIR" expression="${output.dir}"></param>
+      
+      <param name="DBG" expression="${args.debug}" if="args.debug"></param>
+	  
     </xslt>
   </target>
 </project>

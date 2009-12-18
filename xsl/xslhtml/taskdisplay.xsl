@@ -3,11 +3,15 @@
      Sourceforge.net. See the accompanying license.txt file for 
      applicable licenses.-->
 <!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+<!-- 20090904 RDA: Add support for stepsection; combine duplicated logic
+                   for main steps and steps-unordered templates. -->
 
 <xsl:stylesheet version="1.0"
      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
      xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
-     exclude-result-prefixes="related-links">
+     xmlns:dita2html="http://dita-ot.sourceforge.net/ns/200801/dita2html"
+     xmlns:ditamsg="http://dita-ot.sourceforge.net/ns/200704/ditamsg"
+     exclude-result-prefixes="related-links dita2html ditamsg">
 
 <!-- XHTML output with XML syntax -->
 <xsl:output method="xml"
@@ -15,21 +19,18 @@
             indent="no"
 />
 
+<!-- Determines whether to generate titles for task sections. Values are YES and NO. -->
+<xsl:param name="GENERATE-TASK-LABELS" select="'NO'"/>
+
 <!-- == TASK UNIQUE SUBSTRUCTURES == -->
 
 <xsl:template match="*[contains(@class,' task/taskbody ')]" name="topic.task.taskbody">
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
 <div>
   <xsl:call-template name="commonattributes"/>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
   <xsl:call-template name="setidaname"/>
@@ -69,15 +70,9 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
 <div class="p">
   <xsl:call-template name="commonattributes"/>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
   <xsl:call-template name="gen-toc-id"/>
@@ -107,7 +102,10 @@
     <xsl:with-param name="flagrules" select="$flagrules"/>
   </xsl:call-template>
   <xsl:call-template name="sect-heading">
-     <xsl:with-param name="deftitle"></xsl:with-param>
+    <!-- edited by William on 2009-06-11 for bug:2804442 start-->
+     <!--xsl:with-param name="deftitle"></xsl:with-param-->
+     <xsl:with-param name="defaulttitle"></xsl:with-param>
+    <!-- edited by William on 2009-06-11 for bug:2804442 end--> 
   </xsl:call-template>
   <!-- Title is not allowed now, but if we add it, make sure it is processed as in section -->
   <xsl:apply-templates select="*[not(contains(@class,' topic/title '))] | text() | comment() | processing-instruction()"/>
@@ -128,18 +126,21 @@
   </xsl:if>
 </xsl:template>
 
+<xsl:template match="*" mode="make-steps-compact">
+  <xsl:choose>
+    <!-- expand the list when one of the steps has any of these: "*/*" = step context -->
+    <xsl:when test="*/*[contains(@class,' task/info ')]">yes</xsl:when>
+    <xsl:when test="*/*[contains(@class,' task/stepxmp ')]">yes</xsl:when>
+    <xsl:when test="*/*[contains(@class,' task/tutorialinfo ')]">yes</xsl:when>
+    <xsl:when test="*/*[contains(@class,' task/stepresult ')]">yes</xsl:when>
+    <xsl:otherwise>no</xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
 
 <xsl:template match="*[contains(@class,' task/steps ')]" name="topic.task.steps">
  <!-- If there's one of these elements somewhere in a step, expand the whole step list -->
  <xsl:variable name="step_expand"> <!-- set & save step_expand=yes/no for expanding/compacting list items -->
-  <xsl:choose>
-   <!-- expand the list when one of the steps has any of these: "*/*" = step context -->
-   <xsl:when test="*/*[contains(@class,' task/info ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepxmp ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/tutorialinfo ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepresult ')]">yes</xsl:when>
-   <xsl:otherwise>no</xsl:otherwise>
-  </xsl:choose>
+   <xsl:apply-templates select="." mode="make-steps-compact"/>
  </xsl:variable>
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
@@ -176,61 +177,130 @@
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
   </xsl:call-template>
 </xsl:template>
-<xsl:template match="*[contains(@class,' task/steps ')]" mode="steps-fmt">
- <xsl:param name="step_expand"/> 
+
+<xsl:template match="*[contains(@class,' task/steps ') or contains(@class,' task/steps-unordered ')]"
+              mode="common-processing-within-steps">
+  <xsl:param name="step_expand"/>
+  <xsl:param name="list-type">
+    <xsl:choose>
+      <xsl:when test="contains(@class,' task/steps ')">ol</xsl:when>
+      <xsl:otherwise>ul</xsl:otherwise>
+    </xsl:choose>
+  </xsl:param>
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
-  <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
-    <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
-  </xsl:call-template>
- <xsl:choose> 
-  <xsl:when test="*[contains(@class,' task/step ')][2]">
-   <xsl:call-template name="setaname"/>
-   <ol>
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_procedure'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+  <xsl:choose>
+    <xsl:when test="*[contains(@class,' task/step ')] and not(*[contains(@class,' task/step ')][2])">
+      <!-- Single step. Process any stepsection before the step (cannot appear after). -->
+      <xsl:apply-templates select="*[contains(@class,' task/stepsection ')]"/>
+      <xsl:apply-templates select="*[contains(@class,' task/step ')]" mode="onestep">
+        <xsl:with-param name="step_expand" select="$step_expand"/>
+      </xsl:apply-templates>
+    </xsl:when>
+    <xsl:when test="not(*[contains(@class,' task/stepsection ')])">
+      <xsl:apply-templates select="." mode="step-elements-with-no-stepsection">
+        <xsl:with-param name="step_expand" select="$step_expand"/>
+        <xsl:with-param name="list-type" select="$list-type"/>
+      </xsl:apply-templates>
+    </xsl:when>
+    <xsl:when test="*[1][contains(@class,' task/stepsection ')] and not(*[contains(@class,' task/stepsection ')][2])">
+      <!-- Stepsection is first, no other appearances -->
+      <xsl:apply-templates select="*[contains(@class,' task/stepsection ')]"/>
+      <xsl:apply-templates select="." mode="step-elements-with-no-stepsection">
+        <xsl:with-param name="step_expand" select="$step_expand"/>
+        <xsl:with-param name="list-type" select="$list-type"/>
+      </xsl:apply-templates>
+    </xsl:when>
+    <xsl:otherwise>
+      <!-- Stepsection elements mixed in with steps -->
+      <xsl:apply-templates select="." mode="step-elements-with-stepsection">
+        <xsl:with-param name="step_expand" select="$step_expand"/>
+        <xsl:with-param name="list-type" select="$list-type"/>
+      </xsl:apply-templates>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="*" mode="step-elements-with-no-stepsection">
+  <xsl:param name="step_expand"/>
+  <xsl:param name="list-type"/>
+  <xsl:call-template name="setaname"/>
+  <xsl:element name="{$list-type}">
     <xsl:call-template name="commonattributes"/>
-     <xsl:call-template name="gen-style">
-       <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
-       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
-     </xsl:call-template>
+    <xsl:call-template name="gen-style"/>
     <xsl:call-template name="setid"/>
-    <xsl:apply-templates mode="steps">
-     <xsl:with-param name="step_expand" select="$step_expand"/>
+    <xsl:apply-templates select="*[contains(@class,' task/step ')]" mode="steps">
+      <xsl:with-param name="step_expand" select="$step_expand"/>
     </xsl:apply-templates>
-   </ol><xsl:value-of select="$newline"/>
-  </xsl:when>
-  <xsl:otherwise> <!-- One step -->
-    <xsl:apply-templates mode="onestep">
-     <xsl:with-param name="step_expand" select="$step_expand"/> <!-- pass the value to subsequent templates -->
-    </xsl:apply-templates>
-  </xsl:otherwise>
- </xsl:choose>
+  </xsl:element><xsl:value-of select="$newline"/>
+</xsl:template>
+
+<xsl:template match="*" mode="step-elements-with-stepsection">
+  <xsl:param name="step_expand"/>
+  <xsl:param name="list-type"/>
+  <xsl:for-each select="*">
+    <xsl:choose>
+      <xsl:when test="contains(@class,' task/stepsection ')">
+        <xsl:apply-templates select="."/>
+      </xsl:when>
+      <xsl:when test="contains(@class,' task/step ') and preceding-sibling::*[1][contains(@class,' task/step ')]">
+        <!-- Do nothing, was pulled in through recursion -->
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- First step in a series of steps -->
+        <xsl:element name="{$list-type}">
+          <xsl:if test="$list-type='ol' and preceding-sibling::*[contains(@class,' task/step ')]">
+            <!-- Restart numbering for ordered steps that were interrupted by stepsection.
+                 The start attribute is valid in XHTML 1.0 Transitional, but not for XHTML 1.0 Strict.
+                 It is possible (preferable) to keep stepsection within an <li> and use CSS to
+                 fix numbering, but with testing in March of 2009, this does not work in IE. 
+                 It is possible in Firefox 3. -->
+            <xsl:attribute name="start"><xsl:value-of select="count(preceding-sibling::*[contains(@class,' task/step ')])+1"/></xsl:attribute>
+          </xsl:if>
+          <xsl:apply-templates select="." mode="steps">
+            <xsl:with-param name="step_expand" select="$step_expand"/>
+          </xsl:apply-templates>
+          <xsl:apply-templates select="following-sibling::*[1][contains(@class,' task/step ')]" mode="sequence-of-steps">
+            <xsl:with-param name="step_expand" select="$step_expand"/>
+          </xsl:apply-templates>
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:for-each>
+</xsl:template>
+<xsl:template match="*" mode="sequence-of-steps">
+  <xsl:param name="step_expand"/>
+  <xsl:apply-templates select="." mode="steps">
+    <xsl:with-param name="step_expand" select="$step_expand"/>
+  </xsl:apply-templates>
+  <xsl:apply-templates select="following-sibling::*[1][contains(@class,' task/step ')]" mode="sequence-of-steps">
+    <xsl:with-param name="step_expand" select="$step_expand"/>
+  </xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="*[contains(@class,' task/stepsection ')]">
+  <p>
+    <xsl:call-template name="commonattributes"/>
+    <xsl:call-template name="setid"/>
+    <xsl:apply-templates select="." mode="outputContentsWithFlagsAndStyle"/>
+  </p>
 </xsl:template>
 
 <xsl:template match="*[contains(@class,' task/steps-unordered ')]" name="topic.task.steps-unordered">
  <!-- If there's a block element somewhere in the step list, expand the whole list -->
  <xsl:variable name="step_expand"> <!-- set & save step_expand=yes/no for expanding/compacting list items -->
-  <xsl:choose>
-   <xsl:when test="*/*[contains(@class,' task/info ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepxmp ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/tutorialinfo ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepresult ')]">yes</xsl:when>
-   <xsl:otherwise>no</xsl:otherwise>
-  </xsl:choose>
+   <xsl:apply-templates select="." mode="make-steps-compact"/>
  </xsl:variable>
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
-  </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
   </xsl:variable>
   
   <xsl:call-template name="start-flagit">
@@ -265,36 +335,21 @@
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
   </xsl:call-template>
 </xsl:template>
+
+<xsl:template match="*[contains(@class,' task/steps ')]" mode="steps-fmt">
+  <xsl:param name="step_expand"/>
+  <xsl:apply-templates select="." mode="common-processing-within-steps">
+    <xsl:with-param name="step_expand" select="$step_expand"/>
+    <xsl:with-param name="list-type" select="'ol'"/>
+  </xsl:apply-templates>
+</xsl:template>
+
 <xsl:template match="*[contains(@class,' task/steps-unordered ')]" mode="stepsunord-fmt">
- <xsl:param name="step_expand"/> 
-  <xsl:variable name="flagrules">
-    <xsl:call-template name="getrules"/>
-  </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>  
-  
- <xsl:choose> 
-  <xsl:when test="*[contains(@class,' task/step ')][2]">
-   <xsl:call-template name="setaname"/>
-   <ul>
-    <xsl:call-template name="commonattributes"/>
-     <xsl:call-template name="gen-style">
-       <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
-       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
-     </xsl:call-template>
-    <xsl:call-template name="setid"/>
-    <xsl:apply-templates mode="steps">
-     <xsl:with-param name="step_expand" select="$step_expand"/>
-    </xsl:apply-templates>
-   </ul><xsl:value-of select="$newline"/>
-  </xsl:when>
-  <xsl:otherwise> <!-- One step -->
-    <xsl:apply-templates mode="onestep"/>
-  </xsl:otherwise>
- </xsl:choose>
+  <xsl:param name="step_expand"/>
+  <xsl:apply-templates select="." mode="common-processing-within-steps">
+    <xsl:with-param name="step_expand" select="$step_expand"/>
+    <xsl:with-param name="list-type" select="'ul'"/>
+  </xsl:apply-templates>
 </xsl:template>
 
 <!-- only 1 step - output as a para -->
@@ -325,17 +380,11 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
 <div class="p">
   <xsl:call-template name="commonattributes">
     <xsl:with-param name="default-output-class" select="'p'"/>
   </xsl:call-template>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
   <xsl:call-template name="setidaname"/>
@@ -403,18 +452,12 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
 <li>
   <xsl:if test="$step_expand='yes'">
    <xsl:attribute name="class">stepexpand</xsl:attribute>
   </xsl:if>
   <xsl:call-template name="commonattributes"/>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
   <xsl:call-template name="setidaname"/>
@@ -460,22 +503,10 @@
 <xsl:template match="*[contains(@class,' task/substeps ')]" name="topic.task.substeps">
  <!-- If there's a block element somewhere in the step list, expand the whole list -->
  <xsl:variable name="sub_step_expand"> <!-- set & save sub_step_expand=yes/no for expanding/compacting list items -->
-  <xsl:choose>
-   <!-- expand the list when one of the substeps has any of these -->
-   <xsl:when test="*/*[contains(@class,' task/info ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepxmp ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/tutorialinfo ')]">yes</xsl:when>
-   <xsl:when test="*/*[contains(@class,' task/stepresult ')]">yes</xsl:when>
-   <xsl:otherwise>no</xsl:otherwise>
-  </xsl:choose>
+   <xsl:apply-templates select="." mode="make-steps-compact"/>
  </xsl:variable>
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
-  </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
   </xsl:variable>
   
   <xsl:call-template name="start-flagit">
@@ -516,11 +547,6 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
   
 <xsl:call-template name="setaname"/>
 <ol>
@@ -529,7 +555,6 @@
  </xsl:if>                                                <!-- otherwise, default to numbered -->
  <xsl:call-template name="commonattributes"/>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
  <xsl:call-template name="setid"/>
@@ -567,11 +592,6 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>  
   
 <li>
   <xsl:if test="$sub_step_expand='yes'">
@@ -579,7 +599,6 @@
   </xsl:if>
   <xsl:call-template name="commonattributes"/>
   <xsl:call-template name="gen-style">
-    <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
   </xsl:call-template>
   <xsl:call-template name="setidaname"/>
@@ -643,11 +662,6 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
     
   <xsl:call-template name="start-flagit">
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
@@ -659,7 +673,6 @@
   <ul>
    <xsl:call-template name="commonattributes"/>
     <xsl:call-template name="gen-style">
-      <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
     </xsl:call-template>
    <xsl:call-template name="setid"/>
@@ -716,11 +729,6 @@
   <xsl:variable name="flagrules">
     <xsl:call-template name="getrules"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
   
   <xsl:call-template name="start-flagit">
     <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
@@ -733,7 +741,6 @@
  <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="choicetableborder">
   <xsl:call-template name="commonattributes"/>
    <xsl:call-template name="gen-style">
-     <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
      <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
    </xsl:call-template>
   <xsl:call-template name="setid"/><xsl:value-of select="$newline"/>
@@ -852,11 +859,6 @@
     <xsl:call-template name="getrules"/>
     <xsl:call-template name="getrules-parent"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
   
   <td valign="top">
    <!-- Add header attr for column header -->
@@ -886,7 +888,6 @@
    </xsl:attribute>
     <xsl:call-template name="commonattributes"/>
     <xsl:call-template name="gen-style">
-      <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
     </xsl:call-template>
     <xsl:variable name="localkeycol">
@@ -978,11 +979,6 @@
     <xsl:call-template name="getrules"/>
     <xsl:call-template name="getrules-parent"/>
   </xsl:variable>
-  <xsl:variable name="conflictexist">
-    <xsl:call-template name="conflict-check">
-      <xsl:with-param name="flagrules" select="$flagrules"/>
-    </xsl:call-template>
-  </xsl:variable>
     
   <td valign="top">
    <!-- Add header attr, column header then option header -->
@@ -1025,7 +1021,6 @@
    </xsl:if>
    <xsl:call-template name="commonattributes"/>
     <xsl:call-template name="gen-style">
-      <xsl:with-param name="conflictexist" select="$conflictexist"></xsl:with-param> 
       <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>
     </xsl:call-template>
     <xsl:variable name="localkeycol">
@@ -1151,6 +1146,83 @@
   </xsl:call-template>
 </xsl:template>
 
+
+<xsl:template match="*[contains(@class,' task/prereq ')]" mode="dita2html:section-heading">
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_prereq'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="*[contains(@class,' task/context ')]" mode="dita2html:section-heading">
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_context'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+</xsl:template>
+    
+<xsl:template match="*[contains(@class,' task/result ')]" mode="dita2html:section-heading">
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_results'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="*[contains(@class,' task/postreq ')]" mode="dita2html:section-heading">
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_postreq'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="*[contains(@class,' task/taskbody ')]/*[contains(@class,' topic/example ')][not(*[contains(@class,' topic/title ')])]" mode="dita2html:section-heading">
+  <xsl:apply-templates select="." mode="generate-task-label">
+    <xsl:with-param name="use-label">
+      <xsl:call-template name="getString">
+        <xsl:with-param name="stringName" select="'task_example'"/>
+      </xsl:call-template>
+    </xsl:with-param>
+  </xsl:apply-templates>
+</xsl:template>
+
+<!-- 
+     To override the task label for a specific element, match that element with this mode. 
+     For example, you can turn off labels for <context> with this rule:
+     <xsl:template match="*[contains(@class,' task/context ')]" mode="generate-task-label"/>
+-->
+<xsl:template match="*" mode="generate-task-label">
+  <xsl:param name="use-label"/>
+  <xsl:if test="$GENERATE-TASK-LABELS='YES'">
+    <xsl:variable name="headLevel">
+      <xsl:variable name="headCount">
+        <xsl:value-of select="count(ancestor::*[contains(@class,' topic/topic ')])+1"/>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="$headCount > 6">h6</xsl:when>
+        <xsl:otherwise>h<xsl:value-of select="$headCount"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <div class="tasklabel">
+      <xsl:element name="{$headLevel}">
+        <xsl:attribute name="class">sectiontitle tasklabel</xsl:attribute>
+        <xsl:value-of select="$use-label"/>
+      </xsl:element>
+    </div>
+  </xsl:if>
+</xsl:template>
+
   <!-- Tasks have their own group. -->
   <xsl:template match="*[contains(@class, ' topic/link ')][@type='task']" mode="related-links:get-group" name="related-links:group.task">
     <xsl:text>task</xsl:text>
@@ -1164,7 +1236,7 @@
   <!-- Task wrapper for HTML: "Related tasks" in <div>. -->
   <xsl:template match="*[contains(@class, ' topic/link ')][@type='task']" mode="related-links:result-group" name="related-links:result.task">
     <xsl:param name="links"/>
-    <div class="relinfo">
+    <div class="relinfo reltasks">
       <strong>
         <xsl:call-template name="getString">
           <xsl:with-param name="stringName" select="'Related tasks'"/>

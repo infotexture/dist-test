@@ -43,6 +43,11 @@
 
 <xsl:param name="DITAEXT" select="'.xml'"></xsl:param>
 
+<xsl:param name="filename"></xsl:param>
+<xsl:param name="filedir"></xsl:param>
+<xsl:param name="CURRENTFILE" select="concat($filedir, '/', substring-before($filename, '.'), '.dita')"></xsl:param>
+     
+     
 
 <xsl:template match="/">
   <xsl:apply-templates></xsl:apply-templates>

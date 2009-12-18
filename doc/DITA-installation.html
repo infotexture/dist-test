@@ -79,12 +79,11 @@
 
     </div>
 
-    <ol>
-      <li class="stepexpand">
+    <ol><li class="stepexpand">
         <span>Download the DITA Toolkit package file from <a href="http://sourceforge.net/projects/dita-ot" target="_blank">SourceForge</a> .</span>
          
           <div class="note"><span class="notetitle">Note:</span> 
-            <br><ul>
+            <ul>
               <li>It is recommended to download the latest version of the DITA 
                 Toolkit for stable usage.</li>
 
@@ -99,16 +98,14 @@
 
         
       </li>
-
-      <li class="stepexpand">
+<li class="stepexpand">
         <span>Extract the package file into a directory of your choice. </span>
          
           <p>For example: <samp class="codeph">c:\pkg\DITA-OT1.0</samp></p>
 
         
       </li>
-
-      <li class="stepexpand">
+<li class="stepexpand">
         <span>Set up your environment variable<samp class="codeph"> JAVA_HOME</samp> to 
           your installation directory for JDK or JRE. </span>
          
@@ -117,19 +114,18 @@
 
         
       </li>
-
-      <li class="stepexpand">
+<li class="stepexpand">
         <span>Set up the <strong>XSLT</strong> processor.</span>
         
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="choicetableborder">
-<thead><tr><th id="d10184e185-option" valign="bottom" align="left">Option</th>
-<th id="d10184e185-desc" valign="bottom" align="left">Description</th></tr></thead>
+<thead><tr><th id="d10275e194-option" valign="bottom" align="left">Option</th>
+<th id="d10275e194-desc" valign="bottom" align="left">Description</th></tr></thead>
 <tbody>
           <tr>
-            <td valign="top" headers="d10184e185-option" id="d10184e189"><strong>If you use the Saxon,</strong></td>
+            <td valign="top" headers="d10275e194-option" id="d10275e198"><strong>If you use the Saxon,</strong></td>
 
-            <td valign="top" headers="d10184e185-desc d10184e189">
-              <br><ul>
+            <td valign="top" headers="d10275e194-desc d10275e198">
+              <ul>
                 <li>Set up CLASSPATH to include the <em>saxon.jar</em> file. 
                   <p><samp class="codeph">set CLASSPATH=%CLASSPATH%; 
                   &lt;saxon_dir&gt;\saxon.jar</samp></p>
@@ -149,10 +145,10 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="d10184e185-option" id="d10184e223"><strong>If you use the Xalan,</strong></td>
+            <td valign="top" headers="d10275e194-option" id="d10275e232"><strong>If you use the Xalan,</strong></td>
 
-            <td valign="top" headers="d10184e185-desc d10184e223">
-              <br><ul>
+            <td valign="top" headers="d10275e194-desc d10275e232">
+              <ul>
                 <li>Set up CLASSPATH to include the <em>xalan.jar</em> file and 
                   the <em> xercesImpl.jar</em> file. <pre class="codeblock">set CLASSPATH=%CLASSPATH%;&lt;xalan_dir&gt;\bin</pre>
 <div class="attention"><span class="attentiontitle">Attention:</span> if you don't use the Xalan, please remove<em> 
@@ -169,8 +165,7 @@
         </tbody></table>
 
       </li>
-
-      <li class="stepexpand">
+<li class="stepexpand">
         <span>If you need to build compiled JavaHelp, PDF output and compiled 
           HTML Help, you should install some build tools for these formats of 
           outputs</span>
@@ -200,13 +195,13 @@
         
         
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="choicetableborder">
-<thead><tr><th id="d10184e279-option" valign="bottom" align="left">Option</th>
-<th id="d10184e279-desc" valign="bottom" align="left">Description</th></tr></thead>
+<thead><tr><th id="d10275e291-option" valign="bottom" align="left">Option</th>
+<th id="d10275e291-desc" valign="bottom" align="left">Description</th></tr></thead>
 <tbody>
           <tr>
-            <td valign="top" headers="d10184e279-option" id="d10184e283"><strong> If you have installed the JavaHelp,</strong></td>
+            <td valign="top" headers="d10275e291-option" id="d10275e295"><strong> If you have installed the JavaHelp,</strong></td>
 
-            <td valign="top" headers="d10184e279-desc d10184e283">set up the environment variable <samp class="codeph">JHHOME</samp> to 
+            <td valign="top" headers="d10275e291-desc d10275e295">set up the environment variable <samp class="codeph">JHHOME</samp> to 
               your installation directory for JavaHelp. For 
               example:<p><samp class="codeph">set 
               JHHOME=&lt;javahelp_dir&gt;</samp></p>
@@ -215,9 +210,9 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="d10184e279-option" id="d10184e298"><strong>If you have installed the FOP,</strong></td>
+            <td valign="top" headers="d10275e291-option" id="d10275e310"><strong>If you have installed the FOP,</strong></td>
 
-            <td valign="top" headers="d10184e279-desc d10184e298"> set up your environment variable CLASSPATH to include the 
+            <td valign="top" headers="d10275e291-desc d10275e310"> set up your environment variable CLASSPATH to include the 
               <em>fop.jar, batik.jar</em> and <em>avalon.jar</em> files in the FOP 
               directory. For example: <p><samp class="codeph">set 
               CLASSPATH=%CLASSPATH%;&lt;fop_dir&gt;\build;&lt;fop_dir&gt;\lib</samp></p>
@@ -226,9 +221,9 @@
           </tr>
 
           <tr>
-            <td valign="top" headers="d10184e279-option" id="d10184e316"><strong>If you want to build HTML Help output,</strong></td>
+            <td valign="top" headers="d10275e291-option" id="d10275e328"><strong>If you want to build HTML Help output,</strong></td>
 
-            <td valign="top" headers="d10184e279-desc d10184e316">install Microsoft HTML Help Workshop to the default 
+            <td valign="top" headers="d10275e291-desc d10275e328">install Microsoft HTML Help Workshop to the default 
               directory.</td>
 
           </tr>
@@ -236,15 +231,14 @@
         </tbody></table>
 
       </li>
-
-      <li class="stepexpand" id="installation__testdita"><a name="installation__testdita"><!-- --></a>
+<li class="stepexpand" id="installation__testdita"><a name="installation__testdita"><!-- --></a>
         <span>Test the DITA Toolkit when you complete above steps.</span>
          
           <p>You can do the following steps under the command prompt to test 
             whether the DITA Toolkit and the XSLT engine are successfully 
             installed.</p>
 
-          <br><ul>
+          <ul>
             <li>
               <strong>Using the Xalan-Java/ LotusXSL-Java: </strong>
               <p>For example:<kbd class="userinput">c:\pkg\DITA-OT1.0\doc&gt;java 
@@ -290,8 +284,7 @@
 
         
       </li>
-
-    </ol>
+</ol>
 
   </div>
 
@@ -304,7 +297,7 @@
       so the configuration process is streamlined.</p>
 
       <div class="p">Before installing DITA Open Toolkit full distribution, you need to complete the
-        following steps:<br><ul>
+        following steps:<ul>
           <li>Download and configure JDK properly.</li>
 
           <li>(Optional) Download and configure HTMLHelp Compiler properly for HTMLHelp
@@ -318,20 +311,16 @@
 
       <div class="section">Then, you need to complete the following steps:</div>
 
-      <ol>
-        <li><span>Download the full DITA OT package. </span></li>
-
-        <li><span>Run the batch file "<samp class="codeph">startcmd.bat</samp>" for Windows
+      <ol><li><span>Download the full DITA OT package. </span></li>
+<li><span>Run the batch file "<samp class="codeph">startcmd.bat</samp>" for Windows
           or "<samp class="codeph">startcmd.sh</samp>" for Linux to set up the necessary environment
           variables.</span></li>
-
-        <li><span>Run the transformation in the command-line window by using
+<li><span>Run the transformation in the command-line window by using
           Java command line or ANT.</span>
         </li>
+</ol>
 
-      </ol>
-
-      <div class="section">You can still use the standard package to install DITA OT:<br><ul>
+      <div class="section">You can still use the standard package to install DITA OT:<ul>
         <li>Download the standard package.</li>
 
         <li>Configure the system environment of DITA OT, but add two more paths %DITA_HOME%\lib;%DITA_HOME%\lib\resolver.jar;
@@ -355,8 +344,7 @@
         environment in Linux.</strong>
     </p>
 
-      <ol>
-        <li class="stepexpand">
+      <ol><li class="stepexpand">
           <span>Extract the package file into a Linux home directory.</span>
            
             <div class="note"><span class="notetitle">Note:</span> You can extract all package files and toolkits either to your 
@@ -365,44 +353,39 @@
 
           
         </li>
-
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>Set up your environment variable <samp class="codeph">JAVA_HOME</samp>.</span>
            
             <p><samp class="codeph">export JAVA_HOME=&lt;JDK_dir&gt;</samp></p>
 
           
         </li>
-
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>Set up your environment variable <samp class="codeph">PATH</samp>.</span>
            
             <p><samp class="codeph">export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH</samp></p>
 
           
         </li>
-
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>Set up your environment variable <samp class="codeph">CLASSPATH</samp></span>
            
             <p><samp class="codeph">export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:&lt;dita_dir&gt;/lib/dost.jar</samp></p>
 
           
         </li>
-
-        
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>Set up the <strong>XSLT</strong> processor.</span>
           
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="choicetableborder">
-<thead><tr><th id="d10184e555-option" valign="bottom" align="left">Option</th>
-<th id="d10184e555-desc" valign="bottom" align="left">Description</th></tr></thead>
+<thead><tr><th id="d10275e567-option" valign="bottom" align="left">Option</th>
+<th id="d10275e567-desc" valign="bottom" align="left">Description</th></tr></thead>
 <tbody>
             <tr>
-              <td valign="top" headers="d10184e555-option" id="d10184e559"><strong>If you use the Saxon,</strong></td>
+              <td valign="top" headers="d10275e567-option" id="d10275e571"><strong>If you use the Saxon,</strong></td>
 
-              <td valign="top" headers="d10184e555-desc d10184e559">
-                <br><ul>
+              <td valign="top" headers="d10275e567-desc d10275e571">
+                <ul>
                   <li>Set up CLASSPATH to include the <em>saxon.jar</em> file.<p><samp class="codeph">export 
                     CLASSPATH=$CLASSPATH:&lt;saxon_dir&gt;/saxon.jar</samp></p>
 </li>
@@ -421,10 +404,10 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="d10184e555-option" id="d10184e591"><strong>If you use the Xalan,</strong></td>
+              <td valign="top" headers="d10275e567-option" id="d10275e603"><strong>If you use the Xalan,</strong></td>
 
-              <td valign="top" headers="d10184e555-desc d10184e591">
-                <br><ul>
+              <td valign="top" headers="d10275e567-desc d10275e603">
+                <ul>
                   <li>Set up CLASSPATH to include the <em>xalan.jar</em> file and 
                     the <em> xercesImpl.jar</em> file. <p><samp class="codeph">export 
                     CLASSPATH=$CLASSPATH:&lt;xalan_dir&gt;/bin</samp></p>
@@ -442,20 +425,19 @@
           </tbody></table>
 
         </li>
-
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>If you have installed build tools for compiled JavaHelp, PDF 
             output and compiled HTML Help, you should choose the following options 
             to set up.</span>
           
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="choicetableborder">
-<thead><tr><th id="d10184e626-option" valign="bottom" align="left">Option</th>
-<th id="d10184e626-desc" valign="bottom" align="left">Description</th></tr></thead>
+<thead><tr><th id="d10275e638-option" valign="bottom" align="left">Option</th>
+<th id="d10275e638-desc" valign="bottom" align="left">Description</th></tr></thead>
 <tbody>
             <tr>
-              <td valign="top" headers="d10184e626-option" id="d10184e630"><strong> If you have installed the JavaHelp,</strong></td>
+              <td valign="top" headers="d10275e638-option" id="d10275e642"><strong> If you have installed the JavaHelp,</strong></td>
 
-              <td valign="top" headers="d10184e626-desc d10184e630">set up the environment variable JHHOME to your 
+              <td valign="top" headers="d10275e638-desc d10275e642">set up the environment variable JHHOME to your 
                 installation directory for JavaHelp. For 
                 example:<p><samp class="codeph">export 
                 JHHOME=&lt;javahelp_dir&gt;</samp></p>
@@ -464,9 +446,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="d10184e626-option" id="d10184e642"><strong>If you have installed the FOP,</strong></td>
+              <td valign="top" headers="d10275e638-option" id="d10275e654"><strong>If you have installed the FOP,</strong></td>
 
-              <td valign="top" headers="d10184e626-desc d10184e642"> set up your environment variable CLASSPATH to include 
+              <td valign="top" headers="d10275e638-desc d10275e654"> set up your environment variable CLASSPATH to include 
                 the <em>fop.jar, batik.jar</em> and <em>avalon.jar</em> files in 
                 the FOP directory. For example: <p><samp class="codeph">export 
                 CLASSPATH=$CLASSPATH:&lt;fop_dir&gt;/build:&lt;fop_dir&gt;/lib</samp></p>
@@ -475,9 +457,9 @@
             </tr>
 
             <tr>
-              <td valign="top" headers="d10184e626-option" id="d10184e660"><strong>If you want to build HTML Help output,</strong></td>
+              <td valign="top" headers="d10275e638-option" id="d10275e672"><strong>If you want to build HTML Help output,</strong></td>
 
-              <td valign="top" headers="d10184e626-desc d10184e660">install Microsoft HTML Help Workshop to the default 
+              <td valign="top" headers="d10275e638-desc d10275e672">install Microsoft HTML Help Workshop to the default 
                 directory.</td>
 
             </tr>
@@ -485,15 +467,13 @@
           </tbody></table>
 
         </li>
-
-        <li class="stepexpand">
+<li class="stepexpand">
           <span>
             <a href="#installation__testdita">Test the DITA Toolkit when you 
               complete above steps.</a>
           </span><br>
         </li>
-
-      </ol>
+</ol>
 
     </div>
 

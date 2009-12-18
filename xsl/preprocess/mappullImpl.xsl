@@ -26,6 +26,8 @@ mode="mappull:getmetadata_linktext", mode="mappull:getmetadata_shortdesc"
 
 Other modes can be found within the code, and may or may not prove useful for overrides.
      -->
+<!-- 20090903 RDA: added <?ditaot gentext?> and <?ditaot linktext?> PIs for RFE 1367897.
+                   Allows downstream processes to identify original text vs. generated link text. -->
 
 <xsl:stylesheet version="1.0" 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -63,6 +65,7 @@ Other modes can be found within the code, and may or may not prove useful for ov
     <!-- used for mapref target to see whether @linking should be override by the source of mapref -->
     <xsl:param name="parent-toc">#none#</xsl:param>
     <!-- used for mapref target to see whether @toc should be override by the source of mapref -->
+    <xsl:param name="parent-processing-role">#none#</xsl:param>
     
     <!--need to create these variables regardless, for passing as a parameter to get-stuff template-->
         <xsl:variable name="type">
@@ -110,6 +113,14 @@ Other modes can be found within the code, and may or may not prove useful for ov
           <xsl:if test="not(@toc) and not($parent-toc='no')">
             <xsl:apply-templates select="." mode="mappull:inherit-and-set-attribute"><xsl:with-param name="attrib">toc</xsl:with-param></xsl:apply-templates>
           </xsl:if>
+          <xsl:if test="$parent-processing-role='resource-only'">
+            <xsl:attribute name="processing-role">resource-only</xsl:attribute>
+          </xsl:if>
+          <xsl:if test="not(@processing-role) and not($parent-processing-role='resource-only')">
+            <xsl:apply-templates select="." mode="mappull:inherit-and-set-attribute">
+          	  <xsl:with-param name="attrib">processing-role</xsl:with-param>
+            </xsl:apply-templates>
+      	  </xsl:if>
           <xsl:if test="not(@print) and $print!='#none#'">
             <xsl:attribute name="print"><xsl:value-of select="$print"/></xsl:attribute>
           </xsl:if>
@@ -138,7 +149,11 @@ Other modes can be found within the code, and may or may not prove useful for ov
           <xsl:if test="not(@otherprops)">
             <xsl:apply-templates select="." mode="mappull:inherit-and-set-attribute"><xsl:with-param name="attrib">otherprops</xsl:with-param></xsl:apply-templates>
           </xsl:if>
-
+          <!-- added by William on 2009-09-07 for updated mapref behavior start -->
+          <xsl:if test="not(@props)">
+            <xsl:apply-templates select="." mode="mappull:inherit-and-set-attribute"><xsl:with-param name="attrib">props</xsl:with-param></xsl:apply-templates>
+          </xsl:if>
+          <!-- added by William on 2009-09-07 for updated mapref behavior end -->
           <!--grab type, text and metadata, as long there's an href to grab from, and it's not inaccessible-->
           <xsl:choose>
             <xsl:when test="@href=''">
@@ -361,10 +376,12 @@ Other modes can be found within the code, and may or may not prove useful for ov
       <!-- If the actual class contains the specified type; reference can be called topic,
            specializedReference can be called reference -->
       <xsl:when test="contains($actual-class,concat(' ',$type,'/',$type,' '))">
-        <xsl:apply-templates select="." mode="ditamsg:type-mismatch-info">
+        <!-- commented out for bug:1771123 start -->
+        <!--xsl:apply-templates select="." mode="ditamsg:type-mismatch-info">
           <xsl:with-param name="type" select="$type"/>
           <xsl:with-param name="actual-name" select="$actual-name"/>
-        </xsl:apply-templates>
+        </xsl:apply-templates-->
+        <!-- commented out for bug:1771123 end -->
       </xsl:when>
       <!-- Otherwise: incorrect type is specified -->
       <xsl:otherwise>
@@ -804,6 +821,7 @@ Other modes can be found within the code, and may or may not prove useful for ov
     <xsl:choose>
       <!-- If linktext is already specified, use that -->
       <xsl:when test="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' map/linktext ')]">
+        <xsl:apply-templates select="." mode="mappull:add-usertext-PI"/>
         <xsl:apply-templates select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' map/linktext ')]"/>
       </xsl:when>
       <xsl:otherwise>
@@ -867,6 +885,7 @@ Other modes can be found within the code, and may or may not prove useful for ov
           </xsl:choose>
         </xsl:variable>
         <xsl:if test="not($linktext='#none#')">
+          <xsl:apply-templates select="." mode="mappull:add-gentext-PI"/>
           <linktext class="- map/linktext ">
             <xsl:value-of select="$linktext"/>
           </linktext>
@@ -1245,5 +1264,14 @@ Other modes can be found within the code, and may or may not prove useful for ov
   </xsl:template>
 
   <xsl:template match="*[contains(@class,' topic/draft-comment ')]" mode="copy-shortdesc"/>
+
+  <!-- Added for RFE 1367897 -->
+  <xsl:template match="*" mode="mappull:add-gentext-PI">
+    <xsl:processing-instruction name="ditaot">gentext</xsl:processing-instruction>
+  </xsl:template>
+  <xsl:template match="*" mode="mappull:add-usertext-PI">
+    <xsl:processing-instruction name="ditaot">usertext</xsl:processing-instruction>
+  </xsl:template>
+  
 
 </xsl:stylesheet>

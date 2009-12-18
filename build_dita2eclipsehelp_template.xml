@@ -8,7 +8,7 @@
     
     <import file="build_init.xml" />
     <import file="build_preprocess.xml" />
-    <import file="build_general.xml" />
+    <import file="build_general.xml"/>
 	
 	   <target name="dita.index.eclipsehelp.init">
 	      <condition property="dita.eclipsehelp.index.class" value="org.dita.dost.writer.EclipseIndexWriter"> 
@@ -28,7 +28,7 @@
         depends="dita.map.eclipse.init, dita.map.eclipse.toc, dita.map.eclipse.index, dita.map.eclipse.plugin, dita.out.map.eclipse.toc, dita.out.map.eclipse.index, dita.out.map.eclipse.plugin" />-->
 
   <target name="dita.map.eclipse"
-    depends=" dita.map.eclipse.init, dita.map.eclipse.fragment.language.init, dita.map.eclipse.fragment.language.country.init, dita.map.eclipse.fragment.error">
+    depends=" dita.map.eclipse.init, copy-plugin-files, dita.map.eclipse.fragment.language.init, dita.map.eclipse.fragment.language.country.init, dita.map.eclipse.fragment.error">
     
   </target>
 	
@@ -102,6 +102,7 @@
               extension=".xml"
               classpathref="dost.class.path"
               style="${dita.script.dir}${file.separator}map2eclipse.xsl">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedditamapfile}" if="chunkedditamapfile"/>
             <param name="DITAEXT" expression="${dita.ext}" if="dita.ext" />
             <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
@@ -118,6 +119,7 @@
             includesfile="${dita.temp.dir}${file.separator}${fullditamapfile}"
             classpathref="dost.class.path"
             style="${dita.script.dir}${file.separator}map2eclipse.xsl">
+        	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedditamapfile}" if="chunkedditamapfile"/>
             <param name="DITAEXT" expression="${dita.ext}" if="dita.ext" />
             <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
@@ -210,7 +212,7 @@
     description="Build Eclipsehelp manifest.mf file">
     <xslt processor="trax"
       in="${dita.temp.dir}${file.separator}${user.input.file}"
-      out="${dita.map.output.dir}${file.separator}meta-inf${file.separator}Manifest.mf"
+      out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF"
       classpathref="dost.class.path"
       style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version"
@@ -239,7 +241,7 @@
     description="Build Eclipsehelp manifest.mf file">
     <xslt processor="trax"
       in="${dita.temp.dir}${file.separator}${user.input.file}"
-      out="${dita.map.output.dir}${file.separator}meta-inf${file.separator}Manifest.mf"
+      out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF"
       classpathref="dost.class.path"
       style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version"
@@ -327,28 +329,48 @@
   
   <target name="dita.map.eclipse.fragment.move.files"
     if="old.transform">
-    <defaultexcludes add="**/meta-inf/**"/>
+    <defaultexcludes add="**/META-INF/**"/>
     <defaultexcludes add="**/nl/**"/>
+  	<delete file="${output.dir}${file.separator}plugin.xml"/>
+  	<delete file="${output.dir}${file.separator}plugincustomization.ini"/>
     <move todir="${dita.map.output.dir}${file.separator}${fragment.dirname}" includeemptydirs="yes">
       <fileset dir="${dita.map.output.dir}" defaultexcludes="yes">
-        <exclude name="*.xml"/>
-        <exclude name="*.properties"/>
+        <exclude name="helpData.xml"/>
+      	<exclude name="plugin.properties"/>
+      	<exclude name="plugin_${fragment.property.name}.properties"/>
         <exclude name="*.list"/>
+      	<exclude name="disabled_book.css"/>
+      	<exclude name="narrow_book.css"/>
+      	<exclude name="${os}_narrow_book.css"/>
+      	<exclude name="book.css"/>
+      	<exclude name="plugincustomization.ini"/>
       </fileset>
-    </move>     
+    </move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"/>
+
+  	
   </target>
   
   <target name="dita.out.map.eclipse.fragment.move.files"
     if="inner.transform">
-    <defaultexcludes add="**/meta-inf/**"/>
+    <defaultexcludes add="**/META-INF/**"/>
     <defaultexcludes add="**/nl/**"/>
+  	<delete file="${output.dir}${file.separator}plugin.xml"/>
+  	<delete file="${output.dir}${file.separator}plugincustomization.ini"/>
     <move todir="${output.dir}${file.separator}${fragment.dirname}" includeemptydirs="yes">
       <fileset dir="${output.dir}" defaultexcludes="yes">
-        <exclude name="*.xml"/>
-        <exclude name="*.properties"/>
+        <exclude name="helpData.xml"/>
+      	<exclude name="plugin.properties"/>
+      	<exclude name="plugin_${fragment.property.name}.properties"/>
         <exclude name="*.list"/>
+      	<exclude name="disabled_book.css"/>
+      	<exclude name="narrow_book.css"/>
+      	<exclude name="${os}_narrow_book.css"/>
+      	<exclude name="book.css"/>
+      	<exclude name="plugincustomization.ini"/>
       </fileset>
-    </move>     
+    </move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"/>
   </target>
   
   <!--<target name="dita.map.eclipse"
@@ -395,5 +417,21 @@
 
     <!-- depecrated: keep for back-compatibility, will be remvoed in a later release -->
     <target name="dita.topics.eclipse" depends="dita.topics.xhtml" />
+	
+	<target name="copy-plugin-files">
+	  	<!-- Look for files that override behavior in Eclipse plugins -->
+	  	<!-- <echo>* dita.input.dirname = ${user.input.dir}</echo> -->
+	  	<copy todir="${output.dir}">
+	  	      <fileset dir="${user.input.dir}">
+	  	      	<include name="disabled_book.css"/>
+	  	        <include name="narrow_book.css"/>
+	  	        <include name="${os}_narrow_book.css"/>
+	  	        <include name="book.css"/>
+	  	        <include name="plugincustomization.ini"/>
+	  	        <include name="helpData.xml"/>
+	  	      </fileset>
+	  		  
+	  	</copy>
+	</target>
 
 </project>

@@ -18,7 +18,10 @@
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                version="1.0">
+                version="1.0"
+                xmlns:java="org.dita.dost.util.StringUtils"
+                exclude-result-prefixes="java"
+  >
 
 <!-- Include error message template -->
 <xsl:import href="common/output-message.xsl"/>
@@ -64,7 +67,7 @@
      ********************************************************************************* -->
 <xsl:template match="/*[contains(@class, ' map/map ')]">
   <xsl:param name="pathFromMaplist"/>
-  <xsl:if test=".//*[contains(@class, ' map/topicref ')][not(@toc='no')]">
+  <xsl:if test=".//*[contains(@class, ' map/topicref ')][not(@toc='no')][not(@processing-role='resource-only')]">
     <xsl:value-of select="$newline"/>
     <UL>
       <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
@@ -95,7 +98,7 @@
   <xsl:choose>
     <!-- If TOC is no, go ahead and process children; if TOC is turned back on,
          those topics will rise to this level -->
-    <xsl:when test="@toc='no'">
+    <xsl:when test="@toc='no' or @processing-role='resource-only'">
       <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
         <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
       </xsl:apply-templates>
@@ -103,7 +106,7 @@
     <!-- If this this a container (no href or href='', no title), just process children -->
     <xsl:when test="(not(@href) or @href='') and not(@navtitle) and not(*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]) and
                     not(*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' map/linktext ')])">
-      <xsl:apply-templates select="*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))]">
+      <xsl:apply-templates select="*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))][not(@processing-role='resource-only')]">
         <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
       </xsl:apply-templates>
     </xsl:when>
@@ -279,10 +282,26 @@
             <xsl:attribute name="name">Local</xsl:attribute>
             <xsl:choose> <!-- What if targeting a nested topic? Need to keep the ID? -->
               <xsl:when test="contains(@copy-to, $DITAEXT)">
-                <xsl:attribute name="value"><xsl:value-of select="$pathFromMaplist"/><xsl:value-of select="substring-before(@copy-to, $DITAEXT)"/><xsl:value-of select="$OUTEXT"/><xsl:value-of select="$topicID"/></xsl:attribute>
+                <xsl:attribute name="value">
+                  <xsl:value-of select="$pathFromMaplist"/>
+                  <!-- added by William on 2009-11-26 for bug:1628937 start-->
+                  <!--xsl:value-of select="substring-before(@copy-to,$DITAEXT)"/-->
+                  <xsl:value-of select="java:getFileName(@copy-to,$DITAEXT)"/>
+                  <!-- added by William on 2009-11-26 for bug:1628937 end-->
+                  
+                  <xsl:value-of select="$OUTEXT"/><xsl:value-of select="$topicID"/>
+                </xsl:attribute>
               </xsl:when>
               <xsl:when test="contains(@href, $DITAEXT)">
-                <xsl:attribute name="value"><xsl:value-of select="$pathFromMaplist"/><xsl:value-of select="substring-before(@href, $DITAEXT)"/><xsl:value-of select="$OUTEXT"/><xsl:value-of select="$topicID"/></xsl:attribute>
+                <xsl:attribute name="value">
+                  <xsl:value-of select="$pathFromMaplist"/>
+                  <!-- added by William on 2009-11-26 for bug:1628937 start-->
+                  <!--xsl:value-of select="substring-before(@href,$DITAEXT)"/-->
+                  <xsl:value-of select="java:getFileName(@href,$DITAEXT)"/>
+                  <!-- added by William on 2009-11-26 for bug:1628937 end-->
+                  <xsl:value-of select="$OUTEXT"/>
+                  <xsl:value-of select="$topicID"/>
+                </xsl:attribute>
               </xsl:when>
               <xsl:when test="contains(@href,'.htm') and @scope!='external'">
                 <xsl:attribute name="value"><xsl:value-of select="$pathFromMaplist"/><xsl:value-of select="@href"/></xsl:attribute>
@@ -302,7 +321,7 @@
        </OBJECT>
 
        <!-- If there are any children that should be in the TOC, process them -->
-       <xsl:if test="descendant::*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))]">
+       <xsl:if test="descendant::*[contains(@class, ' map/topicref ')][not(contains(@toc,'no'))][not(@processing-role='resource-only')]">
          <UL>
            <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
              <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>

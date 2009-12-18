@@ -49,7 +49,7 @@
           <not>
             <equals arg1="${transtype}" arg2="wordrtf" casesensitive="false"></equals>
           </not>
-          <not><equals arg1="${transtype}" arg2="legacypdf" casesensitive="false"/></not><not><equals arg1="${transtype}" arg2="pdf2" casesensitive="false"/></not>
+          <not><equals arg1="${transtype}" arg2="tocjs" casesensitive="false"/></not><not><equals arg1="${transtype}" arg2="legacypdf" casesensitive="false"/></not><not><equals arg1="${transtype}" arg2="pdf2" casesensitive="false"/></not>
         </and>
       </condition>
     </dita-ot-fail>
@@ -57,6 +57,14 @@
       <equals arg1="${transtype}" arg2="pdf" casesensitive="false"></equals>
     </condition>
     <antcall target="dita2${transtarget}"></antcall>
+  	<condition property="clean_temp">
+  	  <and>
+  	    <isset property="clean.temp"></isset>
+  	    <equals arg1="${clean.temp}" arg2="no" casesensitive="false"></equals>
+  	  </and>
+  	</condition>
+  	<antcall target="clean-temp">
+  	</antcall>
   </target>
   
   <target name="all">
@@ -65,9 +73,56 @@
       ant all -f build_demo.xml</echo>
   </target>
   
-  <target name="dita-preprocess" depends="start-process, init-logger, check-arg, output-deprecated-msg, output-css-warn-message, preprocess"></target>
+  <target name="dita-preprocess" depends="start-process, init-logger, init-URIResolver, check-arg, output-deprecated-msg, output-css-warn-message, preprocess"></target>
 
   
+
+  
+<target name="dita2tocjs" depends="dita-preprocess, map2tocjs, topic2tocjs">
+</target>
+
+  
+<target name="topic2tocjs" if="noMap" depends="dita-preprocess">
+    
+<antcall target="dita.map.tocjs">
+      
+    
+</antcall>
+  
+</target>
+
+  
+<target name="map2tocjs" unless="noMap" depends="dita-preprocess">
+    
+<antcall target="dita.map.tocjs">
+      
+<param name="input" value="${dita.temp.dir}${file.separator}${user.input.file}">
+</param>
+    
+</antcall>
+  
+</target>
+
+
+  
+<target name="dita.map.tocjs" description="generate merged for tocjs">
+    
+<xslt processor="trax" in="${input}" out="${output.file}" style="${dita.dir}/demo/tocjs/xsl/tocjs.xsl">
+      
+<param name="ditaext" expression="${dita.extname}">
+</param>
+      
+<param name="htmlext" expression="${out.ext}">
+</param>
+      
+<xmlcatalog refid="dita.catalog">
+</xmlcatalog>
+    
+</xslt>
+  
+</target>
+
+
         
         
         
@@ -263,6 +318,10 @@
 </target>
         
     
+  
+  
+    
+
   
   
   
