@@ -16,43 +16,43 @@
 <body id="eclipseconprov"><a name="eclipseconprov"><!-- --></a>
 
 
-  <h1 class="topictitle1">Eclipse Content Provider</h1>
+<h1 class="topictitle1">Eclipse Content Provider</h1>
 
-  <div>
-    <p>The Eclipse Content Provider is a new function in IBM DITA toolkit 
-      Release 1.1 tool. In former releases, you should transform DITA files to 
-      HTMLs before you build them into Eclipse help output. With the Eclipse 
-      Content Provider, you do not need to transform DITA files to HTMLs 
-      beforehand. This new function will preprocess DITA files and dynamically 
-      transform them into HTMLs at runtime.</p>
+<div>
+<p>The Eclipse Content Provider was introduced in the DITA-OT Release
+1.1. With the Eclipse        Content Provider, you do not need to
+transform DITA files completely to HTML before loading them in Eclipse.
+This new function will preprocess DITA files and dynamically transform
+them into HTML at runtime.</p>
 
-    
-    <p>During the building process, the Eclipse Content Provider generate 
-      plugin.xml. The file plugin.xml provides the definition of one or more 
-      tables of contents and locate the contents to display.</p>
+<p>During the building process, the Eclipse Content Provider generates
+the file <span class="filepath">plugin.xml</span>. The file <span class="filepath">plugin.xml</span> provides
+the definition of one or more tables of contents and locates the contents
+to display.</p>
 
-    <div class="p">Here is an example of creating an output for the Eclipse Content 
-      Provider and view the output in specially designed Eclipse on Windows 
-      XP.<ol> <li>Create a directory <strong>c:\dita-ot</strong> as the output directory 
-      for DITA mapfiles.</li>
- <li>Start the command line interface by choosing 
-      <span class="menucascade"><span class="uicontrol">Start</span> 
-       &gt; <span class="uicontrol">Run</span></span>.</li>
- <li>Switch to the 
-      directory <strong>c:\dita-ot</strong>.</li>
- <li>Enter the following command to 
-      build:<pre class="codeblock">java -jar lib\dost.jar /i:samples/sequence.ditamap 
+<div class="p">Here is an example of creating an output for the Eclipse Content
+Provider and view the output in specially designed Eclipse on Windows
+XP. This assumes that your environment is already set up to run DITA-OT
+transformations.<ol>
+<li>Start the Windows command line interface.</li>
+
+<li>Switch to the directory <strong>c:\DITA-OT\</strong> (or to your own install
+directory for the toolkit).</li>
+
+<li>Enter the following command to build:<pre class="codeblock">java -jar lib\dost.jar /i:samples/sequence.ditamap 
       /outdir:out /transtype:eclipsecontent </pre>
 </li>
- <li>Then view all 
-      the files under <strong>c:\dita-ot</strong> and copy these files to the 
-      corresponding directory under the plugin directory for Eclipse.</li>
- 
-      <li>Call the specially designed Eclipse to view the output.</li>
- </ol>
+
+<li>Then view all        the files under <strong>c:\DITA-OT\out\</strong> and
+copy these files to the        corresponding directory under the plugin
+directory for Eclipse.</li>
+
+<li>Call the specially designed Eclipse to view the output.</li>
+
+</ol>
 </div>
 
-  </div>
+</div>
 
 
 </body>

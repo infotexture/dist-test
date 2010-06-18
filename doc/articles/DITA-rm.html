@@ -11,9 +11,7 @@
 <meta name="description" content="This document is a roadmap for the Darwin Information Typing Architecture: what it is and how it applies to technical documentation. It is also a product of the architecture, having been written entirely in XML and produced using the principles described here...">
 <meta name="DC.subject" content="Darwin Information Typing Architecture, DITA, XML, topic, information architecture, architectural forms, specialization, information type, document metadata, documentation, technical writing, user assistance, helps">
 <meta name="keywords" content="Darwin Information Typing Architecture, DITA, XML, topic, information architecture, architectural forms, specialization, information type, document metadata, documentation, technical writing, user assistance, helps">
-<meta name="DC.Relation" scheme="URI" content="DITA-dsf.html">
-<meta name="DC.Relation" scheme="URI" content="DITA-domains.html">
-<meta name="DC.Relation" scheme="URI" content="DITA-mapdomains.html">
+<meta name="DC.Relation" scheme="URI" content="ditaot_topic_developerworks_articles.html">
 <meta name="DC.Creator" content="Don R. Day">
 <meta name="DC.Creator" content="Michael Priestley">
 <meta name="DC.Creator" content="Dave A Schell">
@@ -36,14 +34,9 @@
 </div>
 
   <div>
-<ol>
-<li class="olchildlink"><a href="DITA-dsf.html">Specializing topic types in DITA</a><br>
-The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.</li>
-<li class="olchildlink"><a href="DITA-domains.html">Specializing domains in DITA</a><br>
-In current approaches, DTDs are static. As a result, DTD designers try to cover every contingency and, when this effort fails, users have to force their information to fit existing types. DITA changes this situation by giving information architects and developers the power to extend a base DTD to cover their domains.</li>
-<li class="olchildlink"><a href="DITA-mapdomains.html">How to define a formal information architecture with DITA map domains</a><br>
-The benefits of formal information typing are well known for the content of topics, but collections of topics also benefit from formal organizing structure. Such formal structures guide authors while they assemble collections of topics and ensure consistent large-scale patterns of information for the user. Using DITA map domains, a designer can define a formal information architecture that can be reused in many deliverables. </li>
-</ol>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="ditaot_topic_developerworks_articles.html" title="This document contains articles about DITA that were originally published on developerWorks. The online articles have been updated more recently than the versions in this document.">developerWorks articles</a></div>
+</div>
 </div>
 <div class="nested1" id="ditarmintro"><a name="ditarmintro"><!-- --></a>
     <h2 class="topictitle2">Executive summary</h2>
@@ -185,7 +178,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e383">Delivery contexts</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6273e369">Delivery contexts</th>
 
             </tr>
 
@@ -193,11 +186,11 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">helpset</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e369 ">helpset</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">aggregate printing</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e369 ">aggregate printing</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e383 ">Web site; information portal</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e369 ">Web site; information portal</td>
 
             </tr>
 
@@ -214,7 +207,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e421">Typed topic structures</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6273e407">Typed topic structures</th>
 
             </tr>
 
@@ -222,13 +215,13 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">topic</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e407 ">topic</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e407 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e407 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e421 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e407 ">reference</td>
 
             </tr>
 
@@ -245,7 +238,7 @@ The benefits of formal information typing are well known for the content of topi
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e464">Specialized vocabularies (domains) across information types</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6273e450">Specialized vocabularies (domains) across information types</th>
 
             </tr>
 
@@ -253,20 +246,20 @@ The benefits of formal information typing are well known for the content of topi
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e464 ">Typed topic:</td>
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6273e450 ">Typed topic:</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e450 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e450 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e464 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e450 ">reference</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e464 ">Included domains:</td>
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6273e450 ">Included domains:</td>
 
-              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6308e464 ">
+              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6273e450 ">
                 <p>highlighting<br>
 software<br>
 programming<br>
@@ -288,7 +281,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e516">Common structures</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6273e502">Common structures</th>
 
             </tr>
 
@@ -296,9 +289,9 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6308e516 ">metadata</td>
+              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6273e502 ">metadata</td>
 
-              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6308e516 ">OASIS (CALS) table</td>
+              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6273e502 ">OASIS (CALS) table</td>
 
             </tr>
 
@@ -326,7 +319,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e564">delivery contexts</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6273e550">delivery contexts</th>
 
             </tr>
 
@@ -334,11 +327,11 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">helpset</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e550 ">helpset</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">aggregate printing</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e550 ">aggregate printing</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e564 ">Web site; information portal</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e550 ">Web site; information portal</td>
 
             </tr>
 
@@ -365,7 +358,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e626">typed topic structures</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6273e612">typed topic structures</th>
 
             </tr>
 
@@ -373,13 +366,13 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">topic</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e612 ">topic</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e612 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e612 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e626 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e612 ">reference</td>
 
             </tr>
 
@@ -414,7 +407,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6308e702">specialized vocabularies (domains) across information types</th>
+              <th class="cellrowborder" colspan="4" align="center" valign="top" id="d6273e688">specialized vocabularies (domains) across information types</th>
 
             </tr>
 
@@ -422,24 +415,24 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e702 ">
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6273e688 ">
                 <strong>Typed topic:</strong>
               </td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">concept</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e688 ">concept</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">task</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e688 ">task</td>
 
-              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6308e702 ">reference</td>
+              <td class="cellrowborder" align="center" valign="top" width="NaN%" headers="d6273e688 ">reference</td>
 
             </tr>
 
             <tr>
-              <td class="cellrowborder" valign="top" width="NaN%" headers="d6308e702 ">
+              <td class="cellrowborder" valign="top" width="NaN%" headers="d6273e688 ">
                 <strong>Included domains:</strong>
               </td>
 
-              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6308e702 ">
+              <td class="cellrowborder" colspan="3" align="center" valign="top" headers="d6273e688 ">
                 <p>highlighting<br>
 software<br>
 programming<br>
@@ -457,33 +450,33 @@ user interface</p>
       <p>The basic domains defined as examples for DITA include:</p>
 
       <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletableborder"><tr>
-          <th valign="bottom" align="left" id="d6308e754">Domain</th>
+          <th valign="bottom" align="left" id="d6273e740">Domain</th>
 
-          <th valign="bottom" align="left" id="d6308e757">Elements</th>
-
-        </tr>
-<tr>
-          <td valign="top" id="d6308e763" headers="d6308e754"><strong>highlighting</strong></td>
-
-          <td valign="top" headers="d6308e757 d6308e763">b, u, i, tt, sup, sub</td>
+          <th valign="bottom" align="left" id="d6273e743">Elements</th>
 
         </tr>
 <tr>
-          <td valign="top" id="d6308e772" headers="d6308e754"><strong>software</strong></td>
+          <td valign="top" id="d6273e749" headers="d6273e740"><strong>highlighting</strong></td>
 
-          <td valign="top" headers="d6308e757 d6308e772">msgph, msgblock, msgnum, cmdname, varname, filepath, userinput, systemoutput </td>
-
-        </tr>
-<tr>
-          <td valign="top" id="d6308e781" headers="d6308e754"><strong>programming</strong></td>
-
-          <td valign="top" headers="d6308e757 d6308e781">codeph, codeblock, option, var, parmname, synph, oper, delim, sep, apiname, parml, plentry, pt, pd, syntaxdiagram, synblk, groupseq, groupchoice, groupcomp, fragment, fragref, synnote, synnoteref, repsep, kwd </td>
+          <td valign="top" headers="d6273e743 d6273e749">b, u, i, tt, sup, sub</td>
 
         </tr>
 <tr>
-          <td valign="top" id="d6308e790" headers="d6308e754"><strong>user interface</strong></td>
+          <td valign="top" id="d6273e758" headers="d6273e740"><strong>software</strong></td>
 
-          <td valign="top" headers="d6308e757 d6308e790">uicontrol, wintitle, menucascade, shortcut</td>
+          <td valign="top" headers="d6273e743 d6273e758">msgph, msgblock, msgnum, cmdname, varname, filepath, userinput, systemoutput </td>
+
+        </tr>
+<tr>
+          <td valign="top" id="d6273e767" headers="d6273e740"><strong>programming</strong></td>
+
+          <td valign="top" headers="d6273e743 d6273e767">codeph, codeblock, option, var, parmname, synph, oper, delim, sep, apiname, parml, plentry, pt, pd, syntaxdiagram, synblk, groupseq, groupchoice, groupcomp, fragment, fragref, synnote, synnoteref, repsep, kwd </td>
+
+        </tr>
+<tr>
+          <td valign="top" id="d6273e776" headers="d6273e740"><strong>user interface</strong></td>
+
+          <td valign="top" headers="d6273e743 d6273e776">uicontrol, wintitle, menucascade, shortcut</td>
 
         </tr>
 </table>
@@ -511,7 +504,7 @@ user interface</p>
           
           <thead align="left">
             <tr>
-              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6308e836">common structures</th>
+              <th class="cellrowborder" colspan="3" align="center" valign="top" id="d6273e822">common structures</th>
 
             </tr>
 
@@ -519,9 +512,9 @@ user interface</p>
 
           <tbody>
             <tr>
-              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6308e836 ">metadata</td>
+              <td class="cellrowborder" align="center" valign="top" width="49.03339191564148%" headers="d6273e822 ">metadata</td>
 
-              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6308e836 ">OASIS (CALS) table</td>
+              <td class="cellrowborder" colspan="2" align="center" valign="top" headers="d6273e822 ">OASIS (CALS) table</td>
 
             </tr>
 

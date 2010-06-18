@@ -41,12 +41,7 @@
 <xsl:output method="xml" encoding="UTF-8" indent="no" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"></xsl:output>
 
 
-<xsl:param name="DITAEXT" select="'.xml'"></xsl:param>
-
-<xsl:param name="filename"></xsl:param>
-<xsl:param name="filedir"></xsl:param>
-<xsl:param name="CURRENTFILE" select="concat($filedir, '/', substring-before($filename, '.'), '.dita')"></xsl:param>
-     
+<xsl:param name="DITAEXT" select="'.xml'"></xsl:param>    
      
 
 <xsl:template match="/">

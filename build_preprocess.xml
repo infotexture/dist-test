@@ -12,7 +12,7 @@
 
   
   <target name="clean-temp" unless="clean_temp" description="Clean temp directory">
-    <delete includeemptydirs="true">
+    <delete includeemptydirs="true" failonerror="no">
       <fileset dir="${dita.temp.dir}"></fileset>
     </delete>
   </target>
@@ -127,7 +127,7 @@
     <condition property="dita.preprocess.reloadstylesheet.conref" value="${dita.preprocess.reloadstylesheet}">
       <not><isset property="dita.preprocess.reloadstylesheet.conref"></isset></not>
     </condition>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${dita.temp.dir}" includesfile="${dita.temp.dir}${file.separator}${conreffile}" classpathref="dost.class.path" reloadstylesheet="${dita.preprocess.reloadstylesheet.conref}" style="${dita.script.dir}${file.separator}preprocess${file.separator}conref.xsl">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${dita.temp.dir}" includesfile="${dita.temp.dir}${file.separator}${conreffile}" classpathref="dost.class.path" reloadstylesheet="${dita.preprocess.reloadstylesheet.conref}" style="${dita.script.dir}${file.separator}preprocess${file.separator}conref.xsl" filenameparameter="file-being-processed">
       <mapper type="glob" from="*" to="*.cnrf"></mapper>
       <param name="DITAEXT" expression="${dita.ext}"></param>
       
@@ -171,6 +171,9 @@
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${dita.temp.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditamapfile}" extension=".ditamap.ref" classpathref="dost.class.path" reloadstylesheet="${dita.preprocess.reloadstylesheet.mapref}" style="${dita.script.dir}${file.separator}preprocess${file.separator}mapref.xsl">
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
       <param name="TRANSTYPE" expression="${transtype}"></param>
+      
+      <param name="FILEREF" expression="file:"></param>
+      
       
     </xslt>
     <move overwrite="true" todir="${dita.temp.dir}">

@@ -95,6 +95,8 @@
         <xs:sequence>
              <xs:group ref="glossterm"/>
              <xs:group ref="glossdef" />
+             <xs:group ref="prolog" />
+             <xs:group ref="glossBody" />
              <xs:group ref="related-links" minOccurs="0"/>
              <xs:group ref="glossentry-info-types" minOccurs="0" maxOccurs="unbounded"/>
          </xs:sequence>

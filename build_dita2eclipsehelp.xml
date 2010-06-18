@@ -76,6 +76,11 @@
           </not>
         </and>
       </condition>
+    	<condition property="args.eclipsehelp.indexsee" value="false">
+    	    <not>
+    	      <isset property="args.eclipsehelp.indexsee"></isset>
+    	    </not>
+    	</condition>
     </target>
 
     <target name="dita.map.eclipse.toc" unless="noMap" depends="dita.map.eclipse.plugin.init" if="old.transform" description="Build EclipseHelp TOC file">
@@ -100,11 +105,13 @@
     </target>
     
     <target name="dita.map.eclipse.index" unless="noMap" if="old.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
-        <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}${user.input.file};targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};${index.ext.param.encoding}"></pipeline>
+    	  <echo> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
+    	  <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}${user.input.file};targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};eclipse.indexsee=${args.eclipsehelp.indexsee}${index.ext.param.encoding}"></pipeline>
     </target>
     
     <target name="dita.out.map.eclipse.index" unless="noMap" if="inner.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
-        <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}index.xml;targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};${index.ext.param.encoding}"></pipeline>
+    	  <echo> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
+        <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}index.xml;targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};eclipse.indexsee=${args.eclipsehelp.indexsee};${index.ext.param.encoding}"></pipeline>
     </target>
 
     <target name="dita.map.eclipse.plugin" unless="noPlugin" depends="dita.map.eclipse.plugin.init" if="old.transform" description="Build Eclipsehelp plugin file">

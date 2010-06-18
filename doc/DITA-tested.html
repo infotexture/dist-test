@@ -10,9 +10,9 @@
 <meta name="abstract" content="See which tools and platforms have been used in testing the DITA processing system.">
 <meta name="description" content="See which tools and platforms have been used in testing the DITA processing system.">
 <meta name="DC.Relation" scheme="URI" content="DITA-readme.html">
+<meta name="DC.Relation" scheme="URI" content="EvaluateOT.html">
 <meta name="DC.Relation" scheme="URI" content="DITA-relnotes.html">
 <meta name="DC.Relation" scheme="URI" content="DITA-changes.html">
-<meta name="DC.Relation" scheme="URI" content="DITA-futures.html">
 <meta name="DC.Relation" scheme="URI" content="DITA-usingtransforms.html">
 <meta name="DC.Relation" scheme="URI" content="DITA-ant.html">
 <meta name="DC.Relation" scheme="URI" content="DITA-javacmd.html">
@@ -30,66 +30,67 @@
 <body id="testedplatformsandtools"><a name="testedplatformsandtools"><!-- --></a>
 
 
-  <h1 class="topictitle1">Tested platforms and tools</h1>
+<h1 class="topictitle1">Tested platforms and tools</h1>
 
-  
-  
-  <div><p>See which tools and platforms have been used in testing the DITA 
-    processing system.</p>
 
-    <p>The DITA processing system has been tested against the following 
-      platforms and tools:</p>
 
-    <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletableborder"><tr>
-        <td valign="top">Tested OS:</td>
+<div><p>See which tools and platforms have been used in testing
+the DITA      processing system.</p>
 
-        <td valign="top">Windows XP, SLES 10</td>
+<p>The DITA processing system has been tested against the following
+       platforms and tools:</p>
 
-      </tr>
+<table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletableborder"><tr>
+<td valign="top">Tested OS:</td>
+
+<td valign="top">Windows XP, SLES 10</td>
+
+</tr>
 <tr>
-        <td valign="top">Tested XSLT processor:</td>
+<td valign="top">Tested XSLT processor:</td>
 
-        <td valign="top">Xalan-J 2.6, Saxon 6.5<div class="note"><span class="notetitle">Note:</span> XSLT 2.0 standard is not supported yet, 
-          don't use XSLT 2.0 engines. For example: Saxon 8.x.</div>
+<td valign="top">Xalan-J 2.6, Saxon 6.5, Saxon 9<div class="note"><span class="notetitle">Note:</span> XSLT 2.0 standard is
+not officially supported yet, due to the reliance by some users on
+Xalan.</div>
 </td>
 
-      </tr>
+</tr>
 <tr>
-        <td valign="top">Tested JDK:</td>
+<td valign="top">Tested JDK:</td>
 
-        <td valign="top">IBM 1.5, SUN 1.5</td>
+<td valign="top">IBM 1.5, 1.6; SUN 1.5, 1.6</td>
 
-      </tr>
+</tr>
 <tr>
-        <td valign="top">Tested Ant:</td>
+<td valign="top">Tested Ant:</td>
 
-        <td valign="top">Ant 1.7.1</td>
+<td valign="top">Ant 1.7.1</td>
 
-      </tr>
+</tr>
 </table>
 
-  </div>
+</div>
 
 <div>
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is a reference implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, including: XHTML, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-readme.html" title="The DITA Open Toolkit is an implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, such as XHTML, PDF, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit</a></div>
 </div>
 <div class="relinfo relconcepts"><strong>Related concepts</strong><br>
-<div><a href="DITA-futures.html" title="Activity on the DITA Open Toolkit project will revolve around maintenance (bug fixes), enhancements (new function based on prioritized requests), demos and experimentation (sandbox activity), and community support (forums, etc.).">DITA futures</a></div>
-<div><a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
-<div><a href="DITA-javacmd.html" title="The DITA Open Toolkit release 1.0.2 or above provides a command line interface as an alternative for users with little knowledge of Ant to use the toolkit easily.">Building DITA output with Java command line</a></div>
+<div><a href="EvaluateOT.html" title="The most common scenario for first users of the DITA Open Toolkit is to evaluate how it functions. Previous versions of the Toolkit required a number of preliminary installation steps for components necessary both to run the base function and to show off additional output capabilities. With DITA-OT 1.4.2, three versions of the Toolkit are now available: the minimal package (updates core function only), standard package (minimal plus docs and demos), and a &#34;full easy install package&#34; that basically installs everything you need to enable quick and easy evaluation of the Toolkit. This topic deals with installing and using the full easy install package for the first time.">Evaluating the DITA Open Toolkit (Full Easy Install)</a></div>
+<div><a href="DITA-ant.html" title="Ant is an open tool that the DITA Open Toolkit uses to manage builds.">Building DITA output with Ant</a></div>
+<div><a href="DITA-javacmd.html" title="The DITA Open Toolkit provides a Java command line interface as an alternative for users with little knowledge of Ant. Most parameters available to the Ant builds are also available using the Java command line.">Building DITA output with Java command line</a></div>
 <div><a href="DITA-h2d.html">Migrating HTML to DITA</a></div>
 <div><a href="dita2word.html#dita2word">DITA to Word output transform</a></div>
 </div>
 <div class="relinfo relref"><strong>Related reference</strong><br>
-<div><a href="DITA-relnotes.html">DITA release notes</a></div>
+<div><a href="DITA-relnotes.html" title="This document contains the release notes for the 1.5 series of DITA Open Toolkit releases.">DITA Open Toolkit release notes</a></div>
 <div><a href="DITA-log.html">Problem determination and log analysis</a></div>
-<div><a href="DITA-limitations.html" title="Below are some known limitations categoried by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
+<div><a href="DITA-limitations.html" title="Below are some known limitations categorized by module within the current release of the DITA Open Toolkit.">Known Limitations</a></div>
 <div><a href="DITA-troubleshooting.html" title="This section is used for identifying problems when installing and executing the DITA Open Toolkit.">Troubleshooting</a></div>
 </div>
 <div class="relinfo"><strong>Related information</strong><br>
-<div><a href="DITA-changes.html" title="This document lists major changes and new features by release.">DITA release history</a></div>
-<div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent the Reference Implementation for processing the standard DITA specification as maintained by OASIS Open.">Using DITA transforms</a></div>
+<div><a href="DITA-changes.html" title="This document lists major changes and new features by release, going back to the beginning of the toolkit.">DITA complete release history</a></div>
+<div><a href="DITA-usingtransforms.html" title="The core transforms of the DITA Toolkit represent an implementation of all processing defined by OASIS in the DITA specification.">Using DITA transforms</a></div>
 </div>
 </div>
 

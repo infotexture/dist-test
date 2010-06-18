@@ -21,8 +21,8 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
-  	<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
-    	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+  	<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
+      <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
@@ -63,7 +63,7 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
     	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
@@ -113,7 +113,7 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>    
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="filename" filedirparameter="filedir">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
     	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
@@ -157,7 +157,7 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
     	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
@@ -223,7 +223,7 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
     	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
@@ -264,7 +264,7 @@
     </condition>
   	
   	<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>
-    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}">
+    <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
     	<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
       <param name="TRANSTYPE" expression="${transtype}"></param>
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>

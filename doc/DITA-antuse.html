@@ -7,8 +7,8 @@
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
 <meta name="DC.Type" content="reference">
 <meta name="DC.Title" content="Running Ant">
-<meta name="abstract" content="After setting up the Ant environment, you can build the DITA output by running ant command.">
-<meta name="description" content="After setting up the Ant environment, you can build the DITA output by running ant command.">
+<meta name="abstract" content="After setting up the Ant environment, you can build the DITA output by running the ant command.">
+<meta name="description" content="After setting up the Ant environment, you can build the DITA output by running the ant command.">
 <meta name="DC.Relation" scheme="URI" content="DITA-ant.html">
 <meta name="DC.Format" content="XHTML">
 <meta name="DC.Identifier" content="runant">
@@ -19,64 +19,67 @@
 <body id="runant"><a name="runant"><!-- --></a>
 
 
-  <h1 class="topictitle1">Running Ant</h1>
+<h1 class="topictitle1">Running Ant</h1>
 
-  
-  
-  <div><p>After setting up the Ant environment, you can build the DITA 
-    output by running <samp class="codeph">ant</samp> command. </p>
 
-    <div class="example">Here are some samples to explain how to use Ant to build sample 
-      output in the DITA directory. <div class="note"><span class="notetitle">Note:</span>  To run the Ant demo properly, you 
-      should switch to the <strong>DITA installation directory</strong> under the command 
-      prompt. </div>
-<ul> <li>You can build all demos in the DITA 
-      directory.<p>Input <samp class="codeph">ant all</samp></p>
-<p>The building process 
-      will create an <strong>/out/</strong> directory and puts the output files in 
-      subdirectories that parallel the source directory. </p>
+<div><p>After setting up the Ant environment, you can build the
+DITA      output by running the <samp class="codeph">ant</samp> command. </p>
+
+<div class="example">Here are some samples to explain how to use Ant to build
+sample        output in the DITA directory. <div class="note"><span class="notetitle">Note:</span>  To run the Ant
+demo properly, you        should switch to the <strong>DITA installation
+directory</strong> under the command        prompt. If you are using the
+"Full Easy Install" package, running the "startcmd" batch file in
+that directory will give you a prompt that is already set up for the
+following commands.</div>
+<ul>
+<li>You can build all demos in the DITA directory <p>Input <samp class="codeph">ant
+all -f build_demo.xml</samp></p>
+<p>The building process        will
+create an <strong>/out/</strong> directory and put the output files in     
+  subdirectories that parallel the source directory. </p>
 </li>
- <li>You can 
-      also rebuild specific part of output of the DITA sample files.<p>You need 
-      to remove part of the output first by specifying a 
-      "<samp class="codeph">clean</samp>" target, and then rebuild the output. For 
-      example: To rebuild FAQ demo, input</p>
-<p><samp class="codeph">ant 
-      clean.demo.faq</samp></p>
-<p><samp class="codeph">ant demo.faq</samp></p>
-<div class="note"><span class="notetitle">Note:</span> To 
-      find out the complete list of targets you can clean and build, check the 
-      <em>name</em> attributes for the target elements within the 
-      <em>build.xml</em> file. Or, input <samp class="codeph">ant -projecthelp</samp> for 
-      information.</div>
+
+<li>You can        also rebuild specific DITA sample files after running
+the full demo.<div class="p">First you need        to remove part of the output
+by specifying a        "<samp class="codeph">clean</samp>" target, and then rebuild
+the output. For        example: To rebuild FAQ demo, run the following
+two commands: <pre class="codeblock">ant clean.demo.faq -f build_demo.xml
+ant demo.faq -f build_demo.xml</pre>
+</div>
+<div class="note"><span class="notetitle">Note:</span> To find out the
+complete list of targets you can clean and build, check the <em>name</em> attributes
+for the target elements within the        <em>build_demo.xml</em> file.
+Or, input <samp class="codeph">ant -projecthelp -f build_demo.xml</samp> for
+a full list information.</div>
  </li>
- <li>You can also build assigned input to output 
-      in a default and easy way. <p>Input <samp class="codeph">ant</samp></p>
-<p>Ant will 
-      prompt you for the input and output, and you need to input the 
-      directories of input files and output with correctly upper or lower case. 
-      </p>
+
+<li>You can also build your own selections using a prompted build. <p>Input <samp class="codeph">ant
+-f build_demo.xml</samp></p>
+<p>Ant will prompt you for the input
+file, output directory, and transform type. Values on these parameters
+are case sensitive.</p>
 </li>
- </ul>
-<p>You can reuse the targets provided by the 
-      <em>conductor.xml</em> file in builds for your own DITA content by coping 
-      the<em> build.xml, conductor.xml, pretargets.xml, ditatargets.xml</em> and 
-      <em>catalog-ant.xml </em>files into a new directory and edit the 
-      <em>build.xml</em> to specify your DITA files. Refer to <a href="DITA-antscript.html" title="This topic lists detailed Ant tasks and script.">Ant tasks and 
-      tweaks</a> for more information of those functions.</p>
-<div class="note"><span class="notetitle">Note:</span> To 
-      troubleshoot problems in setting up Java, Ant, Saxon, or FOP, you will 
-      get better information from the communities for those components rather 
-      than the communities for the DITA. Of course, if you find issues relevant 
-      to the DITA XSLT scripts (or have ideas for improving them), you are 
-      encouraged to engage the DITA community.</div>
+
+</ul>
+<p>To set up your own reusable Ant builds, with access to the
+full range of DITA-OT parameters, start by using the samples provided
+in <span class="filepath">samples/ant_samples/</span>. That directory contains
+a sample Ant script for each common output format.</p>
+<div class="note"><span class="notetitle">Note:</span> To   
+    troubleshoot problems in setting up Java, Ant, Saxon, or FOP,
+you will        get better information from the communities for those
+components rather        than the communities for the DITA. Of course,
+if you find issues relevant        to the DITA XSLT scripts (or have
+ideas for improving them), you are        encouraged to engage the
+DITA community.</div>
  </div>
 
-  </div>
+</div>
 
 <div>
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-ant.html" title="Ant is an open tool that uses the DITA processes to make producing DITA output easier.">Building DITA output with Ant</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a href="DITA-ant.html" title="Ant is an open tool that the DITA Open Toolkit uses to manage builds.">Building DITA output with Ant</a></div>
 </div>
 </div>
 

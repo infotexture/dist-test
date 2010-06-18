@@ -9,6 +9,7 @@
   <import file="build_dita2eclipsecontent.xml"></import>
   <import file="build_dita2pdf.xml"></import>
   <import file="build_dita2wordrtf.xml"></import>
+  <import file="build_dita2odt.xml"></import>
   <import file="build_dita2docbook.xml"></import>
   <import file="build_dita2troff.xml"></import>
         
@@ -48,6 +49,9 @@
           </not>
           <not>
             <equals arg1="${transtype}" arg2="wordrtf" casesensitive="false"></equals>
+          </not>
+          <not>
+            <equals arg1="${transtype}" arg2="odt" casesensitive="false"></equals>
           </not>
           <not><equals arg1="${transtype}" arg2="tocjs" casesensitive="false"/></not><not><equals arg1="${transtype}" arg2="legacypdf" casesensitive="false"/></not><not><equals arg1="${transtype}" arg2="pdf2" casesensitive="false"/></not>
         </and>
@@ -109,14 +113,15 @@
     
 <xslt processor="trax" in="${input}" out="${output.file}" style="${dita.dir}/demo/tocjs/xsl/tocjs.xsl">
       
+<param name="contentwin" expression="${content.frame}" if="content.frame">
+</param>
+      
 <param name="ditaext" expression="${dita.extname}">
 </param>
       
 <param name="htmlext" expression="${out.ext}">
 </param>
       
-<xmlcatalog refid="dita.catalog">
-</xmlcatalog>
     
 </xslt>
   
