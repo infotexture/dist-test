@@ -1,7 +1,7 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1d><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1d><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
 <meta name="DC.Type" content="concept">
 <meta name="DC.Title" content="Installing the DITA Tookit full package distribution">
@@ -25,43 +25,43 @@
 <body id="installing_full_package"><a name="installing_full_package"><!-- --></a>
 
 
-	<h1 class="topictitle1">Installing the DITA Tookit full package distribution</h1>
+	<h1 class="title topictitle1">Installing the DITA Tookit full package distribution</h1>
 
 	
-	<div>
-		<div class="section"><h2 class="sectiontitle">Installing the full package distribution</h2>
+	<div class="body conbody">
+		<div class="section"><h2 class="title sectiontitle">Installing the full package distribution</h2>
 			
 			<div class="p">To install the full package:
-	<ul>
-					<li>Download the full package from <a href="http://sourceforge.net/projects/dita-ot" target="_blank">http://sourceforge.net/projects/dita-ot</a>.</li>
+	<ul class="ul">
+					<li class="li">Download the full package from <a class="xref" href="http://sourceforge.net/projects/dita-ot" target="_blank">http://sourceforge.net/projects/dita-ot</a>.</li>
 
-					<li>Unzip the package into the <span class="filepath">C:\ditaot</span> directory on Windows, or into a home directory on Linux.</li>
+					<li class="li">Unzip the package into the <span class="ph filepath">C:\ditaot</span> directory on Windows, or into a home directory on Linux.</li>
 
-					<li>On Windows, create a new shortcut for <span class="filepath">C:\ditaot\startcmd.bat</span> to be used to run DITA builds. On Linux execute the shell script <span class="filepath">startcmd.sh</span> before running a DITA build.</li>
+					<li class="li">On Windows, create a new shortcut for <span class="ph filepath">C:\ditaot\startcmd.bat</span> to be used to run DITA builds. On Linux execute the shell script <span class="ph filepath">startcmd.sh</span> before running a DITA build.</li>
 
 				</ul>
 
 			</div>
 
-			<div class="note"><span class="notetitle">Note:</span> You cannot run a DITA Toolkit build until you have installed the Java SDK.</div>
+			<div class="note note"><span class="notetitle">Note:</span> You cannot run a DITA Toolkit build until you have installed the Java SDK.</div>
 
-			<div class="note"><span class="notetitle">Note:</span> You may want to install other optional tools to complete your build environment.</div>
+			<div class="note note"><span class="notetitle">Note:</span> You may want to install other optional tools to complete your build environment.</div>
 
 		</div>
 
-		<div class="section"><h2 class="sectiontitle">Verifying the installation</h2>
+		<div class="section"><h2 class="title sectiontitle">Verifying the installation</h2>
 			
-			<p>Unzip or extract the "fullpackage" zip file to a convenient directory, such as your C: drive's root directory. The package will install a directory called <span class="filepath">dita-ot1.3.1</span> that contains not only the usual Toolkit materials but also all the run-time components needed to run the Toolkit in a basic evaluation mode.</p>
+			<p class="p">Unzip or extract the "fullpackage" zip file to a convenient directory, such as your C: drive's root directory. The package will install a directory called <span class="ph filepath">dita-ot1.3.1</span> that contains not only the usual Toolkit materials but also all the run-time components needed to run the Toolkit in a basic evaluation mode.</p>
 
-			<p>Browse to this new directory and double-click on the <span class="filepath">startcmd.bat</span> file in that directory. A new command shell window will open up, with the environment variables already set to enable the Toolkit to run within that shell.</p>
+			<p class="p">Browse to this new directory and double-click on the <span class="ph filepath">startcmd.bat</span> file in that directory. A new command shell window will open up, with the environment variables already set to enable the Toolkit to run within that shell.</p>
 
-			<p>At the command prompt (usually <span class="filepath">C:\dita-ot1.3.1</span> for this version), type <kbd class="userinput">ant samples.web -f build_demo.xml</kbd> After a series of processing messages, there should be a new <span class="filepath">\out</span> directory in the <span class="filepath">dita-ot1.3.1</span> directory that contains a folder with the resulting HTML output in it. </p>
+			<p class="p">At the command prompt (usually <span class="ph filepath">C:\dita-ot1.3.1</span> for this version), type <kbd class="ph userinput">ant samples.web -f build_demo.xml</kbd> After a series of processing messages, there should be a new <span class="ph filepath">\out</span> directory in the <span class="ph filepath">dita-ot1.3.1</span> directory that contains a folder with the resulting HTML output in it. </p>
 
-			<p>Now try the full set of transforms from a single command: <kbd class="userinput">ant all -f build_demo.xml</kbd> This command will process every DITA example in the Toolkit into each of the supported output types. After a much longer flurry of messages stops, the <span class="filepath">\out directory</span> should have a number of folders in it, each with several forms of deliverable produced by the Toolkit demos. If you have the Microsoft HTMLHelp Workshop or the JavaHelp toolset installed, you will even get ready-to use <span class="filepath">.chm</span> and <span class="filepath">.javahelp</span> output files. By comparing the outputs with the various source materials in the distribution, you can get an idea about how the processing works. See <a href="../processing/processing.html">Processing (building) and publishing DITA documents</a> for more information on processing.</p>
+			<p class="p">Now try the full set of transforms from a single command: <kbd class="ph userinput">ant all -f build_demo.xml</kbd> This command will process every DITA example in the Toolkit into each of the supported output types. After a much longer flurry of messages stops, the <span class="ph filepath">\out directory</span> should have a number of folders in it, each with several forms of deliverable produced by the Toolkit demos. If you have the Microsoft HTMLHelp Workshop or the JavaHelp toolset installed, you will even get ready-to use <span class="ph filepath">.chm</span> and <span class="ph filepath">.javahelp</span> output files. By comparing the outputs with the various source materials in the distribution, you can get an idea about how the processing works. See <a class="xref" href="../processing/processing.html">Processing (building) and publishing DITA documents</a> for more information on processing.</p>
 
 		</div>
 
-		<div class="section"><h2 class="sectiontitle">Demo targets</h2>
+		<div class="section"><h2 class="title sectiontitle">Demo targets</h2>
 			
 			<pre class="pre">
  all                             Build all output
@@ -108,23 +108,23 @@
    samples.web                     Build the samples for the web
    </pre>
 
-			<p>If you do not specify a target for <span class="filepath">build_demo.xml</span>, the default target is <span class="filepath">prompt</span>. </p>
+			<p class="p">If you do not specify a target for <span class="ph filepath">build_demo.xml</span>, the default target is <span class="ph filepath">prompt</span>. </p>
 
-			<p>You can also try your hand at modifying some of the sample scripts in the <span class="filepath">ant</span> directory. These represent the kind of driver files that you would create for your own projects. You can easily adapt these to process your own test DITA files. Run the other ant samples using this example: </p>
+			<p class="p">You can also try your hand at modifying some of the sample scripts in the <span class="ph filepath">ant</span> directory. These represent the kind of driver files that you would create for your own projects. You can easily adapt these to process your own test DITA files. Run the other ant samples using this example: </p>
 
 			<pre class="pre">C:\dita-ot1.3.1&gt;ant -f ant/sample_xhtml.xml</pre>
 
-			<p>This is basically the same as running <kbd class="userinput">ant samples.web -f build_demo.xml</kbd>, but intended for you to modify. </p>
+			<p class="p">This is basically the same as running <kbd class="ph userinput">ant samples.web -f build_demo.xml</kbd>, but intended for you to modify. </p>
 
-			<p>You will find the output for this exercise in the <span class="filepath">ant</span> directory itself. You can add parameters to the <span class="filepath">sample_xhtml.xml</span> file to change where your outputs end up, and also to modify the build process in other ways. See <a href="../processing/antparms.html">Ant processing parameters</a> to learn more about processing options. </p>
+			<p class="p">You will find the output for this exercise in the <span class="ph filepath">ant</span> directory itself. You can add parameters to the <span class="ph filepath">sample_xhtml.xml</span> file to change where your outputs end up, and also to modify the build process in other ways. See <a class="xref" href="../processing/antparms.html">Ant processing parameters</a> to learn more about processing options. </p>
 
 		</div>
 
 	</div>
 
-<div>
+<div class="related-links">
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a href="installing.html">Installing and upgrading DITA Open Toolkit</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="installing.html">Installing and upgrading DITA Open Toolkit</a></div>
 </div>
 </div>
 

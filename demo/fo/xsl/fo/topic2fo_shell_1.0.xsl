@@ -30,6 +30,7 @@
     <xsl:import href="ui-domain.xsl"></xsl:import>
 
     <xsl:import href="static-content.xsl"></xsl:import>
+    <xsl:import href="glossary.xsl"></xsl:import>
 
     
 
@@ -44,6 +45,7 @@
     <xsl:param name="artworkPrefix"></xsl:param>
     <xsl:param name="fileProtocolPrefix"></xsl:param>
     <xsl:param name="publishRequiredCleanup"></xsl:param>
+    <xsl:param name="DRAFT"></xsl:param>
     <xsl:param name="disableRelatedLinks" select="'yes'"></xsl:param>
     <xsl:param name="pdfFormatter" select="'fop'"></xsl:param>
 

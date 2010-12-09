@@ -8,9 +8,10 @@
   
   <xsl:import href="common/output-message.xsl"/>
   
-  <xsl:param name="version">1.0.0</xsl:param>
+  <xsl:param name="version">0.0.0</xsl:param>
   <xsl:param name="provider">DITA</xsl:param>
   <xsl:param name="TOCROOT">toc</xsl:param>
+  <xsl:param name="osgi.symbolic.name" select="''"/>
   
   <xsl:param name="fragment.country" select="''"/>
   <xsl:param name="fragment.lang"  select="''"/>  
@@ -66,8 +67,8 @@
       <xsl:attribute name="name">
         <xsl:choose>
           <xsl:when test="*[contains(@class, ' topic/title ')]">
-            <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>
-          </xsl:when>
+            <xsl:apply-templates select="*[contains(@class,' topic/title ')]" mode="text-only"/>
+      </xsl:when>
           <xsl:when test="@title">
             <xsl:value-of select="@title"/>
           </xsl:when>
@@ -191,10 +192,27 @@
       <xsl:choose>
         <xsl:when test="@title"><xsl:attribute name="name">%name</xsl:attribute>
         </xsl:when>
+        <xsl:when test="*[contains(@class, ' topic/title ')]">
+            <xsl:apply-templates select="*[contains(@class,' topic/title ')]" mode="text-only"/>
+        </xsl:when>
         <xsl:otherwise><xsl:attribute name="name">Sample Title</xsl:attribute>
         </xsl:otherwise>
       </xsl:choose>
       <xsl:choose>
+        <xsl:when test="$osgi.symbolic.name!=''">
+        <xsl:attribute name="plugin-id"><xsl:value-of select="$osgi.symbolic.name"/></xsl:attribute>
+          <xsl:if test="$fragment.lang!=''">
+            <xsl:choose>
+              <xsl:when test="$fragment.country!=''">
+                <xsl:attribute name="id"><xsl:value-of select="$osgi.symbolic.name"/>.<xsl:value-of select="$fragment.lang"/>.<xsl:value-of select="$fragment.country"/></xsl:attribute>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:attribute name="id"><xsl:value-of select="$osgi.symbolic.name"/>.<xsl:value-of select="$fragment.lang"/></xsl:attribute>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+        
+        </xsl:when>
         <xsl:when test="@id">
           <xsl:attribute name="plugin-id"><xsl:value-of select="@id"/></xsl:attribute>
           <xsl:if test="$fragment.lang!=''">
@@ -243,6 +261,9 @@
       <xsl:when test="@title">
         <xsl:text>name=</xsl:text><xsl:value-of select="@title"/>
       </xsl:when>
+      <xsl:when test="*[contains(@class, ' topic/title ')]">
+        <xsl:text>name=</xsl:text><xsl:apply-templates select="*[contains(@class,' topic/title ')]" mode="text-only"/>
+      </xsl:when>
       <xsl:otherwise>
         <xsl:text>name=Sample Title</xsl:text>
       </xsl:otherwise>
@@ -264,6 +285,9 @@
       <xsl:when test="$plugin='true'">
         <xsl:text>Eclipse-LazyStart: true</xsl:text><xsl:value-of select="$newline"/>
         <xsl:choose>
+          <xsl:when test="$osgi.symbolic.name!=''">
+          <xsl:text>Bundle-SymbolicName: </xsl:text><xsl:value-of select="$osgi.symbolic.name"/>;<xsl:text> singleton:=true</xsl:text><xsl:value-of select="$newline"/>
+          </xsl:when>
           <xsl:when test="@id">
             <xsl:text>Bundle-SymbolicName: </xsl:text><xsl:value-of select="@id"/>;<xsl:text> singleton:=true</xsl:text><xsl:value-of select="$newline"/>
           </xsl:when>

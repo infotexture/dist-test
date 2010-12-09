@@ -119,6 +119,7 @@
             <param name="TOCROOT" expression="${args.eclipsehelp.toc}"></param>
             <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
             <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+        	  <param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
         	  <outputproperty value="yes" name="indent"></outputproperty>
         	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>  
         </xslt>
@@ -129,6 +130,7 @@
             <param name="TOCROOT" expression="${args.eclipsehelp.toc}"></param>
             <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
             <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+        	  <param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
         	  <outputproperty value="yes" name="indent"></outputproperty>
         	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>  
         </xslt>
@@ -142,6 +144,7 @@
     <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
       <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+    	<param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
       <param name="plugin" expression="${eclipse.plugin}"></param>
       <param name="fragment.country" expression="${args.eclipsehelp.country}" if="eclipse.fragment.country"></param>
       <param name="fragment.lang" expression="${args.eclipsehelp.language}" if="args.eclipsehelp.language"></param>
@@ -154,6 +157,7 @@
     <xslt processor="trax" in="${dita.temp.dir}${file.separator}${user.input.file}" out="${dita.map.output.dir}${file.separator}META-INF${file.separator}MANIFEST.MF" classpathref="dost.class.path" style="${dita.script.dir}${file.separator}map2plugin.xsl">
       <param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
       <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+    	<param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
       <param name="plugin" expression="${eclipse.plugin}"></param>
       <param name="fragment.country" expression="${args.eclipsehelp.country}" if="eclipse.fragment.country"></param>
       <param name="fragment.lang" expression="${args.eclipsehelp.language}" if="args.eclipsehelp.language"></param>
@@ -217,7 +221,7 @@
       	<exclude name="plugincustomization.ini"></exclude>
       </fileset>
     </move>
-  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"></move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties" failonerror="no"></move>
 
   	
   </target>
@@ -240,7 +244,7 @@
       	<exclude name="plugincustomization.ini"></exclude>
       </fileset>
     </move>
-  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties"></move>
+  	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties" failonerror="no"></move>
   </target>
   
   
