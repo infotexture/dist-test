@@ -1,36 +1,64 @@
-<project name="ditaot-preprocess" basedir=".">
+<?xml version="1.0" encoding="utf-8"?><!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="ditaot-preprocess" basedir=".">
 
-  
+  <!-- Set to "true" if you get out-of-memory errors during preprocess
+       while processing very large (thousands of files) document sets. -->
   <condition property="dita.preprocess.reloadstylesheet" value="false">
     <not><isset property="dita.preprocess.reloadstylesheet"></isset></not>
   </condition>
 
   <target name="preprocess" depends="start-preprocess,gen-list,debug-filter,copy-files,conrefpush,conref,move-meta-entries,keyref,coderef,mapref,mappull,chunk,maplink,move-links,topicpull" description="Preprocessing ended"></target>
 
-  
+  <!-- preprocess modules begin -->
   <target name="start-preprocess" description="Preprocessing started"></target>
 
-  
+  <!-- clean-temp
+      Remove anything in the ${dita.temp.dir} directory before starting. -->
   <target name="clean-temp" unless="clean_temp" description="Clean temp directory">
     <delete includeemptydirs="true" failonerror="no">
       <fileset dir="${dita.temp.dir}"></fileset>
     </delete>
   </target>
 
-  
+  <!-- gen-list
+      Create the manifest files listing which files are referenced by the input file (even indirectly). -->
   <target name="gen-list" depends="gen-list-without-flagging,gen-list-with-flagging" unless="preprocess.gen-list.skip" description="Generate file list">
   </target>
 
   <target name="gen-list-without-flagging" depends="gen-list-flag-check" unless="preprocess.gen-list-without-flagging.skip">
-    <pipeline message="Generate list." module="GenMapAndTopicList" basedir="${basedir}" inputmap="${args.input}" tempdir="${dita.temp.dir}" extparam="ditadir=${dita.dir};validate=${validate};generatecopyouter=${generate.copy.outer};outercontrol=${outer.control};onlytopicinmap=${onlytopic.in.map};outputdir=${output.dir};transtype=${transtype};gramcache=${args.grammar.cache};setsystemid=${args.xml.systemid.set}"></pipeline>
+    <pipeline message="Generate list." module="GenMapAndTopicList" basedir="${basedir}" inputmap="${args.input}" tempdir="${dita.temp.dir}">
+      <param name="ditadir" location="${dita.dir}"></param>
+      <param name="validate" value="${validate}"></param>
+      <param name="generatecopyouter" value="${generate.copy.outer}"></param>
+      <param name="outercontrol" value="${outer.control}"></param>
+      <param name="onlytopicinmap" value="${onlytopic.in.map}"></param>
+      <param name="outputdir" location="${output.dir}"></param>
+      <param name="transtype" value="${transtype}"></param>
+      <param name="gramcache" value="${args.grammar.cache}"></param>
+      <param name="setsystemid" value="${args.xml.systemid.set}"></param>
+    </pipeline>
   </target>
 
   <target name="gen-list-with-flagging" depends="gen-list-flag-check" unless="preprocess.gen-list-with-flagging.skip">
-    <pipeline message="Generate list." module="GenMapAndTopicList" basedir="${basedir}" inputmap="${args.input}" tempdir="${dita.temp.dir}" extparam="ditadir=${dita.dir};ditaval=${dita.input.valfile};validate=${validate};generatecopyouter=${generate.copy.outer};outercontrol=${outer.control};onlytopicinmap=${onlytopic.in.map};outputdir=${output.dir};transtype=${transtype};gramcache=${args.grammar.cache};setsystemid=${args.xml.systemid.set}"></pipeline>
+    <pipeline message="Generate list." module="GenMapAndTopicList" basedir="${basedir}" inputmap="${args.input}" tempdir="${dita.temp.dir}">
+      <param name="ditadir" location="${dita.dir}"></param>
+      <param name="ditaval" value="${dita.input.valfile}"></param>
+      <param name="validate" value="${validate}"></param>
+      <param name="generatecopyouter" value="${generate.copy.outer}"></param>
+      <param name="outercontrol" value="${outer.control}"></param>
+      <param name="onlytopicinmap" value="${onlytopic.in.map}"></param>
+      <param name="outputdir" location="${output.dir}"></param>
+      <param name="transtype" value="${transtype}"></param>
+      <param name="gramcache" value="${args.grammar.cache}"></param>
+      <param name="setsystemid" value="${args.xml.systemid.set}"></param>
+    </pipeline>
   </target>
 
   <target name="gen-list-flag-check">
-    
+    <!-- The apparent double-negative logic of "unless skipped"
+        is so that plugins extending depend.preprocess.gen-list.pre
+        can skip all gen-list processing if they choose to re-implement it themselves. -->
     <condition property="preprocess.gen-list-without-flagging.skip">
       <or>
         <isset property="preprocess.gen-list.skip"></isset>
@@ -45,9 +73,12 @@
     </condition>
   </target>
 
-  
+  <!-- debug-filter
+      Copy input files to ${dita.temp.dir} tree.
+      While copying, populate default attributes like @class,
+      add @xtrf and @xtrc and filter out elements according to valfile, if any. -->
   <target name="debug-filter" depends="gen-list,debug,debug-and-filter" unless="preprocess.debug-filter.skip" description="Debug and filter input files">
-    
+    <!--<property file="${dita.temp.dir}${file.separator}dita.list" />-->
     <xmlpropertyreader file="${dita.temp.dir}${file.separator}dita.xml.properties"></xmlpropertyreader>
     <dirname property="dita.map.output.dir" file="${output.dir}${file.separator}${user.input.file}"></dirname>
     <condition property="noConref">
@@ -56,7 +87,11 @@
     <condition property="noMap">
       <equals arg1="${fullditamaplist}" arg2=""></equals>
     </condition>
-  	
+  	<!--
+    <condition property="noTopic">
+      <equals arg1="${fullditatopiclist}" arg2="" />
+    </condition>
+    -->
     <condition property="noImagelist">
       <equals arg1="${imagelist}" arg2=""></equals>
     </condition>
@@ -75,15 +110,30 @@
   </target>
 
   <target name="debug" depends="debug-filter-flag-check" unless="preprocess.debug.skip" description="Debug input files">
-    <pipeline message="Debug and filtering." module="DebugAndFilter" basedir="${basedir}" tempdir="${dita.temp.dir}" extparam="ditaext=${dita.extname};ditadir=${dita.dir};validate=${validate};transtype=${transtype};setsystemid=${args.xml.systemid.set}"></pipeline>
+    <pipeline message="Debug and filtering." module="DebugAndFilter" basedir="${basedir}" tempdir="${dita.temp.dir}">
+      <param name="ditaext" value="${dita.extname}"></param>
+      <param name="ditadir" location="${dita.dir}"></param>
+      <param name="validate" value="${validate}"></param>
+      <param name="transtype" value="${transtype}"></param>
+      <param name="setsystemid" value="${args.xml.systemid.set}"></param>
+    </pipeline>
   </target>
 
   <target name="debug-and-filter" depends="debug-filter-flag-check" unless="preprocess.debug-and-filter.skip" description="Debug and filter input files">
-    <pipeline message="Debug and filtering." module="DebugAndFilter" basedir="${basedir}" tempdir="${dita.temp.dir}" extparam="ditaval=${dita.input.valfile};ditaext=${dita.extname};ditadir=${dita.dir};validate=${validate};transtype=${transtype};setsystemid=${args.xml.systemid.set}"></pipeline>
+    <pipeline message="Debug and filtering." module="DebugAndFilter" basedir="${basedir}" tempdir="${dita.temp.dir}">
+      <param name="ditaval" value="${dita.input.valfile}"></param>
+      <param name="ditaext" value="${dita.extname}"></param>
+      <param name="ditadir" location="${dita.dir}"></param>
+      <param name="validate" value="${validate}"></param>
+      <param name="transtype" value="${transtype}"></param>
+      <param name="setsystemid" value="${args.xml.systemid.set}"></param>
+    </pipeline>
   </target>
 
   <target name="debug-filter-flag-check">
-    
+    <!-- The apparent double-negative logic of "unless skipped"
+      is so that plugins extending depend.preprocess.debug-filter.pre
+      can skip all debug-filter processing if they choose to re-implement it themselves. -->
     <condition property="preprocess.debug.skip">
       <or>
         <isset property="preprocess.debug-filter.skip"></isset>
@@ -98,7 +148,8 @@
     </condition>
   </target>
   
-  
+  <!-- conref push
+      Push information to the specified target -->
   <target name="conrefpush" depends="debug-filter,conrefpush-check" unless="preprocess.conrefpush.skip" description="Resolve conref push">
     <pipeline message="Resolve conref push." module="ConrefPush" basedir="${basedir}" tempdir="${dita.temp.dir}"></pipeline>     
   </target>
@@ -109,7 +160,8 @@
     </condition>
   </target>
   
-  
+  <!-- move-meta-entries
+      Push information from <topicmeta> in the map into the corresponding topics. -->
   <target name="move-meta-entries" depends="debug-filter,move-meta-entries-check" unless="preprocess.move-meta-entries.skip" description="Move metadata entries">
     <pipeline message="Move metadata entries." module="MoveMeta" basedir="${basedir}" inputmap="${user.input.file}" tempdir="${dita.temp.dir}"></pipeline>
   </target>
@@ -120,7 +172,8 @@
     </condition>
   </target>
   
-  
+  <!-- conref
+      Pull elements referenced by conref into their correct place. -->
   <target name="conref" depends="debug-filter,conrefpush,conref-check" unless="preprocess.conref.skip" description="Resolve conref in input files">
     <condition property="dita.preprocess.reloadstylesheet.conref" value="${dita.preprocess.reloadstylesheet}">
       <not><isset property="dita.preprocess.reloadstylesheet.conref"></isset></not>
@@ -128,11 +181,11 @@
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${dita.temp.dir}" includesfile="${dita.temp.dir}${file.separator}${conreffile}" classpathref="dost.class.path" reloadstylesheet="${dita.preprocess.reloadstylesheet.conref}" style="${dita.script.dir}${file.separator}preprocess${file.separator}conref.xsl" filenameparameter="file-being-processed">
       <mapper type="glob" from="*" to="*.cnrf"></mapper>
       <param name="DITAEXT" expression="${dita.ext}"></param>
-      
+      <!-- added by William on 2009-06-26 for req #12014 start -->
       <param name="BASEDIR" expression="${basedir}"></param>
       <param name="TEMPDIR" expression="${dita.temp.dir}"></param>
       <param name="TRANSTYPE" expression="${transtype}"></param>
-      
+      <!-- added by William on 2009-06-26 for req #12014 end -->
       
     </xslt>
     <move todir="${dita.temp.dir}">
@@ -147,7 +200,7 @@
     </condition>
   </target>
   
-  
+  <!-- coderef -->
   <target name="coderef" depends="debug-filter,keyref,coderef-check" unless="preprocess.coderef.skip" description="Resolve coderef in input files">
     
     <pipeline message="Resolve coderef." module="Coderef" basedir="${basedir}" tempdir="${dita.temp.dir}"></pipeline>
@@ -160,7 +213,9 @@
     </condition>
   </target>
   
-  
+  <!-- mapref
+      Produce a logical super-map from the map references
+      (topicref with format="ditamap") in the input map. -->
   <target name="mapref" depends="coderef,mapref-check" unless="preprocess.mapref.skip" description="Resolve mapref in ditamap">
     <condition property="dita.preprocess.reloadstylesheet.mapref" value="${dita.preprocess.reloadstylesheet}">
       <not><isset property="dita.preprocess.reloadstylesheet.mapref"></isset></not>
@@ -169,9 +224,9 @@
     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${dita.temp.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditamapfile}" extension=".ditamap.ref" classpathref="dost.class.path" reloadstylesheet="${dita.preprocess.reloadstylesheet.mapref}" style="${dita.script.dir}${file.separator}preprocess${file.separator}mapref.xsl">
       <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
       <param name="TRANSTYPE" expression="${transtype}"></param>
-      
+      <!--Added by William on 2010-04-14 for bug:2982485 start -->
       <param name="FILEREF" expression="file:"></param>
-      
+      <!--Added by William on 2010-04-14 for bug:2982485 end -->
       
     </xslt>
     <move overwrite="true" todir="${dita.temp.dir}">
@@ -186,9 +241,12 @@
     </condition>
   </target>
   
-  
+  <!-- keyref
+       Resolve keyref using key definition in ditamap-->
   <target name="keyref" depends="move-meta-entries,keyref-check" unless="preprocess.keyref.skip" description="Resolve keyref">
-    <pipeline message="Resolve keyref." module="Keyref" basedir="${basedir}" tempdir="${dita.temp.dir}" extparam="ditaext=${dita.extname}"></pipeline>     
+    <pipeline message="Resolve keyref." module="Keyref" basedir="${basedir}" tempdir="${dita.temp.dir}">
+      <param name="ditaext" value="${dita.extname}"></param>
+    </pipeline>
   </target>
   
   <target name="keyref-check">
@@ -197,7 +255,8 @@
     </condition>
   </target>
     
-  
+  <!-- mappull
+      Pull metadata (such as navtitle) into the map from the referenced topics. -->
   <target name="mappull" depends="mapref,mappull-check" unless="preprocess.mappull.skip" description="Pull the navtitle and topicmeta from topics to ditamap">
     <dirname property="mappull.workdir" file="${dita.temp.dir}${file.separator}${user.input.file}"></dirname>
     <condition property="dita.preprocess.reloadstylesheet.mappull" value="${dita.preprocess.reloadstylesheet}">
@@ -220,9 +279,13 @@
     </condition>
   </target>
   
-  
+  <!-- chunk
+      Assemble virtual supertopics based on chunk attribute in map. -->
   <target name="chunk" depends="mappull,chunk-check" unless="preprocess.chunk.skip" description="Process chunks">
-    <pipeline message="Process chunks." module="Chunk" basedir="${basedir}" inputmap="${user.input.file}" tempdir="${dita.temp.dir}" extparam="ditaext=${dita.ext};transtype=${transtype}"></pipeline>
+    <pipeline message="Process chunks." module="Chunk" basedir="${basedir}" inputmap="${user.input.file}" tempdir="${dita.temp.dir}">
+      <param name="ditaext" value="${dita.ext}"></param>
+      <param name="transtype" value="${transtype}"></param>
+    </pipeline>
   	
   	<xmlpropertyreader file="${dita.temp.dir}${file.separator}dita.xml.properties"></xmlpropertyreader>
   	<condition property="noTopic">
@@ -236,7 +299,9 @@
     </condition>
   </target>
   
-  
+  <!-- maplink
+    Produce maplinks.unordered file, containing all related links
+    implied by the map (family and reltables). -->
   <target name="maplink" depends="chunk,maplink-check" unless="preprocess.maplink.skip" description="Find and generate related link information">
     <dirname property="maplink.workdir" file="${dita.temp.dir}/${user.input.file}"></dirname>
     <condition property="dita.preprocess.reloadstylesheet.maplink" value="${dita.preprocess.reloadstylesheet}">
@@ -255,9 +320,13 @@
     </condition>
   </target>
   
-  
+  <!-- move-links
+      Push links from maplinks.unordered file into
+      <related-links> sections of the corresponding topics. -->
   <target name="move-links" depends="maplink,move-links-check" unless="preprocess.move-links.skip" description="Move the related link information to topics">
-    <pipeline message="Move links." module="MoveLinks" extparam="maplinks=${maplink.workdir}${file.separator}maplinks.unordered" inputmap="${user.input.file}" tempdir="${dita.temp.dir}"></pipeline>
+    <pipeline message="Move links." module="MoveLinks" inputmap="${user.input.file}" tempdir="${dita.temp.dir}">
+      <param name="maplinks" location="${maplink.workdir}${file.separator}maplinks.unordered"></param>
+    </pipeline>
   </target>
 
   <target name="move-links-check">
@@ -266,7 +335,8 @@
     </condition>
   </target>
   
-  
+  <!-- topicpull
+      Populate link text for links within topics (xref, link). -->
   <target name="topicpull" depends="debug-filter,topicpull-check" unless="preprocess.topicpull.skip" description="Pull metadata for link and xref element">
     <condition property="dita.preprocess.reloadstylesheet.topicpull" value="${dita.preprocess.reloadstylesheet}">
       <not><isset property="dita.preprocess.reloadstylesheet.topicpull"></isset></not>
@@ -292,7 +362,8 @@
     </condition>
   </target>
   
-  
+  <!-- copy-files
+      Copy files to the output directory. -->
   <target name="copy-files" depends="debug-filter,copy-image,copy-html,copy-flag,copy-subsidiary,copy-generated-files" unless="preprocess.copy-files.skip"></target>
 
   <target name="copy-image" depends="copy-image-check" unless="preprocess.copy-image.skip" description="Copy image files">
@@ -363,7 +434,7 @@
     </copy>
   </target>
 
-  
+  <!-- The following targets are not really part of the preprocess pipeline. -->
   
   <target name="copy-revflag" if="dita.input.valfile">
     <copy todir="${output.dir}">
@@ -380,11 +451,11 @@
     </condition>
     <property name="user.csspath.real" value="${output.dir}${file.separator}${user.csspath}"></property>
     <mkdir dir="${user.csspath.real}"></mkdir>    
-    
+    <!-- Always copy system default css files -->
     <copy todir="${user.csspath.real}">
       <fileset dir="${dita.resource.dir}" includes="*.css"></fileset>
     </copy>    
-    
+    <!-- Copy user specify css file when required -->
     <antcall target="copy-css-user"></antcall>
   </target>
 
@@ -392,7 +463,7 @@
     <copy file="${args.css.real}" todir="${user.csspath.real}"></copy>
   </target>
   
-  
+  <!-- depecrated: keep for back-compatibility -->
   <target name="move-index-entries" depends="move-meta-entries"></target>  
   
 </project>

@@ -1,5 +1,9 @@
-<messages>
-  
+<?xml version="1.0" encoding="utf-8"?><!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.--><!-- (c) Copyright IBM Corp. 2005, 2006 All Rights Reserved. --><!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.--><!-- (c) Copyright IBM Corp. 2005 All Rights Reserved. --><messages>
+  <!-- Begin of Ant Messages -->
   <message id="DOTA001F" type="FATAL">
     <reason>Invalid transformation type.</reason>
     <response>Please provide the correct transormation types using Ant parameter &apos;transtype&apos;:  xhtml, eclipsehelp, eclipsecontent, javahelp, htmlhelp, pdf, pdf2, troff, docbook, wordrtf, odt.</response>
@@ -45,13 +49,13 @@
     <response>Please provide the existing file using Ant parameter &apos;args.hdf&apos;, and make sure there is no prefix of  &quot;file:&quot; in the &apos;args.hdf&apos;.</response>
   </message>
   
-  
+  <!--Added by William on 2009-11-23 for bug:2893745 -->
   <message id="DOTA010E" type="ERROR">
     <reason>The FOP Plugin cannot be found in the default location.</reason>
     <response>Please install the required plugins into the dir demo/fo/fop or configure the build file to support your local configuration.</response>
   </message>
   
-  
+  <!-- Begin of Java Messages -->
   <message id="DOTJ001F" type="FATAL">
     <reason>Input argument error: no &apos;:&apos; found in the parameter &apos;%1&apos;.</reason>
     <response>Please add a colon character &apos;:&apos; between the name and value of the parameter &apos;%1&apos;. For detailed information, please refer to User Guide.</response>
@@ -242,7 +246,7 @@
     <response>Please make sure the input is normalized DITA with class attributes included, otherwise it will not be processed correctly.</response>
   </message>
   
-  <message id="DOTJ038W" type="ERROR">
+  <message id="DOTJ038E" type="ERROR">
     <reason>The tag &quot;%1&quot; is specialized from non-predefined metadata.</reason>
     <response>Please make sure that tag &quot;%1&quot; is specialized from some predefinded metadata tag.</response>
   </message>
@@ -307,9 +311,9 @@
     <response>Please make sure that the appropriate index entry is created or manually update the index.xml file.</response>
   </message>
   
-  
+  <!-- End of Java Messages -->
     
-    
+  <!-- Begin of XSL Messages -->  
   <message id="DOTX001W" type="WARN">
     <reason>No string named &apos;%1&apos; was found for language &apos;%2&apos;. Using the default language &apos;%3&apos;.</reason>
     <response>Add the mapping between default language and specific language for the string &apos;%1&apos;.</response>
@@ -615,22 +619,22 @@
     <response>Correct the ID &apos;%1&apos; and make sure that it references a topic level element.</response>
   </message>
   
-  
+  <!-- added by William on 2009-08-20 for #12008 start-->
   <message id="DOTX062I" type="INFO">
     <reason>It appears that this document uses constraints, but the conref processor cannot validate that the target of a conref is valid.</reason>
     <response>To enable constraint checking, please upgrade to an XSLT 2.0 processor.</response>
   </message>
+  <!-- added by William on 2009-08-20 for #12008 end-->
   
-  
-  
+  <!-- added by William on 2009-10-26 for bug:1880097 start -->
   <message id="DOTX063W" type="WARN">
     <reason>It appears that dita file &apos;%1&apos; is not referenced by a topicref tag in the ditamap file.</reason>
     <response>Please make sure that &apos;%1&apos; is referenced in the ditamap file.</response>
   </message>
+  <!-- added by William on 2009-10-26 for bug:1880097 end -->
+  <!-- End of XSL Messages --> 
   
-   
-  
-  
+  <!-- added by Alan on Date:2009-11-02 for Work Item:#1590 start -->
   <message id="DOTX064W" type="WARN">
     <reason>The copy-to attribute [copy-to=&quot;%1&quot;] uses the name of a file that already exists, so this attribute is ignored.</reason>
     <response>Please make sure copy-to attribute uses a file name that does not exist in your project.</response>
@@ -641,15 +645,15 @@
     <response>Please make sure that this attribute value is unique within your project.</response>
   </message>
   
+  <!-- added by Alan on Date:2009-11-02 for Work Item:#1590 end   -->
   
-  
-  
+  <!-- Added by William on 2010-06-21 for bug:3012392 start  -->
   <message id="DOTA066F" type="FATAL">
     <reason>Can&apos;t find the user specified stylesheet &apos;%1&apos;.</reason>
     <response>Please provide the correct sytlesheet using Ant parameter &apos;args.xsl.pdf&apos;.</response>
   </message>
+  <!-- Added by William on 2010-06-21 for bug:3012392 start -->
   
-  
-  
+  <!-- Add any messages defined by plugins. -->
   
 </messages>

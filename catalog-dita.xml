@@ -1,7 +1,11 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<?xml version="1.0" encoding="utf-8"?><!--
+		This file is part of the DITA Open Toolkit project hosted on
+		Sourceforge.net. See the accompanying license.txt file for applicable
+		licenses.
+	--><!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. --><catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"><!-- Catalog for DITA -->
+    <!-- DITA 1.2 DTD -->
     
-    
-		
+		<!-- Topics -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA Topic//EN" uri="topic.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.x Topic//EN" uri="topic.mod" xml:base="dtd/base/dtd/"></public>
@@ -10,25 +14,25 @@
 		<public publicId="-//OASIS//ENTITIES DITA 1.x Topic Definitions//EN" uri="topicDefn.ent" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 Topic Definitions//EN" uri="topicDefn.ent" xml:base="dtd/base/dtd/"></public>
 
-		
+		<!-- Maps -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA Map//EN" uri="map.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.x Map//EN" uri="map.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Map//EN" uri="map.mod" xml:base="dtd/base/dtd/"></public>
 
-    	
+    	<!-- Base topic DTD (no tech-comm domains -->
     
     	<public publicId="-//OASIS//DTD DITA Base Topic//EN" uri="basetopic.dtd" xml:base="dtd/base/dtd/"></public>
     	<public publicId="-//OASIS//DTD DITA 1.x Base Topic//EN" uri="basetopic.dtd" xml:base="dtd/base/dtd/"></public>
     	<public publicId="-//OASIS//DTD DITA 1.2 Base Topic//EN" uri="basetopic.dtd" xml:base="dtd/base/dtd/"></public>
 
-    	
+    	<!-- Base map DTD (no tech-comm domains -->
     
     	<public publicId="-//OASIS//DTD DITA Base Map//EN" uri="basemap.dtd" xml:base="dtd/base/dtd/"></public>
     	<public publicId="-//OASIS//DTD DITA 1.x Base Map//EN" uri="basemap.dtd" xml:base="dtd/base/dtd/"></public>
     	<public publicId="-//OASIS//DTD DITA 1.2 Base Map//EN" uri="basemap.dtd" xml:base="dtd/base/dtd/"></public>
 
-		
+		<!-- Common files for topics and maps -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA Common Elements//EN" uri="commonElements.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA Common Elements//EN" uri="commonElements.ent" xml:base="dtd/base/dtd/"></public>
@@ -43,7 +47,7 @@
 		<public publicId="-//OASIS//ELEMENTS DITA 1.x Exchange Table Model//EN" uri="tblDecl.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Exchange Table Model//EN" uri="tblDecl.mod" xml:base="dtd/base/dtd/"></public>
 
-		
+		<!-- base domains -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA Delayed Resolution Domain//EN" uri="delayResolutionDomain.mod" xml:base="dtd/base/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA Delayed Resolution Domain//EN" uri="delayResolutionDomain.ent" xml:base="dtd/base/dtd/"></public>
@@ -91,7 +95,9 @@
 		<public publicId="-//OASIS//DTD DITA 1.x DITAVAL//EN" uri="ditaval.dtd" xml:base="dtd/ditaval/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.2 DITAVAL//EN" uri="ditaval.dtd" xml:base="dtd/ditaval/dtd/"></public>
 	
-		
+		<!--
+			Document types and modules used by the Technical Content package
+		-->
     
 		<public publicId="-//OASIS//DTD DITA Concept//EN" uri="concept.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x Concept//EN" uri="concept.dtd" xml:base="dtd/technicalContent/dtd/"></public>
@@ -158,19 +164,19 @@
 		<public publicId="-//OASIS//ENTITIES DITA 1.x Task//EN" uri="task.ent" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 Task//EN" uri="task.ent" xml:base="dtd/technicalContent/dtd/"></public>
 
-		
+		<!-- Topic for use in the technical content package -->
     
 		<public publicId="-//OASIS//DTD DITA Topic//EN" uri="topic.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x Topic//EN" uri="topic.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="topic.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 
-		
+		<!-- Map for use in the technical content package -->
     
 		<public publicId="-//OASIS//DTD DITA Map//EN" uri="map.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x Map//EN" uri="map.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.2 Map//EN" uri="map.dtd" xml:base="dtd/technicalContent/dtd/"></public>
 
-		
+		<!-- Domains for the technical content package -->
     
 		<public publicId="-//OASIS//ENTITIES DITA Abbreviated Form Domain//EN" uri="abbreviateDomain.ent" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA Abbreviated Form Domain//EN" uri="abbreviateDomain.mod" xml:base="dtd/technicalContent/dtd/"></public>
@@ -214,12 +220,12 @@
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Glossary Reference Domain//EN" uri="glossrefDomain.mod" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 Glossary Reference Domain//EN" uri="glossrefDomain.ent" xml:base="dtd/technicalContent/dtd/"></public>
 
-		
+		<!-- Constraints in the technical content package -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA Strict Taskbody Constraint//EN" uri="strictTaskbodyConstraint.mod" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.x Strict Taskbody Constraint//EN" uri="strictTaskbodyConstraint.mod" xml:base="dtd/technicalContent/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Strict Taskbody Constraint//EN" uri="strictTaskbodyConstraint.mod" xml:base="dtd/technicalContent/dtd/"></public>
-	
+	<!-- Bookmap document type and module -->
     
 		<public publicId="-//OASIS//DTD DITA BookMap//EN" uri="bookmap.dtd" xml:base="dtd/bookmap/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x BookMap//EN" uri="bookmap.dtd" xml:base="dtd/bookmap/dtd/"></public>
@@ -230,7 +236,7 @@
 		<public publicId="-//OASIS//ENTITIES DITA BookMap//EN" uri="bookmap.ent" xml:base="dtd/bookmap/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.x BookMap//EN" uri="bookmap.ent" xml:base="dtd/bookmap/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 BookMap//EN" uri="bookmap.ent" xml:base="dtd/bookmap/dtd/"></public>
-	
+	<!-- Subject scheme package for controlled vocabularies -->
     
 		<public publicId="-//OASIS//DTD DITA Subject Scheme Map//EN" uri="subjectScheme.dtd" xml:base="dtd/subjectScheme/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x Subject Scheme Map//EN" uri="subjectScheme.dtd" xml:base="dtd/subjectScheme/dtd/"></public>
@@ -252,7 +258,7 @@
 		<public publicId="-//OASIS//ELEMENTS DITA 1.x Map Subject Classification Domain//EN" uri="classifyDomain.mod" xml:base="dtd/subjectScheme/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 Map Subject Classification Domain//EN" uri="classifyDomain.ent" xml:base="dtd/subjectScheme/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Map Subject Classification Domain//EN" uri="classifyDomain.mod" xml:base="dtd/subjectScheme/dtd/"></public>
-	
+	<!-- Domain for representing XNAL address information -->
     
 		<public publicId="-//OASIS//ELEMENTS DITA XNAL Domain//EN" uri="xnalDomain.mod" xml:base="dtd/xnal/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA XNAL Domain//EN" uri="xnalDomain.ent" xml:base="dtd/xnal/dtd/"></public>
@@ -260,7 +266,9 @@
 		<public publicId="-//OASIS//ENTITIES DITA 1.x XNAL Domain//EN" uri="xnalDomain.ent" xml:base="dtd/xnal/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 XNAL Domain//EN" uri="xnalDomain.mod" xml:base="dtd/xnal/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 XNAL Domain//EN" uri="xnalDomain.ent" xml:base="dtd/xnal/dtd/"></public>
-	
+	<!--
+		Modules and document types from the OASIS DITA Learning Subcommittee
+	-->
     
 		<public publicId="-//OASIS//DTD DITA Learning Assessment//EN" uri="learningAssessment.dtd" xml:base="dtd/learning/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA Learning BookMap//EN" uri="learningBookmap.dtd" xml:base="dtd/learning/dtd/"></public>
@@ -352,7 +360,10 @@
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Metadata Domain//EN" uri="learningMetadataDomain.mod" xml:base="dtd/learning/dtd/"></public>
 		<public publicId="-//OASIS//ENTITIES DITA 1.2 Learning Map Domain//EN" uri="learningMapDomain.ent" xml:base="dtd/learning/dtd/"></public>
 		<public publicId="-//OASIS//ELEMENTS DITA 1.2 Learning Map Domain//EN" uri="learningMapDomain.mod" xml:base="dtd/learning/dtd/"></public>
-	
+	<!--
+		Modules and document types from the OASIS DITA Machine Industry
+		Subcommittee
+	-->
     
 		<public publicId="-//OASIS//DTD DITA Machinery Task//EN" uri="machineryTask.dtd" xml:base="dtd/machineryIndustry/dtd/"></public>
 		<public publicId="-//OASIS//DTD DITA 1.x Machinery Task//EN" uri="machineryTask.dtd" xml:base="dtd/machineryIndustry/dtd/"></public>
@@ -564,17 +575,17 @@
     <uri name="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.x" uri="commonElementGrp.xsd" xml:base="schema/base/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.2" uri="commonElementGrp.xsd" xml:base="schema/base/xsd/"></uri>
 
-  
+  <!-- Document types and modules used by the Technical Content package -->
     
 
-     
+     <!-- Topic for use in the technical content package -->
     
     <system systemId="topic.xsd" uri="topic.xsd" xml:base="schema/technicalContent/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd" uri="topic.xsd" xml:base="schema/technicalContent/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.x" uri="topic.xsd" xml:base="schema/technicalContent/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.2" uri="topic.xsd" xml:base="schema/technicalContent/xsd/"></system>
     
-    
+    <!-- Map for use in the technical content package -->
     
     <system systemId="map.xsd" uri="map.xsd" xml:base="schema/technicalContent/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:xsd:map.xsd" uri="map.xsd" xml:base="schema/technicalContent/xsd/"></system>
@@ -788,7 +799,7 @@
     <uri name="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.x" uri="taskMod.xsd" xml:base="schema/technicalContent/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.2" uri="taskMod.xsd" xml:base="schema/technicalContent/xsd/"></uri>
     
-    
+    <!-- Constraints in the technical content package -->
     
     <uri name="strictTaskbodyConstraintMod.xsd" uri="strictTaskbodyConstraintMod.xsd" xml:base="schema/technicalContent/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd" uri="strictTaskbodyConstraintMod.xsd" xml:base="schema/technicalContent/xsd/"></uri>
@@ -877,7 +888,7 @@
     <uri name="urn:oasis:names:tc:dita:xsd:taskreqDomain.xsd:1.2" uri="taskreqDomain.xsd" xml:base="schema/technicalContent/xsd/"></uri>
     
 
-  
+  <!-- Bookmap document type and module -->
     
 
     <system systemId="bookmap.xsd" uri="bookmap.xsd" xml:base="schema/bookmap/xsd/"></system>
@@ -910,7 +921,7 @@
     <uri name="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.x" uri="bookmapGrp.xsd" xml:base="schema/bookmap/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.2" uri="bookmapGrp.xsd" xml:base="schema/bookmap/xsd/"></uri>
 
-  
+  <!-- Domain for representing XNAL address information -->
     
 
     <system systemId="xnalDomain.xsd" uri="xnalDomain.xsd" xml:base="schema/xnal/xsd/"></system>
@@ -923,7 +934,7 @@
     <uri name="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.x" uri="xnalDomain.xsd" xml:base="schema/xnal/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.2" uri="xnalDomain.xsd" xml:base="schema/xnal/xsd/"></uri>
 
-  
+  <!-- Modules and topic types from the OASIS DITA Learning Subcommittee -->
     
 
     
@@ -1168,7 +1179,7 @@
     <uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.x" uri="learningSummaryMod.xsd" xml:base="schema/learning/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:spec:learning:xsd:learningSummaryMod.xsd:1.2" uri="learningSummaryMod.xsd" xml:base="schema/learning/xsd/"></uri>   
      
-  
+  <!-- Subject scheme package for controlled vocabularies -->
     
     <system systemId="subjectScheme.xsd" uri="subjectScheme.xsd" xml:base="schema/subjectScheme/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd" uri="subjectScheme.xsd" xml:base="schema/subjectScheme/xsd/"></system>
@@ -1221,7 +1232,7 @@
      <uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.x" uri="classifyDomain.xsd" xml:base="schema/subjectScheme/xsd/"></uri>
      <uri name="urn:oasis:names:tc:dita:spec:classification:xsd:classifyDomain.xsd:1.2" uri="classifyDomain.xsd" xml:base="schema/subjectScheme/xsd/"></uri>
 
-  
+  <!-- Modules and document types from the OASIS DITA Machine Industry Subcommittee -->
     
     <system systemId="machineryTask.xsd" uri="machineryTask.xsd" xml:base="schema/machineryIndustry/xsd/"></system>
     <system systemId="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTask.xsd" uri="machineryTask.xsd" xml:base="schema/machineryIndustry/xsd/"></system>
@@ -1253,7 +1264,7 @@
     <uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTaskbodyConstraintIntMod.xsd:1.x" uri="machineryTaskbodyConstraintIntMod.xsd" xml:base="schema/machineryIndustry/xsd/"></uri>
     <uri name="urn:oasis:names:tc:dita:spec:machinery:xsd:machineryTaskbodyConstraintIntMod.xsd:1.2" uri="machineryTaskbodyConstraintIntMod.xsd" xml:base="schema/machineryIndustry/xsd/"></uri>
 
-  
+  <!-- DITAVal package for conditional processing -->
     
       <system systemId="ditaval.xsd" uri="ditaval.xsd" xml:base="schema/ditaval/xsd/"></system>
       <system systemId="urn:oasis:names:tc:dita:xsd:ditaval.xsd" uri="ditaval.xsd" xml:base="schema/ditaval/xsd/"></system>
@@ -1264,290 +1275,328 @@
       <uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd" uri="ditaval.xsd" xml:base="schema/ditaval/xsd/"></uri>
       <uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.x" uri="ditaval.xsd" xml:base="schema/ditaval/xsd/"></uri>
       <uri name="urn:oasis:names:tc:dita:xsd:ditaval.xsd:1.2" uri="ditaval.xsd" xml:base="schema/ditaval/xsd/"></uri>
-  
-    <public publicId="-//IBM//DTD DITA Element Reference//EN" uri="demo/elementref/elementref_shell.dtd" xml:base=""></public>
-   <public publicId="-//IBM//ELEMENTS DITA Element Reference//EN" uri="demo/elementref/elementref.mod" xml:base=""></public>
-   <public publicId="-//IBM//DTD DITA FAQ//EN" uri="demo/faq/faq_shell.dtd" xml:base=""></public>
-   <public publicId="-//IBM//ELEMENTS DITA FAQ//EN" uri="demo/faq/faq.mod" xml:base=""></public>
-   <public publicId="-//IBM//DTD DITA eNote//EN" uri="demo/enote/enote_shell.dtd" xml:base=""></public>
-   <public publicId="-//IBM//ELEMENTS DITA eNote//EN" uri="demo/enote/enote.mod" xml:base=""></public>
-   <public publicId="-//IBM//DTD DITA BookMap//EN" uri="demo/book/bookmap.dtd" xml:base=""></public>
-   <public publicId="-//IBM//ELEMENTS DITA BookMap//EN" uri="demo/book/bookmap.mod" xml:base=""></public>
-   <public publicId="-//IBM//DTD DITA Book Information//EN" uri="demo/book/bkinfo.dtd" xml:base=""></public>
-   <public publicId="-//IBM//ELEMENTS DITA Book Information//EN" uri="demo/book/bkinfo.mod" xml:base=""></public>
-   
-   
-    
-    
-    
-    
-<public publicId="-//IBM//DTD DITA Concept//EN" uri="demo/dita132/dtd/concept.dtd"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Concept//EN" uri="demo/dita132/dtd/concept.mod"/>
-    
-    
-<public publicId="-//IBM//DTD DITA Composite//EN" uri="demo/dita132/dtd/ditabase.dtd"/>
-    
-    
-<public publicId="-//IBM//DTD DITA Reference//EN" uri="demo/dita132/dtd/reference.dtd"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Reference//EN" uri="demo/dita132/dtd/reference.mod"/>
-    
-    
-<public publicId="-//IBM//DTD DITA Task//EN" uri="demo/dita132/dtd/task.dtd"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Task//EN" uri="demo/dita132/dtd/task.mod"/>
-    
-    
-<public publicId="-//IBM//DTD DITA Topic//EN" uri="demo/dita132/dtd/topic.dtd"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Topic//EN" uri="demo/dita132/dtd/topic.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Topic Class//EN" uri="demo/dita132/dtd/topic_class.ent"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Topic Definitions//EN" uri="demo/dita132/dtd/topic_defn.ent"/>
-    
-    
-    
-    
-<public publicId="-//IBM//DTD DITA Map//EN" uri="demo/dita132/dtd/map.dtd"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Map//EN" uri="demo/dita132/dtd/map.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Map Group Domain//EN" uri="demo/dita132/dtd/mapgroup.ent"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA Map Group Domain//EN" uri="demo/dita132/dtd/mapgroup.mod"/>
-    
-    
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA Highlight Domain//EN" uri="demo/dita132/dtd/highlight-domain.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Highlight Domain//EN" uri="demo/dita132/dtd/highlight-domain.ent"/>
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA Programming Domain//EN" uri="demo/dita132/dtd/programming-domain.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Programming Domain//EN" uri="demo/dita132/dtd/programming-domain.ent"/>
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA Software Domain//EN" uri="demo/dita132/dtd/software-domain.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Software Domain//EN" uri="demo/dita132/dtd/software-domain.ent"/>
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA User Interface Domain//EN" uri="demo/dita132/dtd/ui-domain.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA User Interface Domain//EN" uri="demo/dita132/dtd/ui-domain.ent"/>
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA Utilities Domain//EN" uri="demo/dita132/dtd/utilities-domain.mod"/>
-    
-<public publicId="-//IBM//ENTITIES DITA Utilities Domain//EN" uri="demo/dita132/dtd/utilities-domain.ent"/>
-    
-    
-    
-    
-<public publicId="-//IBM//ELEMENTS DITA Metadata//EN" uri="demo/dita132/dtd/meta_xml.mod"/>
-    
-<public publicId="-//IBM//ELEMENTS DITA CALS Tables//EN" uri="demo/dita132/dtd/tbl_xml.mod"/>
 
-  
-  
-<public publicId="-//W3C//DTD XHTML 1.0 Strict//EN" uri="demo/h2d/dtd/xhtml1-strict.dtd"/>
-    
-<public publicId="-//W3C//DTD XHTML 1.0 Transitional//EN" uri="demo/h2d/dtd/xhtml1-transitional.dtd"/>
-    
-<public publicId="-//W3C//DTD XHTML 1.0 Frameset//EN" uri="demo/h2d/dtd/xhtml1-frameset.dtd"/>
-    
-<public publicId="-//W3C//ENTITIES Latin 1 for XHTML//EN" uri="demo/h2d/dtd/xhtml-lat1.ent"/>
-    
-<public publicId="-//W3C//ENTITIES Symbols for XHTML//EN" uri="demo/h2d/dtd/xhtml-symbol.ent"/>
-    
-<public publicId="-//W3C//ENTITIES Special for XHTML//EN" uri="demo/h2d/dtd/xhtml-special.ent"/>
-  
+   
+   <!--             (C) Copyright OASIS Open 2005, 2008.              --><!--             (C) Copyright IBM Corporation 2001, 2004.         --><!--             All Rights Reserved.                              -->
 
+
+	<!-- Catalog for Dita DTDs -->
+	<!-- DITA 1.1 DTDs -->
+	<!-- For backward compatibility -->
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" xml:base="demo/dita11/dtd/" uri="concept.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Concept//EN" xml:base="demo/dita11/dtd/" uri="concept.mod"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Composite//EN" xml:base="demo/dita11/dtd/" uri="ditabase.dtd"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Glossary//EN" xml:base="demo/dita11/dtd/" uri="glossary.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Glossary//EN" xml:base="demo/dita11/dtd/" uri="glossary.mod"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" xml:base="demo/dita11/dtd/" uri="reference.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Reference//EN" xml:base="demo/dita11/dtd/" uri="reference.mod"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Task//EN" xml:base="demo/dita11/dtd/" uri="task.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Task//EN" xml:base="demo/dita11/dtd/" uri="task.mod"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" xml:base="demo/dita11/dtd/" uri="topic.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Topic//EN" xml:base="demo/dita11/dtd/" uri="topic.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Topic Definitions//EN" xml:base="demo/dita11/dtd/" uri="topicDefn.ent"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 Map//EN" xml:base="demo/dita11/dtd/" uri="map.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Map//EN" xml:base="demo/dita11/dtd/" uri="map.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Map Group Domain//EN" xml:base="demo/dita11/dtd/" uri="mapGroup.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Map Group Domain//EN" xml:base="demo/dita11/dtd/" uri="mapGroup.mod"/>
+	
+<public publicId="-//OASIS//DTD DITA 1.1 BookMap//EN" xml:base="demo/dita11/dtd/" uri="bookmap.dtd"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 BookMap//EN" xml:base="demo/dita11/dtd/" uri="bookmap.mod"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Highlight Domain//EN" xml:base="demo/dita11/dtd/" uri="highlightDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Highlight Domain//EN" xml:base="demo/dita11/dtd/" uri="highlightDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Indexing Domain//EN" xml:base="demo/dita11/dtd/" uri="indexingDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Indexing Domain//EN" xml:base="demo/dita11/dtd/" uri="indexingDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Programming Domain//EN" xml:base="demo/dita11/dtd/" uri="programmingDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Programming Domain//EN" xml:base="demo/dita11/dtd/" uri="programmingDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Software Domain//EN" xml:base="demo/dita11/dtd/" uri="softwareDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Software Domain//EN" xml:base="demo/dita11/dtd/" uri="softwareDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 User Interface Domain//EN" xml:base="demo/dita11/dtd/" uri="uiDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 User Interface Domain//EN" xml:base="demo/dita11/dtd/" uri="uiDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Utilities Domain//EN" xml:base="demo/dita11/dtd/" uri="utilitiesDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Utilities Domain//EN" xml:base="demo/dita11/dtd/" uri="utilitiesDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 XNAL Domain//EN" xml:base="demo/dita11/dtd/" uri="xnalDomain.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 XNAL Domain//EN" xml:base="demo/dita11/dtd/" uri="xnalDomain.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Common Elements//EN" xml:base="demo/dita11/dtd/" uri="commonElements.mod"/>
+	
+<public publicId="-//OASIS//ENTITIES DITA 1.1 Common Elements//EN" xml:base="demo/dita11/dtd/" uri="commonElements.ent"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Metadata//EN" xml:base="demo/dita11/dtd/" uri="metaDecl.mod"/>
+	
+<public publicId="-//OASIS//ELEMENTS DITA 1.1 Exchange Table Model//EN" xml:base="demo/dita11/dtd/" uri="tblDecl.mod"/>
+
+	<!-- Catalog for Dita Schemas -->
+
+	<!-- DITA 1.1 Schemas -->
+	<!-- For backward compatibility -->
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.1" xml:base="demo/dita11/schema/" uri="topic.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="topicMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="topicGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="commonElementMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="commonElementGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="tblDeclMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="tblDeclGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="metaDeclMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="metaDeclGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:map.xsd:1.1" xml:base="demo/dita11/schema/" uri="map.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="mapMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="mapGrp.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="mapGroupMod.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:concept.xsd:1.1" xml:base="demo/dita11/schema/" uri="concept.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="conceptMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="conceptGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:reference.xsd:1.1" xml:base="demo/dita11/schema/" uri="reference.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="referenceMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="referenceGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:task.xsd:1.1" xml:base="demo/dita11/schema/" uri="task.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="taskMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="taskGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.1" xml:base="demo/dita11/schema/" uri="ditabase.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.1" xml:base="demo/dita11/schema/" uri="glossary.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="glossaryMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="glossaryGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.1" xml:base="demo/dita11/schema/" uri="bookmap.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.1" xml:base="demo/dita11/schema/" uri="bookmapMod.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.1" xml:base="demo/dita11/schema/" uri="bookmapGrp.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="indexingDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="softwareDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="programmingDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="highlightDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="utilitiesDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="uiDomain.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.1" xml:base="demo/dita11/schema/" uri="xnalDomain.xsd"/>
+
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.1" xml:base="demo/dita11/schema/" uri="ditaarch.xsd"/>
+	
+<system systemId="urn:oasis:names:tc:dita:xsd:xml.xsd:1.1" xml:base="demo/dita11/schema/" uri="xml.xsd"/>
+
+<!--
+  This file is part of the DITA Open Toolkit project hosted on
+  Sourceforge.net. See the accompanying license.txt file for applicable
+  licenses.
+--><!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+  
+<public publicId="-//IBM//DTD DITA BookMap//EN" xml:base="demo/book/" uri="bookmap.dtd"/>
+  
+<public publicId="-//IBM//ELEMENTS DITA BookMap//EN" xml:base="demo/book/" uri="bookmap.mod"/>
+  
+<public publicId="-//IBM//DTD DITA Book Information//EN" xml:base="demo/book/" uri="bkinfo.dtd"/>
+  
+<public publicId="-//IBM//ELEMENTS DITA Book Information//EN" xml:base="demo/book/" uri="bkinfo.mod"/>
+<!--
+  This file is part of the DITA Open Toolkit project hosted on
+  Sourceforge.net. See the accompanying license.txt file for applicable
+  licenses.
+--><!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+  
+<public publicId="-//IBM//DTD DITA eNote//EN" xml:base="demo/enote/" uri="enote_shell.dtd"/>
+  
+<public publicId="-//IBM//ELEMENTS DITA eNote//EN" xml:base="demo/enote/" uri="enote.mod"/>
+<!--
+  This file is part of the DITA Open Toolkit project hosted on
+  Sourceforge.net. See the accompanying license.txt file for applicable
+  licenses.
+--><!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+  
+<public publicId="-//IBM//DTD DITA FAQ//EN" xml:base="demo/faq/" uri="faq_shell.dtd"/>
+  
+<public publicId="-//IBM//ELEMENTS DITA FAQ//EN" xml:base="demo/faq/" uri="faq.mod"/>
+<!-- (c) Copyright IBM Corp. 2004, 2008 All Rights Reserved. -->
+    
+    <!-- DITA DTDs -->
+    
+    
+<public publicId="-//IBM//DTD DITA Concept//EN" xml:base="demo/dita132/dtd/" uri="concept.dtd"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Concept//EN" xml:base="demo/dita132/dtd/" uri="concept.mod"/>
+    
+    
+<public publicId="-//IBM//DTD DITA Composite//EN" xml:base="demo/dita132/dtd/" uri="ditabase.dtd"/>
+    
+    
+<public publicId="-//IBM//DTD DITA Reference//EN" xml:base="demo/dita132/dtd/" uri="reference.dtd"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Reference//EN" xml:base="demo/dita132/dtd/" uri="reference.mod"/>
+    
+    
+<public publicId="-//IBM//DTD DITA Task//EN" xml:base="demo/dita132/dtd/" uri="task.dtd"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Task//EN" xml:base="demo/dita132/dtd/" uri="task.mod"/>
+    
+    
+<public publicId="-//IBM//DTD DITA Topic//EN" xml:base="demo/dita132/dtd/" uri="topic.dtd"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Topic//EN" xml:base="demo/dita132/dtd/" uri="topic.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Topic Class//EN" xml:base="demo/dita132/dtd/" uri="topic_class.ent"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Topic Definitions//EN" xml:base="demo/dita132/dtd/" uri="topic_defn.ent"/>
+    
+    <!-- Maps -->
+    
+    
+<public publicId="-//IBM//DTD DITA Map//EN" xml:base="demo/dita132/dtd/" uri="map.dtd"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Map//EN" xml:base="demo/dita132/dtd/" uri="map.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Map Group Domain//EN" xml:base="demo/dita132/dtd/" uri="mapgroup.ent"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA Map Group Domain//EN" xml:base="demo/dita132/dtd/" uri="mapgroup.mod"/>
+    
+    <!-- Domains -->
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Highlight Domain//EN" xml:base="demo/dita132/dtd/" uri="highlight-domain.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Highlight Domain//EN" xml:base="demo/dita132/dtd/" uri="highlight-domain.ent"/>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Programming Domain//EN" xml:base="demo/dita132/dtd/" uri="programming-domain.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Programming Domain//EN" xml:base="demo/dita132/dtd/" uri="programming-domain.ent"/>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Software Domain//EN" xml:base="demo/dita132/dtd/" uri="software-domain.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Software Domain//EN" xml:base="demo/dita132/dtd/" uri="software-domain.ent"/>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA User Interface Domain//EN" xml:base="demo/dita132/dtd/" uri="ui-domain.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA User Interface Domain//EN" xml:base="demo/dita132/dtd/" uri="ui-domain.ent"/>
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Utilities Domain//EN" xml:base="demo/dita132/dtd/" uri="utilities-domain.mod"/>
+    
+<public publicId="-//IBM//ENTITIES DITA Utilities Domain//EN" xml:base="demo/dita132/dtd/" uri="utilities-domain.ent"/>
+    
+    <!-- Common -->
+    
+    
+<public publicId="-//IBM//ELEMENTS DITA Metadata//EN" xml:base="demo/dita132/dtd/" uri="meta_xml.mod"/>
+    
+<public publicId="-//IBM//ELEMENTS DITA CALS Tables//EN" xml:base="demo/dita132/dtd/" uri="tbl_xml.mod"/>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+  Sourceforge.net. See the accompanying license.txt file for 
+  applicable licenses.--><!--
+    | (C) Copyright IBM Corporation 2006. All Rights Reserved.
+    *-->
   
   
-<public publicId="-//IBM//DTD DITA Eclipse Map Collection//EN" uri="demo/eclipsemap/dtd/eclipsemap.dtd"/>
+<public publicId="-//W3C//DTD XHTML 1.0 Strict//EN" xml:base="demo/h2d/dtd/" uri="xhtml1-strict.dtd"/>
+    
+<public publicId="-//W3C//DTD XHTML 1.0 Transitional//EN" xml:base="demo/h2d/dtd/" uri="xhtml1-transitional.dtd"/>
+    
+<public publicId="-//W3C//DTD XHTML 1.0 Frameset//EN" xml:base="demo/h2d/dtd/" uri="xhtml1-frameset.dtd"/>
+    
+<public publicId="-//W3C//ENTITIES Latin 1 for XHTML//EN" xml:base="demo/h2d/dtd/" uri="xhtml-lat1.ent"/>
+    
+<public publicId="-//W3C//ENTITIES Symbols for XHTML//EN" xml:base="demo/h2d/dtd/" uri="xhtml-symbol.ent"/>
+    
+<public publicId="-//W3C//ENTITIES Special for XHTML//EN" xml:base="demo/h2d/dtd/" uri="xhtml-special.ent"/>
+  
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+  Sourceforge.net. See the accompanying license.txt file for 
+  applicable licenses.--><!--
+    | (C) Copyright IBM Corporation 2006. All Rights Reserved.
+    *-->
+  
+  
+<public publicId="-//IBM//DTD DITA Eclipse Map Collection//EN" xml:base="demo/eclipsemap/dtd/" uri="eclipsemap.dtd"/>
       
   
-<public publicId="-//IBM//ELEMENTS DITA Eclipse Map Collection//EN" uri="demo/eclipsemap/dtd/plugin.mod"/>
+<public publicId="-//IBM//ELEMENTS DITA Eclipse Map Collection//EN" xml:base="demo/eclipsemap/dtd/" uri="plugin.mod"/>
   
   
-<public publicId="-//IBM//ENTITIES DITA Eclipse Map Collection//EN" uri="demo/eclipsemap/dtd/plugin.ent"/>
+<public publicId="-//IBM//ENTITIES DITA Eclipse Map Collection//EN" xml:base="demo/eclipsemap/dtd/" uri="plugin.ent"/>
   
-
-
-
-	
-	
-	
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="demo/dita11/dtd/concept.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Concept//EN" uri="demo/dita11/dtd/concept.mod"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Composite//EN" uri="demo/dita11/dtd/ditabase.dtd"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Glossary//EN" uri="demo/dita11/dtd/glossary.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Glossary//EN" uri="demo/dita11/dtd/glossary.mod"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="demo/dita11/dtd/reference.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Reference//EN" uri="demo/dita11/dtd/reference.mod"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Task//EN" uri="demo/dita11/dtd/task.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Task//EN" uri="demo/dita11/dtd/task.mod"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" uri="demo/dita11/dtd/topic.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Topic//EN" uri="demo/dita11/dtd/topic.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Topic Definitions//EN" uri="demo/dita11/dtd/topicDefn.ent"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 Map//EN" uri="demo/dita11/dtd/map.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Map//EN" uri="demo/dita11/dtd/map.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Map Group Domain//EN" uri="demo/dita11/dtd/mapGroup.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Map Group Domain//EN" uri="demo/dita11/dtd/mapGroup.mod"/>
-	
-<public publicId="-//OASIS//DTD DITA 1.1 BookMap//EN" uri="demo/dita11/dtd/bookmap.dtd"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 BookMap//EN" uri="demo/dita11/dtd/bookmap.mod"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Highlight Domain//EN" uri="demo/dita11/dtd/highlightDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Highlight Domain//EN" uri="demo/dita11/dtd/highlightDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Indexing Domain//EN" uri="demo/dita11/dtd/indexingDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Indexing Domain//EN" uri="demo/dita11/dtd/indexingDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Programming Domain//EN" uri="demo/dita11/dtd/programmingDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Programming Domain//EN" uri="demo/dita11/dtd/programmingDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Software Domain//EN" uri="demo/dita11/dtd/softwareDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Software Domain//EN" uri="demo/dita11/dtd/softwareDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 User Interface Domain//EN" uri="demo/dita11/dtd/uiDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 User Interface Domain//EN" uri="demo/dita11/dtd/uiDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Utilities Domain//EN" uri="demo/dita11/dtd/utilitiesDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Utilities Domain//EN" uri="demo/dita11/dtd/utilitiesDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 XNAL Domain//EN" uri="demo/dita11/dtd/xnalDomain.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 XNAL Domain//EN" uri="demo/dita11/dtd/xnalDomain.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Common Elements//EN" uri="demo/dita11/dtd/commonElements.mod"/>
-	
-<public publicId="-//OASIS//ENTITIES DITA 1.1 Common Elements//EN" uri="demo/dita11/dtd/commonElements.ent"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Metadata//EN" uri="demo/dita11/dtd/metaDecl.mod"/>
-	
-<public publicId="-//OASIS//ELEMENTS DITA 1.1 Exchange Table Model//EN" uri="demo/dita11/dtd/tblDecl.mod"/>
-
-	
-
-	
-	
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:topic.xsd:1.1" uri="demo/dita11/schema/topic.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.1" uri="demo/dita11/schema/topicMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:topicGrp.xsd:1.1" uri="demo/dita11/schema/topicGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.1" uri="demo/dita11/schema/commonElementMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:commonElementGrp.xsd:1.1" uri="demo/dita11/schema/commonElementGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclMod.xsd:1.1" uri="demo/dita11/schema/tblDeclMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:tblDeclGrp.xsd:1.1" uri="demo/dita11/schema/tblDeclGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclMod.xsd:1.1" uri="demo/dita11/schema/metaDeclMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:metaDeclGrp.xsd:1.1" uri="demo/dita11/schema/metaDeclGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:map.xsd:1.1" uri="demo/dita11/schema/map.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:mapMod.xsd:1.1" uri="demo/dita11/schema/mapMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:mapGrp.xsd:1.1" uri="demo/dita11/schema/mapGrp.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:mapGroupMod.xsd:1.1" uri="demo/dita11/schema/mapGroupMod.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:concept.xsd:1.1" uri="demo/dita11/schema/concept.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:conceptMod.xsd:1.1" uri="demo/dita11/schema/conceptMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:conceptGrp.xsd:1.1" uri="demo/dita11/schema/conceptGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:reference.xsd:1.1" uri="demo/dita11/schema/reference.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:referenceMod.xsd:1.1" uri="demo/dita11/schema/referenceMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:referenceGrp.xsd:1.1" uri="demo/dita11/schema/referenceGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:task.xsd:1.1" uri="demo/dita11/schema/task.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.1" uri="demo/dita11/schema/taskMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:taskGrp.xsd:1.1" uri="demo/dita11/schema/taskGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:ditabase.xsd:1.1" uri="demo/dita11/schema/ditabase.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:glossary.xsd:1.1" uri="demo/dita11/schema/glossary.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:glossaryMod.xsd:1.1" uri="demo/dita11/schema/glossaryMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:glossaryGrp.xsd:1.1" uri="demo/dita11/schema/glossaryGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:bookmap.xsd:1.1" uri="demo/dita11/schema/bookmap.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:bookmapMod.xsd:1.1" uri="demo/dita11/schema/bookmapMod.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:bookmapGrp.xsd:1.1" uri="demo/dita11/schema/bookmapGrp.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:indexingDomain.xsd:1.1" uri="demo/dita11/schema/indexingDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:softwareDomain.xsd:1.1" uri="demo/dita11/schema/softwareDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:programmingDomain.xsd:1.1" uri="demo/dita11/schema/programmingDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:highlightDomain.xsd:1.1" uri="demo/dita11/schema/highlightDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:utilitiesDomain.xsd:1.1" uri="demo/dita11/schema/utilitiesDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:uiDomain.xsd:1.1" uri="demo/dita11/schema/uiDomain.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:xnalDomain.xsd:1.1" uri="demo/dita11/schema/xnalDomain.xsd"/>
-
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.1" uri="demo/dita11/schema/ditaarch.xsd"/>
-	
-<system systemId="urn:oasis:names:tc:dita:xsd:xml.xsd:1.1" uri="demo/dita11/schema/xml.xsd"/>
-
+<!--
+  This file is part of the DITA Open Toolkit project hosted on
+  Sourceforge.net. See the accompanying license.txt file for applicable
+  licenses.
+--><!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+  
+<public publicId="-//IBM//DTD DITA Element Reference//EN" xml:base="demo/elementref/" uri="elementref_shell.dtd"/>
+  
+<public publicId="-//IBM//ELEMENTS DITA Element Reference//EN" xml:base="demo/elementref/" uri="elementref.mod"/>
 
 </catalog>

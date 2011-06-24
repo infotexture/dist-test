@@ -1,4 +1,6 @@
-<project name="dita2eclipsehelp" default="dita2eclipsehelp">
+<?xml version="1.0" encoding="utf-8"?><!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2eclipsehelp" default="dita2eclipsehelp">
     <property name="transtype" value="eclipsehelp"></property>
     
     <import file="build_init.xml"></import>
@@ -16,7 +18,8 @@
       <antcall target="dita.map.eclipse"></antcall>
     </target>
 
-    
+    <!--<target name="dita.map.eclipse"
+        depends="dita.map.eclipse.init, dita.map.eclipse.toc, dita.map.eclipse.index, dita.map.eclipse.plugin, dita.out.map.eclipse.toc, dita.out.map.eclipse.index, dita.out.map.eclipse.plugin" />-->
 
   <target name="dita.map.eclipse" depends=" dita.map.eclipse.init, copy-plugin-files, dita.map.eclipse.fragment.language.init, dita.map.eclipse.fragment.language.country.init, dita.map.eclipse.fragment.error">
     
@@ -105,13 +108,27 @@
     </target>
     
     <target name="dita.map.eclipse.index" unless="noMap" if="old.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
-    	  <echo> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
-    	  <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}${user.input.file};targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};eclipse.indexsee=${args.eclipsehelp.indexsee}${index.ext.param.encoding}"></pipeline>
+    	  <echo level="info"> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
+    	  <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}">
+          <param name="output" location="${output.dir}${file.separator}${user.input.file}"></param>
+          <param name="targetext" value="${out.ext}"></param>
+          <param name="indextype" value="eclipsehelp"></param>
+          <param name="indexclass" value="${dita.eclipsehelp.index.class}"></param>
+          <param name="eclipse.indexsee" value="${args.eclipsehelp.indexsee}"></param>
+          <param name="encoding" value="${args.dita.locale}" if="args.dita.locale"></param>
+    	  </pipeline>
     </target>
     
     <target name="dita.out.map.eclipse.index" unless="noMap" if="inner.transform" depends="dita.index.eclipsehelp.init,dita.map.eclipse.plugin.init,dita.index.eclipsehelp.init" description="Build Eclipse Help index file">
-    	  <echo> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
-        <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}" extparam="output=${output.dir}${file.separator}index.xml;targetext=${out.ext};indextype=eclipsehelp;indexclass=${dita.eclipsehelp.index.class};eclipse.indexsee=${args.eclipsehelp.indexsee};${index.ext.param.encoding}"></pipeline>
+    	  <echo level="info"> args.eclipsehelp.indexsee = ${args.eclipsehelp.indexsee} </echo>
+        <pipeline message="Extract index term." module="IndexTermExtract" basedir="${basedir}" tempdir="${dita.temp.dir}" inputmap="${user.input.file}">
+          <param name="output" location="${output.dir}${file.separator}index.xml"></param>
+          <param name="targetext" value="${out.ext}"></param>
+          <param name="indextype" value="eclipsehelp"></param>
+          <param name="indexclass" value="${dita.eclipsehelp.index.class}"></param>
+          <param name="eclipse.indexsee" value="${args.eclipsehelp.indexsee}"></param>
+          <param name="encoding" value="${args.dita.locale}" if="args.dita.locale"></param>
+        </pipeline>
     </target>
 
     <target name="dita.map.eclipse.plugin" unless="noPlugin" depends="dita.map.eclipse.plugin.init" if="old.transform" description="Build Eclipsehelp plugin file">
@@ -136,7 +153,7 @@
         </xslt>
     </target>
   
-  
+  <!-- New support for creating Eclipse fragments based on the similar map used to create a plug-in -->
   
   
   
@@ -247,7 +264,15 @@
   	<move file="${output.dir}${file.separator}plugin.properties" tofile="${output.dir}${file.separator}plugin_${fragment.property.name}.properties" failonerror="no"></move>
   </target>
   
-  
+  <!--<target name="dita.map.eclipse"
+    depends="dita.map.eclipse.init, 
+    dita.map.eclipse.toc, 
+    dita.map.eclipse.index, 
+    dita.map.eclipse.plugin, 
+    dita.out.map.eclipse.toc, 
+    dita.out.map.eclipse.index, 
+    dita.out.map.eclipse.plugin" />
+  -->
   
   <target name="dita.map.eclipse.generate.plugin" depends="dita.map.eclipse.toc,      dita.map.eclipse.index,     dita.map.eclipse.plugin,     dita.map.eclipse.plugin.properties,      dita.map.eclipse.manifest.file,     dita.out.map.eclipse.plugin.properties,      dita.out.map.eclipse.manifest.file,     dita.out.map.eclipse.toc,      dita.out.map.eclipse.index,      dita.out.map.eclipse.plugin">
     
@@ -259,12 +284,12 @@
     
   </target>
 
-    
+    <!-- depecrated: keep for back-compatibility, will be remvoed in a later release -->
     <target name="dita.topics.eclipse" depends="dita.topics.xhtml"></target>
 	
 	<target name="copy-plugin-files">
-	  	
-	  	
+	  	<!-- Look for files that override behavior in Eclipse plugins -->
+	  	<!-- <echo>* dita.input.dirname = ${user.input.dir}</echo> -->
 	  	<copy todir="${output.dir}">
 	  	      <fileset dir="${user.input.dir}">
 	  	      	<include name="disabled_book.css"></include>

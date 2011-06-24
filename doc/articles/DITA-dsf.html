@@ -1,27 +1,26 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-us" xml:lang="en-us">
-<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1d><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1d><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="copyright" content="(C) Copyright 2005">
 <meta name="DC.rights.owner" content="(C) Copyright 2005">
-<meta name="DC.Type" content="topic">
+<meta content="topic" name="DC.Type">
 <meta name="DC.Title" content="Specializing topic types in DITA">
 <meta name="abstract" content="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">
 <meta name="description" content="The Darwin Information Typing Architecture (DITA) provides a way for documentation authors and architects to create collections of typed topics that can be easily assembled into various delivery contexts. Topic specialization is the process by which authors and architects can define topic types, while maintaining compatibility with existing style sheets, transforms, and processes. The new topic types are defined as an extension, or delta, relative to an existing topic type, thereby reducing the work necessary to define and maintain the new type.">
-<meta name="DC.Coverage" content="General">
-<meta name="DC.subject" content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps">
-<meta name="keywords" content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps">
-<meta name="DC.Relation" scheme="URI" content="ditaot_topic_developerworks_articles.html">
-<meta name="DC.Audience.Experiencelevel" content="general">
-<meta name="DC.Audience.Job" content="">
-<meta name="DC.Audience.Type" content="user">
-<meta name="DC.Creator" content="Michael Priestley; IBM Corporation; Toronto, Canada; mpriestl@ca.ibm.com; Michael Priestley is an information developer for the IBM Toronto Software Development Laboratory. He has written numerous papers on subjects such as hypertext navigation, singlesourcing, and interfaces to dynamic documents. He is currently working on XML and XSL for help and documentation management.">
-<meta name="DC.Date.Created" content="23 February 2001">
-<meta name="DC.Format" content="XHTML">
-<meta name="DC.Identifier" content="specarch">
-<meta name="DC.Language" content="en-us">
-<link rel="stylesheet" type="text/css" href="commonltr.css">
+<meta content="General" name="DC.Coverage">
+<meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="DC.subject">
+<meta content="DITA, XML, topic, information architecture, architectural forms, specialization, information type, document type, DTD, document metadata, documentation, technical writing, user assistance, helps" name="keywords">
+<meta scheme="URI" name="DC.Relation" content="ditaot_topic_developerworks_articles.html">
+<meta content="general" name="DC.Audience.Experiencelevel">
+<meta content="" name="DC.Audience.Job">
+<meta content="user" name="DC.Audience.Type">
+<meta content="Michael Priestley; IBM Corporation; Toronto, Canada; mpriestl@ca.ibm.com; Michael Priestley is an information developer for the IBM Toronto Software Development Laboratory. He has written numerous papers on subjects such as hypertext navigation, singlesourcing, and interfaces to dynamic documents. He is currently working on XML and XSL for help and documentation management." name="DC.Creator">
+<meta content="23 February 2001" name="DC.Date.Created">
+<meta content="XHTML" name="DC.Format">
+<meta content="specarch" name="DC.Identifier">
+<meta content="en-us" name="DC.Language">
+<link href="commonltr.css" type="text/css" rel="stylesheet">
 <title>Specializing topic types in DITA</title>
 </head>
 <body id="specarch"><a name="specarch"><!-- --></a>
@@ -99,14 +98,14 @@
         <p class="p">Table 1 expresses the relationship between the general elements in topic and the specific elements in reference. Within the table, the columns, rows, and cells indicate information types, element mappings, and elements. Table 2 explains the relationships in detail to help you interpret Table 1. </p>
 
         
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Relationships between topic and a specialization based on it </span></caption>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Relationships between topic and a specialization based on it </span></caption>
             
             
             <thead class="thead" align="left">
               <tr class="row">
-                <th class="entry" valign="top" width="NaN%" id="d2203e192"> Topic </th>
+                <th class="entry" valign="top" width="NaN%" id="N101B0"> Topic </th>
 
-                <th class="entry" valign="top" width="NaN%" id="d2203e195"> Reference</th>
+                <th class="entry" valign="top" width="NaN%" id="N101B7"> Reference</th>
 
               </tr>
 
@@ -114,54 +113,54 @@
 
             <tbody class="tbody">
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e192 ">(topic.mod) </td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B0 ">(topic.mod) </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 "> (reference.mod)</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e192 "> topic </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 "> reference </td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 "> (reference.mod)</td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e192 "> title </td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B0 "> topic </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 ">&nbsp;</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e192 "> body </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 "> refbody </td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 "> reference </td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="d2203e192 ">simpletable</td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B0 "> title </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 ">properties</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 ">&nbsp;</td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 ">&nbsp;</td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="d2203e192 "> section </td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B0 "> body </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 "> refsyn</td>
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 "> refbody </td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e195 ">&nbsp;</td>
+                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="N101B0 ">simpletable</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 ">properties</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 ">&nbsp;</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="N101B0 "> section </td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 "> refsyn</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="NaN%" headers="N101B7 ">&nbsp;</td>
 
               </tr>
 
@@ -280,17 +279,17 @@
         </ul>
 
         
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2. Summary of APIdesc specialization</span></caption>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2. Summary of APIdesc specialization</span></caption>
             
             
             
             <thead class="thead" align="left">
               <tr class="row">
-                <th class="entry" valign="top" width="NaN%" id="d2203e552"> Topic</th>
+                <th class="entry" valign="top" width="NaN%" id="N104AE"> Topic</th>
 
-                <th class="entry" valign="top" width="NaN%" id="d2203e555"> Reference</th>
+                <th class="entry" valign="top" width="NaN%" id="N104B5"> Reference</th>
 
-                <th class="entry" valign="top" width="NaN%" id="d2203e558"> APIdesc</th>
+                <th class="entry" valign="top" width="NaN%" id="N104BC"> APIdesc</th>
 
               </tr>
 
@@ -298,75 +297,75 @@
 
             <tbody class="tbody">
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e552 "> (topic.mod) </td>
+                <td class="entry" valign="top" width="NaN%" headers="N104AE "> (topic.mod) </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 "> (reference.mod)</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 "> (reference.mod)</td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 "> (APIdesc.mod)</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e552 "> topic </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 "> reference </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 "> APIdesc </td>
+                <td class="entry" valign="top" width="NaN%" headers="N104BC "> (APIdesc.mod)</td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e552 "> title </td>
+                <td class="entry" valign="top" width="NaN%" headers="N104AE "> topic </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 ">&nbsp;</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 "> reference </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 "> APIname </td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e552 "> body </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 "> refbody </td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 "> APIbody </td>
+                <td class="entry" valign="top" width="NaN%" headers="N104BC "> APIdesc </td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="d2203e552 ">simpletable</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104AE "> title </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 ">properties</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 ">&nbsp;</td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 ">parameters</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 ">&nbsp;</td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 ">&nbsp;</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104BC "> APIname </td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" rowspan="3" valign="top" width="NaN%" headers="d2203e552 "> section </td>
+                <td class="entry" valign="top" width="NaN%" headers="N104AE "> body </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e555 "> refsyn</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 "> refbody </td>
 
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 ">&nbsp;</td>
-
-              </tr>
-
-              <tr class="row">
-                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="d2203e555 ">&nbsp;</td>
-
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 ">&nbsp;</td>
+                <td class="entry" valign="top" width="NaN%" headers="N104BC "> APIbody </td>
 
               </tr>
 
               <tr class="row">
-                <td class="entry" valign="top" width="NaN%" headers="d2203e558 ">usage</td>
+                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="N104AE ">simpletable</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 ">properties</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104BC ">parameters</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 ">&nbsp;</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104BC ">&nbsp;</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" rowspan="3" valign="top" width="NaN%" headers="N104AE "> section </td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104B5 "> refsyn</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104BC ">&nbsp;</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" rowspan="2" valign="top" width="NaN%" headers="N104B5 ">&nbsp;</td>
+
+                <td class="entry" valign="top" width="NaN%" headers="N104BC ">&nbsp;</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="NaN%" headers="N104BC ">usage</td>
 
               </tr>
 
@@ -699,17 +698,17 @@
       <p class="p">To ensure that the specialized elements are more constrained than their general equivalents (that is, that they allow a proper subset of the structures that the general equivalent allows), you need to look at the content model of the general element. You can safely change the content model of your specialized element as shown in Table A: </p>
 
       
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3. Summary of specialization rules </span></caption>
+<div class="tablenoborder"><table summary="" cellspacing="0" cellpadding="4" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3. Summary of specialization rules </span></caption>
           
           
           
           <thead class="thead" align="left">
             <tr class="row">
-              <th class="entry" valign="top" width="16.051364365971107%" id="d2203e1189">Content type</th>
+              <th class="entry" valign="top" width="16.051364365971107%" id="N109F5">Content type</th>
 
-              <th class="entry" valign="top" width="24.398073836276083%" id="d2203e1192">Allowed specialization</th>
+              <th class="entry" valign="top" width="24.398073836276083%" id="N109FC">Allowed specialization</th>
 
-              <th class="entry" valign="top" width="59.5505617977528%" id="d2203e1195">Example (Special specializing General)</th>
+              <th class="entry" valign="top" width="59.5505617977528%" id="N10A03">Example (Special specializing General)</th>
 
             </tr>
 
@@ -717,11 +716,11 @@
 
           <tbody class="tbody">
             <tr class="row">
-              <td class="entry" valign="top" width="16.051364365971107%" headers="d2203e1189 ">Required</td>
+              <td class="entry" valign="top" width="16.051364365971107%" headers="N109F5 ">Required</td>
 
-              <td class="entry" valign="top" width="24.398073836276083%" headers="d2203e1192 ">Rename only</td>
+              <td class="entry" valign="top" width="24.398073836276083%" headers="N109FC ">Rename only</td>
 
-              <td class="entry" valign="top" width="59.5505617977528%" headers="d2203e1195 ">
+              <td class="entry" valign="top" width="59.5505617977528%" headers="N10A03 ">
                 <pre class="pre">&lt;!ELEMENT General(a)&gt;</pre>
 
                 <pre class="pre">&lt;!ELEMENT Special(a.1)&gt;</pre>
@@ -731,11 +730,11 @@
             </tr>
 
             <tr class="row">
-              <td class="entry" valign="top" width="16.051364365971107%" headers="d2203e1189 ">Optional (?)</td>
+              <td class="entry" valign="top" width="16.051364365971107%" headers="N109F5 ">Optional (?)</td>
 
-              <td class="entry" valign="top" width="24.398073836276083%" headers="d2203e1192 ">Rename, make required, or delete</td>
+              <td class="entry" valign="top" width="24.398073836276083%" headers="N109FC ">Rename, make required, or delete</td>
 
-              <td class="entry" valign="top" width="59.5505617977528%" headers="d2203e1195 ">
+              <td class="entry" valign="top" width="59.5505617977528%" headers="N10A03 ">
                 <pre class="pre">&lt;!ELEMENT General(a?)&gt;</pre>
 
                 <pre class="pre">&lt;!ELEMENT Special(a.1?)&gt;
@@ -747,11 +746,11 @@
             </tr>
 
             <tr class="row">
-              <td class="entry" valign="top" width="16.051364365971107%" headers="d2203e1189 ">One or more (+)</td>
+              <td class="entry" valign="top" width="16.051364365971107%" headers="N109F5 ">One or more (+)</td>
 
-              <td class="entry" valign="top" width="24.398073836276083%" headers="d2203e1192 ">Rename, make required, split into a required element plus others, split into one or more elements plus others.</td>
+              <td class="entry" valign="top" width="24.398073836276083%" headers="N109FC ">Rename, make required, split into a required element plus others, split into one or more elements plus others.</td>
 
-              <td class="entry" valign="top" width="59.5505617977528%" headers="d2203e1195 ">
+              <td class="entry" valign="top" width="59.5505617977528%" headers="N10A03 ">
                 <pre class="pre">&lt;!ELEMENT General(a+)&gt;</pre>
 
                 <pre class="pre">&lt;!ELEMENT Special(a.1+)&gt;
@@ -764,11 +763,11 @@
             </tr>
 
             <tr class="row">
-              <td class="entry" valign="top" width="16.051364365971107%" headers="d2203e1189 ">Zero or more (*)</td>
+              <td class="entry" valign="top" width="16.051364365971107%" headers="N109F5 ">Zero or more (*)</td>
 
-              <td class="entry" valign="top" width="24.398073836276083%" headers="d2203e1192 ">Rename, make required, make optional, split into a required element plus others, split into an optional element plus others, split into one-or-more plus others, split into zero-or-more plus others, or delete</td>
+              <td class="entry" valign="top" width="24.398073836276083%" headers="N109FC ">Rename, make required, make optional, split into a required element plus others, split into an optional element plus others, split into one-or-more plus others, split into zero-or-more plus others, or delete</td>
 
-              <td class="entry" valign="top" width="59.5505617977528%" headers="d2203e1195 ">
+              <td class="entry" valign="top" width="59.5505617977528%" headers="N10A03 ">
                 <pre class="pre">&lt;!ELEMENT General(a*)&gt;</pre>
 
                 <pre class="pre">&lt;!ELEMENT Special(a.1*)&gt;
@@ -785,11 +784,11 @@
             </tr>
 
             <tr class="row">
-              <td class="entry" valign="top" width="16.051364365971107%" headers="d2203e1189 ">Either-or</td>
+              <td class="entry" valign="top" width="16.051364365971107%" headers="N109F5 ">Either-or</td>
 
-              <td class="entry" valign="top" width="24.398073836276083%" headers="d2203e1192 ">Rename, or choose one</td>
+              <td class="entry" valign="top" width="24.398073836276083%" headers="N109FC ">Rename, or choose one</td>
 
-              <td class="entry" valign="top" width="59.5505617977528%" headers="d2203e1195 ">
+              <td class="entry" valign="top" width="59.5505617977528%" headers="N10A03 ">
                 <pre class="pre">&lt;!ELEMENT General (a|b)&gt;</pre>
 
                 <pre class="pre">&lt;!ELEMENT Special (a.1|b.1)&gt;
