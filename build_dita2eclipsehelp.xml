@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!-- This file is part of the DITA Open Toolkit project hosted on 
      Sourceforge.net. See the accompanying license.txt file for 
-     applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2eclipsehelp" default="dita2eclipsehelp">
-    <property name="transtype" value="eclipsehelp"></property>
-    
-    <import file="build_init.xml"></import>
-    <import file="build_preprocess.xml"></import>
-    <import file="build_general.xml"></import>
+     applicable licenses.--><!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. --><project name="dita2eclipsehelp">
 	
 	   <target name="dita.index.eclipsehelp.init">
 	      <condition property="dita.eclipsehelp.index.class" value="org.dita.dost.writer.EclipseIndexWriter"> 
@@ -93,6 +88,7 @@
             <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"></param>
             <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
             <param name="WORKDIR" expression="${workdir}" if="workdir"></param>
+          <xmlcatalog refid="dita.catalog"></xmlcatalog>
         </xslt>
     </target>
     
@@ -104,6 +100,7 @@
             <param name="OUTEXT" expression="${out.ext}" if="out.ext"></param>
             <param name="WORKDIR" expression="${workdir}" if="workdir"></param>
             <mapper type="regexp" from="^(${tempdirToinputmapdir.relative.value})(.*?)(\.ditamap)$$" to="\2\.xml"></mapper>
+          <xmlcatalog refid="dita.catalog"></xmlcatalog>
         </xslt>
     </target>
     
@@ -138,7 +135,8 @@
             <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
         	  <param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
         	  <outputproperty value="yes" name="indent"></outputproperty>
-        	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>  
+        	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>
+          <xmlcatalog refid="dita.catalog"></xmlcatalog>
         </xslt>
     </target>
     
@@ -149,7 +147,8 @@
             <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
         	  <param name="osgi.symbolic.name" expression="${args.eclipse.symbolic.name}" if="args.eclipse.symbolic.name"></param>
         	  <outputproperty value="yes" name="indent"></outputproperty>
-        	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>  
+        	  <param name="dita.plugin.output" expression="dita.eclipse.plugin"></param>
+          <xmlcatalog refid="dita.catalog"></xmlcatalog>
         </xslt>
     </target>
   
@@ -166,7 +165,8 @@
       <param name="fragment.country" expression="${args.eclipsehelp.country}" if="eclipse.fragment.country"></param>
       <param name="fragment.lang" expression="${args.eclipsehelp.language}" if="args.eclipsehelp.language"></param>
       <outputproperty value="text" name="method"></outputproperty>
-      <param name="dita.plugin.output" expression="dita.eclipse.manifest"></param>                
+      <param name="dita.plugin.output" expression="dita.eclipse.manifest"></param>
+      <xmlcatalog refid="dita.catalog"></xmlcatalog>
     </xslt>
   </target>
   
@@ -179,7 +179,8 @@
       <param name="fragment.country" expression="${args.eclipsehelp.country}" if="eclipse.fragment.country"></param>
       <param name="fragment.lang" expression="${args.eclipsehelp.language}" if="args.eclipsehelp.language"></param>
       <outputproperty value="text" name="method"></outputproperty>
-      <param name="dita.plugin.output" expression="dita.eclipse.manifest"></param>                
+      <param name="dita.plugin.output" expression="dita.eclipse.manifest"></param>
+      <xmlcatalog refid="dita.catalog"></xmlcatalog>
     </xslt>
   </target>
   
@@ -190,6 +191,7 @@
       <param name="dita.plugin.output" expression="dita.eclipse.properties"></param>
     	<param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
     	<param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+      <xmlcatalog refid="dita.catalog"></xmlcatalog>
     </xslt>
   </target>
   
@@ -199,6 +201,7 @@
       <param name="dita.plugin.output" expression="dita.eclipse.properties"></param>
     	<param name="version" expression="${args.eclipse.version}" if="args.eclipse.version"></param>
       <param name="provider" expression="${args.eclipse.provider}" if="args.eclipse.provider"></param>
+      <xmlcatalog refid="dita.catalog"></xmlcatalog>
     </xslt>
   </target>
   

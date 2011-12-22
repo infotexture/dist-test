@@ -5,6 +5,7 @@
   <xsl:import href="topic2fo.xsl"></xsl:import>
 
   <xsl:import href="../../cfg/fo/attrs/commons-attr_xep.xsl"></xsl:import>
+  <xsl:import href="index_xep.xsl"></xsl:import>
   
   
   

@@ -11,6 +11,7 @@
 
   <xsl:import href="../../cfg/fo/attrs/tables-attr_axf.xsl"></xsl:import>
   <xsl:import href="../../cfg/fo/attrs/toc-attr_axf.xsl"></xsl:import>
+  <xsl:import href="../../cfg/fo/attrs/index-attr_axf.xsl"></xsl:import>
   <xsl:import href="index_axf.xsl"></xsl:import>
   
   

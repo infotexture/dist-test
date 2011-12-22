@@ -6,7 +6,7 @@
   <!-- Begin of Ant Messages -->
   <message id="DOTA001F" type="FATAL">
     <reason>Invalid transformation type.</reason>
-    <response>Please provide the correct transormation types using Ant parameter &apos;transtype&apos;:  xhtml, eclipsehelp, eclipsecontent, javahelp, htmlhelp, pdf, pdf2, troff, docbook, wordrtf, odt.</response>
+    <response>Please provide the correct transformation types using Ant parameter &apos;transtype&apos;: xhtml, eclipsehelp, eclipsecontent, javahelp, htmlhelp, pdf, pdf2, troff, docbook, wordrtf, odt.</response>
   </message>
   
   <message id="DOTA002F" type="FATAL">
@@ -16,11 +16,11 @@
   
   <message id="DOTA003F" type="FATAL">
     <reason>Can&apos;t find the user specified stylesheet &apos;%1&apos;.</reason>
-    <response>Please provide the correct sytlesheet using Ant parameter &apos;args.xsl&apos;.</response>
+    <response>Please provide the correct stylesheet using Ant parameter &apos;args.xsl&apos;.</response>
   </message>
   
   <message id="DOTA004F" type="FATAL">
-    <reason>Invalid dita extensition &apos;%1&apos;.</reason>
+    <reason>Invalid dita extension &apos;%1&apos;.</reason>
     <response>Please input the correct dita extension using Ant parameter &apos;dita.extname&apos;. Valid values are dita, .dita, xml, or .xml.</response>
   </message>
   
@@ -35,24 +35,24 @@
   </message>
   
   <message id="DOTA007E" type="ERROR">
-    <reason>Cann&apos;t find the user specified file  &quot;%1&quot;.</reason>
-    <response>Please provide the existing file using Ant parameter &apos;args.ftr&apos;, and make sure there is no prefix of  &quot;file:&quot; in the &apos;args.ftr&apos;.</response>
+    <reason>Can&apos;t find the user specified file &quot;%1&quot;.</reason>
+    <response>Please provide the existing file using Ant parameter &apos;args.ftr&apos;, and make sure there is no prefix of &quot;file:&quot; in the &apos;args.ftr&apos;.</response>
   </message>
   
   <message id="DOTA008E" type="ERROR">
-    <reason>Cann&apos;t find the user specified file  &quot;%1&quot;.</reason>
-    <response>Please provide the existing file using Ant parameter &apos;args.hdr&apos;, and make sure there is no prefix of  &quot;file:&quot; in the &apos;args.hdr&apos;.</response>
+    <reason>Can&apos;t find the user specified file &quot;%1&quot;.</reason>
+    <response>Please provide the existing file using Ant parameter &apos;args.hdr&apos;, and make sure there is no prefix of &quot;file:&quot; in the &apos;args.hdr&apos;.</response>
   </message>
   
   <message id="DOTA009E" type="ERROR">
-    <reason>Cann&apos;t find the user specified file  &quot;%1&quot;.</reason>
-    <response>Please provide the existing file using Ant parameter &apos;args.hdf&apos;, and make sure there is no prefix of  &quot;file:&quot; in the &apos;args.hdf&apos;.</response>
+    <reason>Can&apos;t find the user specified file &quot;%1&quot;.</reason>
+    <response>Please provide the existing file using Ant parameter &apos;args.hdf&apos;, and make sure there is no prefix of &quot;file:&quot; in the &apos;args.hdf&apos;.</response>
   </message>
   
   <!--Added by William on 2009-11-23 for bug:2893745 -->
   <message id="DOTA010E" type="ERROR">
-    <reason>The FOP Plugin cannot be found in the default location.</reason>
-    <response>Please install the required plugins into the dir demo/fo/fop or configure the build file to support your local configuration.</response>
+    <reason>The FOP plug-in cannot be found in the default location.</reason>
+    <response>Please install the required plug-ins into the dir demo/fo/fop or configure the build file to support your local configuration.</response>
   </message>
   
   <!-- Begin of Java Messages -->
@@ -152,8 +152,8 @@
   </message>
   
   <message id="DOTJ020W" type="WARN">
-    <reason>At least one plugin in &apos;%1&apos; is required by plugin &apos;%2&apos;. Plugin &apos;%2&apos; cannot be loaded.</reason>
-    <response>Check and see whether all prerequisite plugins are installed in toolkit.</response>
+    <reason>At least one plug-in in &apos;%1&apos; is required by plug-in &apos;%2&apos;. Plug-in &apos;%2&apos; cannot be loaded.</reason>
+    <response>Check and see whether all prerequisite plug-ins are installed in toolkit.</response>
   </message>
   
   <message id="DOTJ021W" type="WARN">
@@ -161,10 +161,10 @@
     <response>Please check the file &apos;%1&apos; and the ditaval file to see if this is the intended result.</response>
   </message>
   
-  <message id="DOTJ021E" type="ERROR">
-    <reason>Failed to get the image file specified &apos;%1&apos; in ODT generation</reason>
+  <!--message id="DOTJ021E" type="ERROR">
+    <reason>Failed to get the image file specified '%1' in ODT generation</reason>
     <response>Check whether the image exists and copied to output directory before the final step of ODT generation.</response>
-  </message>
+  </message-->
   
   <message id="DOTJ022F" type="FATAL">
     <reason>Failed to parse the input file &apos;%1&apos; because all of its content has been filtered out.</reason>
@@ -172,8 +172,8 @@
   </message>
 
   <message id="DOTJ023E" type="ERROR">
-    <reason>Failed to get the specified image file &apos;%1&apos; for RTF generation.</reason>
-    <response>Check whether the image exists and was copied to output directory before the final step of RTF generation.</response>
+    <reason>Failed to get the specified image file &apos;%1&apos; for output generation.</reason>
+    <response>Check whether the image exists and was copied to output directory before the final step of output generation.</response>
   </message>
   
   <message id="DOTJ024W" type="WARN">
@@ -212,7 +212,7 @@
   </message> 
   
   <message id="DOTJ031I" type="INFO">
-    <reason>No specified rule for &apos;%1&apos;  was found in the ditaval file. This value will use the default action, or a parent prop action if specified. </reason>
+    <reason>No specified rule for &apos;%1&apos; was found in the ditaval file. This value will use the default action, or a parent prop action if specified. </reason>
     <response>To remove this message, you can specify a rule for &apos;%1&apos; in the ditaval file. </response>
   </message> 
   
@@ -233,22 +233,22 @@
   
   <message id="DOTJ035F" type="FATAL">
     <reason>The file &quot;%1&quot; referenced by &quot;%2&quot; is outside the scope of the input dita/map directory.</reason>
-    <response>If you want to lower the severity level, please use the Ant parameter &apos;outer.control&apos;, and set the value to &quot;warn&quot; or &quot;quiet&quot;. Otherwise, move the referenced file &quot;%1&quot; into the the input dita/map directory.</response>
+    <response>If you want to lower the severity level, please use the Ant parameter &apos;outer.control&apos;, and set the value to &quot;warn&quot; or &quot;quiet&quot;. Otherwise, move the referenced file &quot;%1&quot; into the input dita/map directory.</response>
   </message>
   
    <message id="DOTJ036W" type="WARN">
     <reason>The file &quot;%1&quot; referenced by &quot;%2&quot; is outside the scope of the input dita/map directory.</reason>
-    <response>If you do not want to see the warning message, please use the Ant parameter &apos;outer.control&apos;, and set the value to &quot;quiet&quot;. Otherwise, move the referenced file &quot;%1&quot; into the the input dita/map directory.</response>
+    <response>If you do not want to see the warning message, please use the Ant parameter &apos;outer.control&apos;, and set the value to &quot;quiet&quot;. Otherwise, move the referenced file &quot;%1&quot; into the input dita/map directory.</response>
   </message>
   
   <message id="DOTJ037W" type="WARN">
-    <reason>The XML schema and DTD validition function of the parser is turned off.</reason>
+    <reason>The XML schema and DTD validation function of the parser is turned off.</reason>
     <response>Please make sure the input is normalized DITA with class attributes included, otherwise it will not be processed correctly.</response>
   </message>
   
   <message id="DOTJ038E" type="ERROR">
     <reason>The tag &quot;%1&quot; is specialized from non-predefined metadata.</reason>
-    <response>Please make sure that tag &quot;%1&quot; is specialized from some predefinded metadata tag.</response>
+    <response>Please make sure that tag &quot;%1&quot; is specialized from some predefined metadata tag.</response>
   </message>
   
   <message id="DOTJ039E" type="ERROR">
@@ -272,8 +272,8 @@
   </message>
   
   <message id="DOTJ043W" type="WARN">
-    <reason>There is no target &quot;%1&quot; in &quot;%2&quot; specified for the conref push action.</reason>
-    <response>Please make sure that the target exists and is not filtered out.</response>
+    <reason>There is no correct target &quot;%1&quot; in &quot;%2&quot; specified for the conref push action.</reason>
+    <response>Please make sure that the target exists and is not filtered out or the target type matches.</response>
   </message>
   
   <message id="DOTJ044W" type="WARN">
@@ -286,13 +286,18 @@
     <response>Please make sure the key name is unique in a single map.</response>
   </message>
   
+  <message id="DOTJ045I" type="INFO">
+    <reason>The key &quot;%1&quot; is defined more than once in the same map file. The reference href=&quot;%2&quot; is ignored.</reason>
+    <response></response>
+  </message>
+  
   <message id="DOTJ046E" type="ERROR">
-    <reason>Conkeyref=&quot;%1&quot; can not be resolved because it does not contain a key or the key is not defined. Using the conref value as fallback if it exists.</reason>
+    <reason>Conkeyref=&quot;%1&quot; can not be resolved because it does not contain a key or the key is not defined. Using the conref value as fall-back if it exists.</reason>
     <response>Please make sure the key name does exist.</response>
   </message>
   
   <message id="DOTJ047I" type="INFO">
-    <reason>Unable to find key definition for keyref=&quot;%1&quot;, href may be used as fallback if it exists.</reason>
+    <reason>Unable to find key definition for keyref=&quot;%1&quot;, href may be used as fall-back if it exists.</reason>
     <response>Please make sure the key name is correct.</response>
   </message>
   
@@ -307,9 +312,26 @@
   </message>
   
   <message id="DOTJ050W" type="WARN">
-    <reason>The index-see reference &apos;%1&apos; was not found in the plugin. </reason>
+    <reason>The index-see reference &apos;%1&apos; was not found in the plug-in. </reason>
     <response>Please make sure that the appropriate index entry is created or manually update the index.xml file.</response>
   </message>
+  
+  <message id="DOTJ051E" type="ERROR">
+    <reason>Unable to find target for coderef &quot;%1&quot;. Check to make sure that the target element is available. Found in file=&quot;%2&quot;, element=&quot;%3&quot;.</reason>
+    <response>Check to make sure the value in the href attribute is correct.</response>
+  </message>
+
+  <message id="DOTJ052E" type="ERROR">
+    <reason>Code reference charset &quot;%1&quot; not supported.</reason>
+    <response>Check to make sure the charset value in the format attribute is correct and supported.</response>
+  </message>
+
+  <!-- Added by ryan on 2011-07-27 for bug:3358377 start  -->
+  <message id="DOTJ053W" type="WARN">
+    <reason>Input file &apos;%1&apos; is not valid DITA file name.</reason>
+    <response>Please check the file &apos;%1&apos; to see if the file is a valid target file by extension.</response>
+  </message>
+  <!-- Added by ryan on 2011-07-27 for bug:3358377 end  -->
   
   <!-- End of Java Messages -->
     
@@ -353,7 +375,12 @@
     <reason>File &apos;%1&apos; does not exist.</reason>
     <response>Be sure the file &apos;%1&apos; exists or change the href to reference an existing file. Note:&apos;%1&apos; might be changed to use standard dita topic file extension name &apos;.dita&apos; or &apos;.xml&apos;.</response>
   </message>
-  
+
+  <message id="DOTX008E" type="ERROR">
+    <reason>File &apos;%1&apos; does not exist.</reason>
+    <response>Be sure the file &apos;%1&apos; exists or change the href to reference an existing file. Note:&apos;%1&apos; might be changed to use standard dita topic file extension name &apos;.dita&apos; or &apos;.xml&apos;.</response>
+  </message>
+
   <message id="DOTX009W" type="WARN">
     <reason>Could not retrieve a title from &apos;%1&apos;. Using &apos;%2&apos; instead.</reason>
     <response>Add a title in the target topic file.</response>
@@ -526,7 +553,7 @@
   
   <message id="DOTX043I" type="INFO">
     <reason>The link to &apos;%1&apos; may appear more than once in &apos;%2&apos;.</reason>
-    <response>If you do not want two occurrences of a link to the same href, remove one of the links or define the same attributes on both link elements.  Note that links generated from a &lt;reltable&gt; in a DITA Map will have the role attribute set to &quot;friend&quot;.</response>
+    <response>If you do not want two occurrences of a link to the same href, remove one of the links or define the same attributes on both link elements. Note that links generated from a &lt;reltable&gt; in a DITA Map will have the role attribute set to &quot;friend&quot;.</response>
   </message>
   
   <message id="DOTX044E" type="ERROR">
@@ -561,7 +588,7 @@
   
   <message id="DOTX050W" type="WARN">
     <reason>Cannot find id attribute in map element. </reason>
-    <response>Default id &quot;org.sample.help.doc&quot; is used for Eclipse plugin. If you want to use your own id, please specify it in the id attribute of the map.</response>
+    <response>Default id &quot;org.sample.help.doc&quot; is used for Eclipse plug-in. If you want to use your own id, please specify it in the id attribute of the map.</response>
   </message>
   
   <message id="DOTX051W" type="WARN">
@@ -576,7 +603,7 @@
   
   <message id="DOTX053E" type="ERROR">
     <reason>A element that references another map indirectly includes itself, which is not possible. Please fix the target of the mapref. The map reference points to &apos;%1&apos;.</reason>
-    <response>Resolve the circlular map reference.</response>
+    <response>Resolve the circular map reference.</response>
   </message>
   
   <message id="DOTX054W" type="WARN">
@@ -650,10 +677,116 @@
   <!-- Added by William on 2010-06-21 for bug:3012392 start  -->
   <message id="DOTA066F" type="FATAL">
     <reason>Can&apos;t find the user specified stylesheet &apos;%1&apos;.</reason>
-    <response>Please provide the correct sytlesheet using Ant parameter &apos;args.xsl.pdf&apos;.</response>
+    <response>Please provide the correct stylesheet using Ant parameter &apos;args.xsl.pdf&apos;.</response>
   </message>
   <!-- Added by William on 2010-06-21 for bug:3012392 start -->
+    
+  <message id="DOTA067W" type="WARN">
+    <reason>Ignoring index-see &apos;%1&apos; for &apos;%2&apos; because parent indexterm contains indexterm children.</reason>
+    <response></response>
+  </message>
   
+  <message id="DOTA068W" type="WARN">
+    <reason>Ignoring index-see-also &apos;%1&apos; for &apos;%2&apos; because parent indexterm contains indexterm children.</reason>
+    <response></response>
+  </message>
+    
   <!-- Add any messages defined by plugins. -->
+  <!-- This file is part of the DITA Open Toolkit project hosted on 
+  Sourceforge.net. See the accompanying license.txt file for 
+  applicable licenses.--><!-- (c) Copyright IBM Corp. 20011 All Rights Reserved. -->
+  <!-- Java -->
   
+<message id="PDFJ001E" type="ERROR">
+    
+<reason>Index entry &apos;%1&apos; is dropped, because corresponding group is not found.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFJ002E" type="ERROR">
+    
+<reason>Build stopped. Problems occured during Index preprocess task. Please check the messages above.</reason>
+    
+<response></response>
+  </message>
+  <!-- XSLT -->
+  
+<message id="PDFX001W" type="WARN">
+    
+<reason>There is no index entry found which closing range for ID=&quot;%1&quot;.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX002W" type="WARN">
+    
+<reason>There are multiple index entry found which is opening range for ID=&quot;%1&quot; but there is only one which close it or ranges are overlapping.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX003W" type="WARN">
+    
+<reason>There are multiple index entry found which closing range for ID=&quot;%1&quot;.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX004F" type="FATAL">
+    
+<reason>Empty href was specified for some topic reference.</reason>
+    
+<response>Please correct your ditamap or bookmap file.</response>
+  </message>
+  
+<message id="PDFX005F" type="FATAL">
+    
+<reason>Topic reference (href : %1) not found.</reason>
+    
+<response>Reference may be incorrect. Please correct your ditamap or bookmap file.</response>
+  </message>
+  
+<message id="PDFX006E" type="ERROR">
+    
+<reason>Number of columns must be specified.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX007W" type="WARN">
+    
+<reason>There is no index entry found which opening range for ID=&quot;%1&quot;.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX008W" type="WARN">
+    
+<reason>Font definition not found for the logical name or alias &apos;%1&apos;.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX009E" type="ERROR">
+    
+<reason>Attribute set reflection can&apos;t handle XSLT element %1.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX010W" type="WARN">
+    
+<reason>Index generation is not supported in FOP.</reason>
+    
+<response></response>
+  </message>
+  
+<message id="PDFX011E" type="ERROR">
+    
+<reason>Both index-see and %1 defined for index entry &apos;%2&apos;.</reason>
+    
+<response>Recovering by treating the index-see as an index-see-also.</response>
+  </message>
+
 </messages>
