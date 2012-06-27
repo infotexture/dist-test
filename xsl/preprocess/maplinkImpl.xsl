@@ -18,11 +18,11 @@
   <xsl:param name="DITAEXT" select="'.xml'"/>
   <xsl:param name="FILEREF">file://</xsl:param>
   <xsl:param name="WORKDIR">
-    <xsl:apply-templates select="/processing-instruction()" mode="get-work-dir"/>
+    <xsl:apply-templates select="/processing-instruction('workdir-uri')" mode="get-work-dir"/>
   </xsl:param>
-  <xsl:variable name="file-prefix">
-    <xsl:value-of select="$FILEREF"/><xsl:value-of select="$WORKDIR"/>
-  </xsl:variable>
+  <xsl:param name="include.rellinks" select="'#default parent child sibling friend next previous cousin ancestor descendant sample external other'"/>
+  <xsl:variable name="include.roles" select="concat(' ', normalize-space($include.rellinks), ' ')"/>
+  <xsl:variable name="file-prefix" select="$WORKDIR"/>
   <xsl:variable name="PATHTOMAP">
     <xsl:call-template name="GetPathToMap">
       <xsl:with-param name="inputMap" select="$INPUTMAP"/>
@@ -43,11 +43,7 @@
       <xsl:apply-templates/>
     </mapcollection>
   </xsl:template>
-  
-  <xsl:template match="processing-instruction('workdir')" mode="get-work-dir">
-    <xsl:value-of select="."/><xsl:text>/</xsl:text>
-  </xsl:template>
-  
+    
   <!-- Get the relative path that leads to a file. Used to find path from a maplist to a map. -->
   <xsl:template name="getRelativePath">
     <xsl:param name="filename"/>
@@ -55,14 +51,14 @@
     <xsl:choose>
       <xsl:when test="contains($filename,'/')">
         <xsl:call-template name="getRelativePath">
-          <xsl:with-param name="filename"><xsl:value-of select="substring-after($filename,'/')"/></xsl:with-param>
-          <xsl:with-param name="currentPath"><xsl:value-of select="$currentPath"/><xsl:value-of select="substring-before($filename,'/')"/>/</xsl:with-param>
+          <xsl:with-param name="filename" select="substring-after($filename,'/')"/>
+          <xsl:with-param name="currentPath" select="concat($currentPath, substring-before($filename,'/'), '/')"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="contains($filename,'\')">
         <xsl:call-template name="getRelativePath">
-          <xsl:with-param name="filename"><xsl:value-of select="substring-after($filename,'\')"/></xsl:with-param>
-          <xsl:with-param name="currentPath"><xsl:value-of select="$currentPath"/><xsl:value-of select="substring-before($filename,'\')"/>/</xsl:with-param>
+          <xsl:with-param name="filename" select="substring-after($filename,'\')"/>
+          <xsl:with-param name="currentPath" select="concat($currentPath, substring-before($filename,'\'), '/')"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise><xsl:value-of select="$currentPath"/></xsl:otherwise>
@@ -95,7 +91,7 @@
     <xsl:variable name="hrefFromOriginalMap">
       <xsl:call-template name="simplifyLink">
         <xsl:with-param name="originalLink">
-          <xsl:value-of select="$pathFromMaplist"/><xsl:value-of select="$use-href"/>
+          <xsl:value-of select="concat($pathFromMaplist, $use-href)"/>
         </xsl:with-param>
       </xsl:call-template>
     </xsl:variable>
@@ -114,7 +110,7 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:with-param>
-        <xsl:with-param name="pathFromMaplist"><xsl:value-of select="$pathFromMaplist"/></xsl:with-param>
+        <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
       </xsl:call-template>
     </xsl:variable>
     <!-- If going to print, and @print=no, do not create links for this topicref -->
@@ -127,7 +123,14 @@
           </xsl:apply-templates>
         </maplinks>
       </xsl:variable>
-      <xsl:apply-templates select="exsl:node-set($newlinks)" mode="add-links-to-temp-file"/>
+      <xsl:choose>
+        <xsl:when test="system-property('xsl:version') >= 2.0">
+          <xsl:apply-templates select="$newlinks" mode="add-links-to-temp-file"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="exsl:node-set($newlinks)" mode="add-links-to-temp-file"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:if>
     <xsl:apply-templates>
       <xsl:with-param name="pathFromMaplist" select="$pathFromMaplist"/>
@@ -200,28 +203,40 @@
   <!-- To do: When XSLT 2.0 is a minimum requirement, do this again with hearty use of xsl:next-match. -->
   <xsl:template match="*[contains(@class, ' map/topicref ')]" mode="link-from">
     <xsl:param name="pathBackToMapDirectory"/>
-    <xsl:apply-templates select="." mode="link-to-parent">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-    </xsl:apply-templates>
+    <xsl:if test="contains($include.roles, ' parent ')">
+      <xsl:apply-templates select="." mode="link-to-parent">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+      </xsl:apply-templates>
+    </xsl:if>
     <xsl:apply-templates select="." mode="link-to-prereqs">
       <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
     </xsl:apply-templates>
-    <xsl:apply-templates select="." mode="link-to-siblings">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-    </xsl:apply-templates>
-    <xsl:apply-templates select="." mode="link-to-next-prev">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-    </xsl:apply-templates>
-    <xsl:apply-templates select="." mode="link-to-children">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-    </xsl:apply-templates>
-    <xsl:apply-templates select="." mode="link-to-friends">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-      <xsl:with-param name="linklist">false</xsl:with-param>
-    </xsl:apply-templates>    
-    <xsl:apply-templates select="." mode="link-to-other">
-      <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
-    </xsl:apply-templates>    
+    <xsl:if test="contains($include.roles, ' sibling ')">
+      <xsl:apply-templates select="." mode="link-to-siblings">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+      </xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="contains($include.roles, ' next ') or contains($include.roles, ' previous')">
+      <xsl:apply-templates select="." mode="link-to-next-prev">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+      </xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="contains($include.roles, ' child ')">
+      <xsl:apply-templates select="." mode="link-to-children">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+      </xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="contains($include.roles, ' friend ')">
+      <xsl:apply-templates select="." mode="link-to-friends">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+        <xsl:with-param name="linklist">false</xsl:with-param>
+      </xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="contains($include.roles, ' other ')">
+      <xsl:apply-templates select="." mode="link-to-other">
+        <xsl:with-param name="pathBackToMapDirectory" select="$pathBackToMapDirectory"/>
+      </xsl:apply-templates>
+    </xsl:if>
   </xsl:template>
 
   <!--parent-->
@@ -273,18 +288,22 @@
   <xsl:template match="*[@collection-type='sequence']/*[contains(@class, ' map/topicref ')]
     [not(ancestor::*[contains(concat(' ', @chunk, ' '), ' to-content ')])]" mode="link-to-next-prev" name="link-to-next-prev">
     <xsl:param name="pathBackToMapDirectory"/>
+    <xsl:if test="contains($include.roles, ' previous ')">
         <xsl:apply-templates mode="link" 
           select="preceding-sibling::*[contains(@class, ' map/topicref ')][@href][not(@href='')][not(@linking='none')][not(@linking='sourceonly')][not(@processing-role='resource-only')][1]">
           <xsl:with-param name="role">previous</xsl:with-param>
           <xsl:with-param name="pathBackToMapDirectory" 
             select="$pathBackToMapDirectory"/>
         </xsl:apply-templates>
+    </xsl:if>
+    <xsl:if test="contains($include.roles, ' next ')">
         <xsl:apply-templates mode="link" 
           select="following-sibling::*[contains(@class, ' map/topicref ')][@href][not(@href='')][not(@linking='none')][not(@linking='sourceonly')][not(@processing-role='resource-only')][1]">
           <xsl:with-param name="role">next</xsl:with-param>
           <xsl:with-param name="pathBackToMapDirectory" 
             select="$pathBackToMapDirectory"/>
         </xsl:apply-templates>
+    </xsl:if>
   </xsl:template>
   
   <!--children-->
@@ -676,16 +695,14 @@
             <xsl:when test="@copy-to and not(contains(@chunk, 'to-content'))">
               <xsl:call-template name="simplifyLink">
                 <xsl:with-param name="originalLink">
-                  <xsl:value-of select="$pathBackToMapDirectory"/><xsl:value-of select="@copy-to"/>
+                  <xsl:value-of select="concat($pathBackToMapDirectory, @copy-to)"/>
                 </xsl:with-param>
               </xsl:call-template>
             </xsl:when>
             <!--ref between two local paths - adjust normally-->
             <xsl:otherwise>
               <xsl:call-template name="simplifyLink">
-                <xsl:with-param name="originalLink"><xsl:value-of 
-                  select="$pathBackToMapDirectory"/><xsl:value-of 
-                  select="@href"/></xsl:with-param>
+                <xsl:with-param name="originalLink" select="concat($pathBackToMapDirectory, @href)"/>
               </xsl:call-template>
             </xsl:otherwise>
           </xsl:choose>
@@ -824,9 +841,7 @@
     <xsl:choose>
       <xsl:when test="contains($originalLink,'\')">
         <xsl:call-template name="simplifyLink">
-          <xsl:with-param name="originalLink"> <xsl:value-of 
-            select="substring-before($originalLink,'\')"/>/<xsl:value-of 
-            select="substring-after($originalLink,'\')"/> </xsl:with-param>
+          <xsl:with-param name="originalLink" select="concat(substring-before($originalLink,'\'), '/', substring-after($originalLink,'\'))"/>
         </xsl:call-template>
       </xsl:when>
       <xsl:when test="starts-with($originalLink,'./')">
@@ -836,8 +851,7 @@
         </xsl:call-template>
       </xsl:when>      
       <xsl:when test="not(contains($originalLink,'../'))">
-        <xsl:value-of select="$buildLink"/>
-        <xsl:value-of select="$originalLink"/>
+        <xsl:value-of select="concat($buildLink, $originalLink)"/>
       </xsl:when>
       <xsl:when test="starts-with($originalLink,'../')">
         <xsl:call-template name="simplifyLink">
@@ -965,7 +979,7 @@
             <xsl:with-param name="path" select="concat($PATHTOMAP,$pathFromMaplist)"/>
           </xsl:call-template>
         </xsl:with-param>
-        <xsl:with-param name="remainingPath"><xsl:value-of select="$PATHTOMAP"/><xsl:value-of select="$pathFromMaplist"/></xsl:with-param>
+        <xsl:with-param name="remainingPath" select="concat($PATHTOMAP, $pathFromMaplist)"/>
       </xsl:call-template>
     </xsl:variable>
     <xsl:variable name="pathWithoutRelPaths">
@@ -983,7 +997,7 @@
     <!-- Now, to get from the target file to any other: it must go up until it hits the common dir.
        Then, it must travel back to the base directory containing the map. At that point, this
        path can be placed in front of any referenced topic, and it will get us to the right spot. -->
-    <xsl:value-of select="$backToCommon"/><xsl:value-of select="$moveToBase"/>
+    <xsl:value-of select="concat($backToCommon, $moveToBase)"/>
   </xsl:template>  
   
   <!-- Count the number of paths removed from the base (1 for each ../ or ..\ at the start of the href) -->

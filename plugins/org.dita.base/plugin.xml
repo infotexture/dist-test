@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the DITA Open Toolkit project hosted on 
-  Sourceforge.net. See the accompanying license.txt file for 
-  applicable licenses.-->
-<!-- (c) Copyright IBM Corp. 2011 All Rights Reserved. -->
+<!--
+  This file is part of the DITA Open Toolkit project.
+  See the accompanying license.txt file for applicable licenses.
+-->
 <plugin id="org.dita.base">
   <!-- base extension points -->
   <extension-point id="package.version" name="Plug-in version"/>
@@ -77,9 +77,10 @@
   <feature extension="dita.resource.extensions" value=".pdf"/>
   <feature extension="dita.resource.extensions" value=".swf"/>
   <feature extension="dita.basedir-resource-directory" value="true"/>
+  <feature extension="dita.conductor.target.relative" file="conductor.xml"/>
   <template file="../../catalog-dita_template.xml"/>
   <template file="../../build_template.xml"/>
-  <template file="../../build_preprocess_template.xml"/>
+  <template file="build_preprocess_template.xml"/>
   <template file="../../resource/messages_template.xml"/>
   <template file="../../xsl/common/allstrings_template.xml"/>
   <template file="../../xsl/preprocess/maplink_template.xsl"/>

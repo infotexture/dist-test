@@ -10,22 +10,22 @@
 <meta name="DC.Title" content="DITA Open Toolkit User Guide"/>
 <meta name="abstract" content="The DITA Open Toolkit is an implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, such as XHTML, PDF, Eclipse Help, HTML Help, and JavaHelp."/>
 <meta name="description" content="The DITA Open Toolkit is an implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, such as XHTML, PDF, Eclipse Help, HTML Help, and JavaHelp."/>
-<meta name="DC.Relation" scheme="URI" content="../readme/changes/rel1.5.4.html"/>
+<meta name="DC.Relation" scheme="URI" content="../readme/changes/rel1.6.html"/>
 <meta name="DC.Relation" scheme="URI" content="../specification/DITA1-2.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/DITA-tested.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/distribution_packages.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/DITA-installation.html"/>
-<meta name="DC.Relation" scheme="URI" content="../readme/DITA-usingtransforms.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/DITA-ant.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/DITA-javacmd.html"/>
+<meta name="DC.Relation" scheme="URI" content="../readme/dita-ot_ant_properties.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/configuration.html"/>
 <meta name="DC.Relation" scheme="URI" content="../readme/AvailableTransforms.html"/>
-<meta name="DC.Relation" scheme="URI" content="../readme/DITA-log.html"/>
-<meta name="DC.Relation" scheme="URI" content="../readme/DITA-troubleshooting.html"/>
+<meta name="DC.Relation" scheme="URI" content="../readme/DITA-globalization.html"/>
+<meta name="DC.Relation" scheme="URI" content="../readme/troubleshooting-overview.html"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="DITA-readme"/>
 <meta name="DC.Language" content="en-us"/>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
 <title>DITA Open Toolkit User Guide</title>
 </head>
 <body id="DITA-readme">
@@ -50,30 +50,30 @@ DITA Open Toolkit</a>.</p>
 
 <div class="related-links">
 <ul class="ullinks">
-<li class="link ulchildlink"><strong><a href="../readme/changes/rel1.5.4.html">DITA Open Toolkit Release 1.5.4</a></strong><br/>
+<li class="link ulchildlink"><strong><a href="../readme/changes/rel1.6.html">DITA Open Toolkit Release 1.6</a></strong><br/>
 </li>
 <li class="link ulchildlink"><strong><a href="../specification/DITA1-2.html">DITA 1.2 Specification Support</a></strong><br/>
-DITA Open Toolkit <span class="keyword">1.5.4</span> supports the DITA 1.2 specification. Initial support for this specification was added in version 1.5 of the toolkit; versions 1.5.1 and 1.5.2 contain minor modifications to keep up with the latest drafts. The specification itself was approved at approximately the same time as DITA-OT 1.5.2, which contains the final versions of the DTD and Schemas.</li>
+DITA Open Toolkit <span class="keyword">1.6</span> supports the DITA 1.2 specification. Initial support for this specification was added in version 1.5 of the toolkit; versions 1.5.1 and 1.5.2 contain minor modifications to keep up with the latest drafts. The specification itself was approved at approximately the same time as DITA-OT 1.5.2, which contained the final versions of the DTD and Schemas. DITA-OT 1.6 updated the DITA 1.2 XSDs to address minor errata in the standard; the DTDs remain up to date.</li>
 <li class="link ulchildlink"><strong><a href="../readme/DITA-tested.html">Tested platforms and tools</a></strong><br/>
 See which tools and platforms have been used in testing the DITA      processing system.</li>
 <li class="link ulchildlink"><strong><a href="../readme/distribution_packages.html">Distribution packages</a></strong><br/>
-DITA-OT is available in three three binary packages, as well as in a source     package.</li>
+DITA-OT is available in three three binary packages.</li>
 <li class="link ulchildlink"><strong><a href="../readme/DITA-installation.html">Installing the DITA Open Toolkit</a></strong><br/>
-This topic explains how to install the DITA Open Toolkit processing     environment.</li>
-<li class="link ulchildlink"><strong><a href="../readme/DITA-usingtransforms.html">Using DITA transforms</a></strong><br/>
-The core transforms of the DITA Open Toolkit represent an implementation of all     processing defined by OASIS in the DITA specification.</li>
+This topic explains how to install the DITA Open Toolkit processing environment.</li>
 <li class="link ulchildlink"><strong><a href="../readme/DITA-ant.html">Running DITA-OT from Ant</a></strong><br/>
 Ant is an open tool that the DITA Open Toolkit uses to manage builds.</li>
 <li class="link ulchildlink"><strong><a href="../readme/DITA-javacmd.html">Running DITA-OT from command-line tool</a></strong><br/>
 The DITA Open Toolkit provides a command-line tool as an alternative for users with     little knowledge of Ant. Most parameters available to the Ant builds are also available using     the command-line tool.</li>
+<li class="link ulchildlink"><strong><a href="../readme/dita-ot_ant_properties.html">Ant argument properties for DITA-OT</a></strong><br/>
+Reference list of DITA-OT specific argument properties.</li>
 <li class="link ulchildlink"><strong><a href="../readme/configuration.html">Configuration</a></strong><br/>
 Reference list of DITA-OT configuration properties.</li>
 <li class="link ulchildlink"><strong><a href="../readme/AvailableTransforms.html">Available DITA-OT Transforms</a></strong><br/>
-The primary purpose of the DITA Open Toolkit is to transform DITA maps and topics into other formats. The toolkit ships with several native transforms, and can be extended to support any other output format with by adding a new plug-in.</li>
-<li class="link ulchildlink"><strong><a href="../readme/DITA-log.html">Problem determination and log analysis</a></strong><br/>
-</li>
-<li class="link ulchildlink"><strong><a href="../readme/DITA-troubleshooting.html">Troubleshooting</a></strong><br/>
-This section is used for identifying problems when installing      and executing the DITA Open Toolkit.</li>
+The primary purpose of the DITA Open Toolkit is to transform DITA maps and topics       into other formats. The toolkit ships with several native transforms, and can be extended to       support any other output format with by adding a new plug-in.</li>
+<li class="link ulchildlink"><strong><a href="../readme/DITA-globalization.html">Globalization in the DITA-OT</a></strong><br/>
+The DITA standard comes with many features to enable globalized content, including the xml:lang, translate, and dir attributes. The DITA-OT uses these attributes to help publish content that is written or translated into many different languages.</li>
+<li class="link ulchildlink"><strong><a href="../readme/troubleshooting-overview.html">Error messages and troubleshooting</a></strong><br/>
+This section contains information about problems that you might encounter and how to         resolve them.</li>
 </ul>
 </div>
 

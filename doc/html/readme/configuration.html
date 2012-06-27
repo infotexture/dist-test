@@ -14,7 +14,7 @@
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="configuration"/>
 <meta name="DC.Language" content="en"/>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
 <title>Configuration</title>
 </head>
 <body id="configuration">
@@ -27,12 +27,13 @@
     <div class="shortdesc">Reference list of DITA-OT configuration properties.</div>
 
     <p class="p">The <span class="ph filepath">lib/configuration.properties</span> file is used to store configuration
-      properties for DITA-OT and plug-ins. The configuration properties are available to both Ant
-      and Java processes, but unlike argument properties, they cannot be set at run-time. </p>
-
-    <p class="p">The <span class="ph filepath">lib/org.dita.dost.platform/plugin.properties</span> file is used to store
+      properties for DITA-OT and plug-ins. <span class="ph">The
+        <span class="ph filepath">lib/org.dita.dost.platform/plugin.properties</span> file is used to store
       configuration properties set by the integration process. The file is regenerated from plug-in
-      configuration each time the integration process is run and should not be edited manually.</p>
+      configuration each time the integration process is run and should not be edited manually.</span></p>
+
+    <p class="p">The configuration properties are available to both Ant and Java processes, but unlike
+      argument properties, they cannot be set at run-time. </p>
 
   </div>
 
@@ -43,6 +44,32 @@
 
           <td valign="top" class="stentry">Default language. Allowed values are those defined in IETF BCP 47, <a class="xref" href="https://tools.ietf.org/html/bcp47" target="_blank">Tags for the Identification
               of Languages</a>.</td>
+
+        </tr>
+<tr class="strow"><td valign="top" class="stentry"><samp class="ph codeph">generate-debug-attributes</samp></td>
+<td valign="top" class="stentry">Generate <samp class="ph codeph">xtrf</samp> and <samp class="ph codeph">xtrc</samp> debug attributes. Allowed values are<ul class="ul">
+              <li class="li">"true" (default) — debug attribute generation is enabled</li>
+
+              <li class="li">"false" — debug attribute generation is disabled</li>
+
+            </ul>
+<div class="note note"><span class="notetitle">Note:</span> Disabling debug attributes will reduce the temporary file size and memory
+              consumption. However, log messages will no longer have the source information
+              available and the ability to debug problems may deteriorate.</div>
+</td>
+</tr>
+<tr class="strow">
+          <td valign="top" class="stentry"><samp class="ph codeph">processing-mode</samp></td>
+
+          <td valign="top" class="stentry">Error recover mode. Allowed values are<ul class="ul" id="configuration__ul_hlq_fp3_rg">
+              <li class="li">"strict" — enforce strict input validation</li>
+
+              <li class="li">"skip" — lax input validation with no error recovery</li>
+
+              <li class="li">"lax" (default) — lax input validation and error recovery</li>
+
+            </ul>
+</td>
 
         </tr>
 </table>
@@ -94,11 +121,38 @@
 
   </div>
 
-<div class="related-links">
+  <div class="related-links">
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../readme/DITA-readme.html" title="The DITA Open Toolkit is an implementation of the OASIS DITA Technical Committee's specification for DITA DTDs and Schemas. The Toolkit transforms DITA content (maps and topics) into deliverable formats, such as XHTML, PDF, Eclipse Help, HTML Help, and JavaHelp.">DITA Open Toolkit User Guide</a></div>
 </div>
 </div>
+<div class="topic reference nested1" id="integration-configuration">
+    <h2 class="title topictitle2">Integration configuration</h2>
+
+    
+    <div class="body refbody"><div class="abstract">The integration process can be configured using the <span class="ph filepath">integrator.properties</span> file.</div>
+
+      <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="strow">
+          <td valign="top" class="stentry"><samp class="ph codeph">plugindirs</samp></td>
+
+          <td valign="top" class="stentry">A semicolon-separated list of directory paths
+           to search for plugins to integrate; relative paths are resolved against the DITA-OT base directory. Any immediate
+           subdirectory containing a "plugin.xml" file is
+           integrated.</td>
+
+        </tr>
+<tr class="strow">
+          <td valign="top" class="stentry"><samp class="ph codeph">plugin.ignores</samp></td>
+
+          <td valign="top" class="stentry">A semicolon-separated list of directory names to ignore during plug-in integration.</td>
+
+        </tr>
+</table>
+
+    </div>
+
+  </div>
+
 
 </body>
 </html>

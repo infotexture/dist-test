@@ -11,7 +11,7 @@
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="topicmerge"/>
 <meta name="DC.Language" content="en-us"/>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
 <title>Topic merge</title>
 </head>
 <body id="topicmerge">
@@ -42,28 +42,28 @@ merged files. A sample usage of this module is as follows.</p>
 
 <div class="p"><p class="lines">sample.xml:</p>
 <pre class="pre codeblock">&lt;project name="sample"&gt;
-	&lt;property name="dita.dir" value="${basedir}"/&gt;
-	&lt;import file="${dita.dir}${file.separator}build.xml"/&gt;
+  &lt;property name="dita.dir" value="${basedir}"/&gt;
+  &lt;import file="${dita.dir}${file.separator}build.xml"/&gt;
 
-	&lt;target name="premerge"&gt;	
-  		&lt;antcall target="preprocess"&gt;
-  		&lt;param name="args.input" value="${input}"/&gt;
-		&lt;param name="output.dir" value="${dita.dir}${file.separator}output"/&gt;
-		&lt;/antcall&gt;
-	&lt;/target&gt;
-	&lt;target name="merge"  description="Merge topics" depends="premerge"&gt;
-		&lt;basename property="temp.base" file="${input}" suffix=".ditamap"/&gt;
-		&lt;property name="temp.input" value="${basedir}${file.separator}${dita.temp.dir}${file.separator}${temp.base}"/&gt;
-		&lt;dirname property="temp.dir" file="${temp.input}"/&gt;
-		&lt;pipeline message="topicmerge" module="TopicMerge" 
-			inputmap="${temp.dir}${file.separator}${temp.base}.ditamap" 
-			extparam="output=${dita.dir}${file.separator}output${file.separator}${temp.base}_merged.xml;
+  &lt;target name="premerge"&gt;  
+      &lt;antcall target="preprocess"&gt;
+      &lt;param name="args.input" value="${input}"/&gt;
+    &lt;param name="output.dir" value="${dita.dir}${file.separator}output"/&gt;
+    &lt;/antcall&gt;
+  &lt;/target&gt;
+  &lt;target name="merge" description="Merge topics" depends="premerge"&gt;
+    &lt;basename property="temp.base" file="${input}" suffix=".ditamap"/&gt;
+    &lt;property name="temp.input" value="${basedir}${file.separator}${dita.temp.dir}${file.separator}${temp.base}"/&gt;
+    &lt;dirname property="temp.dir" file="${temp.input}"/&gt;
+    &lt;pipeline message="topicmerge" module="TopicMerge" 
+      inputmap="${temp.dir}${file.separator}${temp.base}.ditamap" 
+      extparam="output=${dita.dir}${file.separator}output${file.separator}${temp.base}_merged.xml;
       style=${dita.dir}${file.separator}xsl${file.separator}pretty.xsl" /&gt; 
-	&lt;/target&gt;
+  &lt;/target&gt;
 &lt;/project&gt;</pre>
 </div>
 
-  <div class="p">Then, you need to type <samp class="ph codeph">ant -f sample.xml merge -Dinput="C:\DITA-OT<span class="keyword">1.5.4</span>\test.ditamap</samp>"
+  <div class="p">Then, you need to type <samp class="ph codeph">ant -f sample.xml merge -Dinput="C:\DITA-OT<span class="keyword">1.6</span>\test.ditamap</samp>"
 in the command window.<div class="note note"><span class="notetitle">Note:</span> The path for -Dinput must be an absolute path</div>
 </div>
 

@@ -6,12 +6,13 @@
     <prodinfo>
       <prodname>DITA-OT</prodname>
       <vrmlist>
-        <vrm version="1.5.3"/>
+        <vrm version="1.6"/>
       </vrmlist>
     </prodinfo>
   </bookmeta>
   <frontmatter>
     <mapref href="keyrefs.ditamap" processing-role="resource-only"/>
+    <mapref href="reltable.ditamap" processing-role="resource-only"/>
     <mapref href="subjectscheme.ditamap" type="subjectScheme" processing-role="resource-only"/>
     <booklists>
       <toc/>
@@ -19,9 +20,10 @@
       <tablelist/>
     </booklists>
   </frontmatter>
-  <chapter navtitle="Getting Started">
+  <!--<chapter navtitle="Getting Started">
     <mapref href="quickstartguide.ditamap"/>
-  </chapter>
+  </chapter>-->
+  <chapter format="ditamap" href="quickstart.ditamap"/>
   <chapter href="readme.ditamap" format="ditamap"/>
   <chapter navtitle="Developer Reference">
     <mapref href="dev_ref/dev_ref.ditamap"/>

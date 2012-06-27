@@ -80,11 +80,6 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
   <xsl:key name="count.topic.table"
            match="*[contains(@class, ' topic/table ')][*[contains(@class, ' topic/title ')]]"
            use="'include'"/>
-
-  <xsl:template match="processing-instruction('workdir')[1]" mode="get-work-dir">
-    <xsl:value-of select="."/>
-    <xsl:text>/</xsl:text>
-  </xsl:template>
   
   <!-- Process a link in the related-links section. Retrieve link text, type, and
        description if possible (and not already specified locally). -->
@@ -542,16 +537,16 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
 	    <xsl:choose>
 	        <xsl:when test="contains(@class, ' topic/link ')">
 	          <xsl:choose>
-	            <xsl:when test="./preceding::processing-instruction('workdir')[1]">
-	              <xsl:apply-templates select="./preceding::processing-instruction('workdir')[1]" mode="get-work-dir"/>
+	            <xsl:when test="./preceding::processing-instruction('workdir-uri')[1]">
+	              <xsl:apply-templates select="./preceding::processing-instruction('workdir-uri')[1]" mode="get-work-dir"/>
 	            </xsl:when>
 	            <xsl:otherwise>
-	              <xsl:apply-templates select="/processing-instruction()" mode="get-work-dir"/>
+	              <xsl:apply-templates select="/processing-instruction('workdir-uri')" mode="get-work-dir"/>
 	            </xsl:otherwise>
 	          </xsl:choose>
 	        </xsl:when>
 	        <xsl:otherwise>
-	            <xsl:apply-templates select="/processing-instruction()" mode="get-work-dir"/>
+	            <xsl:apply-templates select="/processing-instruction('workdir-uri')" mode="get-work-dir"/>
 	        </xsl:otherwise>
 	    </xsl:choose>
 	</xsl:param>
@@ -564,12 +559,10 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
         <xsl:value-of select="@href"/>
       </xsl:when>
       <xsl:when test="contains(@href,'#')">
-        <xsl:value-of select="$FILEREF"/>
         <xsl:value-of select="$WORKDIR"/>
         <xsl:value-of select="substring-before(@href,'#')"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="$FILEREF"/>
         <xsl:value-of select="$WORKDIR"/>
         <xsl:value-of select="@href"/>
       </xsl:otherwise>
@@ -908,7 +901,14 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
         <xsl:if test="not($shortdesc='#none#')">
           <xsl:apply-templates select="." mode="topicpull:add-genshortdesc-PI"/>
           <desc class="- topic/desc ">
-            <xsl:apply-templates select="exsl:node-set($shortdesc)"/>
+            <xsl:choose>
+              <xsl:when test="system-property('xsl:version') >= 2.0">
+                <xsl:apply-templates select="$shortdesc"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:apply-templates select="exsl:node-set($shortdesc)"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </desc>
         </xsl:if>
       </xsl:otherwise>
@@ -1273,20 +1273,52 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
         </xsl:variable>
         <xsl:value-of select="normalize-space($target-text)"/>
       </xsl:when>
-      <!--otherwise use the href, unless it contains .dita, in which case defer to the final output pass to decide what to do with the file extension-->
-      <xsl:otherwise>
+
+      <!-- No title or spectitle; check to see if the element provides generated text -->
+      <xsl:when test="$topicpos='samefile' and //*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ') or contains(@class,' topic/related-links ') ] //*[contains(@class, $classval)][@id=$elemid][1]">
+        <xsl:variable name="target-text">
+          <xsl:apply-templates select="//*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ')  or contains(@class,' topic/related-links ') ]//*[contains(@class, $classval)][@id=$elemid][1]" mode="topicpull:get_generated_text"/>
+        </xsl:variable>
         <xsl:choose>
-          <xsl:when test="starts-with(@href,'#')">
-            <xsl:value-of select="@href"/>
-          </xsl:when>
-          <xsl:when test="contains(@href,$DITAEXT)">#none#</xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="@href"/>
-          </xsl:otherwise>
+          <xsl:when test="$target-text!='#none#'"><xsl:value-of select="normalize-space($target-text)"/></xsl:when>
+          <xsl:otherwise><xsl:apply-templates select="." mode="topicpull:otherblock-linktext-fallback"/></xsl:otherwise>
         </xsl:choose>
-        <xsl:apply-templates select="." mode="ditamsg:cannot-retrieve-linktext"/>
+      </xsl:when>
+
+      <xsl:when test="$topicpos='otherfile' and $doc//*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ')]//*[contains(@class, $classval)  or contains(@class,' topic/related-links ') ][@id=$elemid][1]">
+        <xsl:variable name="target-text">
+          <xsl:apply-templates select="$doc//*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ')  or contains(@class,' topic/related-links ') ]//*[contains(@class, $classval)][@id=$elemid][1]" mode="topicpull:get_generated_text"/>
+        </xsl:variable>
+        <xsl:choose>
+          <xsl:when test="$target-text!='#none#'"><xsl:value-of select="normalize-space($target-text)"/></xsl:when>
+          <xsl:otherwise><xsl:apply-templates select="." mode="topicpull:otherblock-linktext-fallback"/></xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+
+      <xsl:otherwise>
+        <xsl:apply-templates select="." mode="topicpull:otherblock-linktext-fallback"/>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- Provide a hook for specializations to give default generated text to new elements.
+       By default, elements with no generated text return #none#. -->
+  <xsl:template match="*" mode="topicpull:get_generated_text">
+    <xsl:text>#none#</xsl:text>
+  </xsl:template>
+
+  <!--No link text found; use the href, unless it contains .dita, in which case defer to the final output pass to decide what to do with the file extension-->
+  <xsl:template match="*" mode="topicpull:otherblock-linktext-fallback">
+    <xsl:choose>
+      <xsl:when test="starts-with(@href,'#')">
+        <xsl:value-of select="@href"/>
+      </xsl:when>
+      <xsl:when test="contains(@href,$DITAEXT)">#none#</xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="@href"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:apply-templates select="." mode="ditamsg:cannot-retrieve-linktext"/>
   </xsl:template>
 
   <!-- Pull link text for a figure. Uses mode="topicpull:figure-linktext" to output the text.  -->
@@ -1363,7 +1395,14 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
     <xsl:param name="figtitle"/>
     <xsl:choose>
       <xsl:when test="$FIGURELINK='TITLE'">
-        <xsl:apply-templates select="exsl:node-set($figtitle)" mode="text-only"/>
+        <xsl:choose>
+          <xsl:when test="system-property('xsl:version') >= 2.0">
+            <xsl:apply-templates select="$figtitle" mode="text-only"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="exsl:node-set($figtitle)" mode="text-only"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise> <!-- Default: FIGURELINK='NUMBER' -->
         <xsl:value-of select="$figtext"/>
@@ -1381,7 +1420,14 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
     <xsl:param name="figtitle"/> <!-- Currently unused, but may be picked up by an override -->
     <xsl:choose>
       <xsl:when test="$FIGURELINK='TITLE'">
-        <xsl:apply-templates select="exsl:node-set($figtitle)" mode="text-only"/>
+        <xsl:choose>
+          <xsl:when test="system-property('xsl:version') >= 2.0">
+            <xsl:apply-templates select="$figtitle" mode="text-only"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="exsl:node-set($figtitle)" mode="text-only"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise> <!-- Default: FIGURELINK='NUMBER' -->
         <xsl:value-of select="$figcount"/>
@@ -1491,7 +1537,14 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
     <xsl:param name="tbltitle"/> <!-- Currently unused, but may be picked up by an override -->
     <xsl:choose>
       <xsl:when test="$TABLELINK='TITLE'">
-        <xsl:apply-templates select="exsl:node-set($tbltitle)" mode="text-only"/>
+        <xsl:choose>
+          <xsl:when test="system-property('xsl:version') >= 2.0">
+            <xsl:apply-templates select="$tbltitle" mode="text-only"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="exsl:node-set($tbltitle)" mode="text-only"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise> <!-- Default: TABLELINK='NUMBER' -->
         <xsl:value-of select="$tbltext"/>
@@ -1509,7 +1562,14 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
     <xsl:param name="tbltitle"/> <!-- Currently unused, but may be picked up by an override -->
     <xsl:choose>
       <xsl:when test="$TABLELINK='TITLE'">
-        <xsl:apply-templates select="exsl:node-set($tbltitle)" mode="text-only"/>
+        <xsl:choose>
+          <xsl:when test="system-property('xsl:version') >= 2.0">
+            <xsl:apply-templates select="$tbltitle" mode="text-only"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="exsl:node-set($tbltitle)" mode="text-only"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise> <!-- Default: TABLELINK='NUMBER' -->
         <xsl:value-of select="$tblcount"/>
@@ -1977,222 +2037,29 @@ mode="topicpull:figure-linktext" and mode="topicpull:table-linktext"
     <xsl:call-template name="output-message">
       <xsl:with-param name="msgnum">033</xsl:with-param>
       <xsl:with-param name="msgsev">E</xsl:with-param>
+      <xsl:with-param name="msgparams">%1=<xsl:value-of select="@href"/></xsl:with-param>
     </xsl:call-template>
   </xsl:template>
   <xsl:template match="*" mode="ditamsg:crossref-unordered-listitem">
     <xsl:call-template name="output-message">
       <xsl:with-param name="msgnum">034</xsl:with-param>
       <xsl:with-param name="msgsev">E</xsl:with-param>
+      <xsl:with-param name="msgparams">%1=<xsl:value-of select="@href"/></xsl:with-param>
     </xsl:call-template>
   </xsl:template>
   <xsl:template match="*" mode="ditamsg:cannot-retrieve-footnote-number">
     <xsl:call-template name="output-message">
       <xsl:with-param name="msgnum">035</xsl:with-param>
       <xsl:with-param name="msgsev">E</xsl:with-param>
+      <xsl:with-param name="msgparams">%1=<xsl:value-of select="@href"/></xsl:with-param>
     </xsl:call-template>
   </xsl:template>
   <xsl:template match="*" mode="ditamsg:cannot-find-dlentry-target">
     <xsl:call-template name="output-message">
       <xsl:with-param name="msgnum">036</xsl:with-param>
       <xsl:with-param name="msgsev">E</xsl:with-param>
+      <xsl:with-param name="msgparams">%1=<xsl:value-of select="@href"/></xsl:with-param>
     </xsl:call-template>
-  </xsl:template>
-
-  <!-- ************************* DEPRECATED FUNCTIONS ************************* -->
-  <!-- These functions have been deprecated in favor of the refactored templates added in April 2007. -->
-  <xsl:template name="inherit">
-    <xsl:param name="attrib"/>
-    <xsl:call-template name="topicpull:inherit">
-      <xsl:with-param name="attrib" select="$attrib"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template name="get-stuff">
-    <xsl:param name="localtype">#none#</xsl:param>
-    <xsl:param name="scope">#none#</xsl:param>
-    <xsl:param name="format">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:get-stuff">
-      <xsl:with-param name="localtype" select="$localtype"/>
-      <xsl:with-param name="scope" select="$scope"/>
-      <xsl:with-param name="format" select="$format"/>
-    </xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template name="verify-type-attribute">
-    <xsl:param name="type"/>            <!-- Type value specified on the link -->
-    <xsl:param name="actual-class"/>    <!-- Class value of the target element -->
-    <xsl:param name="actual-name"/>     <!-- Name of the target element -->
-    <xsl:param name="targetting"/>      <!-- Targetting a "topic" or "element" -->
-    <xsl:apply-templates select="." mode="topicpull:verify-type-attribute">
-      <xsl:with-param name="type" select="$type"/>
-      <xsl:with-param name="actual-class" select="$actual-class"/>
-      <xsl:with-param name="actual-name" select="$actual-name"/>
-      <xsl:with-param name="targetting" select="$targetting"/>
-    </xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template name="classval">
-    <xsl:param name="type">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:get-stuff_classval"><xsl:with-param name="type" select="$type"/></xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template mode="getshortdesc" match="*[contains(@class,' topic/link ') or contains(@class,' topic/xref ')]">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getshortdesc">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template mode="getlinktext" match="*[contains(@class,' topic/link ')] | *[contains(@class,' topic/xref ')]">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_topic">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template mode="getlinktext" priority="1" match="*[contains(@class,' topic/xref ')][contains(@href,'#') and contains(substring-after(@href,'#'),'/')]">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="blocktext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='figgroup' or @type='section' or @type='example']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_otherblock">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="figtext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='fig']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_fig">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="tabletext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='table']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_table">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="litext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='li']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_li">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="fntext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='fn']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_fn">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-  <xsl:template name="dlentrytext" mode="getlinktext" priority="2" match="*[contains(@class,' topic/xref ')][@type='dlentry']">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:apply-templates select="." mode="topicpull:getlinktext_within-topic_dlentry">
-      <xsl:with-param name="file" select="$file"/>
-      <xsl:with-param name="topicpos" select="$topicpos"/>
-      <xsl:with-param name="classval" select="$classval"/>
-      <xsl:with-param name="topicid" select="$topicid"/>
-      <xsl:with-param name="elemid" select="$elemid"/>
-    </xsl:apply-templates>
-  </xsl:template>
-
-  <xsl:template name="firstclass">
-    <xsl:param name="file">#none#</xsl:param>
-    <xsl:param name="topicpos">#none#</xsl:param>
-    <xsl:param name="classval">#none#</xsl:param>
-    <xsl:param name="topicid">#none#</xsl:param>
-    <xsl:param name="elemid">#none#</xsl:param>
-    <xsl:variable name="doc" select="document($file,/)"/>
-    <xsl:choose>
-      <!--look for the target in the same file, and create the topic-level classval if accessible-->
-      <xsl:when test="$topicpos='samefile'">
-        <xsl:apply-templates select="//*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ')]//*[contains(@class, $classval)][@id=$elemid]" mode="topicpull:determine_firstclass"/>
-      </xsl:when>
-      <!--look for the target in another file, and create the topic-level classval if accessible-->
-      <xsl:when test="$topicpos='otherfile'">
-        <xsl:apply-templates select="$doc//*[contains(@class, ' topic/topic ')][@id=$topicid]/*[contains(@class,' topic/body ') or contains(@class,' topic/abstract ')]//*[contains(@class, $classval)][@id=$elemid]" mode="topicpull:determine_firstclass"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <!--don't generate error msg, since will also be attempting retrieval of linktext, and don't want to double-up on error msgs-->
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="invalid-list-item">
-    <xsl:apply-templates select="." mode="ditamsg:crossref-unordered-listitem"/>
-  </xsl:template>
-
-  <xsl:template match="*[contains(@class,' topic/ol ')]/*[contains(@class,' topic/li ')]" mode="xref" priority="2">
-    <xsl:apply-templates select="." mode="topicpull:li-linktext"/>
-  </xsl:template>
-  <xsl:template match="*[contains(@class,' topic/fn ')]" mode="xref">
-    <xsl:apply-templates select="." mode="topicpull:fn-linktext"/>
   </xsl:template>
   
   <!-- re-specialize the unknown and foreign elements -->

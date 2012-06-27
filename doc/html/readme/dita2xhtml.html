@@ -14,7 +14,7 @@
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="dita2xhtml"/>
 <meta name="DC.Language" content="en-us"/>
-<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
 <title>DITA to XHTML</title>
 </head>
 <body id="dita2xhtml">
@@ -44,11 +44,67 @@ setting the output type to "web" will run the default XHTML transform.</div>
 
 </div>
 
-<div class="related-links">
+  <div class="related-links">
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../readme/AvailableTransforms.html" title="The primary purpose of the DITA Open Toolkit is to transform DITA maps and topics into other formats. The toolkit ships with several native transforms, and can be extended to support any other output format with by adding a new plug-in.">Available DITA-OT Transforms</a></div>
 </div>
 </div>
+<div class="topic concept nested1" id="outer-copy-generation">
+    <h2 class="title topictitle2">Outer copy generation</h2>
+
+    <div class="body conbody">
+      <p class="p">For the following source structure:</p>
+
+      <pre class="pre">maps/
+  map.ditamap
+topics/
+  concept.dita
+images/
+  graphic.gif</pre>
+
+      <p class="p">depending on the <samp class="ph codeph">generate.copy.outer</samp> property, output directory structure
+        will be different for <span class="ph filepath">out</span> directory.</p>
+
+      <div class="section" id="outer-copy-generation__section_cvy_qwq_3f"><h3 class="title sectiontitle"><samp class="ph codeph">1</samp>: ignore outer files</h3>
+        
+        <p class="p">Files which lay outside the output directory are ignored:</p>
+
+        <pre class="pre">out/
+  index.html</pre>
+
+      </div>
+
+      <div class="section" id="outer-copy-generation__section_cvy_qwq_3e"><h3 class="title sectiontitle"><samp class="ph codeph">2</samp>: generate outer files</h3>
+        
+        <p class="p">Files which lay outside the output directory are generated:</p>
+
+        <pre class="pre">out/
+  index.html
+topics/
+  concept.html
+images/
+  graphic.gif</pre>
+
+      </div>
+
+      <div class="section" id="outer-copy-generation__section_cvy_qwq_3g"><h3 class="title sectiontitle"><samp class="ph codeph">3</samp>: shift base directory</h3>
+        
+        <p class="p">Base directory is shifted up in the directory tree to cover all output directories:</p>
+
+        <pre class="pre">out/
+  maps/
+    index.html
+  topics/
+    concept.html
+  images/
+    graphic.gif</pre>
+
+      </div>
+
+    </div>
+
+  </div>
+
 
 </body>
 </html>

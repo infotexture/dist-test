@@ -9,13 +9,7 @@
 
 <!-- Screen -->
 <xsl:template match="*[contains(@class,' ui-d/screen ')]" name="topic.ui-d.screen">
- <xsl:variable name="revtest">
-   <xsl:if test="@rev and not($FILTERFILE='') and ($DRAFT='yes')"> <!-- revision? -->
-     <xsl:call-template name="find-active-rev-flag">               <!-- active? (revtest will be 1 when active)-->
-       <xsl:with-param name="allrevs" select="@rev"/>
-     </xsl:call-template>
-   </xsl:if>
- </xsl:variable>
+  <xsl:variable name="revtest"><xsl:apply-templates select="." mode="mark-revisions-for-draft"/></xsl:variable>
  <xsl:choose>
    <xsl:when test="$revtest=1">   <!-- Rev is active - add the DIV -->
      <div class="{@rev}"><xsl:apply-templates select="."  mode="screen-fmt" /></div>
@@ -26,16 +20,9 @@
  </xsl:choose>
 </xsl:template>
 <xsl:template match="*[contains(@class,' ui-d/screen ')]" mode="screen-fmt">
-  <xsl:variable name="flagrules">
-    <xsl:call-template name="getrules"/>
-  </xsl:variable>
+  <xsl:variable name="flagrules"><xsl:call-template name="getrules"/></xsl:variable>
     
-  <xsl:call-template name="start-flagit">
-    <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param>     
-  </xsl:call-template>
-  <xsl:call-template name="start-revflag">
-    <xsl:with-param name="flagrules" select="$flagrules"/>
-  </xsl:call-template>
+  <xsl:call-template name="start-flags-and-rev"><xsl:with-param name="flagrules" select="$flagrules"/></xsl:call-template>
 <xsl:call-template name="spec-title-nospace"/>
 <pre class="screen">
   <xsl:call-template name="commonattributes"/>
@@ -46,12 +33,7 @@
   <xsl:call-template name="setidaname"/>
   <xsl:apply-templates/>
 </pre>
-  <xsl:call-template name="end-revflag">
-    <xsl:with-param name="flagrules" select="$flagrules"/>
-  </xsl:call-template>
-  <xsl:call-template name="end-flagit">
-    <xsl:with-param name="flagrules" select="$flagrules"></xsl:with-param> 
-  </xsl:call-template>
+  <xsl:call-template name="end-flags-and-rev"><xsl:with-param name="flagrules" select="$flagrules"/></xsl:call-template>
 <xsl:value-of select="$newline"/>
 </xsl:template>
 

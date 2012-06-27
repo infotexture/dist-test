@@ -37,6 +37,7 @@
 
 <!-- Include error message template -->
 <xsl:import href="../common/output-message.xsl"/>
+<xsl:import href="../common/dita-utilities.xsl"/>
 <xsl:import href="../common/dita-textonly.xsl"/>
 
 <xsl:output method="html" indent="no" encoding="UTF-8"/>
@@ -63,10 +64,6 @@
 <!-- Define a newline character -->
 <xsl:variable name="newline"><xsl:text>
 </xsl:text></xsl:variable>
-
-<xsl:template match="processing-instruction('path2project')" mode="get-path2project">
-  <xsl:value-of select="."/>
-</xsl:template>
 
 <!-- *********************************************************************************
      Setup the HTML wrapper for the table of contents
@@ -292,18 +289,13 @@
   </xsl:apply-templates>
 </xsl:template>
 
-<xsl:template match="processing-instruction('workdir')" mode="get-work-dir">
-  <xsl:value-of select="."/><xsl:text>/</xsl:text>
-</xsl:template>  
-
 <!-- Deprecating the named template in favor of the mode template. -->
 <xsl:template name="navtitle">
   <xsl:apply-templates select="." mode="get-navtitle"/>
 </xsl:template>
 <xsl:template match="*" mode="get-navtitle">
   <xsl:variable name="WORKDIR">
-    <xsl:value-of select="$FILEREF"/>
-    <xsl:apply-templates select="/processing-instruction()" mode="get-work-dir"/>
+    <xsl:apply-templates select="/processing-instruction('workdir-uri')" mode="get-work-dir"/>
   </xsl:variable>
   <xsl:choose>
 
