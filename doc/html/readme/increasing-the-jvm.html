@@ -7,23 +7,23 @@
 <meta name="copyright" content="(C) Copyright 2005"/>
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="task"/>
-<meta name="DC.Title" content="Increasing the JVM"/>
-<meta name="abstract" content="If you are working with large documents with extensive metadata or key references, you will need to increase the Java Virtual Memory (JVM). You can do this from the command-line prompt for a specific session, or you can increase the value of the ANT_OPTS environmental variable."/>
-<meta name="description" content="If you are working with large documents with extensive metadata or key references, you will need to increase the Java Virtual Memory (JVM). You can do this from the command-line prompt for a specific session, or you can increase the value of the ANT_OPTS environmental variable."/>
+<meta name="DC.Title" content="Increasing Java memory allocation"/>
+<meta name="abstract" content="If you are working with large documents with extensive metadata or key references, you will need to increase the memory allocation for the Java process. You can do this from the command-line prompt for a specific session, or you can increase the value of the ANT_OPTS environmental variable."/>
+<meta name="description" content="If you are working with large documents with extensive metadata or key references, you will need to increase the memory allocation for the Java process. You can do this from the command-line prompt for a specific session, or you can increase the value of the ANT_OPTS environmental variable."/>
 <meta name="DC.Relation" scheme="URI" content="../readme/troubleshooting-overview.html"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="t-increasing-the-JVM"/>
-<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
-<title>Increasing the JVM</title>
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
+<title>Increasing Java memory allocation</title>
 </head>
 <body id="t-increasing-the-JVM">
 
 
-    <h1 class="title topictitle1">Increasing the JVM</h1>
+    <h1 class="title topictitle1">Increasing Java memory allocation</h1>
 
     
     <div class="body taskbody"><p class="shortdesc">If you are working with large documents with extensive metadata or key references,
-        you will need to increase the Java Virtual Memory (JVM). You can do this from the
+        you will need to increase the memory allocation for the Java process. You can do this from the
         command-line prompt for a specific session, or you can increase the value of the ANT_OPTS
         environmental variable.</p>
 
@@ -32,22 +32,22 @@
                     following command:</span>
                 
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder">
-<thead><tr><th valign="bottom" align="left" id="d47102e21-option">Platform</th>
-<th valign="bottom" align="left" id="d47102e21-desc">Command</th></tr></thead>
+<thead><tr><th valign="bottom" align="left" id="d47143e21-option">Platform</th>
+<th valign="bottom" align="left" id="d47143e21-desc">Command</th></tr></thead>
 <tbody>
                     
                     <tr class="strow chrow">
-                        <td valign="top" headers="d47102e21-option" id="d47102e34" class="stentry choption"><strong>Windows</strong></td>
+                        <td valign="top" headers="d47143e21-option" id="d47143e34" class="stentry choption"><strong>Windows</strong></td>
 
-                        <td valign="top" headers="d47102e21-desc d47102e34" class="stentry chdesc"><samp class="ph codeph">set ANT_OPTS=%ANT_OPTS%
+                        <td valign="top" headers="d47143e21-desc d47143e34" class="stentry chdesc"><samp class="ph codeph">set ANT_OPTS=%ANT_OPTS%
                                 -Xmx<var class="keyword varname">1024</var>M</samp></td>
 
                     </tr>
 
                     <tr class="strow chrow">
-                        <td valign="top" headers="d47102e21-option" id="d47102e47" class="stentry choption"><strong>Linux</strong></td>
+                        <td valign="top" headers="d47143e21-option" id="d47143e47" class="stentry choption"><strong>Linux</strong></td>
 
-                        <td valign="top" headers="d47102e21-desc d47102e47" class="stentry chdesc"><samp class="ph codeph">export ANT_OPTS=$ANT_OPTS
+                        <td valign="top" headers="d47143e21-desc d47143e47" class="stentry chdesc"><samp class="ph codeph">export ANT_OPTS=$ANT_OPTS
                                 -Xmx<var class="keyword varname">1024</var>M</samp></td>
 
                     </tr>

@@ -14,7 +14,7 @@
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="plugin-configfile"/>
 <meta name="DC.Language" content="en-us"/>
-<link rel="stylesheet" type="text/css" href="..\css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css"/>
 <title>Plug-in configuration file</title>
 </head>
 <body id="plugin-configfile">
@@ -30,8 +30,8 @@ integrates those changes into the core code.</p>
 
 <div class="section">       <p class="p">The root element of the plugin.xml file is <samp class="ph codeph">&lt;plugin&gt;</samp>,
 and must         specify an <samp class="ph codeph">id</samp> attribute. The <samp class="ph codeph">id</samp> attribute
-is used to         identify the plugin, as well as to identify whether
-pre-requisite plugins are available. The           <samp class="ph codeph">id</samp> attribute
+is used to         identify the plug-in, as well as to identify whether
+pre-requisite plug-ins are available. The           <samp class="ph codeph">id</samp> attribute
 should follow the syntax rules:</p>
        <pre class="pre codeblock">id    ::= token('.'token)*
 token ::= ( [0..9] | [a..zA..Z] | ’_’ | ’-’ )+</pre>
@@ -42,44 +42,44 @@ supports the following child elements: </p>
 contribute to a defined               <em class="ph i">extension point</em>. The
 following attributes are supported:</p>
            <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-<th valign="bottom" align="left" id="d10144e63" class="stentry">Attribute</th>
+<th valign="bottom" align="left" id="d10151e63" class="stentry">Attribute</th>
 
-<th valign="bottom" align="left" id="d10144e66" class="stentry">Description</th>
+<th valign="bottom" align="left" id="d10151e66" class="stentry">Description</th>
 
-<th valign="bottom" align="left" id="d10144e69" class="stentry">Required</th>
-
-</tr>
-<tr class="strow">
-<td valign="top" id="d10144e75" headers="d10144e63" class="stentry"><strong><samp class="ph codeph">extension</samp></strong></td>
-
-<td valign="top" headers="d10144e66 d10144e75" class="stentry">extension point identifier</td>
-
-<td valign="top" headers="d10144e69 d10144e75" class="stentry">yes</td>
+<th valign="bottom" align="left" id="d10151e69" class="stentry">Required</th>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e88" headers="d10144e63" class="stentry"><strong><samp class="ph codeph">value</samp></strong></td>
+<td valign="top" id="d10151e75" headers="d10151e63" class="stentry"><strong><samp class="ph codeph">extension</samp></strong></td>
 
-<td valign="top" headers="d10144e66 d10144e88" class="stentry">comma separated string value of the extension</td>
+<td valign="top" headers="d10151e66 d10151e75" class="stentry">extension point identifier</td>
 
-<td valign="top" headers="d10144e69 d10144e88" class="stentry">either <samp class="ph codeph">value</samp> or <samp class="ph codeph">file</samp></td>
+<td valign="top" headers="d10151e69 d10151e75" class="stentry">yes</td>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e106" headers="d10144e63" class="stentry"><strong><samp class="ph codeph">file</samp></strong></td>
+<td valign="top" id="d10151e88" headers="d10151e63" class="stentry"><strong><samp class="ph codeph">value</samp></strong></td>
 
-<td valign="top" headers="d10144e66 d10144e106" class="stentry">file path value of the extension, relative to           
+<td valign="top" headers="d10151e66 d10151e88" class="stentry">comma separated string value of the extension</td>
+
+<td valign="top" headers="d10151e69 d10151e88" class="stentry">either <samp class="ph codeph">value</samp> or <samp class="ph codeph">file</samp></td>
+
+</tr>
+<tr class="strow">
+<td valign="top" id="d10151e106" headers="d10151e63" class="stentry"><strong><samp class="ph codeph">file</samp></strong></td>
+
+<td valign="top" headers="d10151e66 d10151e106" class="stentry">file path value of the extension, relative to           
      <span class="ph filepath">plugin.xml</span></td>
 
-<td valign="top" headers="d10144e69 d10144e106" class="stentry">either <samp class="ph codeph">value</samp> or <samp class="ph codeph">file</samp></td>
+<td valign="top" headers="d10151e69 d10151e106" class="stentry">either <samp class="ph codeph">value</samp> or <samp class="ph codeph">file</samp></td>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e126" headers="d10144e63" class="stentry"><strong><samp class="ph codeph">type</samp></strong></td>
+<td valign="top" id="d10151e126" headers="d10151e63" class="stentry"><strong><samp class="ph codeph">type</samp></strong></td>
 
-<td valign="top" headers="d10144e66 d10144e126" class="stentry">type of the <samp class="ph codeph">value</samp> attribute</td>
+<td valign="top" headers="d10151e66 d10151e126" class="stentry">type of the <samp class="ph codeph">value</samp> attribute</td>
 
-<td valign="top" headers="d10144e69 d10144e126" class="stentry">no</td>
+<td valign="top" headers="d10151e69 d10151e126" class="stentry">no</td>
 
 </tr>
 </table>
@@ -88,27 +88,27 @@ following attributes are supported:</p>
 <li class="li">           <p class="p"><samp class="ph codeph">&lt;require&gt;</samp> defines plug-in dependencies.
 The following attributes             are supported:</p>
            <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-<th valign="bottom" align="left" id="d10144e153" class="stentry">Attribute</th>
+<th valign="bottom" align="left" id="d10151e153" class="stentry">Attribute</th>
 
-<th valign="bottom" align="left" id="d10144e156" class="stentry">Description</th>
+<th valign="bottom" align="left" id="d10151e156" class="stentry">Description</th>
 
-<th valign="bottom" align="left" id="d10144e159" class="stentry">Required</th>
-
-</tr>
-<tr class="strow">
-<td valign="top" id="d10144e165" headers="d10144e153" class="stentry"><strong><samp class="ph codeph">plugin</samp></strong></td>
-
-<td valign="top" headers="d10144e156 d10144e165" class="stentry">vertical bar separated list of plug-ins that are required </td>
-
-<td valign="top" headers="d10144e159 d10144e165" class="stentry">yes</td>
+<th valign="bottom" align="left" id="d10151e159" class="stentry">Required</th>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e178" headers="d10144e153" class="stentry"><strong><samp class="ph codeph">importance</samp></strong></td>
+<td valign="top" id="d10151e165" headers="d10151e153" class="stentry"><strong><samp class="ph codeph">plugin</samp></strong></td>
 
-<td valign="top" headers="d10144e156 d10144e178" class="stentry">flag whether plug-in is required or optional</td>
+<td valign="top" headers="d10151e156 d10151e165" class="stentry">vertical bar separated list of plug-ins that are required </td>
 
-<td valign="top" headers="d10144e159 d10144e178" class="stentry">no</td>
+<td valign="top" headers="d10151e159 d10151e165" class="stentry">yes</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" id="d10151e178" headers="d10151e153" class="stentry"><strong><samp class="ph codeph">importance</samp></strong></td>
+
+<td valign="top" headers="d10151e156 d10151e178" class="stentry">flag whether plug-in is required or optional</td>
+
+<td valign="top" headers="d10151e159 d10151e178" class="stentry">no</td>
 
 </tr>
 </table>
@@ -118,19 +118,19 @@ The following attributes             are supported:</p>
 should be treated as               <em class="ph i">templates</em>. The following
 attributes are supported:</p>
            <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-<th valign="bottom" align="left" id="d10144e206" class="stentry">Attribute</th>
+<th valign="bottom" align="left" id="d10151e206" class="stentry">Attribute</th>
 
-<th valign="bottom" align="left" id="d10144e209" class="stentry">Description</th>
+<th valign="bottom" align="left" id="d10151e209" class="stentry">Description</th>
 
-<th valign="bottom" align="left" id="d10144e212" class="stentry">Required</th>
+<th valign="bottom" align="left" id="d10151e212" class="stentry">Required</th>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e218" headers="d10144e206" class="stentry"><strong><samp class="ph codeph">file</samp></strong></td>
+<td valign="top" id="d10151e218" headers="d10151e206" class="stentry"><strong><samp class="ph codeph">file</samp></strong></td>
 
-<td valign="top" headers="d10144e209 d10144e218" class="stentry">file path to the template, relative to <span class="ph filepath">plugin.xml</span></td>
+<td valign="top" headers="d10151e209 d10151e218" class="stentry">file path to the template, relative to <span class="ph filepath">plugin.xml</span></td>
 
-<td valign="top" headers="d10144e212 d10144e218" class="stentry">yes</td>
+<td valign="top" headers="d10151e212 d10151e218" class="stentry">yes</td>
 
 </tr>
 </table>
@@ -139,27 +139,27 @@ attributes are supported:</p>
 <li class="li">           <p class="p"><samp class="ph codeph">&lt;meta&gt;</samp> defines metadata. The
 following attributes are             supported:</p>
            <table cellpadding="4" cellspacing="0" summary="" border="1" class="simpletable"><tr class="sthead">
-<th valign="bottom" align="left" id="d10144e244" class="stentry">Attribute</th>
+<th valign="bottom" align="left" id="d10151e244" class="stentry">Attribute</th>
 
-<th valign="bottom" align="left" id="d10144e247" class="stentry">Description</th>
+<th valign="bottom" align="left" id="d10151e247" class="stentry">Description</th>
 
-<th valign="bottom" align="left" id="d10144e250" class="stentry">Required</th>
-
-</tr>
-<tr class="strow">
-<td valign="top" id="d10144e256" headers="d10144e244" class="stentry"><strong><samp class="ph codeph">type</samp></strong></td>
-
-<td valign="top" headers="d10144e247 d10144e256" class="stentry">metadata name </td>
-
-<td valign="top" headers="d10144e250 d10144e256" class="stentry">yes</td>
+<th valign="bottom" align="left" id="d10151e250" class="stentry">Required</th>
 
 </tr>
 <tr class="strow">
-<td valign="top" id="d10144e269" headers="d10144e244" class="stentry"><strong><samp class="ph codeph">value</samp></strong></td>
+<td valign="top" id="d10151e256" headers="d10151e244" class="stentry"><strong><samp class="ph codeph">type</samp></strong></td>
 
-<td valign="top" headers="d10144e247 d10144e269" class="stentry">metadata value</td>
+<td valign="top" headers="d10151e247 d10151e256" class="stentry">metadata name </td>
 
-<td valign="top" headers="d10144e250 d10144e269" class="stentry">yes</td>
+<td valign="top" headers="d10151e250 d10151e256" class="stentry">yes</td>
+
+</tr>
+<tr class="strow">
+<td valign="top" id="d10151e269" headers="d10151e244" class="stentry"><strong><samp class="ph codeph">value</samp></strong></td>
+
+<td valign="top" headers="d10151e247 d10151e269" class="stentry">metadata value</td>
+
+<td valign="top" headers="d10151e250 d10151e269" class="stentry">yes</td>
 
 </tr>
 </table>
@@ -169,7 +169,7 @@ following attributes are             supported:</p>
        <p class="p">Any extension that is not recognized by the DITA-OT
 is ignored; all elements other than           <samp class="ph codeph">&lt;plugin&gt;</samp> are
 optional. Since version 1.5.3 multiple extension         definitions
-within a plugin configuration file are combined; in older versions
+within a plug-in configuration file are combined; in older versions
 only the last         extension definition is used. </p>
        </div>
 

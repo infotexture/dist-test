@@ -12,7 +12,7 @@
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="rel1.5.4"/>
 <meta name="DC.Language" content="en"/>
-<link rel="stylesheet" type="text/css" href="..\..\css/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/commonltr.css"/>
 <title>DITA Open Toolkit Release 1.6</title>
 </head>
 <body id="rel1.5.4">
@@ -99,51 +99,51 @@ added DITAVAL to the standard in 2007) has been removed.</p>
           been moved to <span class="ph filepath">plugins</span> folder:</p>
 
         <table cellpadding="4" cellspacing="0" summary="" id="general-enhancements-and-changes__simpletable_gst_mcz_gg" border="1" class="simpletable"><tr class="sthead">
-            <th valign="bottom" align="left" id="d33156e118" class="stentry">old path</th>
+            <th valign="bottom" align="left" id="d33163e118" class="stentry">old path</th>
 
-            <th valign="bottom" align="left" id="d33156e121" class="stentry">new path</th>
-
-          </tr>
-<tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/dita11</span></td>
-
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.dita11</span></td>
+            <th valign="bottom" align="left" id="d33163e121" class="stentry">new path</th>
 
           </tr>
 <tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/dita132</span></td>
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/dita11</span></td>
 
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.dita132</span></td>
-
-          </tr>
-<tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/eclipsemap</span></td>
-
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.eclipsemap</span></td>
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.dita11</span></td>
 
           </tr>
 <tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/fo</span></td>
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/dita132</span></td>
 
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/org.dita.pdf2</span></td>
-
-          </tr>
-<tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/tocjs</span></td>
-
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/com.sophos.tocjs</span></td>
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.dita132</span></td>
 
           </tr>
 <tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/h2d</span></td>
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/eclipsemap</span></td>
 
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/h2d</span></td>
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/org.dita.specialization.eclipsemap</span></td>
 
           </tr>
 <tr class="strow">
-            <td valign="top" headers="d33156e118" class="stentry"><span class="ph filepath">demo/legacypdf</span></td>
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/fo</span></td>
 
-            <td valign="top" headers="d33156e121" class="stentry"><span class="ph filepath">plugins/legacypdf</span></td>
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/org.dita.pdf2</span></td>
+
+          </tr>
+<tr class="strow">
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/tocjs</span></td>
+
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/com.sophos.tocjs</span></td>
+
+          </tr>
+<tr class="strow">
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/h2d</span></td>
+
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/h2d</span></td>
+
+          </tr>
+<tr class="strow">
+            <td valign="top" headers="d33163e118" class="stentry"><span class="ph filepath">demo/legacypdf</span></td>
+
+            <td valign="top" headers="d33163e121" class="stentry"><span class="ph filepath">plugins/legacypdf</span></td>
 
           </tr>
 </table>
@@ -393,7 +393,7 @@ added DITAVAL to the standard in 2007) has been removed.</p>
 
         <p class="p">Main
           FO generation now relies on merging process to rewrite duplicate IDs. The default merging
-          has done this already in previous releses, but now also custom merging needs to fullfill
+          has done this already in previous releses, but now also custom merging needs to fulfill
           the duplicate ID rewrite requirement.</p>
 
         <p class="p">Support for <span class="ph filepath">layout-masters.xml</span> configuration has been removed,
@@ -630,7 +630,20 @@ added DITAVAL to the standard in 2007) has been removed.</p>
 
           <li class="li">#1306 Typo in XSLT mode results in extra fallthrough text for step (final
             release)</li>
-  
+
+          <li class="li">#1321 Fix path2project separator clean-up (maintenance 1)</li>
+
+          <li class="li">#1322 Xref to table cell does not properly navigate to it (maintenance 1)</li>
+
+          <li class="li">#1323 @relcolwidth attribute not taken into account when transforming &lt;choicetable&gt;
+            to PDF using Apache FOP (maintenance 1)</li>
+
+          <li class="li">#1325 Variable "Index See Also String" missing from Hebrew (maintenance 1)</li>
+
+          <li class="li">#1329 PDF2 indexing fails for ranges (maintenance 1)</li>
+
+          <li class="li">#1330 Spaces in Filenames in 1.6 (maintenance 1)</li>
+
         </ul>
 
       </div>

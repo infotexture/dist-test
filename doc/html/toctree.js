@@ -51,7 +51,7 @@
     var d4e445 = new YAHOO.widget.TextNode(objd4e445, d4e435, false);var objd4e465 = { label: "Other error messages", href:"readme/DITA-troubleshooting.html", target:"contentwin" };
     var d4e465 = new YAHOO.widget.TextNode(objd4e465, d4e435, false);var objd4e475 = { label: "Log files", href:"readme/DITA-log.html", target:"contentwin" };
     var d4e475 = new YAHOO.widget.TextNode(objd4e475, d4e435, false);var objd4e485 = { label: "Enabling debug mode", href:"readme/enabling-debug-mode.html", target:"contentwin" };
-    var d4e485 = new YAHOO.widget.TextNode(objd4e485, d4e435, false);var objd4e495 = { label: "Increasing the JVM", href:"readme/increasing-the-jvm.html", target:"contentwin" };
+    var d4e485 = new YAHOO.widget.TextNode(objd4e485, d4e435, false);var objd4e495 = { label: "Increasing Java memory allocation", href:"readme/increasing-the-jvm.html", target:"contentwin" };
     var d4e495 = new YAHOO.widget.TextNode(objd4e495, d4e435, false);
   var d4e516 = new YAHOO.widget.TextNode("Developer Reference", root, false);var objd4e517 = { label: "DITA Open Toolkit Architecture", href:"dev_ref/DITA-OTArchitecture.html", target:"contentwin" };
     var d4e517 = new YAHOO.widget.TextNode(objd4e517, d4e516, false);var objd4e527 = { label: "Processing modules in the DITA-OT", href:"dev_ref/processing-pipeline-modules.html", target:"contentwin" };
