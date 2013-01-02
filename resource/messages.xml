@@ -26,12 +26,7 @@
     <reason>Invalid DITA topic extension &apos;%1&apos;.</reason>
     <response>Supported values are &apos;.dita&apos; and &apos;.xml&apos;.</response>
   </message>
-  
-  <message id="DOTA005W" type="WARN">
-    <reason>The Ant parameters &apos;dita.input&apos; and &apos;dita.input.dirname&apos; are deprecated.</reason>
-    <response>Please use the parameter &apos;args.input&apos; instead.</response>
-  </message>
-  
+    
   <message id="DOTA006W" type="WARN">
     <reason>Absolute paths on the local file system are not supported for the CSSPATH parameter.</reason>
     <response>Please use a relative path or full URI instead.</response>
@@ -354,7 +349,7 @@
   
   <!-- Long term, would like to split this into two messages. One for file not found, another for file outside the scope of the map. -->
   <message id="DOTJ051E" type="ERROR">
-    <reason>Unable to load target for coderef &quot;%1&quot;. Found in file=&quot;%2&quot;, element=&quot;%3&quot;.</reason>
+    <reason>Unable to load target for coderef &quot;%1&quot;.</reason>
     <response></response>
   </message>
 
@@ -366,6 +361,16 @@
   <message id="DOTJ053W" type="WARN">
     <reason>Input file &apos;%1&apos; is not valid DITA file name.</reason>
     <response>Please check &apos;%1&apos; to see if it is correct. The extensions &quot;.dita&quot; or &quot;.xml&quot; are supported for DITA topics.</response>
+  </message>
+  
+  <message id="DOTJ054E" type="ERROR">
+    <reason>Unable to parse invalid %1 attribute value &quot;%2&quot;</reason>
+    <response></response>
+  </message>
+  
+  <message id="DOTJ055E" type="ERROR">
+    <reason>Invalid key name &quot;%1&quot;.</reason>
+    <response></response>
   </message>
   
   <!-- End of Java Messages -->
@@ -725,6 +730,11 @@
   <message id="DOTX067E" type="ERROR">
     <reason>No string named &apos;%1&apos; was found for language &apos;%2&apos;.</reason>
     <response>Add a mapping for the string &apos;%1&apos;.</response>
+  </message>
+  
+  <message id="DOTX068W" type="WARN">
+    <reason>A topicref element that references a map contains child topicref elements.</reason>
+    <response>Child topicref elements are ignored.</response>
   </message>
 
   <!-- End of XSL Messages --> 

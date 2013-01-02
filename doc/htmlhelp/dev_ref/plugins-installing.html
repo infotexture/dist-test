@@ -25,7 +25,7 @@
   <div class="body taskbody"><p class="shortdesc">Plug-ins are generally distributed as zip files. There are two steps to installing a
     plug-in: unzipping and integrating.</p>
 
-    <div class="section context">
+    <div class="section context"><div class="tasklabel"><h2 class="sectiontitle tasklabel">About this task</h2></div>
       <p class="p">It is possible to define a plug-in so that it may be installed anywhere, although most
         expect to be placed in <span class="ph filepath">plugins/</span> directory inside of the DITA-OT. Most
         plug-ins do not require a specific install directory and can go in either of the default
@@ -33,10 +33,10 @@
 
     </div>
 
-    <ol class="ol steps"><li class="li step stepexpand">
+    <div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
         <span class="ph cmd">The unzip the plug-in file to <span class="ph filepath">plugins</span> subdirectory.</span>
-         The plug-in directory should be named after plug-in ID and version, for example
-            <span class="ph filepath">plugins/com.example.xhtml_1.0.0</span>.
+        <div class="itemgroup info">The plug-in directory should be named after plug-in ID and version, for example
+            <span class="ph filepath">plugins/com.example.xhtml_1.0.0</span>.</div>
       </li>
 <li class="li step stepexpand">
         <span class="ph cmd">Run plug-in integration process.</span>
@@ -57,7 +57,7 @@
 
         
         
-         
+        <div class="itemgroup info">
           <p class="p">The integration process has two modes, lax and strict. In the strict mode the integration process will immediately fail if it encounters errors in plug-in configurations or installation process. In the lax mode, the integration process will continue to finish regardless of errors; the lax mode does not imply error recovery and may leave the DITA-OT installation into a broken state. The default mode is lax due to backwards compatibility, to run the integration in strict mode:</p>
 
           <pre class="pre codeblock">ant -f integrator.xml strict</pre>
@@ -66,7 +66,7 @@
 
           <pre class="pre codeblock">ant -f integrator.xml -verbose strict</pre>
 
-        
+        </div>
       </li>
 </ol>
 

@@ -26,36 +26,36 @@
         command-line prompt for a specific session, or you can increase the value of the ANT_OPTS
         environmental variable.</p>
 
-        <ol class="ol steps"><li class="li step stepexpand">
+        <div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ul class="ul steps-unordered"><li class="li step stepexpand">
                 <span class="ph cmd">To change the value for an specific session, from the command prompt, issue the
                     following command:</span>
                 
 <table border="1" frame="hsides" rules="rows" cellpadding="4" cellspacing="0" summary="" class="simpletable choicetable choicetableborder">
-<thead><tr><th valign="bottom" align="left" id="d47279e21-option">Platform</th>
-<th valign="bottom" align="left" id="d47279e21-desc">Command</th></tr></thead>
+<thead><tr><th valign="bottom" align="left" id="d32971e21-option">Platform</th>
+<th valign="bottom" align="left" id="d32971e21-desc">Command</th></tr></thead>
 <tbody>
                     
                     <tr class="strow chrow">
-                        <td valign="top" headers="d47279e21-option" id="d47279e34" class="stentry choption"><strong>Windows</strong></td>
+                        <td valign="top" headers="d32971e21-option" id="d32971e34" class="stentry choption"><strong>Windows</strong></td>
 
-                        <td valign="top" headers="d47279e21-desc d47279e34" class="stentry chdesc"><samp class="ph codeph">set ANT_OPTS=%ANT_OPTS%
+                        <td valign="top" headers="d32971e21-desc d32971e34" class="stentry chdesc"><samp class="ph codeph">set ANT_OPTS=%ANT_OPTS%
                                 -Xmx<var class="keyword varname">1024</var>M</samp></td>
 
                     </tr>
 
                     <tr class="strow chrow">
-                        <td valign="top" headers="d47279e21-option" id="d47279e47" class="stentry choption"><strong>Linux</strong></td>
+                        <td valign="top" headers="d32971e21-option" id="d32971e47" class="stentry choption"><strong>Linux/OS X</strong></td>
 
-                        <td valign="top" headers="d47279e21-desc d47279e47" class="stentry chdesc"><samp class="ph codeph">export ANT_OPTS=$ANT_OPTS
+                        <td valign="top" headers="d32971e21-desc d32971e47" class="stentry chdesc"><samp class="ph codeph">export ANT_OPTS=$ANT_OPTS
                                 -Xmx<var class="keyword varname">1024</var>M</samp></td>
 
                     </tr>
 
                 </tbody></table>
 
-                 <p class="p">This increases the JVM to 1024 megabytes. The amount of memory which can 
+                <div class="itemgroup info"><p class="p">This increases the JVM memory allocation to 1024 megabytes. The amount of memory which can 
                 be allocated is limited by available system memory and the operating system.</p>
-
+</div>
             </li>
 <li class="li step stepexpand">
                 <span class="ph cmd">To persistently change the value, change the value allocated to the ANT_OPTS
@@ -63,7 +63,7 @@
                     from the Full Easy Install to set up a toolkit session, edit that file
                     to change the value.</span>
             </li>
-</ol>
+</ul>
 
     </div>
 

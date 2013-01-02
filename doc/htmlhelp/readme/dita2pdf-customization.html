@@ -9,7 +9,7 @@
 <meta name="DC.Title" content="Customizing PDF output">
 <meta name="abstract" content="Example of PDF output customization with a custom transformation type.">
 <meta name="description" content="Example of PDF output customization with a custom transformation type.">
-<meta name="DC.Relation" scheme="URI" content="../readme/dita2pdf.html">
+<meta name="DC.Relation" scheme="URI" content="../dev_ref/developer-reference.html">
 <meta name="DC.Format" content="XHTML">
 <meta name="DC.Identifier" content="dita2pdf-customization">
 <meta name="DC.Language" content="en">
@@ -24,14 +24,14 @@
   
   <div class="body taskbody"><p class="shortdesc">Example of PDF output customization with a custom transformation type.</p>
 
-    <ol class="ol steps"><li class="li step stepexpand">
+    <div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand">
         <span class="ph cmd">Create a new plug-in directory <span class="ph filepath">com.example.print-pdf</span> into DITA-OT
             <span class="ph filepath">plugins</span> directory.</span>
       </li>
 <li class="li step stepexpand">
       <span class="ph cmd">Create a plug-in configuration file <span class="ph filepath">plugin.xml</span>, declare the new
-          transformation type <var class="keyword varname">print-pdf</var> and dependencies.</span>
-       <div class="fig fignone"><pre class="pre codeblock">&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+          transformation type <span class="keyword">print-pdf</span> and dependencies.</span>
+      <div class="itemgroup info"><div class="fig fignone"><pre class="pre codeblock">&lt;?xml version='1.0' encoding='UTF-8'?&gt;
 &lt;plugin id="com.example.print-pdf"&gt;
   &lt;require plugin="org.dita.pdf2"/&gt;
   &lt;feature extension="dita.conductor.transtype.check" value="print-pdf"/&gt;
@@ -39,45 +39,45 @@
   &lt;feature extension="dita.conductor.target.relative" file="integrator.xml"/&gt;
 &lt;/plugin&gt;</pre>
 </div>
-
+</div>
       </li>
 <li class="li step stepexpand">
       <span class="ph cmd">Add an Ant script <span class="ph filepath">integrator.xml</span> to define the transformation
           type.</span>
-       <pre class="pre codeblock">&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+      <div class="itemgroup info"><pre class="pre codeblock">&lt;?xml version='1.0' encoding='UTF-8'?&gt;
 &lt;project name="com.example.print-pdf"&gt;
   &lt;target name="dita2print-pdf.init"&gt;
     &lt;property name="customization.dir" location="${dita.plugin.com.example.print-pdf.dir}/cfg"/&gt;
   &lt;/target&gt;
   &lt;target name="dita2print-pdf" depends="dita2print-pdf.init, dita2pdf2"/&gt;
 &lt;/project&gt;</pre>
-
+</div>
       </li>
 <li class="li step stepexpand">
       <span class="ph cmd">Add a <span class="ph filepath">cfg/catalog.xml</span> file to take custom XSLT stylesheets into
           use.</span>
-       <pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      <div class="itemgroup info"><pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;catalog prefer="system" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"&gt;
   &lt;uri name="cfg:fo/attrs/custom.xsl" uri="fo/attrs/custom.xsl"/&gt;
   &lt;uri name="cfg:fo/xsl/custom.xsl" uri="fo/xsl/custom.xsl"/&gt;
 &lt;/catalog&gt;</pre>
-
+</div>
       </li>
 <li class="li step stepexpand">
       <span class="ph cmd">Add attribute and variable overrides to
           <span class="ph filepath">cfg/fo/attrs/custom.xsl</span></span>
-       <pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+     <div class="itemgroup info"> <pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version="2.0"&gt;
   &lt;!-- Change page size to A4 --&gt;
   &lt;xsl:variable name="page-width"&gt;210mm&lt;/xsl:variable&gt;
   &lt;xsl:variable name="page-height"&gt;297mm&lt;/xsl:variable&gt;
 &lt;/xsl:stylesheet&gt;</pre>
-
+</div>
       </li>
 <li class="li step stepexpand">
         <span class="ph cmd">Add XSLT overrides to <span class="ph filepath">cfg/fo/xsl/custom.xsl</span></span>
-         
+        <div class="itemgroup info">
           <pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -99,12 +99,12 @@
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</pre>
 
-        
+        </div>
       </li>
 <li class="li step stepexpand">
         <span class="ph cmd">Add variable definition file <span class="ph filepath">cfg/common/vars/en.xml</span> for English to
           override generated text.</span>
-         
+        <div class="itemgroup info">
           <pre class="pre codeblock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;vars xmlns="http://www.idiominc.com/opentopic/vars"&gt;
   &lt;!-- Remove dot from list number --&gt;
@@ -113,11 +113,11 @@
   &lt;variable id="Unordered List bullet"&gt;&amp;#x2014;&lt;/variable&gt;
 &lt;/vars&gt;</pre>
 
-        
+        </div>
       </li>
 </ol>
 
-    <div class="section result" id="dita2pdf-customization__result_23y_yv3_tf"><a name="dita2pdf-customization__result_23y_yv3_tf"><!-- --></a>
+    <div class="section result" id="dita2pdf-customization__result_23y_yv3_tf"><a name="dita2pdf-customization__result_23y_yv3_tf"><!-- --></a><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div>
       <p class="p">The plug-in directory should have the layout and files:</p>
 
       <pre class="pre codeblock">com.example.print-pdf/
@@ -136,8 +136,8 @@
 
     </div>
 
-    <div class="section postreq" id="dita2pdf-customization__postreq_mqj_zz3_tf"><a name="dita2pdf-customization__postreq_mqj_zz3_tf"><!-- --></a>
-      <p class="p">Run integration process to install the plug-in and take the <var class="keyword varname">print-pdf</var>
+    <div class="section postreq" id="dita2pdf-customization__postreq_mqj_zz3_tf"><a name="dita2pdf-customization__postreq_mqj_zz3_tf"><!-- --></a><div class="tasklabel"><h2 class="sectiontitle tasklabel">What to do next</h2></div>
+      <p class="p">Run integration process to install the plug-in and take the <span class="keyword">print-pdf</span>
         transformation type into use.</p>
 
     </div>
@@ -146,7 +146,7 @@
 
 <div class="related-links">
 <div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../readme/dita2pdf.html" title="The DITA-OT transform to PDF was originally created as a plug-in and maintained outside of the main toolkit code. It was created as a more robust alternative to the demo PDF transform in the original toolkit, and thus was known as PDF2. The plug-in was bundled into the default toolkit distribution with release 1.4.3, and is run when setting the transform type to &#34;pdf&#34; or &#34;pfd2&#34;.">DITA to PDF (PDF2)</a></div>
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../dev_ref/developer-reference.html" title="The DITA Open Toolkit Developer Reference is designed to provide more advanced information about the DITA OT. It is geared to an audience that needs information about the DITA-OT architecture, configuring and extending the DITA-OT, and creating DITA-OT plug-ins.">DITA Open Toolkit Developer Reference</a></div>
 </div>
 </div>
 

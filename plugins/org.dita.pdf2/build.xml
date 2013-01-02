@@ -98,8 +98,6 @@ with those set forth herein.
       </filterchain>
     </loadfile>
     
-    <!-- legacy property -->
-    <property name="ot.dir" location="${dita.dir}"></property>
     <property name="lib.dir" value="${dita.dir}/lib"></property>
     <property name="fo.lib.dir" value="${dita.plugin.org.dita.pdf2.dir}/lib"></property>
     <property name="merged.file" value="${dita.map.filename.root}_MERGED.xml"></property>
@@ -123,14 +121,10 @@ with those set forth herein.
     
     <property name="xsl.dir" value="${dita.plugin.org.dita.pdf2.dir}/xsl"></property>
     <property name="xsl.fo.dir" value="${dita.plugin.org.dita.pdf2.dir}/xsl/fo"></property>
-    <!-- legacy property -->
-    <property name="xsl.fo.diff.dir" value="${dita.plugin.org.dita.pdf2.dir}/xsl/fo/diff"></property>
     <property name="xsl.common.dir" value="${dita.plugin.org.dita.pdf2.dir}/xsl/common"></property>
     <property name="cfg.dir" value="${dita.plugin.org.dita.pdf2.dir}/cfg"></property>
     <property name="cfg.fo.dir" value="${dita.plugin.org.dita.pdf2.dir}/cfg/fo"></property>
     <property name="cfg.common.dir" value="${dita.plugin.org.dita.pdf2.dir}/cfg/common"></property>
-    <!-- legacy property -->
-    <property name="dtd.dir" value="${dita.plugin.org.dita.pdf2.dir}/dtd"></property>
         
     <path id="project.class.path">
       <pathelement path="${java.class.path}"></pathelement>
