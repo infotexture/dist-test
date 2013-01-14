@@ -8,6 +8,7 @@
   <xsl:import href="../../cfg/fo/attrs/commons-attr_xep.xsl"></xsl:import>
   <xsl:import href="../../cfg/fo/attrs/layout-masters-attr_xep.xsl"></xsl:import>
   <xsl:import href="root-processing_xep.xsl"></xsl:import>
+  <xsl:import href="../../cfg/fo/attrs/index-attr_xep.xsl"></xsl:import>
   <xsl:import href="index_xep.xsl"></xsl:import>
 
   
