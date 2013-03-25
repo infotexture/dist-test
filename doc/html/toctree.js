@@ -7,7 +7,7 @@
     
   
   
-  var objd4e210 = { label: "DITA Open Toolkit 1.7.3", href:"DITA-OTProjectHome.html", target:"contentwin" };
+  var objd4e210 = { label: "DITA Open Toolkit 1.7.4", href:"DITA-OTProjectHome.html", target:"contentwin" };
     var d4e210 = new YAHOO.widget.TextNode(objd4e210, root, false);
   var objd4e224 = { label: "Getting Started", href:"quickstartguide/exploring-the-dita-ot.html", target:"contentwin" };
     var d4e224 = new YAHOO.widget.TextNode(objd4e224, root, false);var objd4e238 = { label: "Installing the full-easy-install package", href:"readme/installing-full-easy.html", target:"contentwin" };
