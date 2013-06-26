@@ -36,13 +36,13 @@
 <!-- abbreviated-form domain -->
 <xsl:import href="xslhtml/abbrev-d.xsl"></xsl:import>
 
+<!-- Integrate support for flagging with dita-ot pseudo-domain -->
+<xsl:include href="xslhtml/htmlflag.xsl"></xsl:include>
+
 
 
 <!-- the dita to xhtml converter for element reference documents - not used now -->
 <!--<xsl:import href="elementrefdisp.xsl"/>-->
-
-<!-- Integrate support for flagging with dita-ot pseudo-domain -->
-<xsl:include href="xslhtml/htmlflag.xsl"></xsl:include>  
 
 <!-- DITAEXT file extension name of dita topic file -->
 <xsl:param name="DITAEXT" select="&apos;.xml&apos;"></xsl:param>    
